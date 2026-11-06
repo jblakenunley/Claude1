@@ -136,7 +136,7 @@ def snotel_block(raw, ids, day, names=None):
         if want and want.split()[0].lower().replace(" ", "") not in today["name"].lower().replace(" ", ""):
             dropped.append({"id": sid, "expected": want, "got": today["name"]})
             continue
-        s = {"id": sid, "name": today["name"], "swe_in": r1(today["swe_in"]), "depth_in": today["depth_in"],
+        s = {"id": sid, "name": want or today["name"], "swe_in": r1(today["swe_in"]), "depth_in": today["depth_in"],
              "pct_median": round(today["pct_median"]) if today["pct_median"] is not None else None}
         if yday:
             if today["swe_in"] is not None and yday["swe_in"] is not None:
@@ -254,21 +254,33 @@ def nws_alerts(lat, lon, ua):
 DANGER = {1: "Low", 2: "Moderate", 3: "Considerable", 4: "High", 5: "Extreme"}
 
 
+def _inside(lon, lat, ring):
+    hit = False
+    for (x1, y1), (x2, y2) in zip(ring, ring[1:] + ring[:1]):
+        if (y1 > lat) != (y2 > lat) and lon < (x2 - x1) * (lat - y1) / (y2 - y1) + x1:
+            hit = not hit
+    return hit
+
+
 def caic(ua):
+    """CAIC forecast zones as [(polygons, danger)]. avalanche.org names every CAIC zone alike, so zones are
+    matched by location, not name."""
     js = get_json("https://api.avalanche.org/v2/public/products/map-layer/CAIC", ua, "CAIC via avalanche.org")
-    zones = {}
+    zones = []
     for f in (js or {}).get("features", []):
-        pr = f.get("properties", {})
-        lvl = pr.get("danger_level")
-        zones[pr.get("name", "")] = DANGER.get(lvl, "No rating")
+        g = f.get("geometry") or {}
+        polys = [g["coordinates"]] if g.get("type") == "Polygon" else g.get("coordinates", []) if g.get("type") == "MultiPolygon" else []
+        lvl = (f.get("properties") or {}).get("danger_level")
+        zones.append(([[[tuple(pt[:2]) for pt in ring] for ring in poly] for poly in polys], DANGER.get(lvl, "No rating")))
     return zones
 
 
-def caic_for(zones, key):
-    for name, lvl in zones.items():
-        if key.lower() in name.lower():
-            return lvl
-    return zones.get("CAIC zone") if len(zones) == 1 else None
+def caic_at(zones, lat, lon):
+    for polys, lvl in zones:
+        for poly in polys:
+            if poly and _inside(lon, lat, poly[0]) and not any(_inside(lon, lat, hole) for hole in poly[1:]):
+                return lvl
+    return None
 
 
 # ---------------------------------------------------------------- resorts (Liftie open API)
@@ -592,7 +604,7 @@ def run(day, cfg, history_dir=None):
     zones = safely(archive, "caic", lambda: caic(ua), {})
     if zones:
         sources.append("CAIC via avalanche.org")
-        archive["caic_zones"] = zones
+        archive["caic_zones"] = len(zones)
     by_id = {s["id"]: s for s in stations + others}
     regions = []
     for rg in cfg["regions"]:
@@ -605,7 +617,7 @@ def run(day, cfg, history_dir=None):
         rfc = fc if rg.get("home") else safely(archive, f"nws {rg['name']}", lambda: nws_forecast(rg["point"][0], rg["point"][1], ua))
         if rfc:
             rec["next48h"] = next48(rfc)["text"]
-        lvl = caic_for(zones, rg["caic"]) if zones else None
+        lvl = caic_at(zones, rg["point"][0], rg["point"][1]) if zones else None
         if lvl:
             rec["avalanche"] = lvl
         rec["resorts"] = [r for r in (safely(archive, f"liftie {n}", lambda n=n: resort_status(n, cfg, day, ua)) for n in rg["resorts"]) if r]
@@ -740,6 +752,9 @@ def selftest():
     finally:
         get = real_get
     assert [g["title"] for g in got] == ["Fed holds & signals patience", "Chip rout"], got
+    sq = [[(-107.5, 38.8), (-106.5, 38.8), (-106.5, 39.5), (-107.5, 39.5), (-107.5, 38.8)]]
+    zs = [([sq], "Considerable"), ([[[(-106.0, 39.5), (-105.5, 39.5), (-105.5, 40.0), (-106.0, 40.0)]]], "Low")]
+    assert caic_at(zs, 39.1514, -106.8186) == "Considerable" and caic_at(zs, 39.7, -105.8) == "Low" and caic_at(zs, 37.5, -106.8) is None
     print("selftest: all parser checks passed")
 
 
