@@ -27,7 +27,7 @@ LIMITS = {
     "pick.title": (1, 10), "pick.why": (0, 18), "pick.when": (1, 5), "pick.place": (1, 6),
     "events.title": (1, 8), "events.place": (1, 6), "events.day": (1, 2), "events.time": (0, 3),
     "ongoing.title": (1, 8), "ongoing.place": (1, 6), "ongoing.until": (1, 4),
-    "coming.title": (1, 8), "coming.when": (1, 5), "coming.place": (1, 6),
+    "coming.title": (1, 8), "coming.when": (1, 5), "coming.place": (1, 6), "resort_status": (1, 4),
 }
 # News sections: key, printed head, (min, max) stories. Page 2 is the same every day; page 3 changes at weekends.
 PAGE2 = [("markets", "markets", (2, 3)), ("world", "world", (3, 4)), ("us", "us & politics", (3, 4)),
@@ -99,6 +99,8 @@ def check_edition(e, day):
 
     for k in ("headline", "verdict", "brief"):
         slot(k, e.get(k))
+    for name, st in (e.get("resort_status") or {}).items():
+        slot("resort_status", st)
     slot("sponsor", e.get("sponsor"), required=False)
     lead = e.get("lead") or {}
     for f in ("head", "text", "outlet"):
@@ -190,8 +192,9 @@ def as_of_text(m, today):
     if not d:
         return ""
     dd = date.fromisoformat(d)
-    label = "close" if m["fmt"] in ("index",) else "latest"
-    return f"{dd.strftime('%a')} {label}" if dd != date.fromisoformat(today) else "today"
+    if m["fmt"] == "index":
+        return f"{dd.strftime('%a')} close"
+    return "today" if dd == date.fromisoformat(today) else f"{dd.strftime('%a')} latest"
 
 
 SHAPES = [  # Bauhaus compositions, rotated by issue number so the masthead varies but never degrades
@@ -262,6 +265,9 @@ def status_text(r):
 def context(doc, e):
     p = doc["paper"]
     d = date.fromisoformat(p["date"])
+    over = e.get("resort_status") or {}
+    for rg in p.get("regions") or []:
+        rg["resorts"] = [dict(r, status=over.get(r["name"], r.get("status"))) for r in rg.get("resorts", [])]
     regions = []
     for rg in p.get("regions") or []:
         rr = dict(rg)

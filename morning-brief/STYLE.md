@@ -33,6 +33,7 @@ One footer line on page 1, built from the data file. Story and event links sit o
 | Pick of the week | Title up to 10 words, why up to 18, plus when and where. |
 | Events | Up to 18, sorted by time within each day. Title up to 8 words, place up to 6, labelled FREE or NO FEE LISTED, with RSVP when needed. Up to 3 ongoing exhibitions and 3 coming-up events. |
 | Sponsor | Optional, up to 6 words, top right. |
+| Resort status | Optional, up to 4 words per resort, only from the resort's own page. |
 
 ## Choosing
 - **Headline order:** an NWS watch, warning or advisory for the Aspen area; then a storm total; then Aspen Snowmass or Independence Pass news; then the dry or wet outlook.

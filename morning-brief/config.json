@@ -494,11 +494,6 @@
    "section": "world"
   },
   {
-   "outlet": "Yahoo Finance",
-   "url": "https://finance.yahoo.com/news/rssindex",
-   "section": "markets"
-  },
-  {
    "outlet": "investingLive",
    "url": "https://investinglive.com/feed/",
    "section": "economy"
@@ -581,15 +576,11 @@
    "url": "https://longreads.com/feed/",
    "section": "longread",
    "window_days": 7
-  },
-  {
-   "outlet": "Rest of World",
-   "url": "https://restofworld.org/feed/latest/",
-   "section": "tech",
-   "window_days": 3
   }
  ],
  "_news_note": "Feeds are free-to-read outlets only. Never add FT, NYT, WSJ, Bloomberg, The Economist or any paywalled site. URLs untested until the first networked run; a dead feed is logged and skipped.",
  "news_summaries": false,
- "_news_summaries_note": "false while the data lives in a public repo; set true in a private repo so the writer gets each feed's summary"
+ "_news_summaries_note": "false while the data lives in a public repo; set true in a private repo so the writer gets each feed's summary",
+ "use_liftie": false,
+ "_liftie_note": "Liftie answers GitHub's servers with 403 Forbidden, so lift counts are off; resort status comes from opening dates here and from the edition's resort_status."
 }

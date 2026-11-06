@@ -10,6 +10,7 @@ Produce today's Morning Brief for J Blake Nunley, Aspen, as a four-page PDF. Tod
 3. WORDS. Write edition/TODAY.json to the STYLE.md slots: the headline and verdict from the data file and NWS's own wording; two pages of news; the pick of the week; and the events.
    - Choose news from `python3 fetch.py headlines data/news-TODAY.json`. A story may rest on its feed title and summary; open the page only when the sentence needs more.
    - Without the headlines file, search outlet by outlet with allowed_domains, which returns dated articles in one call.
+   - Set resort_status only from a resort's own page, for example "Open" on opening day.
    - Open every event link once. Every item must be dated inside its window, free to read, and support its sentence. Drop any that fail.
 
 4. RENDER. Run `python3 render.py --data … --edition … --out Morning-Brief-TODAY.pdf`. If it reports a violation or an overflow, rewrite that slot and run it again. Never edit the template, CSS or limits. View both pages once at 60 dpi.
