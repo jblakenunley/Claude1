@@ -133,7 +133,7 @@ def snotel_block(raw, ids, day, names=None):
         if not today:
             continue
         want = (names or {}).get(str(sid))
-        if want and want.split()[0].lower() not in today["name"].lower():
+        if want and want.split()[0].lower().replace(" ", "") not in today["name"].lower().replace(" ", ""):
             dropped.append({"id": sid, "expected": want, "got": today["name"]})
             continue
         s = {"id": sid, "name": today["name"], "swe_in": r1(today["swe_in"]), "depth_in": today["depth_in"],
@@ -275,7 +275,7 @@ def caic_for(zones, key):
 def resort_status(name, cfg, today, ua):
     r = cfg["resorts"].get(name, {})
     out = {"name": name}
-    js = get_json(f"https://liftie.info/api/resort/{r['liftie']}", ua, f"Liftie {name}") if r.get("liftie") else None
+    js = get_json(f"https://liftie.info/api/resort/{r['liftie']}", ua, f"Liftie {name}") if r.get("liftie") and cfg.get("use_liftie") else None
     stats = ((js or {}).get("lifts") or {}).get("stats") or {}
     running = (stats.get("open") or 0) + (stats.get("hold") or 0)
     total = sum(v for k, v in stats.items() if isinstance(v, int))
@@ -388,13 +388,19 @@ def road_verdicts(routes, feats, now):
 
 # ---------------------------------------------------------------- markets (Yahoo chart API, FRED fallback)
 def market(m, ua):
+    """Last price, its trading day in the exchange's own time zone, and the change from the prior day's close."""
     js = get_json(f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(m['yahoo'])}?range=5d&interval=1d",
                   ua, f"Yahoo {m['name']}")
     try:
         res = js["chart"]["result"][0]
-        pairs = [(t, c) for t, c in zip(res["timestamp"], res["indicators"]["quote"][0]["close"]) if c is not None]
-        (t0, prev), (t1, last) = pairs[-2], pairs[-1]
-    except (TypeError, KeyError, IndexError, ValueError):
+        meta = res["meta"]
+        tz = ZoneInfo(meta.get("exchangeTimezoneName") or "America/New_York")
+        last, t_last = meta["regularMarketPrice"], meta["regularMarketTime"]
+        last_day = datetime.fromtimestamp(t_last, tz).date()
+        closes = [(datetime.fromtimestamp(t, tz).date(), c)
+                  for t, c in zip(res["timestamp"], res["indicators"]["quote"][0]["close"]) if c is not None]
+        prev = next(c for d, c in reversed(closes) if d < last_day)
+    except (TypeError, KeyError, IndexError, ValueError, StopIteration):
         if m.get("fred"):
             txt = get(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={m['fred']}", ua, label=f"FRED {m['fred']}")
             rows = [r for r in csv.reader(io.StringIO(txt or "")) if len(r) == 2 and num(r[1]) is not None]
@@ -405,8 +411,7 @@ def market(m, ua):
         return None
     if m["fmt"] == "yield" and last > 20:  # older ^TNX quotes were yield x10
         last, prev = last / 10, prev / 10
-    out = {"name": m["name"], "value": round(last, {"yield": 3, "fx": 4}.get(m["fmt"], 2)), "as_of":
-           datetime.fromtimestamp(t1, ET).strftime("%Y-%m-%d"), "fmt": m["fmt"]}
+    out = {"name": m["name"], "value": round(last, {"yield": 3, "fx": 4}.get(m["fmt"], 2)), "as_of": last_day.isoformat(), "fmt": m["fmt"]}
     if m["fmt"] == "yield":
         out["change_bp"] = round((last - prev) * 100)
     else:
@@ -587,6 +592,7 @@ def run(day, cfg, history_dir=None):
     zones = safely(archive, "caic", lambda: caic(ua), {})
     if zones:
         sources.append("CAIC via avalanche.org")
+        archive["caic_zones"] = zones
     by_id = {s["id"]: s for s in stations + others}
     regions = []
     for rg in cfg["regions"]:
