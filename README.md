@@ -1,2 +1,5 @@
-# Claude1
-Clean exported code straight from Claude Prime
+# Morning Brief data
+
+Written each morning by the `morning-brief-data` workflow on `main`. `data/YYYY-MM-DD.json` holds the day's snow, forecast, avalanche, road, lift and market numbers in US units; `data/news-YYYY-MM-DD.json` holds headlines and links from free news feeds; `logs/YYYY-MM-DD.txt` records each run.
+
+Road data comes from COtrip. The data made available here has been modified for use from its original source, which is the State of Colorado, Department of Transportation (CDOT). THE STATE OF COLORADO AND CDOT MAKES NO REPRESENTATIONS OR WARRANTY AS TO THE COMPLETENESS, ACCURACY, TIMELINESS, OR CONTENT OF ANY DATA MADE AVAILABLE THROUGH THIS SITE. THE STATE OF COLORADO AND CDOT EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. The data is subject to change as modifications and updates are complete. It is understood that the information contained in the Web feed is being used at one's own risk.
