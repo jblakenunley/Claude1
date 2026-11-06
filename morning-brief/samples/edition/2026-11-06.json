@@ -1,0 +1,435 @@
+{
+ "headline": "Dry into next week after the midweek storm's 8 inches",
+ "verdict": "No snow in the NWS forecast for the Aspen area through Thursday, with highs in the mid-40s to mid-50s from Sunday. Keystone and A-Basin are open; Breckenridge and Copper plan to open today.",
+ "brief": "The post-election rally reversed hard: the S&P 500 had its worst day since April 2025 as AI and chip stocks sold off. Asia followed, Brent neared $100 and October payrolls land at 6:30am MT.",
+ "lead": {
+  "head": "AI fears turn the midterm rally into a global rout",
+  "text": "The S&P 500 fell 4.4% and the Dow 1,833 points on Thursday, leaving the Nasdaq Composite down 5.5% and in correction, as investors bet a Democratic Congress will slow data-centre buildouts. Euro Stoxx 50 futures pointed about 1% lower before Friday's open.",
+  "outlet": "AP via Yahoo",
+  "url": "https://ca.finance.yahoo.com/news/major-us-stock-indexes-fared-212218583.html",
+  "outlet2": "Euronews",
+  "url2": "https://www.euronews.com/2026/11/06/global-stock-rout-deepens-as-ai-data-centre-fears-fuel-worst-us-chip-sell-off-since-2020"
+ },
+ "sections": {
+  "markets": [
+   {
+    "lead": "Chips take the hit",
+    "text": "The Philadelphia Semiconductor Index fell 12.25% and the Nasdaq-100 6.3%, about $2.3 trillion of value, with SpaceX and Tesla down more than 9%.",
+    "outlet": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-plunge-chip-stocks-melt-down-193726491.html"
+   },
+   {
+    "lead": "Oil firms toward $100",
+    "text": "Brent rose 1.6% to $99.90 on Friday morning as US–Iran uncertainty kept a floor under prices.",
+    "outlet": "investingLive",
+    "url": "https://investinglive.com/commodities/us-iran-uncertainty-keeps-the-downside-in-oil-limited-as-markets-await-further-developments/",
+    "outlet2": "Trading Economics",
+    "url2": "https://tradingeconomics.com/commodities"
+   }
+  ],
+  "world": [
+   {
+    "lead": "Ukraine hits a Russian refinery",
+    "text": "Ukrainian drones set fires in Ryazan, including at its Rosneft refinery, while Russia struck a Nova Poshta delivery hub near Kharkiv.",
+    "outlet": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2026/11/5/russia-says-it-hit-ukrainian-postal-hub-and-ship-as-ukraine-strikes-ryazan"
+   },
+   {
+    "lead": "Talks head to Abu Dhabi",
+    "text": "US, Ukrainian and Russian negotiators resume technical talks next week; Poland warned allies not to settle terms without Eastern Europe.",
+    "outlet": "Euronews",
+    "url": "https://www.euronews.com/2026/11/06/poland-warns-allies-dont-negotiate-with-russia-over-eastern-europes-head"
+   },
+   {
+    "lead": "Eisenkot nears a majority",
+    "text": "Israel's Arab-led Joint List will back Gadi Eisenkot to form a government, giving him an expected 67 of the Knesset's 120 seats.",
+    "outlet": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2026/11/5/joint-list-says-it-will-back-eisenkot-to-form-israels-next-government"
+   },
+   {
+    "lead": "Paraguay's bank crisis",
+    "text": "Paraguay's Congress rejected President Santiago Peña's resignation, offered after the collapse of Ueno Bank.",
+    "outlet": "Al Jazeera",
+    "url": "https://www.aljazeera.com/economy/2026/11/5/paraguay-president-pena-resigns-in-wake-of-bank-collapse"
+   }
+  ],
+  "us": [
+   {
+    "lead": "Meta flags data-centre backlash",
+    "text": "Meta's president said the Democratic wins will make data centres harder to build and expects more projects to face local review.",
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/"
+   },
+   {
+    "lead": "Fed picks now need Democrats",
+    "text": "UBS notes that Democratic control of the Senate means the President's Federal Reserve nominees now need Democratic votes.",
+    "outlet": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-plunge-chip-stocks-melt-down-193726491.html"
+   },
+   {
+    "lead": "Big Tech sues California",
+    "text": "Google, Meta and TikTok sued to block California's law curbing addictive feeds for under-16s, which takes effect on 1 January 2027.",
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/meta-google-and-tiktok-sue-california-ag-over-teen-social-media-law/"
+   },
+   {
+    "lead": "Trump on the sell-off",
+    "text": "Trump posted that stocks had one of their worst days ever but would recover.",
+    "outlet": "investingLive",
+    "url": "https://investinglive.com/news/investinglive-asia-pacific-news-wrap-global-tech-stocks-rout-raises-growth-concerns/"
+   }
+  ],
+  "economy": [
+   {
+    "lead": "Payrolls at 6:30am MT",
+    "text": "October payrolls are expected at +65,000 after +29,000, with unemployment at 4.2%; Michigan consumer sentiment follows.",
+    "outlet": "investingLive",
+    "url": "https://investinglive.com/news/what-are-the-main-events-for-today-80/"
+   },
+   {
+    "lead": "Hike odds near 72%",
+    "text": "The New York Fed's Williams called the economy resilient and said it is time to gather information; markets price 72.3% odds of a hike.",
+    "outlet": "investingLive",
+    "url": "https://investinglive.com/central-banks/fed-s-williams-says-us-economy-remains-resilient-appropriate-time-to-gather-more-information/"
+   },
+   {
+    "lead": "Eurozone shoppers pull back",
+    "text": "Eurozone retail sales fell 0.7% in September from August, against expectations of a 0.1% dip.",
+    "outlet": "investingLive",
+    "url": "https://investinglive.com/news/eurozone-retail-sales-fall-0-7-in-september-signalling-weakening-consumer-demand/"
+   }
+  ],
+  "europe": [
+   {
+    "lead": "France strikes over prices",
+    "text": "At least 575,000 people marched across France on Thursday against the cost of living, the Interior Ministry said; 448 were arrested.",
+    "outlet": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2026/11/5/workers-strike-across-france-hundreds-of-thousands-expected-to-protest"
+   },
+   {
+    "lead": "Hoax threats divert flights",
+    "text": "Bomb hoaxes disrupted at least 27 flights across Europe on Thursday; the EU says it is too early to say whether they are linked.",
+    "outlet": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2026/11/5/bomb-threat-diverts-dublin-rome-flight-to-france"
+   }
+  ],
+  "companies": [
+   {
+    "lead": "Palo Alto eyes Clutch",
+    "text": "Palo Alto Networks is in talks to buy AI-agent security startup Clutch for $500 million in cash, about 50 times its annual revenue.",
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/"
+   },
+   {
+    "lead": "Dropbox buys Tigris Data",
+    "text": "Dropbox will pay $350 million for Tigris Data, apparently its largest acquisition, to build storage for AI agents.",
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/"
+   },
+   {
+    "lead": "Zipline raises at $21.5bn",
+    "text": "Zipline raised $1.5 billion at a $21.5 billion valuation as Walmart agreed to add 300 US drone delivery sites.",
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/zipline-hits-21-5b-valuation-as-walmart-expands-bet-on-drone-delivery/"
+   },
+   {
+    "lead": "AppLovin beats",
+    "text": "AppLovin's third-quarter revenue of $2.18 billion beat the $2.07 billion expected, and it guided the fourth quarter to $2.37–2.40 billion.",
+    "outlet": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-plunge-chip-stocks-melt-down-193726491.html"
+   }
+  ],
+  "financials": [
+   {
+    "lead": "Tokenised equity trades print",
+    "text": "The first equity trades under the SEC's Innovation Exemption settled atomically on the Canton Network, with DRW Cumberland buying tokenised stock.",
+    "outlet": "Markets Media",
+    "url": "https://www.marketsmedia.com/first-equity-trades-executed-under-sec-innovation-exemption/"
+   },
+   {
+    "lead": "Bitcoin slides",
+    "text": "Bitcoin briefly fell below $76,000 on Thursday, down more than 5% on the day.",
+    "outlet": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-plunge-chip-stocks-melt-down-193726491.html"
+   }
+  ],
+  "tech": [
+   {
+    "lead": "OpenAI arms bug hunters",
+    "text": "OpenAI released ChatGPT Cyber to its top-tier security researchers after its models flagged 948 potential issues in the Linux kernel.",
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/"
+   },
+   {
+    "lead": "OpenAI eyes a 2027 listing",
+    "text": "OpenAI president Greg Brockman said the company could be ready for an initial public offering in 2027.",
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/openai-president-greg-brockman-says-company-could-be-ipo-ready-in-2027/"
+   },
+   {
+    "lead": "Meta's Muse takes calls",
+    "text": "Meta opened video chat with its Muse AI agent to all US users, ahead of a Muse wearable due before year-end.",
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/"
+   },
+   {
+    "lead": "Airbnb plans an AI agent",
+    "text": "Airbnb says it will launch an AI travel agent in the first half of 2027.",
+    "outlet": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/"
+   }
+  ],
+  "asia": [
+   {
+    "lead": "Asia's chip stocks crack",
+    "text": "The Nikkei fell as much as 7% and the Kospi 8.8%, tripping a halt; SK Hynix lost about 10% and TSMC up to 8.5%.",
+    "outlet": "AP via ClickOnDetroit",
+    "url": "https://www.clickondetroit.com/business/2026/11/06/japans-stock-benchmark-nikkei-tumbles-more-than-6-after-trading-opens/"
+   },
+   {
+    "lead": "Governments step in",
+    "text": "Seoul cut margin requirements for three months, Taiwan told regulators to prepare stabilisation steps and Japan floated support payments for workers.",
+    "outlet": "investingLive",
+    "url": "https://investinglive.com/news/investinglive-asia-pacific-news-wrap-global-tech-stocks-rout-raises-growth-concerns/"
+   }
+  ],
+  "mideast": [
+   {
+    "lead": "Trump threatens Iran",
+    "text": "Trump said the US may have to destroy the rest of Iran; Tehran reportedly sent a nuclear proposal through Qatar with conditions.",
+    "outlet": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/liveblog/2026/11/6/iran-war-live-trump-warns-us-may-have-to-destroy-rest-of-iran"
+   },
+   {
+    "lead": "Tankers burn in Hormuz",
+    "text": "Iranian forces said at least five tankers and a tugboat caught fire in the Strait of Hormuz, several after striking mines.",
+    "outlet": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2026/11/5/iran-says-tankers-struck-in-hormuz-amid-fears-of-new-us-attack"
+   },
+   {
+    "lead": "US forces on standby",
+    "text": "Axios reports US Central Command is finalising preparations for possible renewed major combat, with no order yet issued.",
+    "outlet": "investingLive",
+    "url": "https://investinglive.com/commodities/us-iran-uncertainty-keeps-the-downside-in-oil-limited-as-markets-await-further-developments/"
+   }
+  ],
+  "science": [
+   {
+    "lead": "Can AI models introspect?",
+    "text": "Researchers who inject concepts into language models find the models can sometimes detect the tampering; whether that counts as introspection is disputed.",
+    "outlet": "Quanta",
+    "url": "https://www.quantamagazine.org/new-research-tests-whether-ai-models-know-their-own-thoughts-20261104/"
+   }
+  ]
+ },
+ "week": [
+  {
+   "day": "Today",
+   "text": "US October payrolls and Michigan sentiment; Canada jobs."
+  },
+  {
+   "day": "Mon 9",
+   "text": "COP31 opens in Antalya; France's prime minister meets unions on wages."
+  },
+  {
+   "day": "Tue 10",
+   "text": "US October CPI and real earnings at 6:30am MT."
+  },
+  {
+   "day": "Wed 11",
+   "text": "Veterans Day, no BLS releases; COP31 leaders' summit opens."
+  },
+  {
+   "day": "Fri 13",
+   "text": "US October PPI."
+  },
+  {
+   "day": "Next week",
+   "text": "US, Ukraine and Russia resume technical talks in Abu Dhabi."
+  }
+ ],
+ "longread": {
+  "title": "Is There Anything Left in the Dream of Cold Fusion?",
+  "why": "Exotic muonic atoms will not solve the energy crisis, but they are stretching the boundaries of physics.",
+  "outlet": "Quanta",
+  "url": "https://www.quantamagazine.org/is-there-anything-left-in-the-dream-of-cold-fusion-20261102/"
+ },
+ "pick": {
+  "title": "Pam Houston on Animals Taught Me Everything",
+  "why": "A live podcast recording with Mitzi Rapkin, then questions and a signing.",
+  "when": "Wed 11 Nov, 6:30pm",
+  "place": "Pitkin County Library, Aspen",
+  "url": "https://pitcolib.org/library-events/animals-taught-me-everything-conversation-author-pam-houston-mitzi-rapkin-podcast"
+ },
+ "events": [
+  {
+   "day": "Fri 6",
+   "time": "5–7pm",
+   "title": "Chris Hassig and Rachel Becker openings",
+   "place": "The Art Base, Basalt",
+   "kind": "art",
+   "label": "FREE",
+   "url": "https://www.aspenpublicradio.org/community-calendar/event/chris-hassig-19-01-2026-11-21-41"
+  },
+  {
+   "day": "Fri 6",
+   "time": "5–8pm",
+   "title": "First Friday Día de los Muertos",
+   "place": "Main Street, Carbondale",
+   "kind": "com",
+   "label": "FREE",
+   "url": "https://www.aspenpublicradio.org/community-calendar/event/first-friday-dia-de-los-muertos-celebration-23-09-2026-09-03-24"
+  },
+  {
+   "day": "Fri 6",
+   "time": "5–7pm",
+   "title": "Alebrije mask workshop",
+   "place": "4th Street Plaza, Carbondale",
+   "kind": "fam",
+   "label": "FREE",
+   "url": "https://aspenartmuseum.org/event/primer-viernes-mascaras-de-alebrije-taller/"
+  },
+  {
+   "day": "Sat 7",
+   "time": "11:30am",
+   "title": "Persistence and Grit, a talk",
+   "place": "Glenwood Library, Glenwood Springs",
+   "kind": "art",
+   "label": "NO FEE LISTED",
+   "url": "https://soprissun.com/calendar-nov-5-15-2026/"
+  },
+  {
+   "day": "Sat 7",
+   "time": "3:30pm",
+   "title": "Dungeons and Dragons for teens",
+   "place": "Pitkin County Library, Aspen",
+   "kind": "fam",
+   "label": "NO FEE LISTED",
+   "url": "https://pitcolib.org/library-events/dungeons-dragons-1107261530"
+  },
+  {
+   "day": "Sun 8",
+   "time": "2pm",
+   "title": "Museum tour in Spanish",
+   "place": "Aspen Art Museum, Aspen",
+   "kind": "art",
+   "label": "FREE",
+   "url": "https://aspenartmuseum.org/event/recorridos-por-el-museo-en-espanol-november-8/"
+  },
+  {
+   "day": "Sun 8",
+   "time": "3–6pm",
+   "title": "Día de los Muertos celebration",
+   "place": "Aspen Art Museum, Aspen",
+   "kind": "com",
+   "label": "FREE",
+   "rsvp": true,
+   "url": "https://aspenartmuseum.org/event/arte-en-espanol-2026-dia-de-los-muertos-celebration/"
+  },
+  {
+   "day": "Mon 9",
+   "time": "5:30pm",
+   "title": "Nonfiction Book Club: The Havana Syndrome",
+   "place": "Pitkin County Library, Aspen",
+   "kind": "art",
+   "label": "NO FEE LISTED",
+   "url": "https://pitcolib.org/nonfiction-book-club/book-of-the-month/nonfiction-book-club-havana-syndrome-secret-weapons"
+  },
+  {
+   "day": "Mon 9",
+   "time": "11am",
+   "title": "Soup Social",
+   "place": "Basalt Library, Basalt",
+   "kind": "com",
+   "label": "NO FEE LISTED",
+   "url": "https://soprissun.com/calendar-nov-5-15-2026/"
+  },
+  {
+   "day": "Tue 10",
+   "time": "4:30pm",
+   "title": "Steven Yazzie, visiting-artist lecture",
+   "place": "Anderson Ranch, Snowmass Village",
+   "kind": "art",
+   "label": "FREE",
+   "url": "https://www.aspenpublicradio.org/community-calendar/event/steven-yazzie-visiting-artist-lecture-24-09-2026-17-45-45"
+  },
+  {
+   "day": "Tue 10",
+   "time": "6pm",
+   "title": "From Page to Stage poetry showcase",
+   "place": "Crystal Theatre, Carbondale",
+   "kind": "art",
+   "label": "FREE",
+   "rsvp": true,
+   "url": "https://www.aspenpublicradio.org/community-calendar/event/from-page-to-stage-aspen-words-poetry-showcase-20-10-2026-15-25-41"
+  },
+  {
+   "day": "Tue 10",
+   "time": "4pm",
+   "title": "Paint Like Bob Ross",
+   "place": "Pitkin County Library, Aspen",
+   "kind": "art",
+   "label": "NO FEE LISTED",
+   "url": "https://pitcolib.org/library-events/paint-bob-ross-1110261600"
+  },
+  {
+   "day": "Wed 11",
+   "time": "5:30pm",
+   "title": "Logan Phillips reads from Reckon",
+   "place": "Explore Books, Aspen",
+   "kind": "art",
+   "label": "FREE",
+   "url": "https://www.aspenpublicradio.org/community-calendar/event/logan-phillips-at-explore-books-16-10-2026-11-34-58"
+  },
+  {
+   "day": "Wed 11",
+   "time": "6:30pm",
+   "title": "Pam Houston and Mitzi Rapkin",
+   "place": "Pitkin County Library, Aspen",
+   "kind": "art",
+   "label": "NO FEE LISTED",
+   "url": "https://pitcolib.org/library-events/animals-taught-me-everything-conversation-author-pam-houston-mitzi-rapkin-podcast"
+  },
+  {
+   "day": "Thu 12",
+   "time": "10am",
+   "title": "Community Mahjong Club",
+   "place": "Pitkin County Library, Aspen",
+   "kind": "com",
+   "label": "FREE",
+   "url": "https://pitcolib.org/library-events/community-mahjong-club-1112261000"
+  },
+  {
+   "day": "Thu 12",
+   "time": "5:30pm",
+   "title": "Self-publishing workshop",
+   "place": "Glenwood Library, Glenwood Springs",
+   "kind": "art",
+   "label": "NO FEE LISTED",
+   "rsvp": true,
+   "url": "https://soprissun.com/calendar-nov-5-15-2026/"
+  }
+ ],
+ "ongoing": [
+  {
+   "title": "Kerstin Brätsch, Fossil Psychic Stone Mimicry",
+   "place": "Aspen Art Museum",
+   "until": "31 Mar 2027",
+   "url": "https://aspenartmuseum.org/exhibition/kerstin-bratsch/"
+  },
+  {
+   "title": "Adrián Villar Rojas, First Gods, Lost Animals",
+   "place": "Aspen Art Museum",
+   "until": "18 Apr 2027",
+   "url": "https://aspenartmuseum.org/exhibition/adrian-villar-rojas/"
+  }
+ ],
+ "coming": [
+  {
+   "title": "DanceAspen Sneak Peek",
+   "when": "Wed 18 Nov, 5:30pm",
+   "place": "Aspen Art Museum",
+   "url": "https://aspenartmuseum.org/event/danceaspen-sneak-peek/"
+  }
+ ]
+}

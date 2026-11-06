@@ -1,0 +1,49 @@
+# Morning Brief data: runs morning-brief/fetch.py on GitHub's servers, which can reach NRCS, NWS, CAIC,
+# COtrip, Liftie, Yahoo and the news feeds. Writes data/DATE.json, data/news-DATE.json and logs/DATE.txt
+# to the mb-data branch, where the 5:33am Morning Brief task reads them.
+# The CDOT key lives in Settings > Secrets and variables > Actions as CDOT_API_KEY; without it, roads are left out.
+name: morning-brief-data
+on:
+  schedule:
+    - cron: "30 11 * * *"   # 4:30am MST / 5:30am MDT
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["morning-brief/**", ".github/workflows/morning-brief-data.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: morning-brief-data
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: mb-data
+          path: mb-data
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch today's numbers and headlines
+        env:
+          CDOT_API_KEY: ${{ secrets.CDOT_API_KEY }}
+        run: |
+          D=$(TZ=America/Denver date +%F)
+          mkdir -p mb-data/data mb-data/logs
+          L="mb-data/logs/$D.txt"
+          echo "run $(date -u +%FT%TZ) cdot_key=$([ -n "$CDOT_API_KEY" ] && echo set || echo missing)" > "$L"
+          python3 morning-brief/fetch.py selftest >> "$L" 2>&1 || true
+          python3 morning-brief/fetch.py run --date "$D" --out "mb-data/data/$D.json" --history mb-data/data >> "$L" 2>&1 || echo "fetch failed" >> "$L"
+          python3 morning-brief/fetch.py validate "mb-data/data/$D.json" >> "$L" 2>&1 || true
+          if [ -n "$CDOT_API_KEY" ] && grep -rqF "$CDOT_API_KEY" mb-data; then echo "key found in output, refusing to commit"; exit 1; fi
+      - name: Commit to mb-data
+        working-directory: mb-data
+        run: |
+          git config user.name "morning-brief-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "data $(TZ=America/Denver date +%F)" && git push || echo "nothing new"
