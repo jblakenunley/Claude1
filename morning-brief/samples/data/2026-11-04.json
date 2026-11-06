@@ -1,0 +1,238 @@
+{
+ "schema": 2,
+ "paper": {
+  "date": "2026-11-04",
+  "issue": "038",
+  "weekday": "Wednesday",
+  "snow": {
+   "stations": [
+    {
+     "id": 542,
+     "name": "Independence Pass",
+     "swe_in": 1.5,
+     "pct_median": 94
+    },
+    {
+     "id": 737,
+     "name": "Schofield Pass",
+     "swe_in": 3.8
+    },
+    {
+     "id": 618,
+     "name": "McClure Pass",
+     "swe_in": 0.4
+    },
+    {
+     "id": 669,
+     "name": "North Lost Trail",
+     "swe_in": 0.4
+    },
+    {
+     "id": 556,
+     "name": "Kiln",
+     "swe_in": 0.6
+    },
+    {
+     "id": 547,
+     "name": "Ivanhoe",
+     "swe_in": 1.0
+    },
+    {
+     "id": 369,
+     "name": "Brumley",
+     "swe_in": 1.1
+    }
+   ],
+   "indep_swe_in": 1.5,
+   "indep_pct_median": 94
+  },
+  "summit": {
+   "name": "Aspen Mountain summit",
+   "elev_ft": 10850,
+   "next48h": {
+    "text": "4–8 in",
+    "low_in": 4,
+    "high_in": 8,
+    "when": null,
+    "label": "NWS advisory, above 10,000 ft by Thu 5am"
+   }
+  },
+  "alerts": [
+   {
+    "event": "Winter Weather Advisory",
+    "until": "Thu 5am"
+   }
+  ],
+  "regions": [
+   {
+    "name": "Roaring Fork",
+    "home": true,
+    "resorts": [
+     {
+      "name": "Aspen Mountain",
+      "status": "Opens 26 Nov"
+     },
+     {
+      "name": "Aspen Highlands",
+      "status": "Opens 12 Dec"
+     },
+     {
+      "name": "Snowmass",
+      "status": "Opens 26 Nov"
+     },
+     {
+      "name": "Buttermilk",
+      "status": "Opens 12 Dec"
+     }
+    ],
+    "next48h": "4–8 in",
+    "avalanche": "Moderate"
+   },
+   {
+    "name": "Elk & Gunnison",
+    "home": false,
+    "resorts": [
+     {
+      "name": "Crested Butte",
+      "status": "Opens 25 Nov"
+     }
+    ]
+   },
+   {
+    "name": "Sawatch",
+    "home": false,
+    "resorts": [
+     {
+      "name": "Ski Cooper",
+      "status": "Opens 9 Dec"
+     }
+    ]
+   },
+   {
+    "name": "Vail Valley",
+    "home": false,
+    "resorts": [
+     {
+      "name": "Vail",
+      "status": "Opens 13 Nov"
+     },
+     {
+      "name": "Beaver Creek",
+      "status": "Opens 25 Nov"
+     }
+    ]
+   },
+   {
+    "name": "Summit & I-70",
+    "home": false,
+    "resorts": [
+     {
+      "name": "Breckenridge",
+      "status": "Opens 6 Nov"
+     },
+     {
+      "name": "Copper",
+      "status": "Opens 6 Nov"
+     }
+    ]
+   },
+   {
+    "name": "Northern",
+    "home": false,
+    "resorts": [
+     {
+      "name": "Eldora",
+      "status": "Opens 13 Nov"
+     }
+    ]
+   },
+   {
+    "name": "Southwest",
+    "home": false,
+    "resorts": [
+     {
+      "name": "Purgatory",
+      "status": "Opens 20 Nov"
+     },
+     {
+      "name": "Silverton",
+      "status": "Opens 31 Dec"
+     }
+    ]
+   }
+  ],
+  "roads": [
+   {
+    "route": "Aspen to Snowmass",
+    "verdict": "GO",
+    "reason": "No incidents; air 24°F at Snowmass Creek"
+   },
+   {
+    "route": "Independence Pass",
+    "verdict": "NO-GO",
+    "reason": "Closed MP 51.4 to 68.5"
+   },
+   {
+    "route": "To Denver via Glenwood and I-70",
+    "verdict": "CAUTION",
+    "reason": "Open and dry; traction law in effect"
+   },
+   {
+    "route": "To Vail",
+    "verdict": "CAUTION",
+    "reason": "Traction law; Vail Pass 22°F"
+   },
+   {
+    "route": "Red Mountain Pass",
+    "verdict": "CAUTION",
+    "reason": "Open and dry; traction law in effect"
+   },
+   {
+    "route": "Wolf Creek Pass",
+    "verdict": "NO-GO",
+    "reason": "Closed MP 157 to 184.5"
+   }
+  ],
+  "markets": [
+   {
+    "name": "Dow",
+    "value": 51786,
+    "change_pct": -0.4,
+    "as_of": "2026-11-03",
+    "fmt": "index"
+   },
+   {
+    "name": "US 10-yr",
+    "value": 4.944,
+    "as_of": "2026-11-04",
+    "fmt": "yield"
+   },
+   {
+    "name": "Brent",
+    "value": 102.84,
+    "change_pct": -0.7,
+    "as_of": "2026-11-04",
+    "fmt": "usd"
+   },
+   {
+    "name": "Gold",
+    "value": 4043,
+    "change_pct": 2.8,
+    "as_of": "2026-11-04",
+    "fmt": "usd"
+   }
+  ],
+  "sources": [
+   "NRCS SNOTEL 4 Nov",
+   "NWS Grand Junction 4 Nov 3:23am",
+   "OpenSnow",
+   "COtrip and CDOT 4 Nov 2:48am",
+   "SRN News",
+   "Trading Economics"
+  ],
+  "cdot_notice": true
+ },
+ "archive": {
+  "note": "sample built from archived records"
+ }
+}
