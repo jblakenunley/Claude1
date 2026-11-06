@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Morning Brief Nº {{ p.issue }}</title>
+<style>{{ css | safe }}</style></head><body>
+
+{# ============================ PAGE 1 — SNOW & ROADS ============================ #}
+<section class="page">
+  {% if e.sponsor %}<div class="sponsor">presented by {{ e.sponsor }}</div>{% endif %}
+  <header class="mast">
+    <div>
+      <h1>morning brief</h1>
+      <div class="meta k"><i></i>Nº {{ p.issue }} · {{ long_date }} · Aspen, Colorado</div>
+    </div>
+    {{ comp | safe }}
+  </header>
+
+  <div class="lead">
+    <div>
+      <div class="k" style="color:var(--red)">snow &amp; roads</div>
+      <h2>{{ e.headline }}</h2>
+      <p>{{ e.verdict }}</p>
+    </div>
+    {% if p.alerts %}
+    <div class="alert"><span class="k">NWS alert</span>
+      {% for a in p.alerts[:2] %}<b>{{ a.event }}{% if a.until %} until {{ a.until }}{% endif %}</b>{% endfor %}
+    </div>
+    {% elif aspen_open %}
+    <div class="calm"><span class="k">aspen snowmass</span><b>{{ aspen_open }}</b></div>
+    {% endif %}
+  </div>
+
+  <div class="tiles">
+    {% for t in tiles %}<div class="tile t{{ loop.index0 }}"><span class="k">{{ t.label }}</span><b>{{ t.value }}</b><span>{{ t.caption }}</span></div>{% endfor %}
+  </div>
+
+  <div class="grid">
+    <div>
+      {% if aspen_resorts %}
+      <div class="block">
+        <h3><i class="m mc"></i>aspen's mountains</h3>
+        <table>
+          <tr><th>Mountain</th><th>Status</th>{% if any_resort_snow %}<th>New 24h</th><th>Base</th>{% endif %}</tr>
+          {% for r in aspen_resorts %}<tr><td>{{ r.name }}</td><td>{{ r.status_text }}</td>
+            {% if any_resort_snow %}<td>{{ inch(r.new_24h_in) }}</td><td>{{ inch(r.base_in) }}</td>{% endif %}</tr>{% endfor %}
+        </table>
+      </div>
+      {% endif %}
+      {% if p.summit and p.summit.days %}
+      <div class="block">
+        <h3><i class="m mt"></i>aspen mountain summit<small>{{ p.summit.elev_ft | thousands }} ft · NWS</small></h3>
+        <div class="fc">
+          {% for d in p.summit.days[:5] %}<div class="{% if d.snow_day or d.snow_night %}snow{% endif %}">
+            <div class="d">{{ d.day | lower }}</div>
+            <div class="t">{% if d.high_f is not none %}{{ d.high_f }}°{% endif %}{% if d.high_f is not none and d.low_f is not none %} / {% endif %}{% if d.low_f is not none %}{{ d.low_f }}°{% endif %}</div>
+            {% if d.snow_day %}<div class="s">Day {{ d.snow_day }}</div>{% endif %}
+            {% if d.snow_night %}<div class="s">Night {{ d.snow_night }}</div>{% endif %}
+            {% if not d.snow_day and not d.snow_night %}<div class="s">No snow</div>{% endif %}
+            {% if d.pop_pct %}<div class="s">{{ d.pop_pct }}% chance</div>{% endif %}
+          </div>{% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      {% if regions %}
+      <div class="block co">
+        <h3><i class="m ms"></i>colorado<small>by region</small></h3>
+        <table>
+          <tr><th>Region</th><th style="text-align:left">Open now</th>{% for c in region_cols %}<th>{{ c.head }}</th>{% endfor %}</tr>
+          {% for r in regions %}<tr class="{% if r.home %}home{% endif %}"><td>{{ r.name }}</td><td class="open">{{ r.open_text }}</td>{% for c in region_cols %}<td>{{ c.fmt(r) }}</td>{% endfor %}</tr>{% endfor %}
+        </table>
+      </div>
+      {% endif %}
+    </div>
+
+    <div>
+      {% if p.roads %}
+      <div class="block">
+        <h3><i class="m mc"></i>roads from aspen</h3>
+        {% for r in p.roads %}<div class="road"><b>{{ r.route }}</b><span class="chip {{ r.verdict }}"><i></i>{{ r.verdict }}</span><p>{{ r.reason }}</p></div>{% endfor %}
+      </div>
+      {% endif %}
+      {% if p.snow and p.snow.stations %}
+      <div class="block">
+        <h3><i class="m ms"></i>aspen snowpack<small>inches{% if p.snow.median_depth_in is defined and p.snow.median_depth_in is not none %} · median {{ p.snow.median_depth_in | num }}{% endif %}</small></h3>
+        <table>
+          <tr><th>Site</th>{% for c in snow_cols %}<th>{{ c.head }}</th>{% endfor %}</tr>
+          {% for s in p.snow.stations %}<tr><td>{{ s.name }}</td>{% for c in snow_cols %}<td>{{ c.fmt(s) }}</td>{% endfor %}</tr>{% endfor %}
+        </table>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="src">Sources: {{ p.sources | join(' · ') }}</div>
+    {% if p.cdot_notice %}<div class="notice">{{ cdot_notice }}</div>{% endif %}
+    <div class="pg"><span>Morning Brief · {{ short_date }}</span><span>01 / snow &amp; roads</span></div>
+  </footer>
+</section>
+
+{% macro story(it) -%}
+<div class="story"><p><b>{{ it.lead }}.</b> {{ it.text }} <a href="{{ it.url }}">{{ it.outlet }}</a>{% if it.url2 %} · <a href="{{ it.url2 }}">{{ it.outlet2 }}</a>{% endif %}</p></div>
+{%- endmacro %}
+{% macro section(sec) -%}
+<div class="sec"><h3><i class="m {{ sec.shape }}"></i>{{ sec.head }}</h3>{% for it in sec["items"] %}{{ story(it) }}{% endfor %}</div>
+{%- endmacro %}
+
+{# ============================ PAGE 2 — THE NEWS ============================ #}
+<section class="page">
+  <div class="band"><div class="n bY">02</div><div class="tt"><h2>the news</h2><span class="k">{{ long_date }} · free to read, every link</span></div></div>
+  <div class="daybrief"><div class="sq"></div><div><span class="k" style="color:var(--red)">the day in brief</span><p>{{ e.brief }}</p></div></div>
+  {% if p.markets %}
+  <div class="mk">
+    {% for m in p.markets %}<div><span class="k">{{ m.name }}</span><b>{{ money(m) }}</b>
+      <span class="{{ 'up' if chg_sign(m) > 0 else ('dn' if chg_sign(m) < 0 else '') }}">{{ change(m) }}</span><em>{{ m.as_of_text }}</em></div>{% endfor %}
+  </div>
+  {% endif %}
+  <div class="lead-story">
+    <h2>{{ e.lead.head }}</h2>
+    <p>{{ e.lead.text }} <a href="{{ e.lead.url }}">{{ e.lead.outlet }}</a>{% if e.lead.url2 %} · <a href="{{ e.lead.url2 }}">{{ e.lead.outlet2 }}</a>{% endif %}</p>
+  </div>
+  <div class="cols">{% for sec in page2 %}{{ section(sec) }}{% endfor %}</div>
+  <footer class="foot">
+    <div class="pg"><span>Morning Brief · {{ short_date }}</span><span>02 / the news</span></div>
+  </footer>
+</section>
+
+{# ============================ PAGE 3 — BUSINESS, OR THE WEEKEND ============================ #}
+<section class="page">
+  <div class="band"><div class="n bB">03</div><div class="tt"><h2>{{ 'business' if kind == 'daily' else 'the weekend' }}</h2><span class="k">{{ 'companies · finance · tech · regions · science' if kind == 'daily' else 'review · ideas · long reads · culture' }}</span></div></div>
+  <div class="cols">{% for sec in page3 %}{{ section(sec) }}{% endfor %}</div>
+  {% if e.week or e.longread %}
+  <div class="tail">
+    {% if e.week %}<div class="week"><h3><i class="m mt"></i>the week ahead</h3>
+      {% for w in e.week %}<div class="wk"><b>{{ w.day }}</b><span>{{ w.text }}</span></div>{% endfor %}</div>{% endif %}
+    {% if e.longread %}<div class="longread"><span class="k">the long read</span>
+      <h4><a href="{{ e.longread.url }}">{{ e.longread.title }}</a></h4>
+      <p>{{ e.longread.why }}</p><span class="k">{{ e.longread.outlet }}{% if e.longread.minutes %} · {{ e.longread.minutes }} min{% endif %}</span></div>{% endif %}
+  </div>
+  {% endif %}
+  <footer class="foot">
+    <div class="pg"><span>Morning Brief · {{ short_date }}</span><span>03 / {{ 'business' if kind == 'daily' else 'the weekend' }}</span></div>
+  </footer>
+</section>
+
+{# ============================ PAGE 4 — FREE IN THE VALLEY ============================ #}
+<section class="page">
+  <div class="band"><div class="n bR">04</div><div class="tt"><h2>free in the valley</h2><span class="k">Pitkin County · Basalt · Carbondale · Glenwood Springs</span></div></div>
+
+  {% if e.pick %}<div class="pick"><div class="lab">pick of the week</div>
+    <p><a href="{{ e.pick.url }}">{{ e.pick.title }}</a>.{% if e.pick.why %} {{ e.pick.why }}{% endif %} {{ e.pick.when }}, {{ e.pick.place }}.</p></div>{% endif %}
+
+  {% if e.events %}
+  <div class="legend"><span><i class="sh art"></i>arts &amp; talks</span><span><i class="sh com"></i>community &amp; outdoors</span><span><i class="sh fam"></i>family</span><span><b class="lb FREE">FREE</b> says free</span><span><b class="lb NOFEE">NO FEE</b> free venue, no price listed</span></div>
+  {% for ev in e.events %}<div class="ev {% if ev.first %}first{% endif %}">
+    <span class="dy">{% if ev.first %}{{ ev.day }}{% endif %}</span><span class="tm">{{ ev.time or '' }}</span><i class="sh {{ ev.kind }}"></i>
+    <span><a href="{{ ev.url }}"><b>{{ ev.title }}</b></a> <span class="pl">· {{ ev.place }}</span></span>
+    <span class="lb {{ 'FREE' if ev.label == 'FREE' else 'NOFEE' }}">{{ 'FREE' if ev.label == 'FREE' else 'NO FEE' }}{% if ev.rsvp %} · RSVP{% endif %}</span></div>{% endfor %}
+  {% else %}<p class="muted">No free events found for the next seven days.</p>{% endif %}
+
+  {% if e.ongoing %}<div class="ongo">{% for o in e.ongoing %}<div><span class="k">on view</span><b><a href="{{ o.url }}">{{ o.title }}</a></b>{{ o.place }}, until {{ o.until }}</div>{% endfor %}</div>{% endif %}
+  {% if e.coming %}<p class="coming"><span class="k">coming up</span> {% for c in e.coming %}<a href="{{ c.url }}"><b>{{ c.title }}</b></a>, {{ c.place }}, {{ c.when }}{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
+
+  <footer class="foot">
+    <div class="src">Every link is free to read. Events are free to attend; check the host's page before you go.</div>
+    <div class="pg"><span>Morning Brief · {{ short_date }} · Aspen, Colorado</span><span>04 / free in the valley</span></div>
+  </footer>
+</section>
+</body></html>
