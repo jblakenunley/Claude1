@@ -456,7 +456,7 @@ def score_calls(history, today):
 
 # ---------------------------------------------------------------- news candidates (free RSS/Atom feeds)
 import html as _html
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as XET
 from email.utils import parsedate_to_datetime
 
 
@@ -481,7 +481,7 @@ def _when(s):
 
 def parse_feed(text):
     """RSS 2.0 or Atom -> [{title, url, published (aware datetime), summary}]."""
-    root = ET.fromstring(text.encode("utf-8") if isinstance(text, str) else text)
+    root = XET.fromstring(text.encode("utf-8") if isinstance(text, str) else text)
     out = []
     for it in root.iter():
         tag = it.tag.rsplit("}", 1)[-1]
@@ -509,7 +509,7 @@ def collect_news(cfg, day, ua, now=None):
             continue
         try:
             entries = parse_feed(txt)
-        except ET.ParseError:
+        except (XET.ParseError, ValueError):
             LOG.append({"source": f"RSS {f['outlet']}", "status": "bad_xml"})
             continue
         hours = f.get("window_days", 0) * 24 or base_h
@@ -538,6 +538,15 @@ def fmt_time(iso):
     return f"{t.day} {t.strftime('%b')} {t.strftime('%-I:%M%p').lower()}"
 
 
+def safely(archive, name, fn, default=None):
+    """One source failing must never stop the others: log it and leave the slot empty."""
+    try:
+        return fn()
+    except Exception as e:  # noqa: BLE001
+        archive.setdefault("errors", []).append(f"{name}: {type(e).__name__}: {e}"[:300])
+        return default
+
+
 def run(day, cfg, history_dir=None):
     ua = cfg["user_agent"]
     issue = f"{(date.fromisoformat(day) - date.fromisoformat(cfg['issue_epoch'])).days:03d}"
@@ -551,7 +560,7 @@ def run(day, cfg, history_dir=None):
     region_ids = sorted({i for r in cfg["regions"] for i in r["snotel"]} - set(aspen_ids))
     names = {str(s["id"]): s["name"] for s in cfg["aspen_snotel"]} | cfg["snotel_names"]
     txt = get(snotel_url(aspen_ids + region_ids), ua, label="NRCS SNOTEL")
-    raw = parse_snotel_csv(txt) if txt else {}
+    raw = safely(archive, "snotel", lambda: parse_snotel_csv(txt) if txt else {}, {})
     stations, dropped = snotel_block(raw, aspen_ids, day, names)
     others, dropped2 = snotel_block(raw, region_ids, day, names)
     archive["dropped"] += dropped + dropped2
@@ -565,17 +574,17 @@ def run(day, cfg, history_dir=None):
 
     # forecast: Aspen summit point, alerts
     sp = cfg["summit_point"]
-    fc = nws_forecast(sp["lat"], sp["lon"], ua)
+    fc = safely(archive, "nws summit", lambda: nws_forecast(sp["lat"], sp["lon"], ua))
     if fc:
         paper["summit"] = {"name": sp["name"], "elev_ft": sp["elev_ft"], "days": summit_days(fc), "next48h": next48(fc)}
         archive["forecast_calls"] = record_calls(fc, day, "NWS point, Aspen summit")
         sources.append(f"NWS {fmt_time(fc['issued'])}")
-    alerts = nws_alerts(sp["lat"], sp["lon"], ua)
+    alerts = safely(archive, "nws alerts", lambda: nws_alerts(sp["lat"], sp["lon"], ua), [])
     if alerts:
         paper["alerts"] = alerts
 
     # avalanche and regions
-    zones = caic(ua)
+    zones = safely(archive, "caic", lambda: caic(ua), {})
     if zones:
         sources.append("CAIC via avalanche.org")
     by_id = {s["id"]: s for s in stations + others}
@@ -587,13 +596,13 @@ def run(day, cfg, history_dir=None):
             rec["pct_median"] = round(statistics.median([r["pct_median"] for r in rows if r["pct_median"] is not None])) \
                 if any(r["pct_median"] is not None for r in rows) else None
             rec["new_24h_in"] = max(0, median_of(rows, "depth_24h_in") or 0) if any("depth_24h_in" in r for r in rows) else None
-        rfc = fc if rg.get("home") else nws_forecast(rg["point"][0], rg["point"][1], ua)
+        rfc = fc if rg.get("home") else safely(archive, f"nws {rg['name']}", lambda: nws_forecast(rg["point"][0], rg["point"][1], ua))
         if rfc:
             rec["next48h"] = next48(rfc)["text"]
         lvl = caic_for(zones, rg["caic"]) if zones else None
         if lvl:
             rec["avalanche"] = lvl
-        rec["resorts"] = [resort_status(n, cfg, day, ua) for n in rg["resorts"]]
+        rec["resorts"] = [r for r in (safely(archive, f"liftie {n}", lambda n=n: resort_status(n, cfg, day, ua)) for n in rg["resorts"]) if r]
         regions.append(rec)
     paper["regions"] = regions
     if any(r.get("status") == "Open" for rg in regions for r in rg["resorts"]):
@@ -602,7 +611,7 @@ def run(day, cfg, history_dir=None):
     # roads
     key = os.environ.get("CDOT_API_KEY")
     if key:
-        roads = road_verdicts(cfg["routes"], road_features(key, ua), now)
+        roads = safely(archive, "cotrip", lambda: road_verdicts(cfg["routes"], road_features(key, ua), now), [])
         if roads:
             paper["roads"] = [{k: r[k] for k in ("route", "verdict", "reason")} for r in roads]
             archive["roads_matched"] = {r["route"]: r["matched"] for r in roads}
@@ -610,7 +619,7 @@ def run(day, cfg, history_dir=None):
             paper["cdot_notice"] = True
 
     # markets
-    mk = [x for x in (market(m, ua) for m in cfg["markets"]) if x]
+    mk = [x for x in (safely(archive, f"market {m['name']}", lambda m=m: market(m, ua)) for m in cfg["markets"]) if x]
     if mk:
         paper["markets"] = mk
         sources.append("Yahoo Finance")
@@ -618,10 +627,10 @@ def run(day, cfg, history_dir=None):
     # scorebook
     if history_dir:
         hist = [json.loads(p.read_text()) for p in sorted(Path(history_dir).glob("????-??-??.json")) if p.stem < day][-14:]
-        archive["scores"] = score_calls(hist + [{"date": day, "paper": paper, "archive": archive}], day)
+        archive["scores"] = safely(archive, "scores", lambda: score_calls(hist + [{"date": day, "paper": paper, "archive": archive}], day), [])
 
     paper["sources"] = sources
-    news = collect_news(cfg, day, ua, now)
+    news = safely(archive, "news", lambda: collect_news(cfg, day, ua, now), [])
     archive["news_candidates"] = len(news)
     archive["fetch_log"] = LOG
     return {"schema": 2, "paper": paper, "archive": archive}, news
