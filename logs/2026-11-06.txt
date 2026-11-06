@@ -1,32 +1,4 @@
-run 2026-11-06T23:11:04Z cdot_key=missing
+run 2026-11-06T23:13:07Z cdot_key=missing
 selftest: all parser checks passed
-Traceback (most recent call last):
-  File "/home/runner/work/Claude1/Claude1/morning-brief/fetch.py", line 771, in <module>
-    main()
-  File "/home/runner/work/Claude1/Claude1/morning-brief/fetch.py", line 757, in main
-    doc, news = run(a.date, cfg, a.history)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Claude1/Claude1/morning-brief/fetch.py", line 613, in run
-    mk = [x for x in (market(m, ua) for m in cfg["markets"]) if x]
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Claude1/Claude1/morning-brief/fetch.py", line 613, in <genexpr>
-    mk = [x for x in (market(m, ua) for m in cfg["markets"]) if x]
-                      ^^^^^^^^^^^^^
-  File "/home/runner/work/Claude1/Claude1/morning-brief/fetch.py", line 409, in market
-    datetime.fromtimestamp(t1, ET).strftime("%Y-%m-%d"), "fmt": m["fmt"]}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'module'
-fetch failed
-Traceback (most recent call last):
-  File "/home/runner/work/Claude1/Claude1/morning-brief/fetch.py", line 771, in <module>
-    main()
-  File "/home/runner/work/Claude1/Claude1/morning-brief/fetch.py", line 753, in main
-    errs = validate(json.loads(Path(a.path).read_text()))
-                               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/pathlib.py", line 1027, in read_text
-    with self.open(mode='r', encoding=encoding, errors=errors) as f:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/pathlib.py", line 1013, in open
-    return io.open(self, mode, buffering, encoding, errors, newline)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'mb-data/data/2026-11-06.json'
+wrote mb-data/data/2026-11-06.json and news-2026-11-06.json: 60/86 fetches ok; 256 stories; 0 validation issues
+valid
