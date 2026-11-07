@@ -1,0 +1,4 @@
+run 2026-11-07T16:55:42Z cdot_key=missing
+selftest: all parser checks passed
+wrote mb-data/data/2026-11-07.json and news-2026-11-07.json: 59/60 fetches ok; 244 stories; 0 validation issues
+valid
