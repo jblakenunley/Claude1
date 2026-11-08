@@ -1,5 +1,82 @@
 [
 {
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Nvidia CEO Jensen Huang faces bipartisan congressional scrutiny over reported China spy link",
+"url": "https://www.cnbc.com/2026/11/08/jensen-huang-nvidia-china-spy-congress.html",
+"published": "2026-11-08T11:06-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "AP sources: Staff at U.S. center for AI safety are reporting to the White House, raising independence concerns",
+"url": "https://www.pbs.org/newshour/politics/staff-at-u-s-center-for-ai-safety-are-reporting-to-the-white-house-raising-independence-concerns",
+"published": "2026-11-08T11:05-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "SNL has a new impression of Elon Musk, ‘the worst thing South Africa has ever done’",
+"url": "https://techcrunch.com/2026/11/08/snl-has-a-new-impression-of-elon-musk-the-worst-thing-south-africa-has-ever-done/",
+"published": "2026-11-08T11:00-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Surgeon having lunch near Krakow shooting undoubtedly saved officer's life, colleague says",
+"url": "https://www.bbc.co.uk/news/articles/c5x2vw4e1gx1o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-08T10:59-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Overcrowded car plunges into lake in Brazil, killing ten, including five children",
+"url": "https://www.euronews.com/2026/11/08/overcrowded-car-plunges-into-lake-in-brazil-killing-ten-including-five-children",
+"published": "2026-11-08T10:52-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "world",
+"title": "Collision of two trains in Egypt kills at least seven",
+"url": "https://www.theguardian.com/world/2026/nov/08/egypt-two-trains-deadly-collision",
+"published": "2026-11-08T10:51-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Labour expected to cut EV targets for UK’s car industry despite MPs’ protests",
+"url": "https://www.theguardian.com/environment/2026/nov/08/labour-cut-ev-target-car-industry-despite-climate-concerns",
+"published": "2026-11-08T10:51-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Hundreds of thousands join Amsterdam’s ‘Red Line’ protest against Israel",
+"url": "https://www.aljazeera.com/news/2026/11/8/hundreds-of-thousands-protesters-storm-amsterdam?traffic_source=rss",
+"published": "2026-11-08T10:44-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Half of NHS trusts in England lack funds earmarked to cover maternity leave",
+"url": "https://www.theguardian.com/society/2026/nov/08/half-of-nhs-trusts-in-england-lack-funds-earmarked-to-cover-maternity-leave",
+"published": "2026-11-08T10:42-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Collision between 2 trains in Egypt kills 7 and injures more than 100",
+"url": "https://www.pbs.org/newshour/world/collision-between-2-trains-in-egypt-kills-7-and-injures-more-than-100",
+"published": "2026-11-08T10:40-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Seven dead and more than 100 injured after trains collide in Egypt",
+"url": "https://www.bbc.co.uk/news/articles/cwvgr20mmmevo?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-08T10:35-07:00"
+},
+{
 "outlet": "PBS NewsHour",
 "hint": "us",
 "title": "Floods bring rare relief to U.S. Southwest reservoirs as Lake Powell rises 20 feet",
@@ -12,13 +89,6 @@
 "title": "He arrested a hacker, then spent 18 months clearing his own name. Now he’s a cybersecurity VC.",
 "url": "https://techcrunch.com/2026/11/08/the-ex-secret-service-agent-who-flipped-a-hacker-is-now-raising-a-second-250m-cybersecurity-fund/",
 "published": "2026-11-08T10:30-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "world",
-"title": "Collision of two trains in Egypt kills at least seven",
-"url": "https://www.theguardian.com/world/2026/nov/08/egypt-two-trains-deadly-collision",
-"published": "2026-11-08T10:19-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -196,13 +266,6 @@
 "published": "2026-11-08T08:37-07:00"
 },
 {
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "‘No matter what, he doesn’t quit’: disabled wrestlers draw strength from ring alter egos",
-"url": "https://www.theguardian.com/uk-news/2026/nov/08/disabled-wrestlers-derry-foyle-rumble",
-"published": "2026-11-08T08:37-07:00"
-},
-{
 "outlet": "Al Jazeera",
 "hint": "world",
 "title": "Tenerife’s Jesus De Miguel honoured in tearful tribute by teammates, fans",
@@ -280,13 +343,6 @@
 "published": "2026-11-08T07:56-07:00"
 },
 {
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Palestinian journalist Abed Abou Shhadeh released after 5 days in detention",
-"url": "https://www.aljazeera.com/video/newsfeed/2026/11/8/palestinian-journalist-abed-abou-shhadeh-released-after-5-days-in-detention?traffic_source=rss",
-"published": "2026-11-08T07:53-07:00"
-},
-{
 "outlet": "Euronews",
 "hint": "europe",
 "title": "Russian strikes on Ukraine leave 850,000 without power as Zelenskyy reports drone attack on Komyshuvakha",
@@ -355,13 +411,6 @@
 "title": "Poppi founders are going after PepsiCo's Gatorade with new beverage startup Jetty",
 "url": "https://www.cnbc.com/2026/11/08/poppi-founders-jetty-hydration-gatorade.html",
 "published": "2026-11-08T07:00-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "Surgeon having lunch near Krakow shooting undoubtedly saved officer's life, colleague says",
-"url": "https://www.bbc.co.uk/news/articles/c5x2vw4e1gx1o?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-08T06:40-07:00"
 },
 {
 "outlet": "BBC",
@@ -476,13 +525,6 @@
 "published": "2026-11-08T05:46-07:00"
 },
 {
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Egypt announces new Mediterranean gas field discovery estimated at 200 billion cubic feet",
-"url": "https://www.euronews.com/2026/11/08/egypt-announces-new-mediterranean-gas-field-discovery-estimated-at-200-billion-cubic-feet",
-"published": "2026-11-08T05:23-07:00"
-},
-{
 "outlet": "BBC",
 "hint": "science",
 "title": "Dormice 'thrive' at National Trust site",
@@ -590,7 +632,7 @@
 {
 "outlet": "NPR",
 "hint": "us",
-"title": "In Maine, a new approach to practicing medicine in the sky",
+"title": "One air ambulance service rethinks what it takes to practice medicine in the sky",
 "url": "https://www.npr.org/2026/11/08/nx-s1-6017801/air-ambulance-service-rural-healthcare-staffing",
 "published": "2026-11-08T04:00-07:00"
 },
@@ -645,7 +687,7 @@
 },
 {
 "outlet": "CNBC",
-"hint": "markets",
+"hint": "world",
 "title": "In pictures: France protests draw 146,000 as clashes erupt for fourth straight weekend",
 "url": "https://www.cnbc.com/2026/11/08/france-protests-clashes-arrests.html",
 "published": "2026-11-08T02:29-07:00"
@@ -756,20 +798,6 @@
 "published": "2026-11-08T00:00-07:00"
 },
 {
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "Does Andy Burnham’s pivot from press to social media put scrutiny at risk?",
-"url": "https://www.theguardian.com/politics/2026/nov/08/andy-burnham-social-media-traditional-media-scrutiny-at-risk",
-"published": "2026-11-07T23:00-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "science",
-"title": "Environmentalists criticise choice of Earthshot prize venue owned by fossil fuel firm",
-"url": "https://www.theguardian.com/environment/2026/nov/08/earthshot-prize-venue-criticism-fossil-fuel-firm-reliance-industries-india-mumbai",
-"published": "2026-11-07T23:00-07:00"
-},
-{
 "outlet": "CNBC",
 "hint": "markets",
 "title": "Cathie Wood 'always feels better when the market is worried' — here's why",
@@ -796,13 +824,6 @@
 "title": "NZ election 2026: New Zealand faces weeks of uncertainty with results ‘too close to call’",
 "url": "https://www.theguardian.com/world/2026/nov/07/new-zealand-election-too-close-to-call-vote-count",
 "published": "2026-11-07T18:00-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "The Trump coalition is shattered - what will Republicans do now?",
-"url": "https://www.bbc.co.uk/news/articles/cm3r5gnxqz3jo?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-07T17:52-07:00"
 },
 {
 "outlet": "BBC",
@@ -987,25 +1008,11 @@
 "published": "2026-11-07T10:54-07:00"
 },
 {
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "In his words: Stephen Miller is an immigration hardliner and a bombastic critic of Democrats",
-"url": "https://www.pbs.org/newshour/politics/in-his-words-stephen-miller-is-an-immigration-hardliner-and-a-bombastic-critic-of-democrats",
-"published": "2026-11-07T10:39-07:00"
-},
-{
 "outlet": "TechCrunch",
 "hint": "tech",
 "title": "Binance CFO is leaving to ‘pursue a new venture’ after $6.3 billion hack",
 "url": "https://techcrunch.com/2026/11/07/binance-cfo-is-leaving-to-pursue-a-new-venture-after-6-3-billion-hack/",
 "published": "2026-11-07T10:24-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Gunman opens fire in Polish city of Krakow, killing 6 people and wounding 16",
-"url": "https://www.pbs.org/newshour/world/gunman-opens-fire-in-polish-city-of-krakow-killing-6-people-and-injuring-15",
-"published": "2026-11-07T10:21-07:00"
 },
 {
 "outlet": "TechCrunch",
@@ -1022,6 +1029,13 @@
 "published": "2026-11-07T10:14-07:00"
 },
 {
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Rise in NHS birth centre closures ‘shocking’ denial of women’s rights, experts say",
+"url": "https://www.theguardian.com/society/2026/nov/07/nhs-birth-centre-maternity-unit-closures-england-womens-rights",
+"published": "2026-11-07T10:00-07:00"
+},
+{
 "outlet": "CNBC",
 "hint": "world",
 "title": "Expanding on naval blockade, U.S. military looks to restrict Iranian land commerce",
@@ -1034,13 +1048,6 @@
 "title": "Italian foreign minister says hackers leaked his personal data",
 "url": "https://www.bbc.co.uk/news/articles/cr20wvge32j3o?at_medium=RSS&at_campaign=rss",
 "published": "2026-11-07T09:50-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "world",
-"title": "Paraguay's former president faces prosecutors after his removal over bank collapse",
-"url": "https://www.cnbc.com/2026/11/07/paraguays-former-president-faces-prosecutors-over-bank-collapse.html",
-"published": "2026-11-07T08:55-07:00"
 },
 {
 "outlet": "ECB",
