@@ -833,6 +833,13 @@ def main():
                          "total": len(feats), "first_keys": sorted((feats[0].get("properties") or {}).keys()) if feats else [],
                          "sample": [{k: (trim(v) if not isinstance(v, (dict, list)) else json.loads(json.dumps(v)[:600] + "\"" * 0) if len(json.dumps(v)) < 600 else json.dumps(v)[:600])
                                      for k, v in (f.get("properties") or {}).items()} for f in keep]}
+        probes = {}
+        for feed in ("plannedEvents", "roadConditions"):
+            for q in ("&limit=1000", "&offset=100", "&page=2", "&pageSize=1000", "&size=1000", "&maxResults=1000"):
+                js = get_json(f"https://data.cotrip.org/api/v1/{feed}?apiKey={key}{q}", ua, f"COtrip probe") if key else None
+                fs = (js or {}).get("features", [])
+                probes[f"{feed}{q}"] = [len(fs), (fs[0].get("properties") or {}).get("id") if fs else None]
+        out["paging_probes"] = probes
         Path(a.out).write_text(json.dumps(out, indent=1, ensure_ascii=False))
         return
     if a.cmd == "headlines":
