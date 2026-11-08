@@ -21,7 +21,7 @@
     </div>
     {% if p.alerts %}
     <div class="alert"><span class="k">NWS alert</span>
-      {% for a in p.alerts[:2] %}<b>{{ a.event }}{% if a.until %} until {{ a.until }}{% endif %}</b>{% endfor %}
+      {% for a in p.alerts[:1] %}<b>{{ a.event }}{% if a.until %} until {{ a.until }}{% endif %}</b>{% endfor %}
     </div>
     {% elif aspen_open %}
     <div class="calm"><span class="k">aspen snowmass</span><b>{{ aspen_open }}</b></div>
@@ -32,62 +32,30 @@
     {% for t in tiles %}<div class="tile t{{ loop.index0 }}"><span class="k">{{ t.label }}</span><b>{{ t.value }}</b><span>{{ t.caption }}</span></div>{% endfor %}
   </div>
 
-  <div class="grid">
-    <div>
-      {% if aspen_resorts %}
-      <div class="block">
-        <h3><i class="m mc"></i>aspen's mountains</h3>
-        <table>
-          <tr><th>Mountain</th><th>Status</th>{% if any_resort_snow %}<th>New 24h</th><th>Base</th>{% endif %}</tr>
-          {% for r in aspen_resorts %}<tr><td>{{ r.name }}</td><td>{{ r.status_text }}</td>
-            {% if any_resort_snow %}<td>{{ inch(r.new_24h_in) }}</td><td>{{ inch(r.base_in) }}</td>{% endif %}</tr>{% endfor %}
-        </table>
-      </div>
-      {% endif %}
-      {% if p.summit and p.summit.days %}
-      <div class="block">
-        <h3><i class="m mt"></i>aspen mountain summit<small>{{ p.summit.elev_ft | thousands }} ft · NWS</small></h3>
-        <div class="fc">
-          {% for d in p.summit.days[:5] %}<div class="{% if d.snow_day or d.snow_night %}snow{% endif %}">
-            <div class="d">{{ d.day | lower }}</div>
-            <div class="t">{% if d.high_f is not none %}{{ d.high_f }}°{% endif %}{% if d.high_f is not none and d.low_f is not none %} / {% endif %}{% if d.low_f is not none %}{{ d.low_f }}°{% endif %}</div>
-            {% if d.snow_day %}<div class="s">Day {{ d.snow_day }}</div>{% endif %}
-            {% if d.snow_night %}<div class="s">Night {{ d.snow_night }}</div>{% endif %}
-            {% if not d.snow_day and not d.snow_night %}<div class="s">No snow</div>{% endif %}
-            {% if d.pop_pct %}<div class="s">{{ d.pop_pct }}% chance</div>{% endif %}
-          </div>{% endfor %}
-        </div>
-      </div>
-      {% endif %}
-      {% if regions %}
-      <div class="block co">
-        <h3><i class="m ms"></i>colorado<small>by region</small></h3>
-        <table>
-          <tr><th>Region</th><th style="text-align:left">Open now</th>{% for c in region_cols %}<th>{{ c.head }}</th>{% endfor %}</tr>
-          {% for r in regions %}<tr class="{% if r.home %}home{% endif %}"><td>{{ r.name }}</td><td class="open">{{ r.open_text }}</td>{% for c in region_cols %}<td>{{ c.fmt(r) }}</td>{% endfor %}</tr>{% endfor %}
-        </table>
-      </div>
-      {% endif %}
-    </div>
+  {% if p.snow and p.snow.stations %}<div class="block">
+    <h3><i class="m ms"></i>aspen snowpack<small>seven SNOTEL sites, inches{% if p.snow.median_depth_in is defined and p.snow.median_depth_in is not none %} · median depth {{ p.snow.median_depth_in | num }}{% endif %}</small></h3>
+    <table class="hz"><tr><th></th>{% for s in p.snow.stations %}<th>{{ s.name }}</th>{% endfor %}</tr>
+      {% for c in snow_cols %}<tr><td>{{ c.head }}</td>{% for s in p.snow.stations %}<td>{{ c.fmt(s) }}</td>{% endfor %}</tr>{% endfor %}
+    </table></div>{% endif %}
 
-    <div>
-      {% if p.roads %}
-      <div class="block">
-        <h3><i class="m mc"></i>roads from aspen</h3>
-        {% for r in p.roads %}<div class="road"><b>{{ r.route }}</b><span class="chip {{ r.verdict }}"><i></i>{{ r.verdict }}</span><p>{{ r.reason }}</p></div>{% endfor %}
-      </div>
-      {% endif %}
-      {% if p.snow and p.snow.stations %}
-      <div class="block">
-        <h3><i class="m ms"></i>aspen snowpack<small>inches{% if p.snow.median_depth_in is defined and p.snow.median_depth_in is not none %} · median {{ p.snow.median_depth_in | num }}{% endif %}</small></h3>
-        <table>
-          <tr><th>Site</th>{% for c in snow_cols %}<th>{{ c.head }}</th>{% endfor %}</tr>
-          {% for s in p.snow.stations %}<tr><td>{{ s.name }}</td>{% for c in snow_cols %}<td>{{ c.fmt(s) }}</td>{% endfor %}</tr>{% endfor %}
-        </table>
-      </div>
-      {% endif %}
-    </div>
+  {% if p.roads %}
+  <div class="block">
+    <h3><i class="m mt"></i>roads from aspen</h3>
+    <div class="roads">{% for r in p.roads %}<div class="road1"><b>{{ r.route }}</b><span>{{ r.reason }}</span><span class="chip {{ r.verdict }}"><i></i>{{ r.verdict }}</span></div>{% endfor %}</div>
   </div>
+  {% endif %}
+
+  {% if mountains %}
+  <div class="block co">
+    <h3><i class="m ms"></i>colorado mountains<small>snow at the nearest SNOTEL site, inches</small></h3>
+    <div class="grid2">{% for half in mountain_halves %}
+      <table><tr><th>Mountain</th><th style="text-align:left">Status</th>{% for c in mountain_cols %}<th>{{ c.head }}</th>{% endfor %}</tr>
+        {% for m in half %}<tr><td>{{ m.name }}</td><td class="l">{{ m.status or '' }}</td>{% for c in mountain_cols %}<td>{{ c.fmt(m) }}</td>{% endfor %}</tr>{% endfor %}
+      </table>{% endfor %}
+    </div>
+    {% if avy_line %}<p class="avyline"><span class="k">avalanche danger</span> {{ avy_line }}</p>{% endif %}
+  </div>
+  {% endif %}
 
   <footer class="foot">
     <div class="src">Sources: {{ p.sources | join(' · ') }}</div>

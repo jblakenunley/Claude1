@@ -283,26 +283,6 @@ def caic_at(zones, lat, lon):
     return None
 
 
-# ---------------------------------------------------------------- resorts (Liftie open API)
-def resort_status(name, cfg, today, ua):
-    r = cfg["resorts"].get(name, {})
-    out = {"name": name}
-    js = get_json(f"https://liftie.info/api/resort/{r['liftie']}", ua, f"Liftie {name}") if r.get("liftie") and cfg.get("use_liftie") else None
-    stats = ((js or {}).get("lifts") or {}).get("stats") or {}
-    running = (stats.get("open") or 0) + (stats.get("hold") or 0)
-    total = sum(v for k, v in stats.items() if isinstance(v, int))
-    if js and running:
-        out.update(status="Open", lifts_open=running, lifts_total=total)
-    elif r.get("opens") and r["opens"] == today:
-        out.update(status="Opens today")
-    elif r.get("opens") and r["opens"] > today:
-        d = date.fromisoformat(r["opens"])
-        out.update(status=f"Opens {d.day} {d.strftime('%b')}")
-    elif js:
-        out.update(status="Closed")
-    return out
-
-
 # ---------------------------------------------------------------- roads (COtrip official feeds)
 CLOSED_TXT = re.compile(r"\b(road|highway|pass|safety|full|seasonal)\s+closure\b|\broad (is )?closed\b|\bclosed (in )?both directions\b|"
                         r"\ball lanes (are )?closed\b|\bclosed to (all|through) traffic\b|\bchain law\b", re.I)
@@ -389,9 +369,11 @@ def classify(feed, pr, now):
 
 def road_features(key, ua):
     feats = []
-    for feed in ("incidents", "plannedEvents", "roadConditions"):
+    for feed in ("incidents", "plannedEvents"):
         js = get_json(f"https://data.cotrip.org/api/v1/{feed}?apiKey={key}", ua, f"COtrip {feed}")
-        for f in (js or {}).get("features", []):
+        if js is None:
+            raise RuntimeError(f"COtrip {feed} did not load")
+        for f in js.get("features", []):
             pr = f.get("properties", {})
             feats.append({"feed": feed, "route": _route_key(pr.get("routeName", "")), "range": _mp_range(pr), "props": pr})
     return feats
@@ -418,9 +400,7 @@ def road_verdicts(routes, feats, now):
                 if worst is None or RANK[c[0]] > RANK[worst[0]]:
                     worst = c
         if worst is None:
-            continue  # nothing reported for this route: leave it out rather than guess GO
-        if worst[0] == "GO" and not seen_cond:
-            continue
+            worst = ("GO", "Open, no incidents reported")
         out.append({"route": rt["name"], "verdict": worst[0], "reason": worst[1], "matched": n})
     return out
 
@@ -602,13 +582,11 @@ def run(day, cfg, history_dir=None):
 
     # snow: Aspen seven plus one or more stations per region, one request
     aspen_ids = [s["id"] for s in cfg["aspen_snotel"]]
-    region_ids = sorted({i for r in cfg["regions"] for i in r["snotel"]} - set(aspen_ids))
-    names = {str(s["id"]): s["name"] for s in cfg["aspen_snotel"]} | cfg["snotel_names"]
-    txt = get(snotel_url(aspen_ids + region_ids), ua, label="NRCS SNOTEL")
+    names = {str(s["id"]): s["name"] for s in cfg["aspen_snotel"]}
+    txt = get(snotel_url(aspen_ids), ua, label="NRCS SNOTEL Aspen")
     raw = safely(archive, "snotel", lambda: parse_snotel_csv(txt) if txt else {}, {})
     stations, dropped = snotel_block(raw, aspen_ids, day, names)
-    others, dropped2 = snotel_block(raw, region_ids, day, names)
-    archive["dropped"] += dropped + dropped2
+    archive["dropped"] += dropped
     if stations:
         indep = next((s for s in stations if s["id"] == 542), None)
         paper["snow"] = {"stations": stations, "median_depth_in": median_of(stations, "depth_in"),
@@ -628,43 +606,45 @@ def run(day, cfg, history_dir=None):
     if alerts:
         paper["alerts"] = alerts
 
-    # avalanche and regions
-    zones = safely(archive, "caic", lambda: caic(ua), {})
+    # avalanche, Aspen's mountains, and mountains across Colorado
+    zones = safely(archive, "caic", lambda: caic(ua), [])
     if zones:
         sources.append("CAIC via avalanche.org")
         archive["caic_zones"] = len(zones)
-    by_id = {s["id"]: s for s in stations + others}
-    regions = []
-    for rg in cfg["regions"]:
-        rows = [by_id[i] for i in rg["snotel"] if i in by_id]
-        rec = {"name": rg["name"], "home": bool(rg.get("home"))}
-        if rows:
-            rec["pct_median"] = round(statistics.median([r["pct_median"] for r in rows if r["pct_median"] is not None])) \
-                if any(r["pct_median"] is not None for r in rows) else None
-            rec["new_24h_in"] = max(0, median_of(rows, "depth_24h_in") or 0) if any("depth_24h_in" in r for r in rows) else None
-        rfc = fc if rg.get("home") else safely(archive, f"nws {rg['name']}", lambda: nws_forecast(rg["point"][0], rg["point"][1], ua))
-        if rfc:
-            rec["next48h"] = next48(rfc)["text"]
-        lvl = caic_at(zones, rg["point"][0], rg["point"][1]) if zones else None
-        if lvl:
-            rec["avalanche"] = lvl
-        rec["resorts"] = [r for r in (safely(archive, f"liftie {n}", lambda n=n: resort_status(n, cfg, day, ua)) for n in rg["resorts"]) if r]
-        regions.append(rec)
-    paper["regions"] = regions
-    if any(r.get("status") == "Open" for rg in regions for r in rg["resorts"]):
-        sources.append("Liftie lift status")
+    status = lambda m: ("Opens today" if m.get("opens") == day else
+                        f"Opens {date.fromisoformat(m['opens']).day} {date.fromisoformat(m['opens']).strftime('%b')}" if m.get("opens", "") > day else None)
+
+    def outlook(m):
+        f = fc if m["name"] == "Aspen Mountain" and fc else safely(archive, f"nws {m['name']}", lambda: nws_forecast(m["point"][0], m["point"][1], ua))
+        return next48(f)["text"] if f else None
+
+    paper["aspen_mountains"] = [{k: v for k, v in {"name": m["name"], "status": status(m), "next48h": outlook(m)}.items() if v is not None}
+                                for m in cfg["aspen_mountains"]]
+    ids = [m["snotel"] for m in cfg["mountains"] if m.get("snotel")]
+    txt2 = get(snotel_url(ids), ua, label="NRCS SNOTEL mountains")
+    raw2 = safely(archive, "snotel mountains", lambda: parse_snotel_csv(txt2) if txt2 else {}, {})
+    sites, bad = snotel_block(raw2, ids, day, {str(m["snotel"]): m["snotel_name"] for m in cfg["mountains"] if m.get("snotel")})
+    archive["dropped"] += bad
+    by_id = {x["id"]: x for x in sites}
+    rows = []
+    for m in cfg["mountains"]:
+        site = by_id.get(m.get("snotel"), {})
+        row = {"name": m["name"], "region": m["region"], "status": status(m), "depth_in": site.get("depth_in"),
+               "depth_24h_in": site.get("depth_24h_in"), "pct_median": site.get("pct_median"), "next48h": outlook(m),
+               "avalanche": caic_at(zones, m["point"][0], m["point"][1]) if zones else None}
+        rows.append({k: v for k, v in row.items() if v is not None})
+    paper["mountains"] = rows
+    if zones:
+        paper["avalanche_aspen"] = caic_at(zones, sp["lat"], sp["lon"])
 
     # roads
     key = os.environ.get("CDOT_API_KEY")
     roads = safely(archive, "cotrip", lambda: road_verdicts(cfg["routes"], road_features(key, ua), now), []) if key else []
-    if roads and not cfg.get("roads_enabled", True):
-        archive["roads_preview"] = roads
-    if roads and cfg.get("roads_enabled", True):
-        if roads:
-            paper["roads"] = [{k: r[k] for k in ("route", "verdict", "reason")} for r in roads]
-            archive["roads_matched"] = {r["route"]: r["matched"] for r in roads}
-            sources.append(f"COtrip {fmt_time(now.isoformat())}")
-            paper["cdot_notice"] = True
+    if roads:
+        paper["roads"] = [{k: r[k] for k in ("route", "verdict", "reason")} for r in roads]
+        archive["roads_matched"] = {r["route"]: r["matched"] for r in roads}
+        sources.append(f"COtrip {fmt_time(now.isoformat())}")
+        paper["cdot_notice"] = True
 
     # markets
     mk = [x for x in (safely(archive, f"market {m['name']}", lambda m=m: market(m, ua)) for m in cfg["markets"]) if x]
@@ -772,7 +752,7 @@ def selftest():
     assert rv["Snowmass"]["verdict"] == "GO" and rv["Snowmass"]["reason"] == "Wet", rv["Snowmass"]
     assert rv["Denver"]["verdict"] == "CAUTION" and rv["Denver"]["reason"].startswith("Road Construction"), rv["Denver"]
     assert rv["Wolf"]["verdict"] == "CAUTION" and rv["Wolf"]["reason"] == "Icy spots MP 150 to 190", rv["Wolf"]
-    assert "Red" not in rv
+    assert rv["Red"]["verdict"] == "GO" and rv["Red"]["reason"] == "Open, no incidents reported", rv["Red"]
     assert _route_key("CO-82") == _route_key("SH 82") == _route_key("CO 82") == "CO82" and _route_key("I-070W") == "I70" and _route_key("US-160E") == "US160"
     assert validate({"paper": {"date": "x", "issue": "1", "weekday": "y", "note": "12 cm"}}) == ["metric unit in paper fields"]
     rss = ('<?xml version="1.0"?><rss version="2.0"><channel><title>x</title>'
@@ -823,7 +803,7 @@ def main():
     if a.cmd == "cotrip-sample":
         key, ua = os.environ.get("CDOT_API_KEY"), json.loads((HERE / "config.json").read_text())["user_agent"]
         out = {}
-        for feed in ("incidents", "plannedEvents", "roadConditions"):
+        for feed in ("incidents", "plannedEvents"):
             js = get_json(f"https://data.cotrip.org/api/v1/{feed}?apiKey={key}", ua, f"COtrip {feed}") if key else None
             feats = (js or {}).get("features", [])
             trim = lambda v: v[:240] if isinstance(v, str) else v
@@ -833,13 +813,6 @@ def main():
                          "total": len(feats), "first_keys": sorted((feats[0].get("properties") or {}).keys()) if feats else [],
                          "sample": [{k: (trim(v) if not isinstance(v, (dict, list)) else json.loads(json.dumps(v)[:600] + "\"" * 0) if len(json.dumps(v)) < 600 else json.dumps(v)[:600])
                                      for k, v in (f.get("properties") or {}).items()} for f in keep]}
-        probes = {}
-        for feed in ("plannedEvents", "roadConditions"):
-            for q in ("&limit=1000", "&offset=100", "&page=2", "&pageSize=1000", "&size=1000", "&maxResults=1000"):
-                js = get_json(f"https://data.cotrip.org/api/v1/{feed}?apiKey={key}{q}", ua, f"COtrip probe") if key else None
-                fs = (js or {}).get("features", [])
-                probes[f"{feed}{q}"] = [len(fs), (fs[0].get("properties") or {}).get("id") if fs else None]
-        out["paging_probes"] = probes
         Path(a.out).write_text(json.dumps(out, indent=1, ensure_ascii=False))
         return
     if a.cmd == "headlines":

@@ -19,7 +19,7 @@ TPL = HERE / "template"
 
 # Slot word limits: (min words, max words).
 LIMITS = {
-    "headline": (4, 12), "verdict": (12, 40), "sponsor": (0, 6), "brief": (20, 40),
+    "headline": (4, 12), "verdict": (12, 32), "sponsor": (0, 6), "brief": (20, 40),
     "lead.head": (4, 12), "lead.text": (35, 60), "lead.outlet": (1, 3),
     "item.lead": (1, 5), "item.text": (8, 24), "item.outlet": (1, 3),
     "week.day": (1, 3), "week.text": (3, 16),
@@ -233,9 +233,8 @@ def build_tiles(p):
     if ip:
         t.append({"label": "independence pass", "value": {"NO-GO": "Closed", "CAUTION": "Caution", "GO": "Open"}[ip["verdict"]],
                   "caption": ip["reason"]})
-    home = next((r for r in p.get("regions") or [] if r.get("home")), {})
-    if home.get("avalanche"):
-        t.append({"label": "avalanche", "value": home["avalanche"], "caption": "Aspen zone danger, CAIC"})
+    if p.get("avalanche_aspen"):
+        t.append({"label": "avalanche", "value": p["avalanche_aspen"], "caption": "Aspen zone danger, CAIC"})
     return t[:4]
 
 
@@ -249,11 +248,35 @@ def snow_columns(stations):
     return out
 
 
-def region_columns(regions):
-    cols = [("pct_median", "Snowpack", lambda v: f"{v}%"), ("new_24h_in", "New 24h", inch),
-            ("next48h", "Next 48h", lambda v: "None" if v == "none" else v), ("avalanche", "Avalanche", str)]
+def snowtxt(v):
+    return "" if v is None else ("None" if v == "none" else v)
+
+
+def mountain_columns(rows):
+    cols = [("depth_in", "Depth", lambda v: f"{v:g}"), ("depth_24h_in", "24h", lambda v: signed(v, "")),
+            ("pct_median", "Of median", lambda v: f"{v}%"), ("next48h", "Next 48h", snowtxt)]
     return [{"head": h, "fmt": (lambda r, k=k, f=f: "" if r.get(k) is None else f(r[k]))}
-            for k, h, f in cols if any(r.get(k) is not None for r in regions)]
+            for k, h, f in cols if any(r.get(k) is not None for r in rows)]
+
+
+def avalanche_line(p, mountains):
+    by_region = {"Aspen": p.get("avalanche_aspen")}
+    for m in mountains:
+        if m.get("avalanche") and m.get("region") not in by_region:
+            by_region[m["region"]] = m["avalanche"]
+    got = {k: v for k, v in by_region.items() if v}
+    if not got:
+        return None
+    if len(set(got.values())) == 1 and len(got) > 3:
+        return f"{next(iter(got.values()))} across Colorado."
+    return " · ".join(f"{k} {v}" for k, v in got.items())
+
+
+def aspen_open(rows):
+    if any((r.get("status") or "").startswith("Open") and not (r.get("status") or "").startswith("Opens") for r in rows):
+        return None
+    nxt = [r for r in rows if (r.get("status") or "").startswith("Opens")]
+    return f"{nxt[0]['name']} {nxt[0]['status'].replace('Opens', 'opens')}" if nxt else None
 
 
 def status_text(r):
@@ -266,23 +289,9 @@ def context(doc, e):
     p = doc["paper"]
     d = date.fromisoformat(p["date"])
     over = e.get("resort_status") or {}
-    for rg in p.get("regions") or []:
-        rg["resorts"] = [dict(r, status=over.get(r["name"], r.get("status"))) for r in rg.get("resorts", [])]
-    regions = []
-    for rg in p.get("regions") or []:
-        rr = dict(rg)
-        opened = [r["name"] for r in rg.get("resorts", []) if r.get("status") == "Open"]
-        rr["open_text"] = ", ".join(opened)
-        regions.append(rr)
-    home = next((r for r in p.get("regions") or [] if r.get("home")), {})
-    aspen_resorts = [dict(r, status_text=status_text(r)) for r in home.get("resorts", []) if r.get("status")]
-    nxt = [r for r in aspen_resorts if r["status"].startswith("Opens")]
-    aspen_open = None
-    if nxt and not any(r["status"].startswith("Open,") or r["status"] == "Open" for r in aspen_resorts):
-        aspen_open = f"{nxt[0]['name']} {nxt[0]['status'].replace('Opens', 'opens')}"
-    avy = [f"{r['name']} {r['avalanche']}" for r in regions if r.get("avalanche")]
-    levels = {r.get("avalanche") for r in regions if r.get("avalanche")}
-    avy_line = (f"{levels.pop()} danger statewide." if len(levels) == 1 and len(avy) > 3 else " · ".join(avy)) if avy else None
+    apply = lambda rows: [dict(r, status=over.get(r["name"], r.get("status"))) for r in rows or []]
+    aspen_resorts = apply(p.get("aspen_mountains"))
+    mountains = aspen_resorts + apply(p.get("mountains"))
     for m in p.get("markets") or []:
         m["as_of_text"] = as_of_text(m, p["date"])
     def start_min(t):
@@ -311,10 +320,11 @@ def context(doc, e):
         "kind": kind, "page2": [x for x in page2 if x["items"]], "page3": [x for x in page3 if x["items"]],
         "p": p, "e": e, "css": (TPL / "style.css").read_text(), "comp": composition(p["issue"]),
         "long_date": f"{d.strftime('%A')} {d.day} {d.strftime('%B %Y')}", "short_date": f"{d.day} {d.strftime('%b %Y')}",
-        "tiles": build_tiles(p), "aspen_resorts": aspen_resorts, "aspen_open": aspen_open,
-        "any_resort_snow": any(r.get("new_24h_in") is not None or r.get("base_in") is not None for r in aspen_resorts),
+        "tiles": build_tiles(p), "aspen_resorts": aspen_resorts, "aspen_open": aspen_open(aspen_resorts),
         "snow_cols": snow_columns((p.get("snow") or {}).get("stations", [])),
-        "regions": regions, "region_cols": region_columns(regions), "avy_line": avy_line,
+        "mountains": mountains, "mountain_cols": mountain_columns(mountains), "snowtxt": snowtxt,
+        "mountain_halves": [mountains[:(len(mountains) + 1) // 2], mountains[(len(mountains) + 1) // 2:]],
+        "avy_line": avalanche_line(p, mountains),
         "inch": inch, "money": money, "change": change, "chg_sign": chg_sign, "cdot_notice": CDOT_NOTICE,
     }
 

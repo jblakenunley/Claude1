@@ -15,7 +15,7 @@ def edition(kind):
     secs = {k: [item() for _ in range(hi)] for k, _, (lo, hi) in render.PAGE2 + render.PAGE3[kind]}
     ev = [{"day": f"Day {i // 3}", "time": "5:30pm", "title": txt(8), "place": txt(6), "kind": "art", "label": "FREE",
            "rsvp": True, "url": "https://example.org/e"} for i in range(18)]
-    return {"headline": txt(12), "verdict": txt(40), "brief": txt(40), "sponsor": txt(6),
+    return {"headline": txt(12), "verdict": txt(32), "brief": txt(40), "sponsor": txt(6),
             "lead": {"head": txt(12), "text": txt(60), "outlet": "AP via Yahoo", "url": "https://example.org/l",
                      "outlet2": "Euronews", "url2": "https://example.org/l2"},
             "sections": secs, "week": [{"day": "Wed 11", "text": txt(16)} for _ in range(6)],
@@ -27,6 +27,15 @@ def edition(kind):
 doc = json.loads((HERE / "samples/data/2026-11-06.json").read_text())
 doc["paper"]["markets"] = [{"name": n, "value": 51523.06, "change_pct": -3.4, "as_of": "2026-11-05", "fmt": "index"}
                            for n in ["S&P 500", "Dow", "Nasdaq", "Stoxx 600", "FTSE 100", "Nikkei", "US 10-yr", "Dollar index", "Euro", "Brent", "Gold", "Bitcoin"]]
+cfg = json.loads((HERE / "config.json").read_text())
+P = doc["paper"]
+P.pop("regions", None)
+P["aspen_mountains"] = [{"name": m["name"], "status": "Opens 26 Nov", "next48h": "2–4 in"} for m in cfg["aspen_mountains"]]
+P["mountains"] = [{"name": m["name"], "region": m["region"], "status": "Opens 13 Dec", "depth_in": 24, "depth_24h_in": -3,
+                   "pct_median": 104, "next48h": "4–8 in", "avalanche": "Considerable"} for m in cfg["mountains"]]
+P["roads"] = [{"route": r["name"], "verdict": "NO-GO", "reason": "Closed MP 157 to 184.5"} for r in cfg["routes"]]
+P["alerts"] = [{"event": "Winter Storm Warning", "until": "Thu 5am"}, {"event": "Avalanche Warning", "until": "Fri 6pm"}]
+P["avalanche_aspen"] = "Considerable"
 bad = 0
 for kind, day in (("daily", "2026-11-06"), ("weekend", "2026-11-07")):
     doc["paper"]["date"] = day

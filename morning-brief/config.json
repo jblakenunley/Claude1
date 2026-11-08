@@ -38,315 +38,6 @@
   "lon": -106.8186,
   "elev_ft": 10850
  },
- "regions": [
-  {
-   "name": "Roaring Fork",
-   "home": true,
-   "snotel": [
-    542,
-    737,
-    547,
-    369
-   ],
-   "point": [
-    39.1514,
-    -106.8186
-   ],
-   "caic": "Aspen",
-   "resorts": [
-    "Aspen Mountain",
-    "Aspen Highlands",
-    "Snowmass",
-    "Buttermilk",
-    "Sunlight"
-   ]
-  },
-  {
-   "name": "Elk & Gunnison",
-   "snotel": [
-    380
-   ],
-   "point": [
-    38.89,
-    -106.96
-   ],
-   "caic": "Gunnison",
-   "resorts": [
-    "Crested Butte",
-    "Monarch"
-   ]
-  },
-  {
-   "name": "Sawatch",
-   "snotel": [
-    485
-   ],
-   "point": [
-    39.36,
-    -106.3
-   ],
-   "caic": "Sawatch",
-   "resorts": [
-    "Ski Cooper"
-   ]
-  },
-  {
-   "name": "Vail Valley",
-   "snotel": [
-    842
-   ],
-   "point": [
-    39.61,
-    -106.36
-   ],
-   "caic": "Vail",
-   "resorts": [
-    "Vail",
-    "Beaver Creek"
-   ]
-  },
-  {
-   "name": "Summit & I-70",
-   "snotel": [
-    415,
-    602
-   ],
-   "point": [
-    39.47,
-    -106.08
-   ],
-   "caic": "Summit",
-   "resorts": [
-    "Arapahoe Basin",
-    "Keystone",
-    "Breckenridge",
-    "Copper",
-    "Loveland"
-   ]
-  },
-  {
-   "name": "Northern",
-   "snotel": [
-    825,
-    335
-   ],
-   "point": [
-    40.46,
-    -106.8
-   ],
-   "caic": "Steamboat",
-   "resorts": [
-    "Steamboat",
-    "Winter Park",
-    "Eldora"
-   ]
-  },
-  {
-   "name": "Southwest",
-   "snotel": [
-    874,
-    713,
-    586
-   ],
-   "point": [
-    37.47,
-    -106.79
-   ],
-   "caic": "San Juan",
-   "resorts": [
-    "Wolf Creek",
-    "Telluride",
-    "Purgatory",
-    "Silverton",
-    "Powderhorn"
-   ]
-  }
- ],
- "snotel_names": {
-  "380": "Butte",
-  "485": "Fremont Pass",
-  "842": "Vail Mountain",
-  "415": "Copper Mountain",
-  "602": "Loveland Basin",
-  "825": "Tower",
-  "335": "Berthoud Summit",
-  "874": "Wolf Creek Summit",
-  "713": "Red Mountain Pass",
-  "586": "Lizard Head Pass"
- },
- "resorts": {
-  "Aspen Mountain": {
-   "liftie": "aspen-mountain",
-   "opens": "2026-11-26"
-  },
-  "Aspen Highlands": {
-   "liftie": "aspen-highlands",
-   "opens": "2026-12-12"
-  },
-  "Snowmass": {
-   "liftie": "snowmass",
-   "opens": "2026-11-26"
-  },
-  "Buttermilk": {
-   "liftie": "buttermilk",
-   "opens": "2026-12-12"
-  },
-  "Sunlight": {
-   "liftie": "sunlight"
-  },
-  "Crested Butte": {
-   "liftie": "crested-butte",
-   "opens": "2026-11-25"
-  },
-  "Monarch": {
-   "liftie": "monarch"
-  },
-  "Ski Cooper": {
-   "liftie": "ski-cooper",
-   "opens": "2026-12-09"
-  },
-  "Vail": {
-   "liftie": "vail",
-   "opens": "2026-11-13"
-  },
-  "Beaver Creek": {
-   "liftie": "beaver-creek",
-   "opens": "2026-11-25"
-  },
-  "Arapahoe Basin": {
-   "liftie": "arapahoe-basin"
-  },
-  "Keystone": {
-   "liftie": "keystone"
-  },
-  "Breckenridge": {
-   "liftie": "breckenridge",
-   "opens": "2026-11-06"
-  },
-  "Copper": {
-   "liftie": "copper",
-   "opens": "2026-11-06"
-  },
-  "Loveland": {
-   "liftie": "loveland"
-  },
-  "Steamboat": {
-   "liftie": "steamboat"
-  },
-  "Winter Park": {
-   "liftie": "winter-park"
-  },
-  "Eldora": {
-   "liftie": "eldora",
-   "opens": "2026-11-13"
-  },
-  "Wolf Creek": {
-   "liftie": "wolf-creek"
-  },
-  "Telluride": {
-   "liftie": "telluride"
-  },
-  "Purgatory": {
-   "liftie": "purgatory",
-   "opens": "2026-11-20"
-  },
-  "Silverton": {
-   "liftie": "silverton",
-   "opens": "2026-12-31"
-  },
-  "Powderhorn": {
-   "liftie": "powderhorn",
-   "opens": "2026-11-20"
-  }
- },
- "routes": [
-  {
-   "name": "Aspen to Snowmass",
-   "segments": [
-    [
-     "CO82",
-     30,
-     42
-    ]
-   ]
-  },
-  {
-   "name": "Independence Pass",
-   "segments": [
-    [
-     "CO82",
-     42,
-     85
-    ]
-   ],
-   "seasonal": true
-  },
-  {
-   "name": "To Denver via Glenwood and I-70",
-   "segments": [
-    [
-     "CO82",
-     0,
-     30
-    ],
-    [
-     "I70",
-     116,
-     260
-    ]
-   ]
-  },
-  {
-   "name": "To Vail",
-   "segments": [
-    [
-     "CO82",
-     0,
-     30
-    ],
-    [
-     "I70",
-     116,
-     176
-    ]
-   ]
-  },
-  {
-   "name": "To Crested Butte via McClure",
-   "segments": [
-    [
-     "CO133",
-     0,
-     70
-    ],
-    [
-     "CO135",
-     0,
-     28
-    ]
-   ]
-  },
-  {
-   "name": "Red Mountain Pass",
-   "segments": [
-    [
-     "US550",
-     60,
-     95
-    ]
-   ]
-  },
-  {
-   "name": "Wolf Creek Pass",
-   "segments": [
-    [
-     "US160",
-     150,
-     190
-    ]
-   ]
-  }
- ],
  "markets": [
   {
    "name": "S&P 500",
@@ -581,8 +272,401 @@
  "_news_note": "Feeds are free-to-read outlets only. Never add FT, NYT, WSJ, Bloomberg, The Economist or any paywalled site. URLs untested until the first networked run; a dead feed is logged and skipped.",
  "news_summaries": false,
  "_news_summaries_note": "false while the data lives in a public repo; set true in a private repo so the writer gets each feed's summary",
- "use_liftie": false,
- "_liftie_note": "Liftie answers GitHub's servers with 403 Forbidden, so lift counts are off; resort status comes from opening dates here and from the edition's resort_status.",
- "roads_enabled": false,
- "_roads_note": "off until the COtrip parser is checked against real records; set true to print road verdicts"
+ "aspen_mountains": [
+  {
+   "name": "Aspen Mountain",
+   "region": "Aspen",
+   "point": [
+    39.1514,
+    -106.8186
+   ],
+   "opens": "2026-11-26"
+  },
+  {
+   "name": "Aspen Highlands",
+   "region": "Aspen",
+   "point": [
+    39.18,
+    -106.86
+   ],
+   "opens": "2026-12-12"
+  },
+  {
+   "name": "Snowmass",
+   "region": "Aspen",
+   "point": [
+    39.195,
+    -106.96
+   ],
+   "opens": "2026-11-26"
+  },
+  {
+   "name": "Buttermilk",
+   "region": "Aspen",
+   "point": [
+    39.205,
+    -106.86
+   ],
+   "opens": "2026-12-12"
+  },
+  {
+   "name": "Sunlight",
+   "region": "Glenwood",
+   "point": [
+    39.4,
+    -107.34
+   ]
+  }
+ ],
+ "mountains": [
+  {
+   "name": "Crested Butte",
+   "region": "Gunnison",
+   "point": [
+    38.89,
+    -106.96
+   ],
+   "snotel": 380,
+   "snotel_name": "Butte",
+   "opens": "2026-11-25"
+  },
+  {
+   "name": "Monarch",
+   "region": "Gunnison",
+   "point": [
+    38.51,
+    -106.33
+   ],
+   "snotel": 701,
+   "snotel_name": "Porphyry Creek"
+  },
+  {
+   "name": "Ski Cooper",
+   "region": "Sawatch",
+   "point": [
+    39.36,
+    -106.3
+   ],
+   "snotel": 485,
+   "snotel_name": "Fremont Pass",
+   "opens": "2026-12-09"
+  },
+  {
+   "name": "Vail",
+   "region": "Vail Valley",
+   "point": [
+    39.61,
+    -106.36
+   ],
+   "snotel": 842,
+   "snotel_name": "Vail Mountain",
+   "opens": "2026-11-13"
+  },
+  {
+   "name": "Beaver Creek",
+   "region": "Vail Valley",
+   "point": [
+    39.6,
+    -106.52
+   ],
+   "opens": "2026-11-25"
+  },
+  {
+   "name": "Arapahoe Basin",
+   "region": "Summit",
+   "point": [
+    39.64,
+    -105.87
+   ],
+   "snotel": 505,
+   "snotel_name": "Grizzly Peak"
+  },
+  {
+   "name": "Keystone",
+   "region": "Summit",
+   "point": [
+    39.6,
+    -105.95
+   ]
+  },
+  {
+   "name": "Breckenridge",
+   "region": "Summit",
+   "point": [
+    39.47,
+    -106.08
+   ],
+   "snotel": 531,
+   "snotel_name": "Hoosier Pass",
+   "opens": "2026-11-06"
+  },
+  {
+   "name": "Copper",
+   "region": "Summit",
+   "point": [
+    39.5,
+    -106.15
+   ],
+   "snotel": 415,
+   "snotel_name": "Copper Mountain",
+   "opens": "2026-11-06"
+  },
+  {
+   "name": "Loveland",
+   "region": "Summit",
+   "point": [
+    39.68,
+    -105.9
+   ],
+   "snotel": 602,
+   "snotel_name": "Loveland Basin"
+  },
+  {
+   "name": "Steamboat",
+   "region": "Northern",
+   "point": [
+    40.46,
+    -106.8
+   ],
+   "snotel": 825,
+   "snotel_name": "Tower"
+  },
+  {
+   "name": "Winter Park",
+   "region": "Northern",
+   "point": [
+    39.89,
+    -105.76
+   ],
+   "snotel": 335,
+   "snotel_name": "Berthoud Summit"
+  },
+  {
+   "name": "Wolf Creek",
+   "region": "Southwest",
+   "point": [
+    37.47,
+    -106.79
+   ],
+   "snotel": 874,
+   "snotel_name": "Wolf Creek Summit"
+  },
+  {
+   "name": "Telluride",
+   "region": "Southwest",
+   "point": [
+    37.92,
+    -107.84
+   ],
+   "snotel": 586,
+   "snotel_name": "Lizard Head Pass"
+  },
+  {
+   "name": "Purgatory",
+   "region": "Southwest",
+   "point": [
+    37.63,
+    -107.81
+   ],
+   "snotel": 632,
+   "snotel_name": "Molas Lake",
+   "opens": "2026-11-20"
+  },
+  {
+   "name": "Silverton",
+   "region": "Southwest",
+   "point": [
+    37.88,
+    -107.67
+   ],
+   "snotel": 713,
+   "snotel_name": "Red Mountain Pass",
+   "opens": "2026-12-31"
+  },
+  {
+   "name": "Powderhorn",
+   "region": "Grand Mesa",
+   "point": [
+    39.07,
+    -108.15
+   ],
+   "snotel": 622,
+   "snotel_name": "Mesa Lakes",
+   "opens": "2026-11-20"
+  }
+ ],
+ "_mountains_note": "snotel = nearest SNOTEL site; snotel_name guards against a wrong id (a mismatch leaves the cells blank). opens = announced opening date; the edition's resort_status overrides it.",
+ "routes": [
+  {
+   "name": "Snowmass & Highlands",
+   "segments": [
+    [
+     "CO82",
+     30,
+     42
+    ]
+   ]
+  },
+  {
+   "name": "Sunlight",
+   "segments": [
+    [
+     "CO82",
+     0,
+     30
+    ]
+   ]
+  },
+  {
+   "name": "Vail & Beaver Creek",
+   "segments": [
+    [
+     "CO82",
+     0,
+     30
+    ],
+    [
+     "I70",
+     116,
+     176
+    ]
+   ]
+  },
+  {
+   "name": "Summit County",
+   "segments": [
+    [
+     "CO82",
+     0,
+     30
+    ],
+    [
+     "I70",
+     116,
+     216
+    ]
+   ]
+  },
+  {
+   "name": "Winter Park",
+   "segments": [
+    [
+     "CO82",
+     0,
+     30
+    ],
+    [
+     "I70",
+     116,
+     232
+    ],
+    [
+     "US40",
+     225,
+     255
+    ]
+   ]
+  },
+  {
+   "name": "Steamboat",
+   "segments": [
+    [
+     "CO82",
+     0,
+     30
+    ],
+    [
+     "I70",
+     116,
+     157
+    ],
+    [
+     "CO131",
+     0,
+     70
+    ]
+   ]
+  },
+  {
+   "name": "Crested Butte",
+   "segments": [
+    [
+     "CO82",
+     0,
+     12
+    ],
+    [
+     "CO133",
+     0,
+     70
+    ],
+    [
+     "CO135",
+     0,
+     28
+    ]
+   ]
+  },
+  {
+   "name": "Ski Cooper",
+   "segments": [
+    [
+     "CO82",
+     0,
+     30
+    ],
+    [
+     "I70",
+     116,
+     171
+    ],
+    [
+     "US24",
+     140,
+     180
+    ]
+   ]
+  },
+  {
+   "name": "Monarch & Wolf Creek",
+   "segments": [
+    [
+     "US50",
+     190,
+     210
+    ],
+    [
+     "US160",
+     150,
+     190
+    ]
+   ]
+  },
+  {
+   "name": "Telluride & Purgatory",
+   "segments": [
+    [
+     "US550",
+     40,
+     95
+    ],
+    [
+     "CO145",
+     40,
+     75
+    ]
+   ]
+  },
+  {
+   "name": "Independence Pass",
+   "segments": [
+    [
+     "CO82",
+     42,
+     85
+    ]
+   ]
+  }
+ ],
+ "_routes_note": "Roads come from COtrip incidents and planned work only: closures, chain and traction laws, lane closures. No road-surface layer."
 }
