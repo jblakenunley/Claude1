@@ -3,7 +3,7 @@ Produce today's Morning Brief for J Blake Nunley, Aspen, as a four-page PDF. Tod
 1. LOAD. ToolSearch "select:ArtifactData,PushNotification,SendUserFile" (skip any that don't exist). Clone the kit and the data: `git clone --depth 1 https://github.com/jblakenunley/claude1 kit` and `git clone --depth 1 --branch mb-data https://github.com/jblakenunley/claude1 mbdata`. The kit is kit/morning-brief/: fetch.py, render.py, template/ and STYLE.md, which governs every word you write. Read registry-news and registry-events from the Morning Brief Playbook artifact (https://claude.ai/artifact/9DdCwf3gdP9yiessJ4YW34) and the last three "editions" records for repeats.
 
 2. NUMBERS. Start a fresh fetch, then read it:
-   - In kit, run `git commit -q --allow-empty -m "fetch TODAY" && git push -q -f origin HEAD:mb-trigger`. If the push is refused, call add_repo for jblakenunley/claude1 with push access and retry once.
+   - In kit, run `git commit -q --allow-empty -m "fetch TODAY" && git push -q origin HEAD:refs/heads/mb-trigger-$(date -u +%Y%m%d%H%M)`. This creates a new branch; never force-push. If it is refused, call add_repo for jblakenunley/claude1 with push access and retry once.
    - Poll `git ls-remote origin refs/heads/mb-data` every 20 seconds for up to 4 minutes; when it moves, `git -C mbdata pull`. Use mbdata/data/TODAY.json and mbdata/data/news-TODAY.json; mbdata/logs/TODAY.txt says what failed.
    - If no file for today arrives, build it yourself in the same schema from config.json's URLs and the registries, US units only, leaving out anything you can't load, and run `python3 kit/morning-brief/fetch.py validate` on it.
 
