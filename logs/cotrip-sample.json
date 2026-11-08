@@ -1,5 +1,11 @@
 {
  "incidents": {
+  "top_keys": [
+   "type"
+  ],
+  "top_meta": {
+   "type": "FeatureCollection"
+  },
   "total": 11,
   "first_keys": [
    "additionalImpacts",
@@ -50,8 +56,8 @@
     "severity": "minor",
     "lastUpdatedBy": "",
     "additionalImpacts": [
-     "Impacts both directions",
-     "Alternating Traffic"
+     "Alternating Traffic",
+     "Impacts both directions"
     ],
     "laneImpacts": [
      {
@@ -194,8 +200,8 @@
     "lastUpdatedBy": "",
     "additionalImpacts": [
      "Impacts both directions",
-     "Slower speeds advised",
-     "Alternating Traffic"
+     "Alternating Traffic",
+     "Slower speeds advised"
     ],
     "laneImpacts": [
      {
@@ -390,6 +396,12 @@
   ]
  },
  "plannedEvents": {
+  "top_keys": [
+   "type"
+  ],
+  "top_meta": {
+   "type": "FeatureCollection"
+  },
   "total": 100,
   "first_keys": [
    "category",
@@ -1015,6 +1027,12 @@
   ]
  },
  "roadConditions": {
+  "top_keys": [
+   "type"
+  ],
+  "top_meta": {
+   "type": "FeatureCollection"
+  },
   "total": 100,
   "first_keys": [
    "currentConditions",

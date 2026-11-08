@@ -1,5 +1,12 @@
 [
 {
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Floods bring rare relief to U.S. Southwest reservoirs as Lake Powell rises 20 feet",
+"url": "https://www.pbs.org/newshour/nation/floods-bring-rare-relief-to-u-s-southwest-reservoirs-as-lake-powell-rises-20-feet",
+"published": "2026-11-08T10:31-07:00"
+},
+{
 "outlet": "TechCrunch",
 "hint": "tech",
 "title": "He arrested a hacker, then spent 18 months clearing his own name. Now he’s a cybersecurity VC.",
@@ -1013,13 +1020,6 @@
 "title": "Ousted Paraguayan president appears before prosecutors",
 "url": "https://www.npr.org/2026/11/07/nx-s1-6033373/paraguay-president-ousted-bank-collapse",
 "published": "2026-11-07T10:14-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Paraguay's ousted president charged with crimes linked to collapse of major bank",
-"url": "https://www.pbs.org/newshour/world/paraguays-ousted-president-faces-prosecutors-after-his-removal-over-bank-collapse",
-"published": "2026-11-07T10:10-07:00"
 },
 {
 "outlet": "CNBC",
