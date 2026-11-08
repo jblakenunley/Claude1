@@ -1,0 +1,1256 @@
+{
+ "incidents": {
+  "total": 11,
+  "first_keys": [
+   "additionalImpacts",
+   "category",
+   "detectionSource",
+   "direction",
+   "fatalities",
+   "hasRampRestriction",
+   "id",
+   "injuries",
+   "isOversizedLoadsProhibited",
+   "jurisdictions",
+   "landmark",
+   "laneImpacts",
+   "lastUpdated",
+   "lastUpdatedBy",
+   "marker",
+   "owningGroup",
+   "patrolRoute",
+   "region",
+   "responseLevel",
+   "routeName",
+   "severity",
+   "startTime",
+   "status",
+   "travelerInformationMessage",
+   "type",
+   "vehiclesInvolved"
+  ],
+  "sample": [
+   {
+    "injuries": 0,
+    "type": "Maintenance Operations",
+    "routeName": "US-84E",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-04T21:36:58.775Z",
+    "startTime": "2026-11-04T21:35:22.873Z",
+    "id": "OpenTMS-Incident36174431408",
+    "travelerInformationMessage": "Between New Mexico State Line and County Road 382 (23 miles west of the Pagosa Springs area) at Mile Point 4. Road maintenance operations. There is alternating traffic. Comment: Flood and debris clean up operations expect 20 minute delays",
+    "patrolRoute": "P-7, Section 3 King",
+    "responseLevel": "Intermediate",
+    "landmark": "COUNTY RD 382",
+    "owningGroup": "HLT",
+    "jurisdictions": [
+     "ARCHULETA (COUNTY)"
+    ],
+    "direction": "east",
+    "severity": "minor",
+    "lastUpdatedBy": "",
+    "additionalImpacts": [
+     "Impacts both directions",
+     "Alternating Traffic"
+    ],
+    "laneImpacts": [
+     {
+      "direction": "east",
+      "laneCount": 1,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     },
+     {
+      "direction": "west",
+      "laneCount": 1,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     }
+    ],
+    "vehiclesInvolved": 0,
+    "marker": 4.0,
+    "fatalities": 0,
+    "hasRampRestriction": false,
+    "detectionSource": "CDOT",
+    "region": "REGION 5",
+    "category": "Traffic",
+    "status": "confirmed report"
+   },
+   {
+    "injuries": 0,
+    "startMarker": 142.0,
+    "type": "Flooding",
+    "routeName": "US-160E",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-08T12:34:54.749Z",
+    "endMarker": 145.0,
+    "startTime": "2026-11-01T20:50:10.074Z",
+    "id": "OpenTMS-Incident36114945224",
+    "travelerInformationMessage": "Between Pike Drive and Paul Hood Place (near Pagosa Springs) from Mile Point 142 to Mile Point 145. Look out for flooding. Comment: Avoid traveling into Downtown Pagosa Springs, as several local roads remain affected by flooding.",
+    "patrolRoute": "P-7, Section 3 King",
+    "responseLevel": "Intermediate",
+    "owningGroup": "Pueblo",
+    "jurisdictions": [
+     "ARCHULETA (COUNTY)"
+    ],
+    "direction": "east",
+    "severity": "minor",
+    "lastUpdatedBy": "",
+    "additionalImpacts": [
+     "Impacts both directions"
+    ],
+    "laneImpacts": [
+     {
+      "direction": "east",
+      "laneCount": 1,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     },
+     {
+      "direction": "west",
+      "laneCount": 2,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     }
+    ],
+    "vehiclesInvolved": 0,
+    "fatalities": 0,
+    "hasRampRestriction": false,
+    "detectionSource": "CDOT",
+    "region": "REGION 5",
+    "category": "Environmental",
+    "status": "confirmed report"
+   },
+   {
+    "injuries": 0,
+    "type": "Other",
+    "routeName": "CO-17S",
+    "isOversizedLoadsProhibited": true,
+    "lastUpdated": "2026-11-08T12:34:36.463Z",
+    "responseSigns": [
+     {
+      "id": "468204",
+      "message": "[pt30o0][jp3][jl3][fo20]24/7 [nl2][jl3][fo20]10 FT WIDTH[nl2][jl3][fo20]RESTRICTION[np][pt30o0][jp3][jl3][fo20]CO 17[nl2][jl3][fo20]MP 0 - MP 35[nl2][jl3]"
+     },
+     {
+      "id": "467064",
+      "message": "[pt30o0][jp3][jl3][fo1]CO 17[nl2][jl3][fo2]NO OVERSIZE[nl2][jl3][fo1]LOADS[np][pt30o0][jp3][jl3][fo1]INTO[nl2][jl3][fo1]NEW MEXICO"
+     }
+    ],
+    "startTime": "2026-11-06T21:22:32.612Z",
+    "id": "OpenTMS-Incident36213621746",
+    "travelerInformationMessage": "At NM 17; State Border New Mexico (38 miles south of the Antonito area) at Mile Point 0. Traffic impacts. Permitted oversize loads are prohibited. Comment: No oversize, or wide loads will be able to cross into New Mexico.",
+    "patrolRoute": "P-25, Section 7 John",
+    "responseLevel": "Intermediate",
+    "owningGroup": "Pueblo",
+    "jurisdictions": [
+     "ARCHULETA (COUNTY)"
+    ],
+    "direction": "south",
+    "severity": "minor",
+    "lastUpdatedBy": "",
+    "laneImpacts": [
+     {
+      "direction": "north",
+      "laneCount": 1,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     },
+     {
+      "direction": "south",
+      "laneCount": 1,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     }
+    ],
+    "vehiclesInvolved": 0,
+    "marker": 0.0,
+    "fatalities": 0,
+    "hasRampRestriction": false,
+    "detectionSource": "CDOT",
+    "region": "REGION 5",
+    "category": "Environmental",
+    "status": "confirmed report"
+   },
+   {
+    "injuries": 0,
+    "startMarker": 134.2,
+    "type": "Flooding",
+    "routeName": "US-160E",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-04T21:39:22.808Z",
+    "endMarker": 135.0,
+    "startTime": "2026-10-23T04:12:36.555Z",
+    "id": "OpenTMS-Incident35924175630",
+    "travelerInformationMessage": "Between Oakridge Drive and County Road 139 (3 to 4 miles west of the Pagosa Springs area) from Mile Point 134.2 to Mile Point 135. Look out for flooding. There is alternating traffic. Slower speeds are advised. Comment: Speed reduced to 40 ",
+    "patrolRoute": "P-7, Section 3 King",
+    "responseLevel": "Intermediate",
+    "owningGroup": "HLT",
+    "jurisdictions": [
+     "ARCHULETA (COUNTY)"
+    ],
+    "direction": "east",
+    "severity": "minor",
+    "lastUpdatedBy": "",
+    "additionalImpacts": [
+     "Impacts both directions",
+     "Slower speeds advised",
+     "Alternating Traffic"
+    ],
+    "laneImpacts": [
+     {
+      "direction": "east",
+      "laneCount": 1,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     },
+     {
+      "direction": "west",
+      "laneCount": 1,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     }
+    ],
+    "vehiclesInvolved": 0,
+    "fatalities": 0,
+    "hasRampRestriction": false,
+    "detectionSource": "CDOT",
+    "region": "REGION 5",
+    "category": "Environmental",
+    "status": "confirmed report"
+   },
+   {
+    "injuries": 0,
+    "startMarker": 121.2,
+    "type": "Flooding",
+    "routeName": "US-160E",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-05T19:06:50.132Z",
+    "endMarker": 127.0,
+    "startTime": "2026-11-02T01:20:37.197Z",
+    "id": "OpenTMS-Incident36118619481",
+    "travelerInformationMessage": "Between Forest Service Road 621 (17 miles east of the Bayfield area) and CO 151 (12 miles west of the Pagosa Springs area) from Mile Point 121.2 to Mile Point 127. Road closed expect delays because of flooding. Comment: Residential and emer",
+    "patrolRoute": "P-5, Section 3 King",
+    "responseLevel": "Intermediate",
+    "owningGroup": "HLT",
+    "jurisdictions": [
+     "ARCHULETA (COUNTY)"
+    ],
+    "direction": "east",
+    "severity": "minor",
+    "lastUpdatedBy": "",
+    "communicationActivity": [
+     {
+      "type": "incoming",
+      "communicationTime": "2026-11-02T12:53:59.000Z",
+      "details": "",
+      "name": "",
+      "phone": "",
+      "organization": "Interagency Dispatch Center - Durango"
+     }
+    ],
+    "laneImpacts": [
+     {
+      "direction": "east",
+      "laneCount": 1,
+      "laneClosures": "c001",
+      "closedLaneTypes": [
+       "through lanes",
+       "right shoulder",
+       "left shoulder"
+      ]
+     },
+     {
+      "direction": "west",
+      "laneCount": 1,
+      "laneClosures": "c001",
+      "closedLaneTypes": [
+       "through lanes",
+       "right shoulder",
+       "left shoulder"
+      ]
+     }
+    ],
+    "vehiclesInvolved": 0,
+    "fatalities": 0,
+    "hasRampRestriction": false,
+    "detectionSource": "CDOT",
+    "region": "REGION 5",
+    "category": "Environmental",
+    "status": "confirmed report"
+   },
+   {
+    "injuries": 0,
+    "startMarker": 51.4,
+    "type": "Safety Closure",
+    "routeName": "CO-82E",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-05T23:59:16.956Z",
+    "endMarker": 68.5,
+    "responseSigns": "[{\"id\": \"474954\", \"message\": \"[jp2][jl3][fo1]INDEPENDENCE[nl][jl3][fo1]PASS[nl][jl3][fo1]CLOSED\"}, {\"id\": \"474729\", \"message\": \"[pt30o0][jp3][jl3][fo1]INDEPENDENCE[nl2][jl3][fo1]PASS[nl2][jl3][fo1]CLOSED[np][pt30o0][jp3][jl3][fo1]CO-82[nl2][jl3][fo1]MILE POST[nl2][jl3][fo1]51.4-68.5\"}, {\"id\": \"466329\", \"message\": \"[pt30o0][jp3][jl3][fo1]INDEPENDENCE[nl2][jl3][fo1]PASS[nl2][jl3][fo1]CLOSED[np][pt30o0][jp3][jl3][fo1]CO-82 CLOSED[nl2][jl3][fo1]MP 68.5 - 51.4[nl2][jl3][fo1]SEE COTRIP\"}, {\"id\": \"476079\", \"message\": \"[pt30o0][jp2][jl3][fo1]INDEPENDENCE[nl][jl3][fo1]PASS[nl][jl3][fo1]CLOSED [np][pt30",
+    "startTime": "2026-10-29T21:49:45.146Z",
+    "id": "OpenTMS-Incident36057055825",
+    "travelerInformationMessage": "Between County Road 23 (8 miles east of the Aspen area) and Carlton Tunnel Road (11 miles west of the Twin Lakes area) from Mile Point 51.4 to Mile Point 68.5. Road closed expect delays due to safety concerns. Comment: Due to forecasted win",
+    "patrolRoute": "P-16, Section 2 King",
+    "responseLevel": "Intermediate",
+    "owningGroup": "HLT",
+    "jurisdictions": [
+     "PITKIN (COUNTY)"
+    ],
+    "direction": "east",
+    "severity": "minor",
+    "lastUpdatedBy": "",
+    "additionalImpacts": [
+     "Impacts both directions"
+    ],
+    "laneImpacts": [
+     {
+      "direction": "east",
+      "laneCount": 1,
+      "laneClosures": "c001",
+      "closedLaneTypes": [
+       "through lanes",
+       "right shoulder",
+       "left shoulder"
+      ]
+     },
+     {
+      "direction": "west",
+      "laneCount": 1,
+      "laneClosures": "c001",
+      "closedLaneTypes": [
+       "through lanes",
+       "right shoulder",
+       "left shoulder"
+      ]
+     }
+    ],
+    "vehiclesInvolved": 0,
+    "fatalities": 0,
+    "hasRampRestriction": false,
+    "detectionSource": "CDOT",
+    "region": "REGION 3",
+    "category": "Traffic",
+    "status": "confirmed report"
+   },
+   {
+    "city": "SOUTH FORK (CITY)",
+    "injuries": 0,
+    "startMarker": 157.0,
+    "type": "Safety Closure",
+    "routeName": "US-160E",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-08T12:35:19.279Z",
+    "endMarker": 184.5,
+    "startTime": "2026-11-01T20:35:34.918Z",
+    "id": "OpenTMS-Incident36114741354",
+    "travelerInformationMessage": "Between Forest Service Road 667 (11 miles east of the Pagosa Springs area) and County Road 20 (South Fork) from Mile Point 157 to Mile Point 184.5. Road closed expect delays due to safety concerns. Comment: Extended closure seek alternate r",
+    "patrolRoute": "P-6, Section 7 Paul",
+    "responseLevel": "Intermediate",
+    "owningGroup": "Pueblo",
+    "jurisdictions": [
+     "MINERAL (COUNTY)"
+    ],
+    "direction": "east",
+    "severity": "minor",
+    "lastUpdatedBy": "",
+    "additionalImpacts": [
+     "Impacts both directions"
+    ],
+    "laneImpacts": [
+     {
+      "direction": "east",
+      "laneCount": 1,
+      "laneClosures": "c001",
+      "closedLaneTypes": [
+       "through lanes",
+       "right shoulder",
+       "left shoulder"
+      ]
+     },
+     {
+      "direction": "west",
+      "laneCount": 1,
+      "laneClosures": "c001",
+      "closedLaneTypes": [
+       "through lanes",
+       "right shoulder",
+       "left shoulder"
+      ]
+     }
+    ],
+    "vehiclesInvolved": 0,
+    "fatalities": 0,
+    "hasRampRestriction": false,
+    "detectionSource": "CDOT",
+    "region": "REGION 5",
+    "category": "Incident Closures",
+    "status": "confirmed report"
+   }
+  ]
+ },
+ "plannedEvents": {
+  "total": 100,
+  "first_keys": [
+   "category",
+   "clearTime",
+   "direction",
+   "endMarker",
+   "hasRampRestriction",
+   "id",
+   "isOversizedLoadsProhibited",
+   "jurisdictions",
+   "laneImpacts",
+   "lastUpdated",
+   "name",
+   "owningGroup",
+   "routeName",
+   "schedule",
+   "startMarker",
+   "startTime",
+   "travelerInformationMessage",
+   "type"
+  ],
+  "sample": [
+   {
+    "clearTime": "2026-11-16T06:59:00Z",
+    "startMarker": 0.1,
+    "project": {
+     "description": "This project will primarily consist of a full roadway reconstruction on the I-70B and I-70Z business routes in Grand Junction.",
+     "status": "project active",
+     "owningGroup": "LaneAware",
+     "startTime": "2026-02-09T07:00:00Z",
+     "endTime": "2026-12-24T06:59:59Z"
+    },
+    "type": "Road Construction",
+    "laneImpacts": [
+     {
+      "direction": "north",
+      "laneCount": 2,
+      "laneClosures": "2001",
+      "closedLaneTypes": [
+       "right lane",
+       "right shoulder"
+      ]
+     },
+     {
+      "direction": "south",
+      "laneCount": 1,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     }
+    ],
+    "routeName": "5TH ST",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-05T22:12:04.245Z",
+    "schedule": [
+     {
+      "startTime": "2026-11-05T14:01:00.000Z",
+      "endTime": "2026-11-16T06:59:00.000Z"
+     }
+    ],
+    "endMarker": 0.0,
+    "hasRampRestriction": false,
+    "name": "I-70B East of Third Street Reconstruction-148788",
+    "startTime": "2026-11-05T14:01:00Z",
+    "id": "OpenTMS-Event35509265100",
+    "travelerInformationMessage": "Between Alpine Street and Pace Street (near Longmont) at Mile Point 0.1. The right lane is closed due to road construction. Until November 15, 2026 at about 11:59PM MST. Full schedule below: • November 5, 7:01AM - November 15, 11:59PM Comme",
+    "category": "Construction",
+    "owningGroup": "LaneAware",
+    "jurisdictions": [
+     "MESA (COUNTY)"
+    ],
+    "direction": "north"
+   },
+   {
+    "clearTime": "2026-11-13T12:00:00Z",
+    "startMarker": 201.0,
+    "project": {
+     "description": "Santa Fe and Mineral Improvements",
+     "status": "project active",
+     "owningGroup": "LaneAware",
+     "startTime": "2025-11-17T07:00:00Z",
+     "endTime": "2027-08-31T05:59:59Z"
+    },
+    "type": "IT or Fiber Optics",
+    "laneImpacts": [
+     {
+      "direction": "north",
+      "laneCount": 2,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     },
+     {
+      "direction": "south",
+      "laneCount": 2,
+      "laneClosures": "2000",
+      "closedLaneTypes": [
+       "right lane"
+      ]
+     }
+    ],
+    "routeName": "US-85S",
+    "isOversizedLoadsProhibited": false,
+    "endLandmark": "US 85 ML (SANTA FE DR)",
+    "lastUpdated": "2026-11-05T02:01:27.540Z",
+    "schedule": [
+     {
+      "startTime": "2026-11-13T02:00:00.000Z",
+      "endTime": "2026-11-13T12:00:00.000Z"
+     }
+    ],
+    "endMarker": 202.0,
+    "hasRampRestriction": false,
+    "name": "Santa Fe Drive Mineral Ave Operational Improvements-151689",
+    "startTime": "2026-11-13T02:00:00Z",
+    "id": "OpenTMS-Event36178054382",
+    "travelerInformationMessage": "Between Rowland Avenue and County Line Road (Littleton) from Mile Point 202 to Mile Point 201. Right lane closed due to technology or fiber optics repair. Starting November 12, 2026 at 7:00PM MST until November 13, 2026 at about 5:00AM MST.",
+    "category": "ITS Work",
+    "owningGroup": "LaneAware",
+    "jurisdictions": [
+     "ARAPAHOE (COUNTY)"
+    ],
+    "direction": "south"
+   },
+   {
+    "clearTime": "2026-11-14T06:59:00Z",
+    "startMarker": 289.97,
+    "project": {
+     "description": "interchange at I-70 east of E-470 that will eventually tie into future roadways. ",
+     "status": "project active",
+     "owningGroup": "LaneAware",
+     "startTime": "2025-08-18T06:00:00Z",
+     "endTime": "2026-11-28T06:59:59Z"
+    },
+    "type": "Road Construction",
+    "laneImpacts": [
+     {
+      "direction": "east",
+      "laneCount": 2,
+      "laneClosures": "8001",
+      "closedLaneTypes": [
+       "right shoulder",
+       "left shoulder"
+      ]
+     },
+     {
+      "direction": "west",
+      "laneCount": 2,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     }
+    ],
+    "routeName": "I-70E",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-05T07:04:48.805Z",
+    "schedule": [
+     {
+      "startTime": "2026-11-13T07:00:00.000Z",
+      "endTime": "2026-11-14T06:59:00.000Z"
+     }
+    ],
+    "endMarker": 291.19,
+    "hasRampRestriction": false,
+    "name": "I-70 Aerotropolis Interchange-150763",
+    "startTime": "2026-11-13T07:00:00Z",
+    "id": "OpenTMS-Event36182221981",
+    "travelerInformationMessage": "Between E-470 and Exit 292: US 36; Airpark Road (near Aurora) from Mile Point 289.97 to Mile Point 291.19. Both shoulders closed due to road construction. Starting November 13, 2026 at 12:00AM MST until November 13, 2026 at about 11:59PM MS",
+    "category": "Construction",
+    "owningGroup": "LaneAware",
+    "jurisdictions": [
+     "ADAMS (COUNTY)"
+    ],
+    "direction": "east"
+   },
+   {
+    "clearTime": "2026-11-12T06:59:00Z",
+    "startMarker": 289.97,
+    "project": {
+     "description": "interchange at I-70 east of E-470 that will eventually tie into future roadways. ",
+     "status": "project active",
+     "owningGroup": "LaneAware",
+     "startTime": "2025-08-18T06:00:00Z",
+     "endTime": "2026-11-28T06:59:59Z"
+    },
+    "type": "Bridge Construction",
+    "laneImpacts": [
+     {
+      "direction": "east",
+      "laneCount": 2,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     },
+     {
+      "direction": "west",
+      "laneCount": 2,
+      "laneClosures": "8001",
+      "closedLaneTypes": [
+       "right shoulder",
+       "left shoulder"
+      ]
+     }
+    ],
+    "routeName": "I-70W",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-06T19:39:36.953Z",
+    "schedule": [
+     {
+      "startTime": "2026-11-11T07:00:00.000Z",
+      "endTime": "2026-11-12T06:59:00.000Z"
+     }
+    ],
+    "endMarker": 291.19,
+    "hasRampRestriction": false,
+    "name": "I-70 Aerotropolis Interchange-150801",
+    "startTime": "2026-11-11T07:00:00Z",
+    "id": "OpenTMS-Event36142877226",
+    "travelerInformationMessage": "Between Exit 292: US 36; Airpark Road and E-470 (near Aurora) from Mile Point 291.19 to Mile Point 289.97. Both shoulders closed due to bridge construction. Starting November 11, 2026 at 12:00AM MST until November 11, 2026 at about 11:59PM ",
+    "category": "Construction",
+    "owningGroup": "LaneAware",
+    "jurisdictions": [
+     "ADAMS (COUNTY)"
+    ],
+    "direction": "west"
+   },
+   {
+    "clearTime": "2026-11-14T14:00:00Z",
+    "startMarker": 144.0,
+    "project": {
+     "description": "I-25 Acceleration/De-Acceleration Lane from Garden of the Gods Road to Fillmore",
+     "status": "project active",
+     "owningGroup": "LaneAware",
+     "startTime": "2023-10-30T06:00:00Z",
+     "endTime": "2026-11-28T06:59:59Z"
+    },
+    "type": "Road Construction",
+    "laneImpacts": [
+     {
+      "direction": "north",
+      "laneCount": 4,
+      "laneClosures": "3000",
+      "closedLaneTypes": [
+       "middle two lanes"
+      ]
+     },
+     {
+      "direction": "south",
+      "laneCount": 4,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     }
+    ],
+    "routeName": "I-25N",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-06T19:04:19.582Z",
+    "schedule": [
+     {
+      "startTime": "2026-11-14T05:00:00.000Z",
+      "endTime": "2026-11-14T14:00:00.000Z"
+     }
+    ],
+    "endMarker": 146.5,
+    "hasRampRestriction": false,
+    "name": "I-25 Acceleration/De-Acceleration Lane from Garden of the Gods Road to Fillmore-152087",
+    "startTime": "2026-11-14T05:00:00Z",
+    "id": "OpenTMS-Event36211593880",
+    "travelerInformationMessage": "Between Exit 144: Fontanero Street and Exit 148: Nevada Avenue (Colorado Springs) from Mile Point 144 to Mile Point 146.5. Two center lanes closed due to road construction. Starting November 13, 2026 at 10:00PM MST until November 14, 2026 a",
+    "category": "Construction",
+    "owningGroup": "LaneAware",
+    "jurisdictions": [
+     "EL PASO (COUNTY)"
+    ],
+    "direction": "north"
+   },
+   {
+    "additionalImpacts": [
+     "Alternating traffic",
+     "Alternating Lanes"
+    ],
+    "clearTime": "2026-11-14T00:00:00Z",
+    "startMarker": 398.1,
+    "project": {
+     "description": "Resurfacing, bridge replacement and roadway improvement project on US Highway 6 between Sterling and Atwood, from Mile Point 398.2 to 404.11.",
+     "status": "project active",
+     "owningGroup": "LaneAware",
+     "startTime": "2026-03-02T07:00:00Z",
+     "endTime": "2026-12-02T06:59:59Z"
+    },
+    "type": "Road Construction",
+    "laneImpacts": [
+     {
+      "direction": "east",
+      "laneCount": 2,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     },
+     {
+      "direction": "west",
+      "laneCount": 2,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     }
+    ],
+    "routeName": "US-6E",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-06T21:51:07.866Z",
+    "widthRestriction": 366,
+    "schedule": [
+     {
+      "startTime": "2026-11-13T13:30:00.000Z",
+      "endTime": "2026-11-14T00:00:00.000Z"
+     }
+    ],
+    "endMarker": 404.0,
+    "hasRampRestriction": false,
+    "name": "US 6 Resurfacing Between Sterling and Atwood-152151",
+    "startTime": "2026-11-13T13:30:00Z",
+    "id": "OpenTMS-Event36213998267",
+    "travelerInformationMessage": "Between 7th Street (Atwood) and South 2nd Street (Sterling) from Mile Point 398.1 to Mile Point 404. Road construction. Alternating traffic. Width limit in effect. Width limit 12'0\". Starting November 13, 2026 at 6:30AM MST until November 1",
+    "category": "Construction",
+    "owningGroup": "LaneAware",
+    "jurisdictions": [
+     "LOGAN (COUNTY)"
+    ],
+    "direction": "east"
+   },
+   {
+    "startLandmark": "3RD ST",
+    "clearTime": "2026-11-16T06:59:00Z",
+    "startMarker": 5.48,
+    "project": {
+     "description": "This project will primarily consist of a full roadway reconstruction on the I-70B and I-70Z business routes in Grand Junction.",
+     "status": "project active",
+     "owningGroup": "LaneAware",
+     "startTime": "2026-02-09T07:00:00Z",
+     "endTime": "2026-12-24T06:59:59Z"
+    },
+    "type": "Road Construction",
+    "laneImpacts": [
+     {
+      "direction": "east",
+      "laneCount": 3,
+      "laneClosures": "3001",
+      "closedLaneTypes": [
+       "center lane",
+       "right lane",
+       "right shoulder"
+      ]
+     },
+     {
+      "direction": "west",
+      "laneCount": 0,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     }
+    ],
+    "routeName": "CO-70E",
+    "isOversizedLoadsProhibited": false,
+    "endLandmark": "6TH ST",
+    "lastUpdated": "2026-11-05T22:12:06.968Z",
+    "schedule": [
+     {
+      "startTime": "2026-11-05T14:01:00.000Z",
+      "endTime": "2026-11-16T06:59:00.000Z"
+     }
+    ],
+    "endMarker": 5.75,
+    "hasRampRestriction": false,
+    "name": "I-70B East of Third Street Reconstruction-148785",
+    "startTime": "2026-11-05T14:01:00Z",
+    "id": "OpenTMS-Event35509265131",
+    "travelerInformationMessage": "Between CO 340 and US 6 (Grand Junction) from Mile Point 5.48 to Mile Point 5.75. Two right lanes are closed due to road construction. Until November 15, 2026 at about 11:59PM MST. Full schedule below: • November 5, 7:01AM - November 15, 11",
+    "category": "Construction",
+    "owningGroup": "LaneAware",
+    "jurisdictions": [
+     "MESA (COUNTY)"
+    ],
+    "direction": "east"
+   },
+   {
+    "clearTime": "2026-11-09T02:00:00Z",
+    "startMarker": 139.0,
+    "project": {
+     "description": "I-70 Gypsum to Eagle Resurfacing",
+     "status": "project inactive",
+     "owningGroup": "LaneAware",
+     "startTime": "2026-04-06T06:00:00Z",
+     "endTime": "2026-10-31T05:59:59Z"
+    },
+    "type": "Paving Operations",
+    "laneImpacts": [
+     {
+      "direction": "east",
+      "laneCount": 2,
+      "laneClosures": "2000",
+      "closedLaneTypes": [
+       "right lane"
+      ]
+     },
+     {
+      "direction": "west",
+      "laneCount": 2,
+      "laneClosures": "2000",
+      "closedLaneTypes": [
+       "right lane"
+      ]
+     }
+    ],
+    "routeName": "I-70E",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-06T16:16:34.399Z",
+    "widthRestriction": 335,
+    "schedule": [
+     {
+      "startTime": "2026-11-08T14:00:00.000Z",
+      "endTime": "2026-11-09T02:00:00.000Z"
+     }
+    ],
+    "endMarker": 147.0,
+    "hasRampRestriction": false,
+    "name": "Paving Operations-152018",
+    "startTime": "2026-11-08T14:00:00Z",
+    "id": "OpenTMS-Event36209288665",
+    "travelerInformationMessage": "Between Exit 133: Dotsero (near Gypsum) and US 6 (near Eagle) from Mile Point 139 to Mile Point 147. Right lane closed due to paving operations. Width limit in effect. Width limit 11'0\". Starting Sunday at 7:00AM MST until Sunday, at about ",
+    "category": "Construction",
+    "owningGroup": "LaneAware",
+    "jurisdictions": [
+     "EAGLE (COUNTY)"
+    ],
+    "direction": "east"
+   },
+   {
+    "clearTime": "2026-11-12T13:00:00Z",
+    "startMarker": 146.5,
+    "project": {
+     "description": "I-25 Acceleration/De-Acceleration Lane from Garden of the Gods Road to Fillmore",
+     "status": "project active",
+     "owningGroup": "LaneAware",
+     "startTime": "2023-10-30T06:00:00Z",
+     "endTime": "2026-11-28T06:59:59Z"
+    },
+    "type": "Road Construction",
+    "laneImpacts": [
+     {
+      "direction": "north",
+      "laneCount": 4,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     },
+     {
+      "direction": "south",
+      "laneCount": 4,
+      "laneClosures": "4000",
+      "closedLaneTypes": [
+       "left lane"
+      ]
+     }
+    ],
+    "routeName": "I-25S",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-06T19:04:21.823Z",
+    "schedule": [
+     {
+      "startTime": "2026-11-12T12:00:00.000Z",
+      "endTime": "2026-11-12T13:00:00.000Z"
+     }
+    ],
+    "endMarker": 144.0,
+    "hasRampRestriction": false,
+    "name": "I-25 Acceleration/De-Acceleration Lane from Garden of the Gods Road to Fillmore-152114",
+    "startTime": "2026-11-12T12:00:00Z",
+    "id": "OpenTMS-Event36211594116",
+    "travelerInformationMessage": "Between Exit 148: Nevada Avenue and Exit 144: Fontanero Street (Colorado Springs) from Mile Point 146.5 to Mile Point 144. Left lane closed due to road construction. Starting November 12, 2026 at 5:00AM MST until November 12, 2026 at about ",
+    "category": "Construction",
+    "owningGroup": "LaneAware",
+    "jurisdictions": [
+     "EL PASO (COUNTY)"
+    ],
+    "direction": "south"
+   },
+   {
+    "additionalImpacts": [
+     "Alternating traffic",
+     "Alternating Lanes"
+    ],
+    "clearTime": "2026-11-12T05:00:00Z",
+    "startMarker": 0.53,
+    "project": {
+     "description": "Roadway Improvements - I-70 east and west of Seibert (Mile Point 401 to 407) and along Colorado Highway 57 (Colorado Avenue) between I-70 and US Highway 24 in the Town of Stratton",
+     "status": "project inactive",
+     "owningGroup": "LaneAware",
+     "startTime": "2026-04-06T06:00:00Z",
+     "endTime": "2026-10-30T05:59:59Z"
+    },
+    "type": "Road Construction",
+    "laneImpacts": [
+     {
+      "direction": "north",
+      "laneCount": 0,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     },
+     {
+      "direction": "south",
+      "laneCount": 0,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     }
+    ],
+    "routeName": "CO-57S",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-04T21:33:33.241Z",
+    "schedule": [
+     {
+      "startTime": "2026-11-11T13:30:00.000Z",
+      "endTime": "2026-11-12T05:00:00.000Z"
+     }
+    ],
+    "endMarker": 0.1,
+    "hasRampRestriction": false,
+    "name": "I-70 Seibert-Stratton Roadway Improvements-151737",
+    "startTime": "2026-11-11T13:30:00Z",
+    "id": "OpenTMS-Event36174341633",
+    "travelerInformationMessage": "Between US 24; Colorado Avenue and I-70 (Stratton) from Mile Point 0.53 to Mile Point 0.1. Road construction. Alternating traffic. Starting November 11, 2026 at 6:30AM MST until November 11, 2026 at about 10:00PM MST. Full schedule below: •",
+    "category": "Construction",
+    "owningGroup": "LaneAware",
+    "jurisdictions": [
+     "KIT CARSON (COUNTY)"
+    ],
+    "direction": "south"
+   },
+   {
+    "clearTime": "2026-11-11T01:00:00Z",
+    "startMarker": 262.0,
+    "project": {
+     "description": "I-70 Resurfacing: Chief Hosa to Colfax, Jefferson County",
+     "status": "project inactive",
+     "owningGroup": "LaneAware",
+     "startTime": "2024-08-12T06:00:00Z",
+     "endTime": "2026-03-28T05:59:59Z"
+    },
+    "type": "Sign Work",
+    "laneImpacts": [
+     {
+      "direction": "east",
+      "laneCount": 3,
+      "laneClosures": "0",
+      "closedLaneTypes": []
+     },
+     {
+      "direction": "west",
+      "laneCount": 3,
+      "laneClosures": "8001",
+      "closedLaneTypes": [
+       "right shoulder",
+       "left shoulder"
+      ]
+     }
+    ],
+    "routeName": "I-70W",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-04T21:58:32.196Z",
+    "schedule": [
+     {
+      "startTime": "2026-11-10T14:00:00.000Z",
+      "endTime": "2026-11-11T01:00:00.000Z"
+     }
+    ],
+    "endMarker": 253.0,
+    "hasRampRestriction": false,
+    "name": "I-70 Resurfacing - Chief Hosa to Colfax-151799",
+    "startTime": "2026-11-10T14:00:00Z",
+    "id": "OpenTMS-Event36174743921",
+    "travelerInformationMessage": "Between Exit 263: Colorado Mills Parkway (West Pleasant View) and Exit 253: Chief Hosa (near Genesee) from Mile Point 262 to Mile Point 253. Both shoulders closed due to sign repair. Starting November 10, 2026 at 7:00AM MST until November 1",
+    "category": "ITS Work",
+    "owningGroup": "LaneAware",
+    "jurisdictions": [
+     "JEFFERSON (COUNTY)"
+    ],
+    "direction": "west"
+   },
+   {
+    "clearTime": "2026-11-11T06:59:00Z",
+    "startMarker": 217.5,
+    "type": "Guardrail",
+    "laneImpacts": [
+     {
+      "direction": "east",
+      "laneCount": 2,
+      "laneClosures": "4000",
+      "closedLaneTypes": [
+       "left lane"
+      ]
+     },
+     {
+      "direction": "west",
+      "laneCount": 2,
+      "laneClosures": "4000",
+      "closedLaneTypes": [
+       "left lane"
+      ]
+     }
+    ],
+    "routeName": "I-70W",
+    "isOversizedLoadsProhibited": false,
+    "lastUpdated": "2026-11-06T06:37:33.018Z",
+    "schedule": [
+     {
+      "startTime": "2026-11-11T01:00:00.000Z",
+      "endTime": "2026-11-11T06:59:00.000Z"
+     }
+    ],
+    "endMarker": 215.5,
+    "hasRampRestriction": false,
+    "name": "Energy attenuator repair-152063",
+    "startTime": "2026-11-11T01:00:00Z",
+    "id": "OpenTMS-Event36201529766",
+    "travelerInformationMessage": "Between CO 9 (8 miles east of the Dillon area) and Exit 218: Herman Gulch (7 miles west of the Silver Plume area) from Mile Point 215.5 to Mile Point 217.5. Left lane closed due to guardrail repair. Starting November 10, 2026 at 6:00PM MST ",
+    "category": "Maintenance",
+    "owningGroup": "LaneAware",
+    "jurisdictions": [
+     "CLEAR CREEK (COUNTY)"
+    ],
+    "direction": "west"
+   }
+  ]
+ },
+ "roadConditions": {
+  "total": 100,
+  "first_keys": [
+   "currentConditions",
+   "id",
+   "name",
+   "nameId",
+   "parentAreaId",
+   "parentSubAreaId",
+   "primaryLatitude",
+   "primaryLongitude",
+   "primaryMP",
+   "routeId",
+   "routeName",
+   "routeSegmentIndex",
+   "secondaryLatitude",
+   "secondaryLongitude",
+   "secondaryMP",
+   "sortOrder"
+  ],
+  "sample": [
+   {
+    "id": "151",
+    "name": "CO 145, between Scotch Creek Road (Lizard Head Pass) and Nimbus Drive (near Telluride)",
+    "nameId": "Lizard Head Pass",
+    "routeId": 41,
+    "routeName": "CO 145",
+    "primaryMP": 46.43321074882593,
+    "secondaryMP": 71.57274062998921,
+    "primaryLatitude": 37.68247486191323,
+    "primaryLongitude": -108.03349779379637,
+    "secondaryLatitude": 37.95047247004012,
+    "secondaryLongitude": -107.87306087945089,
+    "sortOrder": 2,
+    "parentAreaId": 214,
+    "parentSubAreaId": 146,
+    "routeSegmentIndex": 2,
+    "currentConditions": "[{\"id\": 1354019, \"conditionId\": 17, \"conditionDescription\": \"3 - dry\", \"userName\": \"\", \"startTime\": 1794144717906, \"endTime\": 4947744717906, \"confirmationTime\": 1794144717906, \"updateTime\": 1794144717906, \"confirmationUserName\": \"\", \"sourceType\": \"OPERATOR\", \"additionalData\": null}, {\"id\": 1354837, \"conditionId\": 47, \"conditionDescription\": \"forecast text included\", \"userName\": \"\", \"startTime\": 1794158827467, \"endTime\": 1794180221290, \"confirmationTime\": 1794158621290, \"updateTime\": 1794158621290, \"confirmationUserName\": \"\", \"sourceType\": \"NDFD\", \"additionalData\": \"Clear skies. Wind gusts of u"
+   },
+   {
+    "id": "430",
+    "name": "US 50, between MP 190 (1 mile west of the Monarch Pass area) and MP 209 (near Monarch Pass)",
+    "nameId": "Monarch Pass",
+    "routeId": 154,
+    "routeName": "US 50",
+    "primaryMP": 190.283999779025,
+    "secondaryMP": 208.2914585504575,
+    "primaryLatitude": 38.420170207546484,
+    "primaryLongitude": -106.40925329393704,
+    "secondaryLatitude": 38.54175544476432,
+    "secondaryLongitude": -106.23149916576745,
+    "sortOrder": 1,
+    "parentAreaId": 212,
+    "parentSubAreaId": 171,
+    "routeSegmentIndex": 4,
+    "currentConditions": "[{\"id\": 1353633, \"conditionId\": 17, \"conditionDescription\": \"3 - dry\", \"userName\": \"\", \"startTime\": 1794141012927, \"endTime\": 4947757310293, \"confirmationTime\": 1794157310293, \"updateTime\": 1794141012927, \"confirmationUserName\": \"\", \"sourceType\": \"OPERATOR\", \"additionalData\": null}, {\"id\": 1354849, \"conditionId\": 47, \"conditionDescription\": \"forecast text included\", \"userName\": \"\", \"startTime\": 1794158827479, \"endTime\": 1794180221290, \"confirmationTime\": 1794158621290, \"updateTime\": 1794158621290, \"confirmationUserName\": \"\", \"sourceType\": \"NDFD\", \"additionalData\": \"Clear skies. Wind gusts of u"
+   },
+   {
+    "id": "405",
+    "name": "US 85, between US 34 (Greeley) and the Wyoming Border (16 miles north of the Nunn area)",
+    "nameId": "Greeley-Wyoming border",
+    "routeId": 158,
+    "routeName": "US 85",
+    "primaryMP": 265.84900000842754,
+    "secondaryMP": 309.54199999202683,
+    "primaryLatitude": 40.392244880652704,
+    "primaryLongitude": -104.68188544956989,
+    "secondaryLatitude": 40.99971632618544,
+    "secondaryLongitude": -104.7730935778482,
+    "sortOrder": 3,
+    "parentAreaId": 215,
+    "parentSubAreaId": 142,
+    "routeSegmentIndex": 3,
+    "currentConditions": "[{\"id\": 1354538, \"conditionId\": 17, \"conditionDescription\": \"3 - dry\", \"userName\": \"\", \"startTime\": 1794153601237, \"endTime\": 4947757206715, \"confirmationTime\": 1794157206715, \"updateTime\": 1794153601237, \"confirmationUserName\": \"\", \"sourceType\": \"OPERATOR\", \"additionalData\": null}, {\"id\": 1354853, \"conditionId\": 47, \"conditionDescription\": \"forecast text included\", \"userName\": \"\", \"startTime\": 1794158827485, \"endTime\": 1794180221290, \"confirmationTime\": 1794158621290, \"updateTime\": 1794158621290, \"confirmationUserName\": \"\", \"sourceType\": \"NDFD\", \"additionalData\": \"Clear skies. Wind gusts of u"
+   },
+   {
+    "id": "201",
+    "name": "US 40, between Kemry Lane (near Rabbit Ears Pass) and Utility Road (3 miles west of the Kremmling area)",
+    "nameId": "Rabbit Ears Pass",
+    "routeId": 152,
+    "routeName": "US 40",
+    "primaryMP": 137.32318525182112,
+    "secondaryMP": 178.67290150809615,
+    "primaryLatitude": 40.42138834181959,
+    "primaryLongitude": -106.80654513301302,
+    "secondaryLatitude": 40.13198409056448,
+    "secondaryLongitude": -106.4305999242779,
+    "sortOrder": 4,
+    "parentAreaId": 214,
+    "parentSubAreaId": 148,
+    "routeSegmentIndex": 4,
+    "currentConditions": "[{\"id\": 1353971, \"conditionId\": 17, \"conditionDescription\": \"3 - dry\", \"userName\": \"\", \"startTime\": 1794144717906, \"endTime\": 4947744717906, \"confirmationTime\": 1794144717906, \"updateTime\": 1794144717906, \"confirmationUserName\": \"\", \"sourceType\": \"OPERATOR\", \"additionalData\": null}, {\"id\": 1354843, \"conditionId\": 47, \"conditionDescription\": \"forecast text included\", \"userName\": \"\", \"startTime\": 1794158827473, \"endTime\": 1794180221290, \"confirmationTime\": 1794158621290, \"updateTime\": 1794158621290, \"confirmationUserName\": \"\", \"sourceType\": \"NDFD\", \"additionalData\": \"Mostly clear. Wind gusts of "
+   },
+   {
+    "id": "202",
+    "name": "US 40, between CO 134 (3 miles west of the Kremmling area) and Mesa Street (near Granby)",
+    "nameId": "Kremmling-Granby",
+    "routeId": 152,
+    "routeName": "US 40",
+    "primaryMP": 178.67290150809615,
+    "secondaryMP": 211.57416959762907,
+    "primaryLatitude": 40.13198409056448,
+    "primaryLongitude": -106.4305999242779,
+    "secondaryLatitude": 40.08659728781265,
+    "secondaryLongitude": -105.9494919649502,
+    "sortOrder": 5,
+    "parentAreaId": 214,
+    "parentSubAreaId": 148,
+    "routeSegmentIndex": 5,
+    "currentConditions": "[{\"id\": 1353972, \"conditionId\": 17, \"conditionDescription\": \"3 - dry\", \"userName\": \"\", \"startTime\": 1794144717906, \"endTime\": 4947744717906, \"confirmationTime\": 1794144717906, \"updateTime\": 1794144717906, \"confirmationUserName\": \"\", \"sourceType\": \"OPERATOR\", \"additionalData\": null}, {\"id\": 1354821, \"conditionId\": 47, \"conditionDescription\": \"forecast text included\", \"userName\": \"\", \"startTime\": 1794158827428, \"endTime\": 1794180221290, \"confirmationTime\": 1794158621290, \"updateTime\": 1794158621290, \"confirmationUserName\": \"\", \"sourceType\": \"NDFD\", \"additionalData\": \"Clear skies. Wind gusts of u"
+   },
+   {
+    "id": "156",
+    "name": "CO 151, between CO 172; Ute Street (Ignacio) and US 160 (1 mile east of Chimney Rock)",
+    "nameId": "Ignacio-Chimney Rock (US 160)",
+    "routeId": 45,
+    "routeName": "CO 151",
+    "primaryMP": 1.8822400110989285e-07,
+    "secondaryMP": 33.953608418888685,
+    "primaryLatitude": 37.11509148773316,
+    "primaryLongitude": -107.63319680000673,
+    "secondaryLatitude": 37.210238450274865,
+    "secondaryLongitude": -107.26340883897437,
+    "sortOrder": 1,
+    "parentAreaId": 214,
+    "parentSubAreaId": 150,
+    "routeSegmentIndex": 1,
+    "currentConditions": "[{\"id\": 1354023, \"conditionId\": 17, \"conditionDescription\": \"3 - dry\", \"userName\": \"\", \"startTime\": 1794144717906, \"endTime\": 4947744717906, \"confirmationTime\": 1794144717906, \"updateTime\": 1794144717906, \"confirmationUserName\": \"\", \"sourceType\": \"OPERATOR\", \"additionalData\": null}, {\"id\": 1354811, \"conditionId\": 47, \"conditionDescription\": \"forecast text included\", \"userName\": \"\", \"startTime\": 1794158827418, \"endTime\": 1794180221290, \"confirmationTime\": 1794158621290, \"updateTime\": 1794158621290, \"confirmationUserName\": \"\", \"sourceType\": \"NDFD\", \"additionalData\": \"Clear skies. Wind gusts of u"
+   },
+   {
+    "id": "444",
+    "name": "I-70, between Exit 361: US 24; Limon (near Limon) and Exit 405: CO 59 (3 miles east of the Flagler area)",
+    "nameId": "Limon-Genoa-Seibert",
+    "routeId": 5,
+    "routeName": "I-70",
+    "primaryMP": 362.328299049995,
+    "secondaryMP": 399.3334727719219,
+    "primaryLatitude": 39.26083419805817,
+    "primaryLongitude": -103.6593641473261,
+    "secondaryLatitude": 39.27572369482661,
+    "secondaryLongitude": -102.97549987314278,
+    "sortOrder": 5,
+    "parentAreaId": 215,
+    "parentSubAreaId": 137,
+    "routeSegmentIndex": 18,
+    "currentConditions": "[{\"id\": 1354515, \"conditionId\": 17, \"conditionDescription\": \"3 - dry\", \"userName\": \"\", \"startTime\": 1794153601237, \"endTime\": 4947757206715, \"confirmationTime\": 1794157206715, \"updateTime\": 1794153601237, \"confirmationUserName\": \"\", \"sourceType\": \"OPERATOR\", \"additionalData\": null}, {\"id\": 1354955, \"conditionId\": 47, \"conditionDescription\": \"forecast text included\", \"userName\": \"\", \"startTime\": 1794158827635, \"endTime\": 1794180221290, \"confirmationTime\": 1794158621290, \"updateTime\": 1794158621290, \"confirmationUserName\": \"\", \"sourceType\": \"NDFD\", \"additionalData\": \"Clear skies. Wind gusts of u"
+   },
+   {
+    "id": "49",
+    "name": "CO 9, between 3rd Street (1 mile north of Fairplay) and I-70; County Road 1231 (Frisco)",
+    "nameId": "Hoosier Pass - Frisco",
+    "routeId": 134,
+    "routeName": "CO 9",
+    "primaryMP": 66.57713676843773,
+    "secondaryMP": 97.23000005133508,
+    "primaryLatitude": 39.23498908839107,
+    "primaryLongitude": -106.02337718097084,
+    "secondaryLatitude": 39.59328733139537,
+    "secondaryLongitude": -106.09712053996748,
+    "sortOrder": 3,
+    "parentAreaId": 212,
+    "parentSubAreaId": 184,
+    "routeSegmentIndex": 3,
+    "currentConditions": "[{\"id\": 1353658, \"conditionId\": 17, \"conditionDescription\": \"3 - dry\", \"userName\": \"\", \"startTime\": 1794141012927, \"endTime\": 4947757310293, \"confirmationTime\": 1794157310293, \"updateTime\": 1794141012927, \"confirmationUserName\": \"\", \"sourceType\": \"OPERATOR\", \"additionalData\": null}, {\"id\": 1354930, \"conditionId\": 47, \"conditionDescription\": \"forecast text included\", \"userName\": \"\", \"startTime\": 1794158827591, \"endTime\": 1794180221290, \"confirmationTime\": 1794158621290, \"updateTime\": 1794158621290, \"confirmationUserName\": \"\", \"sourceType\": \"NDFD\", \"additionalData\": \"Clear skies. Wind gusts of u"
+   },
+   {
+    "id": "395",
+    "name": "US 50, between Cimarron Avenue (La Junta) and Mill Street (Lamar)",
+    "nameId": "LaJunta-Lamar",
+    "routeId": 154,
+    "routeName": "US 50",
+    "primaryMP": 379.83304153264623,
+    "secondaryMP": 435.7321144062969,
+    "primaryLatitude": 37.98797675625955,
+    "primaryLongitude": -103.54056323830311,
+    "secondaryLatitude": 38.0884740169598,
+    "secondaryLongitude": -102.6129067038947,
+    "sortOrder": 5,
+    "parentAreaId": 212,
+    "parentSubAreaId": 171,
+    "routeSegmentIndex": 8,
+    "currentConditions": "[{\"id\": 1353637, \"conditionId\": 17, \"conditionDescription\": \"3 - dry\", \"userName\": \"\", \"startTime\": 1794141012927, \"endTime\": 4947757310293, \"confirmationTime\": 1794157310293, \"updateTime\": 1794141012927, \"confirmationUserName\": \"\", \"sourceType\": \"OPERATOR\", \"additionalData\": null}, {\"id\": 1354873, \"conditionId\": 47, \"conditionDescription\": \"forecast text included\", \"userName\": \"\", \"startTime\": 1794158827516, \"endTime\": 1794180221290, \"confirmationTime\": 1794158621290, \"updateTime\": 1794158621290, \"confirmationUserName\": \"\", \"sourceType\": \"NDFD\", \"additionalData\": \"Clear skies. Wind gusts of u"
+   },
+   {
+    "id": "123",
+    "name": "CO 94, between County Road 17.3 and US 40 (Punkin Center)",
+    "nameId": "US40/287-Punkin Center",
+    "routeId": 139,
+    "routeName": "CO 94",
+    "primaryMP": 53.63089944563572,
+    "secondaryMP": 86.17399995806045,
+    "primaryLatitude": 38.85216077813205,
+    "primaryLongitude": -103.71800572070714,
+    "secondaryLatitude": 38.8694189457826,
+    "secondaryLongitude": -103.12059574938371,
+    "sortOrder": 2,
+    "parentAreaId": 212,
+    "parentSubAreaId": 174,
+    "routeSegmentIndex": 2,
+    "currentConditions": "[{\"id\": 1353668, \"conditionId\": 17, \"conditionDescription\": \"3 - dry\", \"userName\": \"\", \"startTime\": 1794141012927, \"endTime\": 4947757310293, \"confirmationTime\": 1794157310293, \"updateTime\": 1794141012927, \"confirmationUserName\": \"\", \"sourceType\": \"OPERATOR\", \"additionalData\": null}, {\"id\": 1354957, \"conditionId\": 47, \"conditionDescription\": \"forecast text included\", \"userName\": \"\", \"startTime\": 1794158827639, \"endTime\": 1794180221290, \"confirmationTime\": 1794158621290, \"updateTime\": 1794158621290, \"confirmationUserName\": \"\", \"sourceType\": \"NDFD\", \"additionalData\": \"Clear skies. Wind gusts of u"
+   },
+   {
+    "id": "478",
+    "name": "CO 86, between High Point Road (Castle Rock) and County Road 37 (1 mile west of the Kiowa area)",
+    "nameId": "Franktown-Kiowa",
+    "routeId": 131,
+    "routeName": "CO 86",
+    "primaryMP": 4.557815421521892,
+    "secondaryMP": 19.598671830606154,
+    "primaryLatitude": 39.39536003044732,
+    "primaryLongitude": -104.7955419142151,
+    "secondaryLatitude": 39.357387018687646,
+    "secondaryLongitude": -104.52762003139193,
+    "sortOrder": 1,
+    "parentAreaId": 215,
+    "parentSubAreaId": 200,
+    "routeSegmentIndex": 1,
+    "currentConditions": "[{\"id\": 1354559, \"conditionId\": 17, \"conditionDescription\": \"3 - dry\", \"userName\": \"\", \"startTime\": 1794153601237, \"endTime\": 4947757206715, \"confirmationTime\": 1794157206715, \"updateTime\": 1794153601237, \"confirmationUserName\": \"\", \"sourceType\": \"OPERATOR\", \"additionalData\": null}, {\"id\": 1354872, \"conditionId\": 47, \"conditionDescription\": \"forecast text included\", \"userName\": \"\", \"startTime\": 1794158827513, \"endTime\": 1794180221290, \"confirmationTime\": 1794158621290, \"updateTime\": 1794158621290, \"confirmationUserName\": \"\", \"sourceType\": \"NDFD\", \"additionalData\": \"Clear skies. Wind gusts of u"
+   },
+   {
+    "id": "214",
+    "name": "US 50, between I-70B Grand Junction; Ute Avenue (Grand Junction) and 1250 Road (Delta)",
+    "nameId": "Grand Junction-Delta",
+    "routeId": 154,
+    "routeName": "US 50",
+    "primaryMP": 31.760000401925172,
+    "secondaryMP": 66.62475631073863,
+    "primaryLatitude": 39.06536377417823,
+    "primaryLongitude": -108.56445009536255,
+    "secondaryLatitude": 38.76274353921792,
+    "secondaryLongitude": -108.12955311471563,
+    "sortOrder": 1,
+    "parentAreaId": 214,
+    "parentSubAreaId": 154,
+    "routeSegmentIndex": 1,
+    "currentConditions": "[{\"id\": 1353974, \"conditionId\": 17, \"conditionDescription\": \"3 - dry\", \"userName\": \"\", \"startTime\": 1794144717906, \"endTime\": 4947744717906, \"confirmationTime\": 1794144717906, \"updateTime\": 1794144717906, \"confirmationUserName\": \"\", \"sourceType\": \"OPERATOR\", \"additionalData\": null}, {\"id\": 1354790, \"conditionId\": 47, \"conditionDescription\": \"forecast text included\", \"userName\": \"\", \"startTime\": 1794158827385, \"endTime\": 1794180221290, \"confirmationTime\": 1794158621290, \"updateTime\": 1794158621290, \"confirmationUserName\": \"\", \"sourceType\": \"NDFD\", \"additionalData\": \"Clear skies. Wind gusts of u"
+   }
+  ]
+ }
+}

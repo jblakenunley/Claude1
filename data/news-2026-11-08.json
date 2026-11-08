@@ -8,6 +8,13 @@
 },
 {
 "outlet": "The Guardian",
+"hint": "world",
+"title": "Collision of two trains in Egypt kills at least seven",
+"url": "https://www.theguardian.com/world/2026/nov/08/egypt-two-trains-deadly-collision",
+"published": "2026-11-08T10:19-07:00"
+},
+{
+"outlet": "The Guardian",
 "hint": "science",
 "title": "Nicola Jennings on Cop31 in Turkey – cartoon",
 "url": "https://www.theguardian.com/commentisfree/picture/2026/nov/08/nicola-jennings-on-cop31-in-turkey-cartoon",
@@ -96,13 +103,6 @@
 "title": "No clear winner in New Zealand election, as leaders prepare for weeks of talks",
 "url": "https://www.npr.org/2026/11/08/nx-s1-6033999/no-clear-winner-in-new-zealand-election-as-leaders-prepare-for-weeks-of-talks",
 "published": "2026-11-08T09:46-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "world",
-"title": "Collision of two trains in Egypt kills at least four",
-"url": "https://www.theguardian.com/world/2026/nov/08/egypt-two-trains-deadly-collision",
-"published": "2026-11-08T09:38-07:00"
 },
 {
 "outlet": "The Guardian",
