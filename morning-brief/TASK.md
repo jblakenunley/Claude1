@@ -1,6 +1,6 @@
 Produce today's Morning Brief for J Blake Nunley, Aspen, as a four-page PDF. Today = America/Denver date. This prompt stays under one page: any new rule must replace an old one.
 
-1. LOAD. Clone the kit and the data: `git clone --depth 1 https://github.com/jblakenunley/claude1 kit` and `git clone --depth 1 --branch mb-data https://github.com/jblakenunley/claude1 mbdata`. The kit is kit/morning-brief/: fetch.py, render.py, template/ and STYLE.md, which governs every word you write. Read registry-news and registry-events from the Morning Brief Playbook artifact (https://claude.ai/artifact/9DdCwf3gdP9yiessJ4YW34) and the last three "editions" records for repeats.
+1. LOAD. ToolSearch "select:ArtifactData,PushNotification,SendUserFile" (skip any that don't exist). Clone the kit and the data: `git clone --depth 1 https://github.com/jblakenunley/claude1 kit` and `git clone --depth 1 --branch mb-data https://github.com/jblakenunley/claude1 mbdata`. The kit is kit/morning-brief/: fetch.py, render.py, template/ and STYLE.md, which governs every word you write. Read registry-news and registry-events from the Morning Brief Playbook artifact (https://claude.ai/artifact/9DdCwf3gdP9yiessJ4YW34) and the last three "editions" records for repeats.
 
 2. NUMBERS. Start a fresh fetch, then read it:
    - In kit, run `git commit -q --allow-empty -m "fetch TODAY" && git push -q -f origin HEAD:mb-trigger`. If the push is refused, call add_repo for jblakenunley/claude1 with push access and retry once.
@@ -10,7 +10,7 @@ Produce today's Morning Brief for J Blake Nunley, Aspen, as a four-page PDF. Tod
 3. WORDS. Write edition/TODAY.json to the STYLE.md slots: the headline and verdict from the data file and NWS's own wording; two pages of news; the pick of the week; and the events.
    - Choose news from `python3 fetch.py headlines data/news-TODAY.json`. A story may rest on its feed title and summary; open the page only when the sentence needs more.
    - Without the headlines file, search outlet by outlet with allowed_domains, which returns dated articles in one call.
-   - Set resort_status only from a resort's own page, for example "Open" on opening day.
+   - resort_status: carry forward the last edition's; change a resort only from its own page, and check once any resort whose planned opening has passed with no status.
    - Open every event link once. Every item must be dated inside its window, free to read, and support its sentence. Drop any that fail.
 
 4. RENDER. Run `python3 render.py --data … --edition … --out Morning-Brief-TODAY.pdf`. If it reports a violation or an overflow, rewrite that slot and run it again. Never edit the template, CSS or limits. View both pages once at 60 dpi.
@@ -19,7 +19,7 @@ Produce today's Morning Brief for J Blake Nunley, Aspen, as a four-page PDF. Tod
 
 6. ARCHIVE. A failure here never blocks delivery.
    - Upload the PDF with the Artifact tool: action "publish", url the playbook, file_path the PDF, asset true.
-   - ArtifactData "set", collection "editions", doc_id TODAY: date, issue, kind, lead (the headline), snow {indep_swe_in, indep_pct_median} from the data file, story_urls, event_urls, pdf_asset_id, factcheck {checked, dropped, notes}, and the data file's archive block.
+   - ArtifactData "set", collection "editions", doc_id TODAY: date, issue, kind, lead (the headline), snow {indep_swe_in, indep_pct_median} from the data file, story_urls, event_urls, resort_status, pdf_asset_id, factcheck {checked, dropped, notes}, and the data file's archive block.
    - Provenance, scores and checks live here only, never in the paper.
 
 CDOT key (step 2, own builds only): [kept in the scheduled task, never in the playbook]
