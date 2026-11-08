@@ -11,7 +11,7 @@ a{color:inherit;text-decoration:none}
 .muted{color:var(--grey)}
 
 /* masthead */
-.mast{display:flex;justify-content:space-between;align-items:flex-end;height:.98in;border-bottom:6pt solid var(--black);padding-bottom:7pt}
+.mast{display:flex;justify-content:space-between;align-items:flex-end;height:.9in;border-bottom:6pt solid var(--black);padding-bottom:7pt}
 .mast h1{font-family:"Inter Display";font-weight:900;font-size:60pt;line-height:.8;letter-spacing:-.05em;text-transform:lowercase}
 .mast .meta{margin-top:7pt;display:flex;gap:10pt;align-items:center}
 .mast .meta i{width:7pt;height:7pt;background:var(--red);border-radius:50%;display:inline-block}
@@ -19,8 +19,8 @@ a{color:inherit;text-decoration:none}
 .sponsor{position:absolute;right:.5in;top:.3in;font-size:6.4pt;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
 
 /* lead */
-.lead{display:grid;grid-template-columns:1fr 2.05in;gap:16pt;padding:9pt 0 8pt}
-.lead h2{font-family:"Inter Display";font-weight:800;font-size:21pt;line-height:1.02;letter-spacing:-.025em}
+.lead{display:grid;grid-template-columns:1fr 2.05in;gap:16pt;padding:7pt 0 6pt}
+.lead h2{font-family:"Inter Display";font-weight:800;font-size:20pt;line-height:1.02;letter-spacing:-.025em}
 .lead p{font-size:10.2pt;line-height:1.38;font-weight:500;margin-top:5pt}
 .alert{background:var(--red);color:#fff;padding:8pt 10pt;align-self:start}
 .alert b{display:block;font-family:"Inter Display";font-weight:800;font-size:12pt;line-height:1.05;margin-top:3pt}
@@ -29,8 +29,8 @@ a{color:inherit;text-decoration:none}
 
 /* tiles */
 .tiles{display:grid;grid-template-columns:repeat(4,1fr);margin-bottom:11pt}
-.tile{padding:7pt 9pt 6pt;color:#fff;min-height:.76in}
-.tile b{display:block;font-family:"Inter Display";font-weight:800;font-size:22pt;letter-spacing:-.03em;line-height:1;margin-top:4pt}
+.tile{padding:5pt 9pt 4pt;color:#fff;min-height:.62in}
+.tile b{display:block;font-family:"Inter Display";font-weight:800;font-size:20pt;letter-spacing:-.03em;line-height:1;margin-top:4pt}
 .tile span{display:block;font-size:7pt;margin-top:3pt;opacity:.92;line-height:1.2}
 .t0{background:var(--black)}.t1{background:var(--red)}.t2{background:var(--blue)}.t3{background:var(--yellow);color:var(--black)}
 
@@ -41,7 +41,7 @@ h3 small{margin-left:auto;font-family:"Inter";font-size:6.4pt;font-weight:700;le
 .m{display:inline-block;width:9pt;height:9pt;flex:none}
 .mc{border-radius:50%;background:var(--red)}.ms{background:var(--blue)}
 .mt{width:0;height:0;border-left:5.5pt solid transparent;border-right:5.5pt solid transparent;border-bottom:9pt solid var(--yellow)}
-.block{margin-bottom:10pt}
+.block{margin-bottom:8pt}
 
 /* tables */
 table{width:100%;border-collapse:collapse}
@@ -82,7 +82,7 @@ tr.home td{background:#fff6}
 /* footer */
 .foot{position:absolute;left:.5in;right:.5in;bottom:.26in;border-top:1.5pt solid var(--black);padding-top:4pt}
 .foot .src{font-size:6.4pt;color:#3b3833;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.foot .notice{font-size:4.6pt;line-height:1.25;color:var(--grey);margin-top:2pt}
+.foot .notice{font-size:4.3pt;line-height:1.25;color:var(--grey);margin-top:2pt}
 .foot .pg{display:flex;justify-content:space-between;font-size:6.2pt;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--grey);margin-top:3pt}
 
 /* news pages */
@@ -150,3 +150,17 @@ tr.home td{background:#fff6}
 .ev.first{border-top:2pt solid var(--black)}
 .legend{display:flex;gap:12pt;font-size:7pt;color:#3b3833;margin:0 0 5pt;align-items:center}
 .legend span{display:inline-flex;gap:4pt;align-items:center}
+
+/* page 1, edition 2.1 */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16pt}
+.roads{column-count:2;column-gap:16pt;column-rule:1px solid var(--hair)}
+.road1{display:grid;grid-template-columns:auto 1fr auto;gap:6pt;align-items:baseline;padding:2.2pt 0;border-bottom:1px solid var(--hair);break-inside:avoid;font-size:7.9pt}
+.road1 b{font-size:8pt;white-space:nowrap}
+.road1 span:nth-child(2){color:#3b3833}
+.co td{padding-top:1.2pt;padding-bottom:1.2pt;font-size:7.6pt}
+.roads .road{break-inside:avoid;padding:2.2pt 0}
+.roads .road p{font-size:7.5pt}
+.avyline{margin-top:4pt;font-size:7.8pt}
+table.hz th{white-space:normal;line-height:1.15;vertical-align:bottom}
+table.hz th{font-size:5.8pt}
+.road1{padding:1.8pt 0}

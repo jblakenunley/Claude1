@@ -23,7 +23,7 @@ One footer line on page 1, built from the data file. Story and event links sit o
 | Slot | Limit |
 |---|---|
 | Headline | 4–12 words. The single most useful snow or road fact. |
-| Verdict | 12–40 words. What the next 48 hours bring and where to ski. |
+| Verdict | 12–32 words. What the next 48 hours bring and where to ski. |
 | Day in brief | 20–40 words. The two things a reader must know today. |
 | Lead story | Head 4–12 words, text 35–60 words, one or two free links. |
 | Every story | Lead 1–5 words, text 8–24 words, one or two free links. |
