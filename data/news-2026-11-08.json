@@ -1,10 +1,45 @@
 [
 {
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "He arrested a hacker, then spent 18 months clearing his own name. Now he’s a cybersecurity VC.",
+"url": "https://techcrunch.com/2026/11/08/the-ex-secret-service-agent-who-flipped-a-hacker-is-now-raising-a-second-250m-cybersecurity-fund/",
+"published": "2026-11-08T10:30-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "science",
+"title": "Nicola Jennings on Cop31 in Turkey – cartoon",
+"url": "https://www.theguardian.com/commentisfree/picture/2026/nov/08/nicola-jennings-on-cop31-in-turkey-cartoon",
+"published": "2026-11-08T10:11-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Jerusalem Daily: Eisenkot picked over Netanyahu to form government",
+"url": "https://www.aljazeera.com/video/newsfeed/2026/11/8/dnrbltn-261108-hegazyn-jerusalem_daily-081126?traffic_source=rss",
+"published": "2026-11-08T10:11-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Erdoğan joins Aliyev for Azerbaijan’s Victory Day in Karabakh",
+"url": "https://www.euronews.com/2026/11/08/erdogan-joins-aliyev-for-azerbaijans-victory-day-in-karabakh",
+"published": "2026-11-08T10:11-07:00"
+},
+{
 "outlet": "Euronews",
 "hint": "europe",
 "title": "Rosstat hack: data obtained suggests over 390,000 Russian deaths in Ukraine war",
 "url": "https://www.euronews.com/2026/11/08/rosstat-hack-data-obtained-suggests-over-390000-russian-deaths-in-ukraine-war",
 "published": "2026-11-08T10:04-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Photos: Diwali celebrations light up India and its global diaspora",
+"url": "https://www.aljazeera.com/gallery/2026/11/8/photos-diwali-celebrations-light-up-india-and-its-global-diaspora?traffic_source=rss",
+"published": "2026-11-08T10:03-07:00"
 },
 {
 "outlet": "TechCrunch",
@@ -16,7 +51,7 @@
 {
 "outlet": "Al Jazeera",
 "hint": "world",
-"title": "Atletico Madrid vs Barcelona: La Liga live",
+"title": "LIVE: Atletico Madrid vs Barcelona – La Liga",
 "url": "https://www.aljazeera.com/sports/liveblog/2026/11/8/atletico-madrid-vs-barcelona-la-liga-live?traffic_source=rss",
 "published": "2026-11-08T10:00-07:00"
 },
@@ -117,6 +152,13 @@
 "title": "Israeli forces release Palestinian journalist Abou Shhadeh",
 "url": "https://www.aljazeera.com/news/2026/11/8/israeli-forces-release-palestinian-journalist-abou-shhadeh?traffic_source=rss",
 "published": "2026-11-08T09:18-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Footage shows derailed carriages after fatal train crash in Egypt",
+"url": "https://www.bbc.co.uk/news/videos/cw78p2km7d94o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-08T09:05-07:00"
 },
 {
 "outlet": "CNBC",
@@ -247,9 +289,9 @@
 {
 "outlet": "BBC",
 "hint": "world",
-"title": "What we know so far after Krakow gun attack",
-"url": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-08T07:32-07:00"
+"title": "Homes and temples glow across India to mark Diwali",
+"url": "https://www.bbc.co.uk/news/articles/cm70pdwz122ro?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-08T07:42-07:00"
 },
 {
 "outlet": "CNBC",
@@ -273,25 +315,11 @@
 "published": "2026-11-08T07:22-07:00"
 },
 {
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Tearful Alex Eala loses Hong Kong Open final to Claire Liu in straight sets",
-"url": "https://www.aljazeera.com/sports/2026/11/8/tearful-alex-eala-loses-hong-kong-open-final-to-claire-liu-in-straight-sets?traffic_source=rss",
-"published": "2026-11-08T07:19-07:00"
-},
-{
 "outlet": "CNBC",
 "hint": "markets",
 "title": "Recent AI agent experiments reveal a risky future of machine 'teamwork' inside corporations",
 "url": "https://www.cnbc.com/2026/11/08/ai-agents-risks.html",
 "published": "2026-11-08T07:14-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "US task force to cut off Iran’s transport of advanced weapons: What we know",
-"url": "https://www.aljazeera.com/news/2026/11/8/us-task-force-to-cut-off-irans-transport-of-advanced-weapons-what-we-know?traffic_source=rss",
-"published": "2026-11-08T07:06-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -320,6 +348,20 @@
 "title": "Poppi founders are going after PepsiCo's Gatorade with new beverage startup Jetty",
 "url": "https://www.cnbc.com/2026/11/08/poppi-founders-jetty-hydration-gatorade.html",
 "published": "2026-11-08T07:00-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Surgeon having lunch near Krakow shooting undoubtedly saved officer's life, colleague says",
+"url": "https://www.bbc.co.uk/news/articles/c5x2vw4e1gx1o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-08T06:40-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Iran executes three men for 'armed unrest' after January protests",
+"url": "https://www.bbc.co.uk/news/articles/ckly0ex633ydo?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-08T06:37-07:00"
 },
 {
 "outlet": "NPR",
@@ -469,6 +511,13 @@
 "published": "2026-11-08T05:00-07:00"
 },
 {
+"outlet": "The Guardian",
+"hint": "us",
+"title": "Zohran Mamdani has a mustache now. We cannot take this lightly | Dave Schilling",
+"url": "https://www.theguardian.com/commentisfree/2026/nov/08/zohran-mamdani-mustache-facial-hair",
+"published": "2026-11-08T05:00-07:00"
+},
+{
 "outlet": "CNBC",
 "hint": "markets",
 "title": "These funds tout hefty income tied to the tech trade – if you’re willing to deal with the complexity",
@@ -488,13 +537,6 @@
 "title": "Top Wall Street analysts like these 3 dividend stocks for consistent income",
 "url": "https://www.cnbc.com/2026/11/08/top-analysts-like-these-3-dividend-stocks-for-consistent-income.html",
 "published": "2026-11-08T04:47-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "US forces strike commercial vessel in Gulf of Oman after crew 'ignored repeated warnings'",
-"url": "https://www.euronews.com/2026/11/08/us-forces-strike-commercial-vessel-in-gulf-of-oman-after-crew-ignored-repeated-warnings",
-"published": "2026-11-08T04:41-07:00"
 },
 {
 "outlet": "Colorado Sun",
@@ -757,13 +799,6 @@
 },
 {
 "outlet": "BBC",
-"hint": "world",
-"title": "Germans wrestle with what to do with Hitler's destroyed Eagle's Nest retreat",
-"url": "https://www.bbc.co.uk/news/articles/cm74pk1g51nko?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-07T17:48-07:00"
-},
-{
-"outlet": "BBC",
 "hint": "tech",
 "title": "Can the Zelda remake capture the magic of the original?",
 "url": "https://www.bbc.co.uk/news/articles/cm8xznl0n1q4o?at_medium=RSS&at_campaign=rss",
@@ -796,13 +831,6 @@
 "title": "What is Diwali, the Festival of Lights, and how is it celebrated?",
 "url": "https://www.pbs.org/newshour/world/what-is-diwali-the-festival-of-lights-and-how-is-it-celebrated",
 "published": "2026-11-07T16:01-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "Israel's president tasks opposition leader Eisenkot with forming government",
-"url": "https://www.bbc.co.uk/news/articles/cmy8367lj5xlo?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-07T15:19-07:00"
 },
 {
 "outlet": "CNBC",
@@ -1013,34 +1041,6 @@
 "title": "Paraguay's former president faces prosecutors after his removal over bank collapse",
 "url": "https://www.cnbc.com/2026/11/07/paraguays-former-president-faces-prosecutors-over-bank-collapse.html",
 "published": "2026-11-07T08:55-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "Five European leaders call for closer EU-UK ties ahead of Brussels summit",
-"url": "https://www.theguardian.com/world/2026/nov/07/europe-leaders-call-closer-eu-uk-ties-brussels-summit",
-"published": "2026-11-07T08:30-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "world",
-"title": "Berkshire Hathaway more than doubles buybacks in third quarter as earnings decline",
-"url": "https://www.cnbc.com/2026/11/07/berkshire-hathaway-q3-2026-earnings-buybacks.html",
-"published": "2026-11-07T08:23-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "UK cannot 'cherry pick' EU single market deal, Barnier tells BBC",
-"url": "https://www.bbc.co.uk/news/articles/c9kgjj206nzpo?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-07T08:19-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "Stephen Miller, Trump’s incoming chief of staff, pledges ‘total devotion’ to the president",
-"url": "https://www.theguardian.com/us-news/2026/nov/07/stephen-miller-trump-loyalty",
-"published": "2026-11-07T08:15-07:00"
 },
 {
 "outlet": "ECB",
