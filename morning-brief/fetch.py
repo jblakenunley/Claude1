@@ -304,15 +304,15 @@ def resort_status(name, cfg, today, ua):
 
 
 # ---------------------------------------------------------------- roads (COtrip official feeds)
-NOGO = re.compile(r"(road|highway|pass|safety|full|seasonal|canyon) closure|closed (in )?both directions|"
-                  r"all lanes closed|road closed|highway closed|pass closed|is closed|chain law", re.I)
-CAUTION = re.compile(r"lane clos|shoulder clos|traction law|icy|black ice|snow ?packed|slush|snow|"
-                     r"delays?|construction|crash|rock ?fall|flood|wet", re.I)
+CLOSED_TXT = re.compile(r"\b(road|highway|pass|safety|full|seasonal)\s+closure\b|\broad (is )?closed\b|\bclosed (in )?both directions\b|"
+                        r"\ball lanes (are )?closed\b|\bclosed to (all|through) traffic\b|\bchain law\b", re.I)
 
 
 def _route_key(s):
-    s = re.sub(r"[^A-Z0-9]", "", str(s).upper())
-    s = s.replace("INTERSTATE", "I").replace("SH", "CO").replace("STATEHIGHWAY", "CO")
+    """'US-160E', 'CO 82', 'I-70W', 'SH 82' -> 'US160', 'CO82', 'I70', 'CO82'."""
+    s = re.sub(r"[^A-Z0-9]", "", str(s).upper()).replace("INTERSTATE", "I").replace("STATEHIGHWAY", "CO")
+    s = re.sub(r"^SH(?=\d)", "CO", s)
+    s = re.sub(r"(\d)[NSEW]$", r"\1", s)
     return re.sub(r"^(I|US|CO)0*", r"\1", s)
 
 
@@ -329,41 +329,75 @@ def _flat(o, acc=None):
     return acc
 
 
-def _mileposts(pr, text):
-    mps = []
-    for k, v in pr.items():
-        if re.search(r"(marker|milepost|mile_?point|mm)$", k, re.I) and num(v) is not None:
-            mps.append(num(v))
-    if not mps:
-        mps = [float(x) for x in re.findall(r"\b(?:MP|mile ?(?:post|marker|point))\s*(\d+(?:\.\d+)?)", text, re.I)]
-    return mps
+def _mp_range(pr):
+    vals = [num(pr.get(k)) for k in ("marker", "startMarker", "endMarker", "primaryMP", "secondaryMP") if num(pr.get(k)) is not None]
+    return (min(vals), max(vals)) if vals else None
 
 
-def _active(pr, now):
-    st = pr.get("startTime") or pr.get("start_date")
-    en = pr.get("endTime") or pr.get("clearTime") or pr.get("end_date")
+def _ts(v):
+    if v is None:
+        return None
+    if isinstance(v, (int, float)):
+        return datetime.fromtimestamp(v / 1000, timezone.utc)
     try:
-        if st and datetime.fromisoformat(st.replace("Z", "+00:00")) > now:
-            return False
-        if en and datetime.fromisoformat(en.replace("Z", "+00:00")) < now:
-            return False
+        return datetime.fromisoformat(str(v).replace("Z", "+00:00"))
     except ValueError:
-        pass
-    return True
+        return None
+
+
+def _active_window(start, end, now):
+    s, e = _ts(start), _ts(end)
+    return (s is None or s <= now) and (e is None or e >= now)
+
+
+def classify(feed, pr, now):
+    """One COtrip record -> (verdict, reason) or None when it is not active or says nothing about driving."""
+    rng = _mp_range(pr)
+    where = (f"MP {rng[0]:g}" if rng[0] == rng[1] else f"MP {round(rng[0], 1):g} to {round(rng[1], 1):g}") if rng else ""
+    if feed == "roadConditions":
+        try:
+            conds = json.loads(pr.get("currentConditions") or "[]")
+        except (TypeError, json.JSONDecodeError):
+            conds = []
+        desc = [re.sub(r"^\d+\s*-\s*", "", c.get("conditionDescription", "")).strip().lower() for c in conds
+                if _active_window(c.get("startTime"), c.get("endTime"), now)]
+        desc = [d for d in desc if d and "forecast" not in d]
+        if any("closed" in d or "chain law" in d for d in desc):
+            return "NO-GO", f"Closed {where}".strip()
+        bad = [d for d in desc if re.search(r"ic[ey]|snow|slush|pack|traction|spots|fog|blowing", d)]
+        if bad:
+            return "CAUTION", f"{bad[0].capitalize()} {where}".strip()
+        if desc:
+            return "GO", desc[0].capitalize()
+        return None
+    if feed == "plannedEvents":
+        sched = pr.get("schedule") or []
+        if sched and not any(_active_window(x.get("startTime"), x.get("endTime"), now) for x in sched):
+            return None
+    text = " ".join(_flat({k: v for k, v in pr.items() if k in ("type", "travelerInformationMessage", "name")}))
+    lanes = pr.get("laneImpacts") or []
+    all_closed = any(str(l.get("laneClosures", "0")) != "0" and l.get("laneCount") and
+                     sum("lane" in t for t in l.get("closedLaneTypes", [])) >= l["laneCount"] for l in lanes)
+    if CLOSED_TXT.search(text) or all_closed or "closure" in str(pr.get("type", "")).lower():
+        return "NO-GO", f"Closed {where}".strip()
+    lane_hit = any(any("lane" in t for t in l.get("closedLaneTypes", [])) for l in lanes)
+    if lane_hit or re.search(r"alternating traffic|delays|crash|flood|rock ?fall|ic[ey]|snow", text, re.I):
+        kind = str(pr.get("type") or "Delays").strip()
+        return "CAUTION", f"{kind} {where}".strip()
+    return None
 
 
 def road_features(key, ua):
     feats = []
     for feed in ("incidents", "plannedEvents", "roadConditions"):
         js = get_json(f"https://data.cotrip.org/api/v1/{feed}?apiKey={key}", ua, f"COtrip {feed}")
-        if js is None:
-            continue
-        for f in js.get("features", []):
+        for f in (js or {}).get("features", []):
             pr = f.get("properties", {})
-            text = " ".join(_flat(pr))
-            route = pr.get("routeName") or pr.get("route") or pr.get("roadName") or ""
-            feats.append({"feed": feed, "route": _route_key(route), "text": text, "mps": _mileposts(pr, text), "props": pr})
+            feats.append({"feed": feed, "route": _route_key(pr.get("routeName", "")), "range": _mp_range(pr), "props": pr})
     return feats
+
+
+RANK = {"GO": 0, "CAUTION": 1, "NO-GO": 2}
 
 
 def road_verdicts(routes, feats, now):
@@ -371,30 +405,23 @@ def road_verdicts(routes, feats, now):
         return []
     out = []
     for rt in routes:
-        hits = []
+        worst, n, seen_cond = None, 0, False
         for rk, lo, hi in rt["segments"]:
             for f in feats:
-                if f["route"] != _route_key(rk) or not _active(f["props"], now):
+                if f["route"] != _route_key(rk) or not f["range"] or max(lo, f["range"][0]) > min(hi, f["range"][1]):
                     continue
-                if f["mps"] and not any(lo <= m <= hi for m in f["mps"]):
+                c = classify(f["feed"], f["props"], now)
+                if not c:
                     continue
-                hits.append(f)
-        verdict, reason = "GO", "No closures or incidents reported"
-        for f in hits:
-            if NOGO.search(f["text"]):
-                verdict = "NO-GO"
-                mp = sorted(f["mps"])
-                reason = f"Closed MP {mp[0]:g} to {mp[-1]:g}" if len(mp) >= 2 else "Closed"
-                if re.search(r"chain law", f["text"], re.I) and not re.search(r"clos", f["text"], re.I):
-                    reason = "Chain law in effect"
-                break
-        if verdict == "GO":
-            for f in hits:
-                m = CAUTION.search(f["text"])
-                if m:
-                    verdict, reason = "CAUTION", m.group(0).strip().capitalize()
-                    break
-        out.append({"route": rt["name"], "verdict": verdict, "reason": reason, "matched": len(hits)})
+                n += 1
+                seen_cond |= f["feed"] == "roadConditions"
+                if worst is None or RANK[c[0]] > RANK[worst[0]]:
+                    worst = c
+        if worst is None:
+            continue  # nothing reported for this route: leave it out rather than guess GO
+        if worst[0] == "GO" and not seen_cond:
+            continue
+        out.append({"route": rt["name"], "verdict": worst[0], "reason": worst[1], "matched": n})
     return out
 
 
@@ -629,8 +656,10 @@ def run(day, cfg, history_dir=None):
 
     # roads
     key = os.environ.get("CDOT_API_KEY")
-    if key and cfg.get("roads_enabled", True):
-        roads = safely(archive, "cotrip", lambda: road_verdicts(cfg["routes"], road_features(key, ua), now), [])
+    roads = safely(archive, "cotrip", lambda: road_verdicts(cfg["routes"], road_features(key, ua), now), []) if key else []
+    if roads and not cfg.get("roads_enabled", True):
+        archive["roads_preview"] = roads
+    if roads and cfg.get("roads_enabled", True):
         if roads:
             paper["roads"] = [{k: r[k] for k in ("route", "verdict", "reason")} for r in roads]
             archive["roads_matched"] = {r["route"]: r["matched"] for r in roads}
@@ -721,16 +750,30 @@ def selftest():
             {"date": "2026-11-05", "paper": {"snow": {"stations": [{"id": i, "depth_in": 5 + g} for i, g in enumerate([6, 7, 8, 8, 9, 3, 10])]}}, "archive": {}}]
     sc = score_calls(hist, "2026-11-05")
     assert sc[0]["observed_in"] == 8 and sc[0]["verdict"] == "low" and sc[0]["low_in"] == 3 and sc[0]["high_in"] == 5, sc
-    feats = [{"feed": "incidents", "route": _route_key("CO 82"), "mps": [51.4, 68.5], "props": {},
-              "text": "Safety closure between Mile Point 51.4 and 68.5"},
-             {"feed": "plannedEvents", "route": _route_key("I-70"), "mps": [253, 262], "props": {}, "text": "Shoulder closures for sign repair"}]
+    now = datetime(2026, 11, 8, 13, 0, tzinfo=timezone.utc)
+    ms = lambda d: int(d.timestamp() * 1000)
+    cond = lambda txt: json.dumps([{"conditionDescription": txt, "startTime": ms(now) - 3600000, "endTime": ms(now) + 3600000},
+                                   {"conditionDescription": "forecast text included", "startTime": ms(now), "endTime": ms(now) + 1}])
+    feats = [{"feed": "incidents", "route": _route_key("CO-82E"), "range": (51.4, 68.5),
+              "props": {"type": "Safety Closure", "travelerInformationMessage": "Between Difficult Campground and Twin Lakes from Mile Point 51.4 to Mile Point 68.5. Road closed.",
+                        "startMarker": 51.4, "endMarker": 68.5, "laneImpacts": []}},
+             {"feed": "roadConditions", "route": _route_key("CO 82"), "range": (30.1, 41.9), "props": {"currentConditions": cond("4 - wet"), "primaryMP": 30.1, "secondaryMP": 41.9}},
+             {"feed": "plannedEvents", "route": _route_key("I-70W"), "range": (253.0, 262.0),
+              "props": {"type": "Road Construction", "travelerInformationMessage": "The right lane is closed.", "startMarker": 253, "endMarker": 262,
+                        "schedule": [{"startTime": "2026-11-08T12:00:00Z", "endTime": "2026-11-08T23:00:00Z"}],
+                        "laneImpacts": [{"direction": "west", "laneCount": 2, "laneClosures": "2001", "closedLaneTypes": ["right lane"]}]}},
+             {"feed": "roadConditions", "route": _route_key("US 160"), "range": (150.0, 190.0), "props": {"currentConditions": cond("2 - icy spots"), "primaryMP": 150, "secondaryMP": 190}}]
     rv = {r["route"]: r for r in road_verdicts([{"name": "Indy", "segments": [["CO82", 42, 85]]},
+                                                {"name": "Snowmass", "segments": [["CO82", 30, 42]]},
                                                 {"name": "Denver", "segments": [["CO82", 0, 30], ["I70", 116, 260]]},
-                                                {"name": "Snowmass", "segments": [["CO82", 30, 42]]}], feats, datetime.now(timezone.utc))}
+                                                {"name": "Wolf", "segments": [["US160", 150, 190]]},
+                                                {"name": "Red", "segments": [["US550", 60, 95]]}], feats, now)}
     assert rv["Indy"]["verdict"] == "NO-GO" and rv["Indy"]["reason"] == "Closed MP 51.4 to 68.5", rv["Indy"]
-    assert rv["Denver"]["verdict"] == "CAUTION", rv["Denver"]
-    assert rv["Snowmass"]["verdict"] == "GO"
-    assert _route_key("CO-82") == _route_key("SH 82") == "CO82" and _route_key("I-070") == "I70"
+    assert rv["Snowmass"]["verdict"] == "GO" and rv["Snowmass"]["reason"] == "Wet", rv["Snowmass"]
+    assert rv["Denver"]["verdict"] == "CAUTION" and rv["Denver"]["reason"].startswith("Road Construction"), rv["Denver"]
+    assert rv["Wolf"]["verdict"] == "CAUTION" and rv["Wolf"]["reason"] == "Icy spots MP 150 to 190", rv["Wolf"]
+    assert "Red" not in rv
+    assert _route_key("CO-82") == _route_key("SH 82") == _route_key("CO 82") == "CO82" and _route_key("I-070W") == "I70" and _route_key("US-160E") == "US160"
     assert validate({"paper": {"date": "x", "issue": "1", "weekday": "y", "note": "12 cm"}}) == ["metric unit in paper fields"]
     rss = ('<?xml version="1.0"?><rss version="2.0"><channel><title>x</title>'
            '<item><title>Fed holds &amp; signals patience</title><link>https://example.org/a</link>'
@@ -785,7 +828,9 @@ def main():
             feats = (js or {}).get("features", [])
             trim = lambda v: v[:240] if isinstance(v, str) else v
             keep = [f for f in feats if any(t in json.dumps(f.get("properties", {})) for t in ("82", "I-70", "160", "133", "550"))][:12]
-            out[feed] = {"total": len(feats), "first_keys": sorted((feats[0].get("properties") or {}).keys()) if feats else [],
+            out[feed] = {"top_keys": sorted(k for k in (js or {}) if k != "features"),
+                         "top_meta": {k: v for k, v in (js or {}).items() if k != "features" and not isinstance(v, (list, dict))},
+                         "total": len(feats), "first_keys": sorted((feats[0].get("properties") or {}).keys()) if feats else [],
                          "sample": [{k: (trim(v) if not isinstance(v, (dict, list)) else json.loads(json.dumps(v)[:600] + "\"" * 0) if len(json.dumps(v)) < 600 else json.dumps(v)[:600])
                                      for k, v in (f.get("properties") or {}).items()} for f in keep]}
         Path(a.out).write_text(json.dumps(out, indent=1, ensure_ascii=False))
