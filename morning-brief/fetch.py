@@ -629,7 +629,7 @@ def run(day, cfg, history_dir=None):
 
     # roads
     key = os.environ.get("CDOT_API_KEY")
-    if key:
+    if key and cfg.get("roads_enabled", True):
         roads = safely(archive, "cotrip", lambda: road_verdicts(cfg["routes"], road_features(key, ua), now), [])
         if roads:
             paper["roads"] = [{k: r[k] for k in ("route", "verdict", "reason")} for r in roads]
@@ -769,12 +769,27 @@ def main():
     v = sub.add_parser("validate")
     v.add_argument("path")
     sub.add_parser("selftest")
+    cs = sub.add_parser("cotrip-sample", help="save a trimmed sample of COtrip records on Aspen routes, for checking the road parser")
+    cs.add_argument("out")
     h = sub.add_parser("headlines", help="one line per candidate story, for the writer to choose from")
     h.add_argument("path")
     h.add_argument("--hint")
     a = ap.parse_args()
     if a.cmd == "selftest":
         return selftest()
+    if a.cmd == "cotrip-sample":
+        key, ua = os.environ.get("CDOT_API_KEY"), json.loads((HERE / "config.json").read_text())["user_agent"]
+        out = {}
+        for feed in ("incidents", "plannedEvents", "roadConditions"):
+            js = get_json(f"https://data.cotrip.org/api/v1/{feed}?apiKey={key}", ua, f"COtrip {feed}") if key else None
+            feats = (js or {}).get("features", [])
+            trim = lambda v: v[:240] if isinstance(v, str) else v
+            keep = [f for f in feats if any(t in json.dumps(f.get("properties", {})) for t in ("82", "I-70", "160", "133", "550"))][:12]
+            out[feed] = {"total": len(feats), "first_keys": sorted((feats[0].get("properties") or {}).keys()) if feats else [],
+                         "sample": [{k: (trim(v) if not isinstance(v, (dict, list)) else json.loads(json.dumps(v)[:600] + "\"" * 0) if len(json.dumps(v)) < 600 else json.dumps(v)[:600])
+                                     for k, v in (f.get("properties") or {}).items()} for f in keep]}
+        Path(a.out).write_text(json.dumps(out, indent=1, ensure_ascii=False))
+        return
     if a.cmd == "headlines":
         for i, n in enumerate(json.loads(Path(a.path).read_text())):
             if not a.hint or n["hint"] == a.hint:

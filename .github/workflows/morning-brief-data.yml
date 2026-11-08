@@ -41,6 +41,7 @@ jobs:
           python3 morning-brief/fetch.py selftest >> "$L" 2>&1 || true
           python3 morning-brief/fetch.py run --date "$D" --out "mb-data/data/$D.json" --history mb-data/data >> "$L" 2>&1 || echo "fetch failed" >> "$L"
           python3 morning-brief/fetch.py validate "mb-data/data/$D.json" >> "$L" 2>&1 || true
+          python3 morning-brief/fetch.py cotrip-sample mb-data/logs/cotrip-sample.json >> "$L" 2>&1 || true
           if [ -n "$CDOT_API_KEY" ] && grep -rqF "$CDOT_API_KEY" mb-data; then echo "key found in output, refusing to commit"; exit 1; fi
       - name: Commit to mb-data
         working-directory: mb-data

@@ -582,5 +582,7 @@
  "news_summaries": false,
  "_news_summaries_note": "false while the data lives in a public repo; set true in a private repo so the writer gets each feed's summary",
  "use_liftie": false,
- "_liftie_note": "Liftie answers GitHub's servers with 403 Forbidden, so lift counts are off; resort status comes from opening dates here and from the edition's resort_status."
+ "_liftie_note": "Liftie answers GitHub's servers with 403 Forbidden, so lift counts are off; resort status comes from opening dates here and from the edition's resort_status.",
+ "roads_enabled": false,
+ "_roads_note": "off until the COtrip parser is checked against real records; set true to print road verdicts"
 }
