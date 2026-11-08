@@ -1,5 +1,12 @@
 [
 {
+"outlet": "BBC",
+"hint": "world",
+"title": "Surgeon having lunch near Krakow shooting undoubtedly saved officer's life, colleague says",
+"url": "https://www.bbc.co.uk/news/articles/c5x2vw4e1gx1o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-08T11:14-07:00"
+},
+{
 "outlet": "CNBC",
 "hint": "markets",
 "title": "Nvidia CEO Jensen Huang faces bipartisan congressional scrutiny over reported China spy link",
@@ -21,11 +28,11 @@
 "published": "2026-11-08T11:00-07:00"
 },
 {
-"outlet": "BBC",
-"hint": "world",
-"title": "Surgeon having lunch near Krakow shooting undoubtedly saved officer's life, colleague says",
-"url": "https://www.bbc.co.uk/news/articles/c5x2vw4e1gx1o?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-08T10:59-07:00"
+"outlet": "The Guardian",
+"hint": "us",
+"title": "Trump set to lurch further right, claiming US took ‘giant step back’ in elections",
+"url": "https://www.theguardian.com/us-news/2026/nov/08/trump-midterm-elections-loss-democrats-immigration",
+"published": "2026-11-08T10:58-07:00"
 },
 {
 "outlet": "Euronews",
@@ -781,13 +788,6 @@
 "hint": "world",
 "title": "Banana producers in Latin America want better pay to cope with effects of climate crisis",
 "url": "https://www.theguardian.com/business/2026/nov/08/banana-producers-in-latin-america-want-better-pay-to-cope-with-effects-of-climate-crisis",
-"published": "2026-11-08T00:00-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "Trump’s shattered ‘mirror world’: American voters roundly reject president’s alternate reality",
-"url": "https://www.theguardian.com/us-news/ng-interactive/2026/nov/08/trump-midterms-voters-mirror-world",
 "published": "2026-11-08T00:00-07:00"
 },
 {
