@@ -1,6 +1,7 @@
 # Morning Brief data: runs morning-brief/fetch.py on GitHub's servers, which can reach NRCS, NWS, CAIC,
 # COtrip, Liftie, Yahoo and the news feeds. Writes data/DATE.json, data/news-DATE.json and logs/DATE.txt
-# to the mb-data branch, where the 5:33am Morning Brief task reads them.
+# to the mb-data branch, where the 5:33am Morning Brief task reads them. It runs at 4:30am MST as a backup and
+# whenever the task pushes an empty commit to mb-trigger, which is the run the paper normally uses.
 # The CDOT key lives in Settings > Secrets and variables > Actions as CDOT_API_KEY; without it, roads are left out.
 name: morning-brief-data
 on:
@@ -8,8 +9,7 @@ on:
     - cron: "30 11 * * *"   # 4:30am MST / 5:30am MDT
   workflow_dispatch:
   push:
-    branches: [main]
-    paths: ["morning-brief/**", ".github/workflows/morning-brief-data.yml"]
+    branches: [mb-trigger]   # the 5:33am task pushes here for a fresh run; GitHub's schedule can lag by hours
 permissions:
   contents: write
 concurrency:
@@ -21,6 +21,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/checkout@v4
         with:
           ref: mb-data

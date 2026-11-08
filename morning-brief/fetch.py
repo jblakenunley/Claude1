@@ -449,6 +449,7 @@ def score_calls(history, today):
     start of that day to start of the next (SNOTEL daily is start-of-day). Returns new scores."""
     depth = {}  # date -> {id: depth}
     for rec in history:
+        rec.setdefault("date", rec.get("paper", {}).get("date"))
         for s in rec.get("paper", {}).get("snow", {}).get("stations", []):
             depth.setdefault(rec["date"], {})[s["id"]] = s.get("depth_in")
     done = {(s["source"], s["issued"], s["date"]) for rec in history for s in rec.get("archive", {}).get("scores", [])}
