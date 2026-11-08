@@ -199,8 +199,8 @@
     "severity": "minor",
     "lastUpdatedBy": "",
     "additionalImpacts": [
-     "Impacts both directions",
      "Alternating Traffic",
+     "Impacts both directions",
      "Slower speeds advised"
     ],
     "laneImpacts": [
@@ -1269,6 +1269,56 @@
     "routeSegmentIndex": 1,
     "currentConditions": "[{\"id\": 1353974, \"conditionId\": 17, \"conditionDescription\": \"3 - dry\", \"userName\": \"\", \"startTime\": 1794144717906, \"endTime\": 4947744717906, \"confirmationTime\": 1794144717906, \"updateTime\": 1794144717906, \"confirmationUserName\": \"\", \"sourceType\": \"OPERATOR\", \"additionalData\": null}, {\"id\": 1354790, \"conditionId\": 47, \"conditionDescription\": \"forecast text included\", \"userName\": \"\", \"startTime\": 1794158827385, \"endTime\": 1794180221290, \"confirmationTime\": 1794158621290, \"updateTime\": 1794158621290, \"confirmationUserName\": \"\", \"sourceType\": \"NDFD\", \"additionalData\": \"Clear skies. Wind gusts of u"
    }
+  ]
+ },
+ "paging_probes": {
+  "plannedEvents&limit=1000": [
+   361,
+   "OpenTMS-Event36190130225"
+  ],
+  "plannedEvents&offset=100": [
+   0,
+   null
+  ],
+  "plannedEvents&page=2": [
+   100,
+   "OpenTMS-Event36190130225"
+  ],
+  "plannedEvents&pageSize=1000": [
+   100,
+   "OpenTMS-Event36190130225"
+  ],
+  "plannedEvents&size=1000": [
+   100,
+   "OpenTMS-Event36190130225"
+  ],
+  "plannedEvents&maxResults=1000": [
+   100,
+   "OpenTMS-Event36190130225"
+  ],
+  "roadConditions&limit=1000": [
+   198,
+   "151"
+  ],
+  "roadConditions&offset=100": [
+   0,
+   null
+  ],
+  "roadConditions&page=2": [
+   100,
+   "151"
+  ],
+  "roadConditions&pageSize=1000": [
+   100,
+   "151"
+  ],
+  "roadConditions&size=1000": [
+   100,
+   "151"
+  ],
+  "roadConditions&maxResults=1000": [
+   100,
+   "151"
   ]
  }
 }
