@@ -2,7 +2,7 @@
 
 J Blake Nunley's daily paper for Aspen, Colorado: snow and roads, two pages of news, free events.
 
-- `fetch.py` pulls snow, forecast, avalanche, road, lift and market numbers in US units, plus headlines from free news feeds. GitHub Actions runs it every morning (`.github/workflows/morning-brief-data.yml`) and writes the results to the `mb-data` branch.
+- `fetch.py` pulls snow, forecast, avalanche, road, lift and market numbers in US units, plus headlines from free news feeds. It also saves NWS's own wording (active alerts for the Aspen summit, town and Snowmass, the summit point forecast text and the Grand Junction forecast discussion) in the data file's `nws` block, which `fetch.py nws` prints for the writer and the paper never prints. GitHub Actions runs it every morning (`.github/workflows/morning-brief-data.yml`) and writes the results to the `mb-data` branch.
 - `render.py` and `template/` turn those numbers and the day's words into the locked four-page PDF. `tests/capacity.py` proves the fullest edition fits.
 - `STYLE.md` governs the words. `TASK.md` is the daily task prompt.
 

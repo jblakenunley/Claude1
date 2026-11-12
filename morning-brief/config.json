@@ -38,6 +38,18 @@
   "lon": -106.8186,
   "elev_ft": 10850
  },
+ "alert_points": [
+  {
+   "name": "Aspen",
+   "lat": 39.1911,
+   "lon": -106.8175
+  },
+  {
+   "name": "Snowmass Village",
+   "lat": 39.213,
+   "lon": -106.9378
+  }
+ ],
  "markets": [
   {
    "name": "S&P 500",
