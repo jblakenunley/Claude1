@@ -31,7 +31,7 @@
      "depth_in": 0.0,
      "pct_median": 45,
      "swe_24h_in": -0.3,
-     "depth_24h_in": 0.0
+     "depth_24h_in": -1.0
     },
     {
      "id": 669,
@@ -83,39 +83,39 @@
     {
      "date": "2026-11-12",
      "day": "Thu",
-     "low_f": 26,
+     "high_f": 43,
      "pop_pct": 0,
-     "high_f": 40
+     "low_f": 24
     },
     {
      "date": "2026-11-13",
      "day": "Fri",
      "high_f": 38,
-     "pop_pct": 26,
+     "pop_pct": 44,
      "low_f": 24
     },
     {
      "date": "2026-11-14",
      "day": "Sat",
      "high_f": 30,
-     "snow_day": "under ½ in",
-     "pop_pct": 78,
+     "snow_day": "under 1 in",
+     "pop_pct": 94,
      "low_f": 24,
      "snow_night": "under ½ in"
     },
     {
      "date": "2026-11-15",
      "day": "Sun",
-     "high_f": 31,
-     "pop_pct": 4,
+     "high_f": 32,
+     "pop_pct": 2,
      "low_f": 21
     },
     {
      "date": "2026-11-16",
      "day": "Mon",
-     "high_f": 39,
+     "high_f": 38,
      "pop_pct": 1,
-     "low_f": 25
+     "low_f": 24
     }
    ],
    "next48h": {
@@ -159,7 +159,7 @@
     "depth_in": 3.0,
     "depth_24h_in": 1.0,
     "pct_median": 55,
-    "next48h": "none",
+    "next48h": "under ½ in",
     "avalanche": "Low"
    },
    {
@@ -263,7 +263,7 @@
     "depth_in": 20.0,
     "depth_24h_in": 0.0,
     "pct_median": 167,
-    "next48h": "none",
+    "next48h": "3–5 in",
     "avalanche": "Low"
    },
    {
@@ -271,8 +271,8 @@
     "region": "Southwest",
     "depth_in": 4.0,
     "depth_24h_in": 0.0,
-    "pct_median": 107,
-    "next48h": "none",
+    "pct_median": 100,
+    "next48h": "1–2 in",
     "avalanche": "Low"
    },
    {
@@ -282,7 +282,7 @@
     "depth_in": 10.0,
     "depth_24h_in": 0.0,
     "pct_median": 213,
-    "next48h": "none",
+    "next48h": "2–4 in",
     "avalanche": "Low"
    },
    {
@@ -292,7 +292,7 @@
     "depth_in": 23.0,
     "depth_24h_in": 0.0,
     "pct_median": 243,
-    "next48h": "none",
+    "next48h": "1–3 in",
     "avalanche": "Low"
    },
    {
@@ -319,23 +319,23 @@
    },
    {
     "route": "Vail & Beaver Creek",
-    "verdict": "GO",
-    "reason": "Open, no incidents reported"
+    "verdict": "CAUTION",
+    "reason": "Road Maintenance Operations MP 125 to 126"
    },
    {
     "route": "Summit County",
-    "verdict": "GO",
-    "reason": "Open, no incidents reported"
+    "verdict": "NO-GO",
+    "reason": "Closed MP 206 to 244"
    },
    {
     "route": "Winter Park",
-    "verdict": "GO",
-    "reason": "Open, no incidents reported"
+    "verdict": "NO-GO",
+    "reason": "Closed MP 206 to 244"
    },
    {
     "route": "Steamboat",
-    "verdict": "GO",
-    "reason": "Open, no incidents reported"
+    "verdict": "CAUTION",
+    "reason": "Road Maintenance Operations MP 125 to 126"
    },
    {
     "route": "Crested Butte",
@@ -344,18 +344,18 @@
    },
    {
     "route": "Ski Cooper",
-    "verdict": "GO",
-    "reason": "Open, no incidents reported"
+    "verdict": "CAUTION",
+    "reason": "Road Maintenance Operations MP 125 to 126"
    },
    {
     "route": "Monarch & Wolf Creek",
     "verdict": "NO-GO",
-    "reason": "Closed MP 157 to 184.5"
+    "reason": "Closed MP 154 to 156"
    },
    {
     "route": "Telluride & Purgatory",
-    "verdict": "GO",
-    "reason": "Open, no incidents reported"
+    "verdict": "CAUTION",
+    "reason": "Maintenance Operations MP 76"
    },
    {
     "route": "Independence Pass",
@@ -367,35 +367,35 @@
   "markets": [
    {
     "name": "S&P 500",
-    "value": 7619.38,
-    "as_of": "2026-11-11",
+    "value": 7607.57,
+    "as_of": "2026-11-12",
     "fmt": "index",
-    "change_pct": 1.3
+    "change_pct": -0.2
    },
    {
     "name": "Dow",
-    "value": 52486.49,
-    "as_of": "2026-11-11",
+    "value": 52466.64,
+    "as_of": "2026-11-12",
     "fmt": "index",
-    "change_pct": 0.5
+    "change_pct": -0.0
    },
    {
     "name": "Nasdaq",
-    "value": 25466.19,
-    "as_of": "2026-11-11",
+    "value": 25390.07,
+    "as_of": "2026-11-12",
     "fmt": "index",
-    "change_pct": 1.6
+    "change_pct": -0.3
    },
    {
     "name": "Stoxx 600",
-    "value": 665.58,
+    "value": 664.01,
     "as_of": "2026-11-12",
     "fmt": "index",
-    "change_pct": 0.4
+    "change_pct": 0.1
    },
    {
     "name": "FTSE 100",
-    "value": 10873.42,
+    "value": 10863.09,
     "as_of": "2026-11-12",
     "fmt": "index",
     "change_pct": 0.3
@@ -409,67 +409,67 @@
    },
    {
     "name": "US 10-yr",
-    "value": 4.998,
-    "as_of": "2026-11-11",
+    "value": 5.113,
+    "as_of": "2026-11-12",
     "fmt": "yield",
-    "change_bp": 2
+    "change_bp": 11
    },
    {
     "name": "Dollar index",
-    "value": 102.92,
+    "value": 103.22,
     "as_of": "2026-11-12",
     "fmt": "index",
-    "change_pct": 0.0
+    "change_pct": 0.3
    },
    {
     "name": "Euro",
-    "value": 1.1088,
+    "value": 1.1052,
     "as_of": "2026-11-12",
     "fmt": "fx",
-    "change_pct": -0.7
+    "change_pct": -1.0
    },
    {
     "name": "Brent",
-    "value": 92.08,
+    "value": 95.18,
     "as_of": "2026-11-12",
     "fmt": "usd",
-    "change_pct": -0.7
+    "change_pct": 2.6
    },
    {
     "name": "Gold",
-    "value": 3949.3,
+    "value": 3885.7,
     "as_of": "2026-11-12",
     "fmt": "usd",
-    "change_pct": -1.3
+    "change_pct": -2.9
    },
    {
     "name": "Bitcoin",
-    "value": 72777.95,
+    "value": 71580.82,
     "as_of": "2026-11-12",
     "fmt": "usd",
-    "change_pct": -1.6
+    "change_pct": -3.2
    }
   ],
   "sources": [
    "NRCS SNOTEL 12 Nov",
-   "NWS 12 Nov 3:42am",
+   "NWS 12 Nov 11:31am",
    "CAIC via avalanche.org",
-   "COtrip 12 Nov 5:34am",
+   "COtrip 12 Nov 12:00pm",
    "Yahoo Finance"
   ]
  },
  "archive": {
-  "generated_at": "2026-11-12T12:34:17.861992+00:00",
+  "generated_at": "2026-11-12T19:00:19.855745+00:00",
   "dropped": [],
   "forecast_calls": [
    {
     "source": "NWS point, Aspen summit",
-    "issued": "2026-11-12T10:42:12+00:00",
+    "issued": "2026-11-12T18:31:59+00:00",
     "date": "2026-11-14",
     "low_in": 0.0,
-    "high_in": 1.0,
+    "high_in": 1.5,
     "bands": [
-     "under ½ in",
+     "under 1 in",
      "under ½ in"
     ],
     "lead_days": 2
@@ -479,510 +479,510 @@
   "roads_matched": {
    "Snowmass & Highlands": 0,
    "Sunlight": 0,
-   "Vail & Beaver Creek": 0,
-   "Summit County": 0,
-   "Winter Park": 0,
-   "Steamboat": 0,
+   "Vail & Beaver Creek": 2,
+   "Summit County": 3,
+   "Winter Park": 4,
+   "Steamboat": 2,
    "Crested Butte": 0,
-   "Ski Cooper": 0,
-   "Monarch & Wolf Creek": 1,
-   "Telluride & Purgatory": 0,
+   "Ski Cooper": 2,
+   "Monarch & Wolf Creek": 2,
+   "Telluride & Purgatory": 1,
    "Independence Pass": 1
   },
   "scores": [],
-  "news_candidates": 259,
+  "news_candidates": 258,
   "fetch_log": [
    {
     "source": "NRCS SNOTEL Aspen",
     "url": "https://wcc.sc.egov.usda.gov/reportGenerator/view_csv/customMultipleStationReport/daily/542:CO:SNTL%7C737:CO:SNTL%7C618:CO:SNTL%7C669:CO:SNTL%7C556:CO:SNTL%7C547:CO:SNTL%7C369:CO:SNTL/-1,0/stationId,name,WTEQ::value,SNWD::value,WTEQ::pctOfMedian_1991",
     "status": "ok",
-    "ms": 652
+    "ms": 1740
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.1514,-106.8186",
     "status": "ok",
-    "ms": 200
+    "ms": 3780
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/156,100/forecast",
     "status": "ok",
-    "ms": 216
+    "ms": 963
    },
    {
     "source": "NWS alerts",
     "url": "https://api.weather.gov/alerts/active?point=39.1514,-106.8186",
     "status": "ok",
-    "ms": 192
+    "ms": 2117
    },
    {
     "source": "CAIC via avalanche.org",
     "url": "https://api.avalanche.org/v2/public/products/map-layer/CAIC",
     "status": "ok",
-    "ms": 2540
+    "ms": 2324
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.18,-106.86",
     "status": "ok",
-    "ms": 102
+    "ms": 2588
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/155,102/forecast",
     "status": "ok",
-    "ms": 231
+    "ms": 2060
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.195,-106.96",
     "status": "ok",
-    "ms": 128
+    "ms": 3411
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/151,103/forecast",
     "status": "ok",
-    "ms": 190
+    "ms": 4759
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.205,-106.86",
     "status": "ok",
-    "ms": 104
+    "ms": 449
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/155,103/forecast",
     "status": "ok",
-    "ms": 116
+    "ms": 1821
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.4,-107.34",
     "status": "ok",
-    "ms": 123
+    "ms": 1362
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/139,113/forecast",
     "status": "ok",
-    "ms": 241
+    "ms": 669
    },
    {
     "source": "NRCS SNOTEL mountains",
     "url": "https://wcc.sc.egov.usda.gov/reportGenerator/view_csv/customMultipleStationReport/daily/380:CO:SNTL%7C701:CO:SNTL%7C485:CO:SNTL%7C842:CO:SNTL%7C505:CO:SNTL%7C531:CO:SNTL%7C415:CO:SNTL%7C602:CO:SNTL%7C825:CO:SNTL%7C335:CO:SNTL%7C874:CO:SNTL%7C586:CO:SNTL%7C632:CO:SNTL%7C713:CO:SNTL%7C622:CO:SNTL/-1,0/stationId,name,WTEQ::value,SNWD::value,WTEQ::pctOfMedian_1991",
     "status": "ok",
-    "ms": 941
+    "ms": 1676
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/38.89,-106.96",
     "status": "ok",
-    "ms": 104
+    "ms": 932
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/150,89/forecast",
     "status": "ok",
-    "ms": 124
+    "ms": 661
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/38.51,-106.33",
     "status": "ok",
-    "ms": 111
+    "ms": 304
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/PUB/36,81/forecast",
     "status": "ok",
-    "ms": 228
+    "ms": 121
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.36,-106.3",
     "status": "ok",
-    "ms": 108
+    "ms": 336
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/175,108/forecast",
     "status": "ok",
-    "ms": 216
+    "ms": 362
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.61,-106.36",
     "status": "ok",
-    "ms": 82
+    "ms": 1358
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/174,119/forecast",
     "status": "ok",
-    "ms": 82
+    "ms": 111
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.6,-106.52",
     "status": "ok",
-    "ms": 120
+    "ms": 240
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/168,119/forecast",
     "status": "ok",
-    "ms": 181
+    "ms": 1088
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.64,-105.87",
     "status": "ok",
-    "ms": 80
+    "ms": 277
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/BOU/32,59/forecast",
     "status": "ok",
-    "ms": 193
+    "ms": 151
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.6,-105.95",
     "status": "ok",
-    "ms": 74
+    "ms": 972
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/BOU/29,58/forecast",
     "status": "ok",
-    "ms": 134
+    "ms": 234
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.47,-106.08",
     "status": "ok",
-    "ms": 95
+    "ms": 2148
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/BOU/24,52/forecast",
     "status": "ok",
-    "ms": 219
+    "ms": 606
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.5,-106.15",
     "status": "ok",
-    "ms": 85
+    "ms": 251
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/BOU/22,54/forecast",
     "status": "ok",
-    "ms": 116
+    "ms": 280
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.68,-105.9",
     "status": "ok",
-    "ms": 122
+    "ms": 248
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/BOU/31,61/forecast",
     "status": "ok",
-    "ms": 131
+    "ms": 773
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/40.46,-106.8",
     "status": "ok",
-    "ms": 108
+    "ms": 811
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/162,159/forecast",
     "status": "ok",
-    "ms": 84
+    "ms": 153
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.89,-105.76",
     "status": "ok",
-    "ms": 106
+    "ms": 415
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/BOU/37,70/forecast",
     "status": "ok",
-    "ms": 123
+    "ms": 2042
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/37.47,-106.79",
     "status": "ok",
-    "ms": 117
+    "ms": 231
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/PUB/16,36/forecast",
     "status": "ok",
-    "ms": 179
+    "ms": 256
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/37.92,-107.84",
     "status": "ok",
-    "ms": 117
+    "ms": 200
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/115,48/forecast",
     "status": "ok",
-    "ms": 193
+    "ms": 1150
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/37.63,-107.81",
     "status": "ok",
-    "ms": 124
+    "ms": 189
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/115,35/forecast",
     "status": "ok",
-    "ms": 215
+    "ms": 100
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/37.88,-107.67",
     "status": "ok",
-    "ms": 112
+    "ms": 1224
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/121,46/forecast",
     "status": "ok",
-    "ms": 204
+    "ms": 1168
    },
    {
     "source": "NWS points",
     "url": "https://api.weather.gov/points/39.07,-108.15",
     "status": "ok",
-    "ms": 133
+    "ms": 987
    },
    {
     "source": "NWS forecast",
     "url": "https://api.weather.gov/gridpoints/GJT/109,101/forecast",
     "status": "ok",
-    "ms": 206
+    "ms": 2000
    },
    {
     "source": "COtrip incidents",
     "url": "https://data.cotrip.org/api/v1/incidents?apiKey=***",
     "status": "ok",
-    "ms": 326
+    "ms": 277
    },
    {
     "source": "COtrip plannedEvents",
     "url": "https://data.cotrip.org/api/v1/plannedEvents?apiKey=***",
     "status": "ok",
-    "ms": 427
+    "ms": 371
    },
    {
     "source": "Yahoo S&P 500",
     "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=5d&interval=1d",
     "status": "ok",
-    "ms": 157
+    "ms": 146
    },
    {
     "source": "Yahoo Dow",
     "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=5d&interval=1d",
     "status": "ok",
-    "ms": 128
+    "ms": 202
    },
    {
     "source": "Yahoo Nasdaq",
     "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=5d&interval=1d",
     "status": "ok",
-    "ms": 81
+    "ms": 146
    },
    {
     "source": "Yahoo Stoxx 600",
     "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESTOXX?range=5d&interval=1d",
     "status": "ok",
-    "ms": 123
+    "ms": 143
    },
    {
     "source": "Yahoo FTSE 100",
     "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EFTSE?range=5d&interval=1d",
     "status": "ok",
-    "ms": 83
+    "ms": 1297
    },
    {
     "source": "Yahoo Nikkei",
     "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=5d&interval=1d",
     "status": "ok",
-    "ms": 92
+    "ms": 184
    },
    {
     "source": "Yahoo US 10-yr",
     "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=5d&interval=1d",
     "status": "ok",
-    "ms": 125
+    "ms": 156
    },
    {
     "source": "Yahoo Dollar index",
     "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=5d&interval=1d",
     "status": "ok",
-    "ms": 94
+    "ms": 162
    },
    {
     "source": "Yahoo Euro",
     "url": "https://query1.finance.yahoo.com/v8/finance/chart/EURUSD%3DX?range=5d&interval=1d",
     "status": "ok",
-    "ms": 112
+    "ms": 213
    },
    {
     "source": "Yahoo Brent",
     "url": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?range=5d&interval=1d",
     "status": "ok",
-    "ms": 143
+    "ms": 216
    },
    {
     "source": "Yahoo Gold",
     "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=5d&interval=1d",
     "status": "ok",
-    "ms": 120
+    "ms": 170
    },
    {
     "source": "Yahoo Bitcoin",
     "url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=5d&interval=1d",
     "status": "ok",
-    "ms": 107
+    "ms": 192
    },
    {
     "source": "RSS BBC",
     "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
     "status": "ok",
-    "ms": 213
+    "ms": 133
    },
    {
     "source": "RSS BBC",
     "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
     "status": "ok",
-    "ms": 101
+    "ms": 214
    },
    {
     "source": "RSS BBC",
     "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
     "status": "ok",
-    "ms": 257
+    "ms": 86
    },
    {
     "source": "RSS BBC",
     "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
     "status": "ok",
-    "ms": 79
+    "ms": 61
    },
    {
     "source": "RSS The Guardian",
     "url": "https://www.theguardian.com/world/rss",
     "status": "ok",
-    "ms": 92
+    "ms": 143
    },
    {
     "source": "RSS The Guardian",
     "url": "https://www.theguardian.com/us-news/rss",
     "status": "ok",
-    "ms": 56
+    "ms": 77
    },
    {
     "source": "RSS The Guardian",
     "url": "https://www.theguardian.com/uk-news/rss",
     "status": "ok",
-    "ms": 61
+    "ms": 108
    },
    {
     "source": "RSS The Guardian",
     "url": "https://www.theguardian.com/business/rss",
     "status": "ok",
-    "ms": 92
+    "ms": 120
    },
    {
     "source": "RSS The Guardian",
     "url": "https://www.theguardian.com/environment/rss",
     "status": "ok",
-    "ms": 91
+    "ms": 242
    },
    {
     "source": "RSS Al Jazeera",
     "url": "https://www.aljazeera.com/xml/rss/all.xml",
     "status": "ok",
-    "ms": 93
+    "ms": 237
    },
    {
     "source": "RSS Euronews",
     "url": "https://www.euronews.com/rss",
     "status": "ok",
-    "ms": 91
+    "ms": 172
    },
    {
     "source": "RSS NPR",
     "url": "https://feeds.npr.org/1001/rss.xml",
     "status": "ok",
-    "ms": 224
+    "ms": 232
    },
    {
     "source": "RSS NPR",
     "url": "https://feeds.npr.org/1014/rss.xml",
     "status": "ok",
-    "ms": 26
+    "ms": 140
    },
    {
     "source": "RSS PBS NewsHour",
     "url": "https://www.pbs.org/newshour/feeds/rss/headlines",
     "status": "ok",
-    "ms": 168
+    "ms": 185
    },
    {
     "source": "RSS CNBC",
     "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
     "status": "ok",
-    "ms": 250
+    "ms": 258
    },
    {
     "source": "RSS CNBC",
     "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100727362",
     "status": "ok",
-    "ms": 187
+    "ms": 297
    },
    {
     "source": "RSS investingLive",
     "url": "https://investinglive.com/feed/",
     "status": "ok",
-    "ms": 201
+    "ms": 112
    },
    {
     "source": "RSS TechCrunch",
     "url": "https://techcrunch.com/feed/",
     "status": "ok",
-    "ms": 92
+    "ms": 111
    },
    {
     "source": "RSS The Register",
     "url": "https://www.theregister.com/headlines.atom",
     "status": "ok",
-    "ms": 615
+    "ms": 644
    },
    {
     "source": "RSS Markets Media",
     "url": "https://www.marketsmedia.com/feed/",
     "status": "ok",
-    "ms": 394
+    "ms": 922
    },
    {
     "source": "RSS The TRADE",
@@ -994,61 +994,61 @@
     "source": "RSS Federal Reserve",
     "url": "https://www.federalreserve.gov/feeds/press_all.xml",
     "status": "ok",
-    "ms": 108
+    "ms": 117
    },
    {
     "source": "RSS ECB",
     "url": "https://www.ecb.europa.eu/rss/press.html",
     "status": "ok",
-    "ms": 452
+    "ms": 529
    },
    {
     "source": "RSS Bank of England",
     "url": "https://www.bankofengland.co.uk/rss/news",
     "status": "ok",
-    "ms": 586
+    "ms": 500
    },
    {
     "source": "RSS SEC",
     "url": "https://www.sec.gov/news/pressreleases.rss",
     "status": "ok",
-    "ms": 249
+    "ms": 196
    },
    {
     "source": "RSS Colorado Sun",
     "url": "https://coloradosun.com/feed/",
     "status": "ok",
-    "ms": 123
+    "ms": 102
    },
    {
     "source": "RSS Quanta",
     "url": "https://www.quantamagazine.org/feed/",
     "status": "ok",
-    "ms": 194
+    "ms": 81
    },
    {
     "source": "RSS ProPublica",
     "url": "https://feeds.propublica.org/propublica/main",
     "status": "ok",
-    "ms": 425
+    "ms": 387
    },
    {
     "source": "RSS Aeon",
     "url": "https://aeon.co/feed.rss",
     "status": "ok",
-    "ms": 172
+    "ms": 193
    },
    {
     "source": "RSS Noema",
     "url": "https://www.noemamag.com/feed/",
     "status": "ok",
-    "ms": 311
+    "ms": 318
    },
    {
     "source": "RSS Longreads",
     "url": "https://longreads.com/feed/",
     "status": "ok",
-    "ms": 122
+    "ms": 106
    }
   ],
   "validation": []
