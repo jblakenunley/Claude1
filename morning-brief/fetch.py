@@ -4,10 +4,12 @@
 Pulls snow, forecast, avalanche, road, resort and market data from machine-readable
 public feeds and writes one JSON file of clean numbers in US units. The paper reads only
 the "paper" fields; everything under "archive" (fetch log, forecast calls, scores) is for
-the archive record and is never printed.
+the archive record and is never printed. "nws" holds NWS's own wording (alert details, the
+Aspen summit periods, the forecast discussion) for the writer to restate; it is never printed.
 
     python3 fetch.py run --date 2026-11-06 --out data/2026-11-06.json --history data
     python3 fetch.py validate data/2026-11-06.json
+    python3 fetch.py nws data/2026-11-06.json
     python3 fetch.py selftest
 
 Needs plain internet access (GitHub Actions, a laptop). The CDOT key comes from the
@@ -153,8 +155,9 @@ def median_of(rows, key):
 
 
 # ---------------------------------------------------------------- NWS (api.weather.gov)
-WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9,
+WORDS = {"an": 1, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9,
          "ten": 10, "eleven": 11, "twelve": 12, "fifteen": 15, "eighteen": 18, "twenty": 20}
+STALE_H = 12  # a point forecast older than this is refetched once
 
 
 def _n(tok):
@@ -183,6 +186,14 @@ def snow_band(text):
     return None
 
 
+def _age_h(iso, now=None):
+    try:
+        t = datetime.fromisoformat(str(iso).replace("Z", "+00:00"))
+    except (TypeError, ValueError):
+        return None
+    return round(((now or datetime.now(timezone.utc)) - t).total_seconds() / 3600, 1)
+
+
 def nws_forecast(lat, lon, ua):
     pts = get_json(f"https://api.weather.gov/points/{lat},{lon}", ua, "NWS points", "application/geo+json")
     if not pts:
@@ -192,6 +203,14 @@ def nws_forecast(lat, lon, ua):
     if not fc:
         return None
     p = fc.get("properties", {})
+    age = _age_h(p.get("updateTime") or p.get("generatedAt"))
+    if age is not None and age > STALE_H:
+        # the API's edge cache sometimes serves an old forecast; a different query string usually reaches a fresh one
+        fresh = get_json(url + "?units=us", ua, "NWS forecast refetch", "application/geo+json")
+        fp = (fresh or {}).get("properties", {})
+        fresh_age = _age_h(fp.get("updateTime") or fp.get("generatedAt"))
+        if fresh_age is not None and fresh_age < age:
+            p, age = fp, fresh_age
     periods = []
     for x in p.get("periods", []):
         temp = x.get("temperature")
@@ -202,9 +221,15 @@ def nws_forecast(lat, lon, ua):
         band = snow_band(x.get("detailedForecast"))
         periods.append({"name": x.get("name"), "start": st.isoformat(), "end": en.isoformat(), "day": x.get("isDaytime"),
                         "temp_f": temp, "pop_pct": (x.get("probabilityOfPrecipitation") or {}).get("value"),
-                        "short": x.get("shortForecast"), "band": band})
-    return {"issued": p.get("updateTime") or p.get("generatedAt"), "periods": periods,
-            "zone": pts.get("properties", {}).get("forecastZone", "").rsplit("/", 1)[-1]}
+                        "short": x.get("shortForecast"), "text": x.get("detailedForecast"), "band": band})
+    pp = pts.get("properties", {})
+    return {"issued": p.get("updateTime") or p.get("generatedAt"), "age_h": age, "periods": periods,
+            "zone": (pp.get("forecastZone") or "").rsplit("/", 1)[-1], "office": pp.get("gridId")}
+
+
+def nws_wording(fc, n=6):
+    """NWS's own words for the next n periods, so the writer can quote them without reaching api.weather.gov."""
+    return [{"name": p["name"], "text": p["text"]} for p in fc["periods"][:n] if p.get("text")]
 
 
 def summit_days(fc, n=5):
@@ -239,14 +264,94 @@ def next48(fc):
     return {"text": best[1][0], "low_in": best[1][1], "high_in": best[1][2], "when": best[0]}
 
 
-def nws_alerts(lat, lon, ua):
-    js = get_json(f"https://api.weather.gov/alerts/active?point={lat},{lon}", ua, "NWS alerts", "application/geo+json")
-    out = []
-    for f in (js or {}).get("features", []):
+ALERT_RANK = (("Warning", 0), ("Watch", 1), ("Advisory", 2))
+
+
+def _alert_rank(event):
+    return next((r for word, r in ALERT_RANK if word in (event or "")), 3)
+
+
+def _alert_parts(desc):
+    """'* WHAT...Snow expected. Total snow accumulations 6 to 12 inches.' -> {'what': ..., 'when': ...}."""
+    out = {}
+    for m in re.finditer(r"\*\s*([A-Z ]+?)\.\.\.(.*?)(?=\n\s*\n|\n\*|\Z)", desc or "", re.S):
+        out[m.group(1).strip().lower().replace(" ", "_")] = re.sub(r"\s+", " ", m.group(2)).strip()
+    return out
+
+
+def parse_alerts(features):
+    """GeoJSON alert features from one or more points -> de-duplicated list, warnings first."""
+    seen, out = set(), []
+    for f in features:
         pr = f.get("properties", {})
+        key = pr.get("id") or f.get("id") or (pr.get("event"), pr.get("onset"), pr.get("areaDesc"))
+        if key in seen or pr.get("status", "Actual") != "Actual":
+            continue
+        seen.add(key)
         ends = pr.get("ends") or pr.get("expires")
         until = datetime.fromisoformat(ends).astimezone(MT).strftime("%a %-I%p").lower().capitalize() if ends else None
-        out.append({"event": pr.get("event"), "until": until})
+        a = {"event": pr.get("event"), "until": until, "headline": pr.get("headline"), "area": pr.get("areaDesc"),
+             "onset": pr.get("onset"), "ends": ends}
+        a.update({k: v for k, v in _alert_parts(pr.get("description")).items() if k in ("what", "where", "when", "impacts")})
+        out.append({k: v for k, v in a.items() if v})
+    out.sort(key=lambda a: (_alert_rank(a.get("event")), a.get("onset") or ""))
+    return out
+
+
+def nws_alerts(points, ua):
+    feats = []
+    for name, lat, lon in points:
+        js = get_json(f"https://api.weather.gov/alerts/active?point={lat},{lon}", ua, f"NWS alerts {name}", "application/geo+json")
+        feats += (js or {}).get("features", [])
+    return parse_alerts(feats)
+
+
+def afd_sections(text):
+    """Area Forecast Discussion text -> {'key messages': ..., 'short term': ..., ...}, line wraps joined."""
+    secs, name, buf = {}, None, []
+    for line in (text or "").replace("\r", "").split("\n"):
+        m = re.match(r"^\.([A-Z][A-Z ]+?)(\.\.\.|\s*/[^/]*/?|\s*$)", line)
+        if m and not line.startswith(".."):
+            if name:
+                secs[name] = buf
+            name, buf = m.group(1).strip().lower(), []
+            rest = line[m.end():].strip() if m.group(2) == "..." else ""  # '.SYNOPSIS...text' keeps text; '/Today/' is a label
+            if rest:
+                buf.append(rest)
+            continue
+        if line.strip() == "$$":
+            break
+        if line.strip() == "&&":
+            if name:
+                secs[name], name, buf = buf, None, []
+            continue
+        if name is not None:
+            buf.append(line)
+    if name:
+        secs[name] = buf
+    out = {}
+    for k, lines in secs.items():
+        lines = [l for l in lines if not re.match(r"^\s*Issued at ", l)]
+        paras = re.split(r"\n\s*\n", "\n".join(lines).strip())
+        out[k] = "\n".join(re.sub(r"\s*\n\s*(?![-*])", " ", p).strip() for p in paras if p.strip())
+    return out
+
+
+def nws_discussion(office, ua, limit=900):
+    """The office's latest Area Forecast Discussion: key messages first, then the short- and long-term text."""
+    lst = get_json(f"https://api.weather.gov/products/types/AFD/locations/{office}", ua, f"NWS AFD list {office}", "application/ld+json")
+    graph = (lst or {}).get("@graph") or []
+    if not graph:
+        return None
+    prod = get_json(f"https://api.weather.gov/products/{graph[0]['id']}", ua, f"NWS AFD {office}", "application/ld+json")
+    if not prod:
+        return None
+    secs = afd_sections(prod.get("productText"))
+    trim = lambda t: t if len(t) <= limit else t[:limit].rsplit(" ", 1)[0] + "…"
+    out = {"office": office, "issued": prod.get("issuanceTime")}
+    for k, label in (("key messages", "key_messages"), ("synopsis", "synopsis"), ("short term", "short_term"), ("long term", "long_term")):
+        if secs.get(k):
+            out[label] = trim(secs[k])
     return out
 
 
@@ -597,14 +702,22 @@ def run(day, cfg, history_dir=None):
 
     # forecast: Aspen summit point, alerts
     sp = cfg["summit_point"]
+    nws = {}  # NWS's own words for the writer: never printed, kept out of the archive record
     fc = safely(archive, "nws summit", lambda: nws_forecast(sp["lat"], sp["lon"], ua))
     if fc:
         paper["summit"] = {"name": sp["name"], "elev_ft": sp["elev_ft"], "days": summit_days(fc), "next48h": next48(fc)}
         archive["forecast_calls"] = record_calls(fc, day, "NWS point, Aspen summit")
+        archive["nws_age_h"] = fc.get("age_h")
         sources.append(f"NWS {fmt_time(fc['issued'])}")
-    alerts = safely(archive, "nws alerts", lambda: nws_alerts(sp["lat"], sp["lon"], ua), [])
+        nws.update(issued=fc["issued"], summit=nws_wording(fc))
+    points = [(sp["name"], sp["lat"], sp["lon"])] + [(p["name"], p["lat"], p["lon"]) for p in cfg.get("alert_points", [])]
+    alerts = safely(archive, "nws alerts", lambda: nws_alerts(points, ua), [])
     if alerts:
-        paper["alerts"] = alerts
+        paper["alerts"] = [{k: a[k] for k in ("event", "until") if a.get(k)} for a in alerts]
+        nws["alerts"] = alerts
+    afd = safely(archive, "nws discussion", lambda: nws_discussion((fc or {}).get("office") or cfg.get("nws_office", "GJT"), ua))
+    if afd:
+        nws["discussion"] = afd
 
     # avalanche, Aspen's mountains, and mountains across Colorado
     zones = safely(archive, "caic", lambda: caic(ua), [])
@@ -661,7 +774,10 @@ def run(day, cfg, history_dir=None):
     news = safely(archive, "news", lambda: collect_news(cfg, day, ua, now), [])
     archive["news_candidates"] = len(news)
     archive["fetch_log"] = LOG
-    return {"schema": 2, "paper": paper, "archive": archive}, news
+    doc = {"schema": 2, "paper": paper, "archive": archive}
+    if nws:
+        doc["nws"] = nws
+    return doc, news
 
 
 # ---------------------------------------------------------------- validate
@@ -712,6 +828,7 @@ def selftest():
         "New snow accumulation of less than half an inch possible.": ("under ½ in", 0, 0.5),
         "New snow accumulation of around one inch possible.": ("about 1 in", 1, 1),
         "Little or no snow accumulation expected.": ("0 in", 0, 0),
+        "Snow likely. New snow accumulation of around an inch possible.": ("about 1 in", 1, 1),
         "Sunny, with a high near 41.": None,
     }
     for t, want in cases.items():
@@ -723,6 +840,31 @@ def selftest():
         {"name": "Thursday", "start": "2026-11-05T06:00:00-07:00", "end": "", "day": True, "temp_f": 25, "pop_pct": 20, "band": None},
         {"name": "Thursday Night", "start": "2026-11-05T18:00:00-07:00", "end": "", "day": False, "temp_f": 8, "pop_pct": 0, "band": None}]}
     assert next48(fc) == {"text": "2–4 in", "low_in": 2, "high_in": 4, "when": "Tonight"}
+    fc["periods"][0]["text"] = "Snow. High near 30. New snow accumulation of around one inch possible."
+    assert nws_wording(fc) == [{"name": "Today", "text": fc["periods"][0]["text"]}]
+    adv = {"id": "urn:a1", "properties": {"id": "urn:a1", "status": "Actual", "event": "Winter Weather Advisory",
+           "headline": "Winter Weather Advisory issued November 13 at 3:41AM MST until November 14 at 5:00AM MST by NWS Grand Junction CO",
+           "areaDesc": "Elk and Gore Mountains", "onset": "2026-11-13T17:00:00-07:00", "ends": "2026-11-14T05:00:00-07:00",
+           "description": "* WHAT...Snow expected. Total snow accumulations 4 to 8 inches.\n\n* WHERE...Elk and Gore Mountains.\n\n"
+                          "* WHEN...From 5 PM this afternoon to 5 AM MST Saturday.\n\n* IMPACTS...Travel could be very\ndifficult."}}
+    warn = {"id": "urn:w1", "properties": {"id": "urn:w1", "status": "Actual", "event": "Winter Storm Warning", "areaDesc": "Central Mountain Valleys",
+            "onset": "2026-11-13T20:00:00-07:00", "ends": "2026-11-14T11:00:00-07:00", "description": "* WHAT...Heavy snow."}}
+    test = {"id": "urn:t1", "properties": {"id": "urn:t1", "status": "Test", "event": "Test Message"}}
+    al = parse_alerts([adv, warn, adv, test])
+    assert [a["event"] for a in al] == ["Winter Storm Warning", "Winter Weather Advisory"], al
+    assert al[1]["until"] == "Sat 5am" and al[1]["what"] == "Snow expected. Total snow accumulations 4 to 8 inches.", al[1]
+    assert al[1]["impacts"] == "Travel could be very difficult." and al[1]["area"] == "Elk and Gore Mountains", al[1]
+    afd = ("000\nFXUS65 KGJT 121042\nAFDGJT\n\nArea Forecast Discussion\nNational Weather Service Grand Junction CO\n"
+           "342 AM MST Thu Nov 12 2026\n\n.KEY MESSAGES...\n\n- Dry and mild through Friday with high\n  pressure overhead.\n"
+           "- A weak system brings light snow to the\n  northern and central mountains Saturday.\n\n&&\n\n"
+           ".SHORT TERM /Today through Friday/\nIssued at 341 AM MST Thu Nov 12 2026\n\nRidging holds through Friday.\n"
+           "Highs run 5 to 10 degrees above normal.\n\n&&\n\n.LONG TERM /Friday night through Wednesday/\n"
+           "Issued at 341 AM MST Thu Nov 12 2026\n\nA shortwave crosses Saturday.\n\n&&\n\n.AVIATION /12Z TAFS/\nVFR.\n\n$$\n")
+    s = afd_sections(afd)
+    assert s["key messages"] == ("- Dry and mild through Friday with high pressure overhead.\n"
+                                 "- A weak system brings light snow to the northern and central mountains Saturday."), s["key messages"]
+    assert s["short term"] == "Ridging holds through Friday. Highs run 5 to 10 degrees above normal.", s["short term"]
+    assert s["long term"] == "A shortwave crosses Saturday." and "aviation" in s, s
     d = summit_days(fc)
     assert d[0] == {"date": "2026-11-04", "day": "Wed", "high_f": 30, "snow_day": "about 1 in", "pop_pct": 90, "low_f": 12, "snow_night": "2–4 in"}, d[0]
     calls = record_calls(fc, "2026-11-04", "NWS point")
@@ -797,7 +939,29 @@ def main():
     h = sub.add_parser("headlines", help="one line per candidate story, for the writer to choose from")
     h.add_argument("path")
     h.add_argument("--hint")
+    w = sub.add_parser("nws", help="NWS's own wording from a data file: alerts, Aspen summit periods, forecast discussion")
+    w.add_argument("path")
     a = ap.parse_args()
+    if a.cmd == "nws":
+        n = json.loads(Path(a.path).read_text()).get("nws") or {}
+        if not n:
+            print("no NWS wording in this file")
+        for al in n.get("alerts", []):
+            print(f"ALERT {al.get('event')} until {al.get('until')}, {al.get('area')}")
+            for k in ("what", "when", "impacts"):
+                if al.get(k):
+                    print(f"  {k.upper()}: {al[k]}")
+        if n.get("summit"):
+            print(f"\nASPEN SUMMIT, issued {fmt_time(n.get('issued'))}")
+            for p in n["summit"]:
+                print(f"  {p['name']}: {p['text']}")
+        d = n.get("discussion") or {}
+        if d:
+            print(f"\nFORECAST DISCUSSION {d.get('office')}, issued {fmt_time(d.get('issued'))}")
+            for k in ("key_messages", "synopsis", "short_term", "long_term"):
+                if d.get(k):
+                    print(f"  {k.replace('_', ' ').upper()}:\n    " + d[k].replace("\n", "\n    "))
+        return
     if a.cmd == "selftest":
         return selftest()
     if a.cmd == "cotrip-sample":

@@ -7,7 +7,7 @@ Produce today's Morning Brief for J Blake Nunley, Aspen, as a four-page PDF. Tod
    - Poll `git ls-remote origin refs/heads/mb-data` every 20 seconds for up to 4 minutes; when it moves, `git -C mbdata pull`. Use mbdata/data/TODAY.json and mbdata/data/news-TODAY.json; mbdata/logs/TODAY.txt says what failed.
    - If no file for today arrives, build it yourself in the same schema from config.json's URLs and the registries, US units only, leaving out anything you can't load, and run `python3 kit/morning-brief/fetch.py validate` on it.
 
-3. WORDS. Write edition/TODAY.json to the STYLE.md slots: the headline and verdict from the data file and NWS's own wording; two pages of news; the pick of the week; and the events.
+3. WORDS. Write edition/TODAY.json to the STYLE.md slots: the headline and verdict from the data file and NWS's own wording, printed by `python3 kit/morning-brief/fetch.py nws mbdata/data/TODAY.json`; two pages of news; the pick of the week; and the events.
    - Choose news from `python3 kit/morning-brief/fetch.py headlines mbdata/data/news-TODAY.json`. A story may rest on its feed title and summary; open the page only when the sentence needs more.
    - Without the headlines file, search outlet by outlet with allowed_domains, which returns dated articles in one call.
    - resort_status: carry forward the last edition's; change a resort only from its own page, and check once any resort whose planned opening has passed with no status.
