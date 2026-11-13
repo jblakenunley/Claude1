@@ -1,0 +1,4790 @@
+{
+ "rows": [
+  {
+   "name": "Apache Superset",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "superset.apache.org",
+   "url": "https://superset.apache.org/docs/api",
+   "desc": "API to manage your BI dashboards and data sources on Superset"
+  },
+  {
+   "name": "Charity Search",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "No",
+   "host": "charityapi.orghunter.com",
+   "url": "http://charityapi.orghunter.com/",
+   "desc": "Non-profit charity data"
+  },
+  {
+   "name": "Clearbit Logo",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "clearbit.com",
+   "url": "https://clearbit.com/docs#logo-api",
+   "desc": "Search for company logos and embed them in your projects"
+  },
+  {
+   "name": "Compabase",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "compabase.com",
+   "url": "https://compabase.com/docs/",
+   "desc": "Polish company data: 3M+ KRS and CEIDG entities with financial statements, people and rankings"
+  },
+  {
+   "name": "Company Enrichment",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "dataandapis.com",
+   "url": "https://dataandapis.com/apis/companies",
+   "desc": "Domain, URL or email to company name, industry, size, HQ, tickers and socials, 125k companies"
+  },
+  {
+   "name": "Crustdata",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.crustdata.com",
+   "url": "https://docs.crustdata.com",
+   "desc": "People and company data covering profiles, headcount, funding and contacts"
+  },
+  {
+   "name": "Domainsdb.info",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "domainsdb.info",
+   "url": "https://domainsdb.info/",
+   "desc": "Registered Domain Names Search"
+  },
+  {
+   "name": "EuroValidate",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "eurovalidate.com",
+   "url": "https://eurovalidate.com",
+   "desc": "EU VAT (VIES), IBAN and EORI validation with company name & address lookup"
+  },
+  {
+   "name": "Firmbase",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "firmbase.be",
+   "url": "https://firmbase.be/en/api/docs",
+   "desc": "Belgian company register (KBO/CBE), Official Gazette notices and VAT validation"
+  },
+  {
+   "name": "Freelancer",
+   "section": "Business",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "developers.freelancer.com",
+   "url": "https://developers.freelancer.com",
+   "desc": "Hire freelancers to get work done"
+  },
+  {
+   "name": "Funding Signals",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "fundingsignals.net",
+   "url": "https://fundingsignals.net/docs",
+   "desc": "Companies that just raised funding, scored as sales leads, from public SEC filings"
+  },
+  {
+   "name": "GlobalEntity",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "globalentityapi.com",
+   "url": "https://www.globalentityapi.com/docs",
+   "desc": "Official company data from 56 European business registers as normalized JSON"
+  },
+  {
+   "name": "Gmail",
+   "section": "Business",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "developers.google.com",
+   "url": "https://developers.google.com/gmail/api/",
+   "desc": "Flexible, RESTful access to the user's inbox"
+  },
+  {
+   "name": "Google Analytics",
+   "section": "Business",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "developers.google.com",
+   "url": "https://developers.google.com/analytics/",
+   "desc": "Collect, configure and analyze your data to reach the right audience"
+  },
+  {
+   "name": "gstinapi",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "gstinapi.in",
+   "url": "https://www.gstinapi.in/docs",
+   "desc": "Verify Indian GST numbers (GSTIN): legal name, status, address and return filing history; free tier"
+  },
+  {
+   "name": "Instatus",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "instatus.com",
+   "url": "https://instatus.com/help/api",
+   "desc": "Post to and update maintenance and incidents on your status page through an HTTP REST API"
+  },
+  {
+   "name": "InvoiceIn",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "invoicein.peculiar.systems",
+   "url": "https://invoicein.peculiar.systems/",
+   "desc": "Parse and validate received e-invoices: XRechnung, ZUGFeRD, Peppol, FatturaPA, KSeF"
+  },
+  {
+   "name": "Invovate",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "invovate.com",
+   "url": "https://invovate.com/api",
+   "desc": "Generate PDF, JSON & UBL invoices in 11 languages from one JSON POST"
+  },
+  {
+   "name": "Katalis",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "meetkatalis.com",
+   "url": "https://meetkatalis.com/apis",
+   "desc": "UK company checks: payment practices, contracts won, registers, filed accounts, change feed"
+  },
+  {
+   "name": "KontragentPro",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "kontragentpro.ru",
+   "url": "https://kontragentpro.ru/api/v2/docs",
+   "desc": "Russian company data from state registers by INN or OGRN: profile, finances, timeline"
+  },
+  {
+   "name": "Leadgen Romania",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "leadgen.adrianhomelab.com",
+   "url": "https://leadgen.adrianhomelab.com/docs",
+   "desc": "Romanian company registry, ANAF tax status and financial statements"
+  },
+  {
+   "name": "Legal Sandbox Georgia",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "legal.ge",
+   "url": "https://legal.ge/api/openapi.json",
+   "desc": "Find verified legal specialists in Georgia from natural-language queries"
+  },
+  {
+   "name": "Logoapi",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "logoapi.sh",
+   "url": "https://logoapi.sh/docs",
+   "desc": "Free SVG company logos by domain, plus search by name. No signup"
+  },
+  {
+   "name": "Mailchimp",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "mailchimp.com",
+   "url": "https://mailchimp.com/developer/",
+   "desc": "Send marketing campaigns and transactional mails"
+  },
+  {
+   "name": "mailjet",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "mailjet.com",
+   "url": "https://www.mailjet.com/",
+   "desc": "Marketing email can be sent and mail templates made in MJML or HTML can be sent using API"
+  },
+  {
+   "name": "markerapi",
+   "section": "Business",
+   "auth": "No",
+   "https": "No",
+   "host": "markerapi.com",
+   "url": "https://markerapi.com",
+   "desc": "Trademark Search"
+  },
+  {
+   "name": "Meirra",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "meirra.com",
+   "url": "https://meirra.com/api",
+   "desc": "SEO monitoring, email verification, lead generation, and marketing analytics"
+  },
+  {
+   "name": "ORB Intelligence",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "api.orb-intelligence.com",
+   "url": "https://api.orb-intelligence.com/docs/",
+   "desc": "Company lookup"
+  },
+  {
+   "name": "PeopleSearch",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "peoplesearch.im",
+   "url": "https://peoplesearch.im/developers",
+   "desc": "People and company search in plain English, with verified work emails and email verification"
+  },
+  {
+   "name": "Pick an Agency",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "pickanagency.com",
+   "url": "https://www.pickanagency.com/developers",
+   "desc": "Search 47,000+ marketing agencies by service, location and rating"
+  },
+  {
+   "name": "RankFabrik Places",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "rankfabrik.com",
+   "url": "https://rankfabrik.com/produits/etablissements",
+   "desc": "Search businesses and points of interest by city, deduplicated with a coverage report"
+  },
+  {
+   "name": "Redash",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "redash.io",
+   "url": "https://redash.io/help/user-guide/integrations-and-api/api",
+   "desc": "Access your queries and dashboards on Redash"
+  },
+  {
+   "name": "RegisterWire",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "registerwire.uk",
+   "url": "https://www.registerwire.uk/docs/index.html",
+   "desc": "Real-time alerts on UK company register changes"
+  },
+  {
+   "name": "Requstory",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "requstory.com",
+   "url": "https://requstory.com/developers/api/",
+   "desc": "How companies work: teams, processes, ease scores and AI-readiness from public websites"
+  },
+  {
+   "name": "RunDossier",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "rundossier.com",
+   "url": "https://rundossier.com/docs/api",
+   "desc": "Pre-meeting briefing on a person from public professional and web sources, as JSON"
+  },
+  {
+   "name": "Seller Fee",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "seller-fee-api.narwhalapis.workers.dev",
+   "url": "https://seller-fee-api.narwhalapis.workers.dev",
+   "desc": "Marketplace and payment fees for Gumroad, Etsy, Stripe and PayPal with net payout breakdowns"
+  },
+  {
+   "name": "Signaliz",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "signaliz.docs.buildwithfern.com",
+   "url": "https://signaliz.docs.buildwithfern.com/signaliz-api-public-docs/introduction",
+   "desc": "GTM enrichment, lead generation, email verification, and company signals"
+  },
+  {
+   "name": "Smartsheet",
+   "section": "Business",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "smartsheet.redoc.ly",
+   "url": "https://smartsheet.redoc.ly/",
+   "desc": "Allows you to programmatically access and Smartsheet data and account information"
+  },
+  {
+   "name": "Softoteca",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "softoteca.com.br",
+   "url": "https://softoteca.com.br/v1",
+   "desc": "Catalog of Brazilian software with the source of each data point and prices in BRL"
+  },
+  {
+   "name": "Square",
+   "section": "Business",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "developer.squareup.com",
+   "url": "https://developer.squareup.com/reference/square",
+   "desc": "Easy way to take payments, manage refunds, and help customers checkout online"
+  },
+  {
+   "name": "SwiftKanban",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "digite.com",
+   "url": "https://www.digite.com/knowledge-base/swiftkanban/article/api-for-swift-kanban-web-services/#restapi",
+   "desc": "Kanban software, Visualize Work, Increase Organizations Lead Time, Throughput & Productivity"
+  },
+  {
+   "name": "Tenders in Hungary",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "tenders.guru",
+   "url": "https://tenders.guru/hu/api",
+   "desc": "Get data for procurements in Hungary in JSON format"
+  },
+  {
+   "name": "Tenders in Poland",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "tenders.guru",
+   "url": "https://tenders.guru/pl/api",
+   "desc": "Get data for procurements in Poland in JSON format"
+  },
+  {
+   "name": "Tenders in Romania",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "tenders.guru",
+   "url": "https://tenders.guru/ro/api",
+   "desc": "Get data for procurements in Romania in JSON format"
+  },
+  {
+   "name": "Tenders in Spain",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "tenders.guru",
+   "url": "https://tenders.guru/es/api",
+   "desc": "Get data for procurements in Spain in JSON format"
+  },
+  {
+   "name": "Tenders in Ukraine",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "tenders.guru",
+   "url": "https://tenders.guru/ua/api",
+   "desc": "Get data for procurements in Ukraine in JSON format"
+  },
+  {
+   "name": "TradeDataHub",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "tradedatahub.net",
+   "url": "https://www.tradedatahub.net",
+   "desc": "U.S. contractor datasets with a free discovery API for coverage, pricing and masked previews"
+  },
+  {
+   "name": "Tomba email finder",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "tomba.io",
+   "url": "https://tomba.io/api",
+   "desc": "Email Finder for B2B sales and email marketing and email verifier"
+  },
+  {
+   "name": "Trello",
+   "section": "Business",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "developers.trello.com",
+   "url": "https://developers.trello.com/",
+   "desc": "Boards, lists and cards to help you organize and prioritize your projects"
+  },
+  {
+   "name": "TrendsAGI",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "trendsagi.com",
+   "url": "https://trendsagi.com/api-docs",
+   "desc": "Trending topic volume, velocity and growth with AI insights; free plan of 100 calls/day"
+  },
+  {
+   "name": "UGC VZ",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "ugc-vz.de",
+   "url": "https://ugc-vz.de/developers",
+   "desc": "Directory of DACH user-generated-content creators with topics, cities, rates and contact requests"
+  },
+  {
+   "name": "Verif Entreprise FR",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "api-production-24833.up.railway.app",
+   "url": "https://api-production-24833.up.railway.app",
+   "desc": "French company checks by SIREN: status, insolvency (BODACC), VAT (VIES); free preview"
+  },
+  {
+   "name": "Village",
+   "section": "Business",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.village.ai",
+   "url": "https://docs.village.ai",
+   "desc": "Person and company enrichment plus warm introduction paths through your network"
+  },
+  {
+   "name": "W System EU Business Data",
+   "section": "Business",
+   "auth": "No",
+   "https": "Yes",
+   "host": "api.wsystem.dev",
+   "url": "https://api.wsystem.dev/docs",
+   "desc": "EU VAT (VIES) and EORI validation, company registers, EU/UN/OFAC/UK sanctions screening"
+  },
+  {
+   "name": "Coinlayer",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "coinlayer.com",
+   "url": "https://coinlayer.com?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+   "desc": "Real-time Crypto Currency Exchange Rates"
+  },
+  {
+   "name": "0x",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "docs.0x.org",
+   "url": "https://docs.0x.org/",
+   "desc": "API for querying token and pool stats across various liquidity pools"
+  },
+  {
+   "name": "1inch",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "business.1inch.com",
+   "url": "https://business.1inch.com/portal/documentation",
+   "desc": "API for querying decentralize exchange"
+  },
+  {
+   "name": "Alchemy Ethereum",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "alchemy.com",
+   "url": "https://www.alchemy.com/docs/",
+   "desc": "Ethereum Node-as-a-Service Provider"
+  },
+  {
+   "name": "Alpha (Mossland)",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "alpha.moss.land",
+   "url": "https://alpha.moss.land/developers",
+   "desc": "Korean crypto channel stance + RAG Q&A + canonical entity/topic/event store"
+  },
+  {
+   "name": "AlphaGrowth",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "alphagrowth.io",
+   "url": "https://alphagrowth.io/openapi.json",
+   "desc": "Crypto project metrics, community growth, funding rounds, investors, chains, fees and DAO treasuries"
+  },
+  {
+   "name": "Binance",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "github.com",
+   "url": "https://github.com/binance/binance-spot-api-docs",
+   "desc": "Exchange for Trading Cryptocurrencies based in China"
+  },
+  {
+   "name": "Bitcambio",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "nova.bitcambio.com.br",
+   "url": "https://nova.bitcambio.com.br/api/v3/docs#a-public",
+   "desc": "Get the list of all traded assets in the exchange"
+  },
+  {
+   "name": "BitcoinAverage",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "apiv2.bitcoinaverage.com",
+   "url": "https://apiv2.bitcoinaverage.com/",
+   "desc": "Digital Asset Price Data for the blockchain industry"
+  },
+  {
+   "name": "BitcoinCharts",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "bitcoincharts.com",
+   "url": "https://bitcoincharts.com/about/exchanges/",
+   "desc": "Financial and Technical Data related to the Bitcoin Network"
+  },
+  {
+   "name": "Bitcoin Halving",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "why21million.com",
+   "url": "https://why21million.com/halving-api/",
+   "desc": "Halving era, block reward, and schedule arithmetic for any Bitcoin block height"
+  },
+  {
+   "name": "BitcoinYield",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "bitcoinyield.co",
+   "url": "https://bitcoinyield.co/docs",
+   "desc": "Live yields on BTC, ETH and stablecoins across DeFi and CeFi, with an A-D risk grade per offer"
+  },
+  {
+   "name": "Bitculator",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "bitculator.com",
+   "url": "https://bitculator.com/en/documentation/api/v1",
+   "desc": "Crypto prices, OHLCV history, sentiment, technical indicators, exchanges and liquidations"
+  },
+  {
+   "name": "Bitfinex",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.bitfinex.com",
+   "url": "https://docs.bitfinex.com/docs",
+   "desc": "Cryptocurrency Trading Platform"
+  },
+  {
+   "name": "BitPanda",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "developers.bitpanda.com",
+   "url": "https://developers.bitpanda.com",
+   "desc": "Cryptocurrency Information"
+  },
+  {
+   "name": "Bitmex",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "bitmex.com",
+   "url": "https://www.bitmex.com/app/apiOverview",
+   "desc": "Real-Time Cryptocurrency derivatives trading platform based in Hong Kong"
+  },
+  {
+   "name": "Bittrex",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "bittrex.github.io",
+   "url": "https://bittrex.github.io/api/v3",
+   "desc": "Next Generation Crypto Trading Platform"
+  },
+  {
+   "name": "Block",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "block.io",
+   "url": "https://block.io/docs/basic",
+   "desc": "Bitcoin Payment, Wallet & Transaction Data"
+  },
+  {
+   "name": "BlazePhoenix",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "blazephoenix.xyz",
+   "url": "https://blazephoenix.xyz/api",
+   "desc": "On-chain DEX aggregator quotes and route execution data"
+  },
+  {
+   "name": "bilbop",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "api.bilbop.org",
+   "url": "https://api.bilbop.org",
+   "desc": "Solana USDC x402 pay-per-call tools for agents: SPL mint info, token brief, text summarize, Piper TTS, brand feedback"
+  },
+  {
+   "name": "Block Lottos",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "blocklottos.com",
+   "url": "https://blocklottos.com/openapi.json",
+   "desc": "On-chain lottery, draw history, jackpot and advertising endpoints"
+  },
+  {
+   "name": "Blockchain",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "blockchain.com",
+   "url": "https://www.blockchain.com/api",
+   "desc": "Bitcoin Payment, Wallet & Transaction Data"
+  },
+  {
+   "name": "blockfrost Cardano",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "blockfrost.io",
+   "url": "https://blockfrost.io/",
+   "desc": "Interaction with the Cardano mainnet and several testnets"
+  },
+  {
+   "name": "Brave NewCoin",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "bravenewcoin.com",
+   "url": "https://bravenewcoin.com/developers",
+   "desc": "Real-time and historic crypto data from more than 200+ exchanges"
+  },
+  {
+   "name": "BTCGlobe",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "btcglobe.live",
+   "url": "https://btcglobe.live/join#makers",
+   "desc": "Bitcoin height, fees, mempool and peer data served live from two self-hosted nodes"
+  },
+  {
+   "name": "btcnode.uk",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "btcnode.uk",
+   "url": "https://btcnode.uk",
+   "desc": "Bitcoin blockchain data, fees, mempool, SEC insider trades, Reddit sentiment. x402 micropayments for paid endpoints."
+  },
+  {
+   "name": "BtcTurk",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.btcturk.com",
+   "url": "https://docs.btcturk.com/",
+   "desc": "Real-time cryptocurrency data, graphs and API that allows buy&sell"
+  },
+  {
+   "name": "Bybit",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "bybit.com",
+   "url": "https://www.bybit.com/docs/v5/introduction",
+   "desc": "Cryptocurrency data feed and algorithmic trading"
+  },
+  {
+   "name": "CoinAPI",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.coinapi.io",
+   "url": "https://docs.coinapi.io/",
+   "desc": "All Currency Exchanges integrate under a single api"
+  },
+  {
+   "name": "Coinbase",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "developers.coinbase.com",
+   "url": "https://developers.coinbase.com",
+   "desc": "Bitcoin, Bitcoin Cash, Litecoin and Ethereum Prices"
+  },
+  {
+   "name": "Coinbase Pro",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.pro.coinbase.com",
+   "url": "https://docs.pro.coinbase.com/#api",
+   "desc": "Cryptocurrency Trading Platform"
+  },
+  {
+   "name": "CoinCap",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "docs.coincap.io",
+   "url": "https://docs.coincap.io/",
+   "desc": "Real time Cryptocurrency prices through a RESTful API"
+  },
+  {
+   "name": "CoinDCX",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.coindcx.com",
+   "url": "https://docs.coindcx.com/",
+   "desc": "Cryptocurrency Trading Platform"
+  },
+  {
+   "name": "CoinGecko",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "coingecko.com",
+   "url": "http://www.coingecko.com/api",
+   "desc": "Cryptocurrency Price, Market, and Developer/Social Data"
+  },
+  {
+   "name": "Coinigy",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "coinigy.docs.apiary.io",
+   "url": "https://coinigy.docs.apiary.io",
+   "desc": "Interacting with Coinigy Accounts and Exchange Directly"
+  },
+  {
+   "name": "Coinlib",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "coinlib.io",
+   "url": "https://coinlib.io/",
+   "desc": "Crypto Currency Prices"
+  },
+  {
+   "name": "CoinLobster",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "coinlobster.com",
+   "url": "https://coinlobster.com/developers",
+   "desc": "Live executed whale trades across 15 exchanges and on-chain DEX with an unusualness radar"
+  },
+  {
+   "name": "Coinlore",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "coinlore.com",
+   "url": "https://www.coinlore.com/cryptocurrency-data-api",
+   "desc": "Cryptocurrencies prices, volume and more"
+  },
+  {
+   "name": "CoinMarketCap",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "coinmarketcap.com",
+   "url": "https://coinmarketcap.com/api/",
+   "desc": "Cryptocurrencies Prices"
+  },
+  {
+   "name": "Coinmico",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.coinmico.com",
+   "url": "https://docs.coinmico.com",
+   "desc": "Crypto prices, volume and liquidity measured from real trades on 50+ exchanges and DEXs"
+  },
+  {
+   "name": "CoinNudge",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "coinnudge.site",
+   "url": "https://coinnudge.site/data/api-docs",
+   "desc": "Current crypto market breadth, funding and open-interest research datasets"
+  },
+  {
+   "name": "Coinpaprika",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "api.coinpaprika.com",
+   "url": "https://api.coinpaprika.com",
+   "desc": "Cryptocurrencies prices, volume and more"
+  },
+  {
+   "name": "CoinRanking",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "developers.coinranking.com",
+   "url": "https://developers.coinranking.com/api/documentation",
+   "desc": "Live Cryptocurrency data"
+  },
+  {
+   "name": "Coinremitter",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "coinremitter.com",
+   "url": "https://coinremitter.com/docs",
+   "desc": "Cryptocurrencies Payment & Prices"
+  },
+  {
+   "name": "CoinStats",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "documenter.getpostman.com",
+   "url": "https://documenter.getpostman.com/view/5734027/RzZ6Hzr3?version=latest",
+   "desc": "Crypto Tracker"
+  },
+  {
+   "name": "CoinXview",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "coinxview.com",
+   "url": "https://coinxview.com/en/api-mien-phi",
+   "desc": "Real-time crypto prices aggregated from 22 exchanges, OHLC, market stats, Fear & Greed"
+  },
+  {
+   "name": "CorpStacking",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "corpstacking.com",
+   "url": "https://www.corpstacking.com/feed.json",
+   "desc": "Corporate, government and ETF Bitcoin, Ethereum and Solana treasury disclosures"
+  },
+  {
+   "name": "CryptAPI",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "docs.cryptapi.io",
+   "url": "https://docs.cryptapi.io/",
+   "desc": "Cryptocurrency Payment Processor"
+  },
+  {
+   "name": "CryptingUp",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "cryptingup.com",
+   "url": "https://www.cryptingup.com/apidoc/#introduction",
+   "desc": "Cryptocurrency data"
+  },
+  {
+   "name": "Crypto Vision",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "cryptocurrency.cv",
+   "url": "https://cryptocurrency.cv/developers",
+   "desc": "Free crypto news aggregator with market context, JSON REST and RSS"
+  },
+  {
+   "name": "CryptoCompare",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "cryptocompare.com",
+   "url": "https://www.cryptocompare.com/api#",
+   "desc": "Cryptocurrencies Comparison"
+  },
+  {
+   "name": "CryptoKeyhole",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "cryptokeyhole.com",
+   "url": "https://cryptokeyhole.com/data-access/",
+   "desc": "On-chain and market metrics for Bitcoin, Ethereum and more, computed from self-hosted nodes"
+  },
+  {
+   "name": "CryptoMarket",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "api.exchange.cryptomkt.com",
+   "url": "https://api.exchange.cryptomkt.com/",
+   "desc": "Cryptocurrencies Trading platform"
+  },
+  {
+   "name": "Cryptonator",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "cryptonator.com",
+   "url": "https://www.cryptonator.com/api/",
+   "desc": "Cryptocurrencies Exchange Rates"
+  },
+  {
+   "name": "Deep Blue Alpha",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "deepbluealpha.io",
+   "url": "https://deepbluealpha.io/whale-api",
+   "desc": "Real-time Ethereum whale wallet tracking, DEX trades, net flow, and conviction scoring"
+  },
+  {
+   "name": "DefiLlama",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "defillama.com",
+   "url": "https://defillama.com/docs/api",
+   "desc": "Open and transparent DeFi data, TVL, coin prices, volumes, and yields"
+  },
+  {
+   "name": "Degenscan Intel",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "intel.degenscan.io",
+   "url": "https://intel.degenscan.io/carry",
+   "desc": "Hyperliquid funding on every dex (HIP-3 incl.), cross-dex spreads, event feed; free trial key"
+  },
+  {
+   "name": "Dudelytics",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "dudelytics.com",
+   "url": "https://dudelytics.com/en/dpmi/data/",
+   "desc": "Productive crypto indices, daily benchmarks, sector indices and market-stress data"
+  },
+  {
+   "name": "dYdX",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.dydx.exchange",
+   "url": "https://docs.dydx.exchange/",
+   "desc": "Decentralized cryptocurrency exchange"
+  },
+  {
+   "name": "Ethplorer",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "github.com",
+   "url": "https://github.com/EverexIO/Ethplorer/wiki/Ethplorer-API",
+   "desc": "Ethereum tokens, balances, addresses, history of transactions, contracts, and custom structures"
+  },
+  {
+   "name": "EXMO",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "documenter.getpostman.com",
+   "url": "https://documenter.getpostman.com/view/10287440/SzYXWKPi",
+   "desc": "Cryptocurrencies exchange based in UK"
+  },
+  {
+   "name": "FraudCoins",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "fraudcoins.com",
+   "url": "https://fraudcoins.com/data/",
+   "desc": "On-chain top-10 holder concentration and contract permissions for crypto tokens"
+  },
+  {
+   "name": "Gateio",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "gate.io",
+   "url": "https://www.gate.io/api2",
+   "desc": "API provides spot, margin and futures trading operations"
+  },
+  {
+   "name": "Gemini",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "docs.gemini.com",
+   "url": "https://docs.gemini.com/rest-api/",
+   "desc": "Cryptocurrencies Exchange"
+  },
+  {
+   "name": "Hirak Exchange Rates",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "rates.hirak.site",
+   "url": "https://rates.hirak.site/",
+   "desc": "Exchange rates between 162 currency & 300 crypto currency update each 5 min, accurate, no limits"
+  },
+  {
+   "name": "HostDeFi",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "hostdefi.com",
+   "url": "https://hostdefi.com/docs/api/",
+   "desc": "Free A+\u2013F token-safety grades across Solana and EVM chains"
+  },
+  {
+   "name": "Huobi",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "huobiapi.github.io",
+   "url": "https://huobiapi.github.io/docs/spot/v1/en/",
+   "desc": "Seychelles based cryptocurrency exchange"
+  },
+  {
+   "name": "Hyperliquid Market Data",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "rapidapi.com",
+   "url": "https://rapidapi.com/theliminalguy/api/hyperliquid-market-data-oi-funding-open-interest",
+   "desc": "Hyperliquid open interest, funding and cross-venue predicted rates per coin"
+  },
+  {
+   "name": "icy.tools",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "developers.icy.tools",
+   "url": "https://developers.icy.tools/",
+   "desc": "GraphQL based NFT API"
+  },
+  {
+   "name": "Indodax",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "github.com",
+   "url": "https://github.com/btcid/indodax-official-api-docs",
+   "desc": "Trade your Bitcoin and other assets with rupiah"
+  },
+  {
+   "name": "INFURA Ethereum",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "infura.io",
+   "url": "https://infura.io/product/ethereum",
+   "desc": "Interaction with the Ethereum mainnet and several testnets"
+  },
+  {
+   "name": "Ironflow",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "docs.ironflow.sh",
+   "url": "https://docs.ironflow.sh",
+   "desc": "Hyperliquid trades, liquidations, candles, funding and wallet data, plus SQL; no key to start"
+  },
+  {
+   "name": "Kraken",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.kraken.com",
+   "url": "https://docs.kraken.com/exchange/guides/rest/introduction",
+   "desc": "Cryptocurrencies Exchange"
+  },
+  {
+   "name": "KuCoin",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.kucoin.com",
+   "url": "https://docs.kucoin.com/",
+   "desc": "Cryptocurrency Trading Platform"
+  },
+  {
+   "name": "Localbitcoins",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "localbitcoins.com",
+   "url": "https://localbitcoins.com/api-docs/",
+   "desc": "P2P platform to buy and sell Bitcoins"
+  },
+  {
+   "name": "Lucyd",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "lucyd.trade",
+   "url": "https://lucyd.trade/api-docs",
+   "desc": "Bitcoin Up/Down prediction markets on testnet: markets, trades, positions, order books"
+  },
+  {
+   "name": "MadeOnSol",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "madeonsol.com",
+   "url": "https://madeonsol.com/developer",
+   "desc": "Real-time Solana & Robinhood Chain KOL trades, deployer reputation, and DEX activity"
+  },
+  {
+   "name": "MarginPad",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "marginpad.io",
+   "url": "https://marginpad.io/free-crypto-api/",
+   "desc": "Crypto futures prices, candles, funding, open interest, long/short and liquidations, 9 exchanges"
+  },
+  {
+   "name": "Mempool",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "mempool.space",
+   "url": "https://mempool.space/api",
+   "desc": "Bitcoin API Service focusing on the transaction fee"
+  },
+  {
+   "name": "MercadoBitcoin",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "mercadobitcoin.com.br",
+   "url": "https://www.mercadobitcoin.com.br/api-doc/",
+   "desc": "Brazilian Cryptocurrency Information"
+  },
+  {
+   "name": "Messari",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "messari.io",
+   "url": "https://messari.io/api",
+   "desc": "Provides API endpoints for thousands of crypto assets"
+  },
+  {
+   "name": "Mexc",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "mexc.com",
+   "url": "https://www.mexc.com/api-docs",
+   "desc": "Cryptocurrency info, place order"
+  },
+  {
+   "name": "monerometrics",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "monerometrics.net",
+   "url": "https://monerometrics.net",
+   "desc": "Reorg-aware Monero (XMR) network metrics, mining-pool centralization and chain reorganizations"
+  },
+  {
+   "name": "MyCryptoSignal",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "mycryptosignal.com",
+   "url": "https://mycryptosignal.com/api/",
+   "desc": "Crypto market data: daily direction signals, prices, on-chain and news snapshots"
+  },
+  {
+   "name": "Nexchange",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "No",
+   "host": "nexchange2.docs.apiary.io",
+   "url": "https://nexchange2.docs.apiary.io/",
+   "desc": "Automated cryptocurrency exchange service"
+  },
+  {
+   "name": "Nomics",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "nomics.com",
+   "url": "https://nomics.com/docs/",
+   "desc": "Historical and realtime cryptocurrency prices and market data"
+  },
+  {
+   "name": "NovaDax",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "doc.novadax.com",
+   "url": "https://doc.novadax.com/en-US/#introduction",
+   "desc": "NovaDAX API to access all market data, trading management endpoints"
+  },
+  {
+   "name": "OKEx",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "okex.com",
+   "url": "https://www.okex.com/docs/",
+   "desc": "Cryptocurrency exchange based in Seychelles"
+  },
+  {
+   "name": "OptimistFi Perps",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "optimistfi.com",
+   "url": "https://optimistfi.com/perps/data",
+   "desc": "Funding, open interest, prices and leverage caps for perps on 40+ venues, in one schema"
+  },
+  {
+   "name": "Paribu",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.paribu.com",
+   "url": "https://docs.paribu.com/api",
+   "desc": "Turkish cryptocurrency exchange with real-time market data, trading and WebSocket streams"
+  },
+  {
+   "name": "Poloniex",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.poloniex.com",
+   "url": "https://docs.poloniex.com",
+   "desc": "US based digital asset exchange"
+  },
+  {
+   "name": "PumpFunData",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "pumpfundata.com",
+   "url": "https://pumpfundata.com/docs",
+   "desc": "Historical Pump.fun and PumpSwap AMM swap data as hourly Parquet files"
+  },
+  {
+   "name": "Shumi",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.shumi.ai",
+   "url": "https://docs.shumi.ai/api-reference/introduction",
+   "desc": "Crypto market data: prices, trends, funding rates, sentiment, narratives and market regime"
+  },
+  {
+   "name": "SoChain",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "sochain.com",
+   "url": "https://sochain.com/docs",
+   "desc": "Bitcoin, Litecoin, Dogecoin and Zcash addresses, transactions, blocks and fees"
+  },
+  {
+   "name": "Solana JSON RPC",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "docs.solana.com",
+   "url": "https://docs.solana.com/developing/clients/jsonrpc-api",
+   "desc": "Provides various endpoints to interact with the Solana Blockchain"
+  },
+  {
+   "name": "SoloLuck",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "sololuck.io",
+   "url": "https://sololuck.io/api",
+   "desc": "Bitcoin solo mining pool stats, per-address miner stats and an open dataset of solo-mined blocks"
+  },
+  {
+   "name": "Technical Analysis",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "technical-analysis-api.com",
+   "url": "https://technical-analysis-api.com",
+   "desc": "Cryptocurrency prices and technical analysis"
+  },
+  {
+   "name": "The Coin Analysis",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "thecoinanalysis.com",
+   "url": "https://www.thecoinanalysis.com/developers",
+   "desc": "Live and historical cryptocurrency prices, market caps, volatility and drawdown"
+  },
+  {
+   "name": "TronOrb",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "tronorb.com",
+   "url": "https://tronorb.com/developers/api",
+   "desc": "TRON data: USDT TRC-20 fees, address checks, Tether freezes, dApp and exchange rankings"
+  },
+  {
+   "name": "VALR",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.valr.com",
+   "url": "https://docs.valr.com/",
+   "desc": "Cryptocurrency Exchange based in South Africa"
+  },
+  {
+   "name": "ScriptMasterLabs MCP",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "mcp-x402.onrender.com",
+   "url": "https://mcp-x402.onrender.com",
+   "desc": "Model Context Protocol server with web search, social search & LLM chat paid via x402"
+  },
+  {
+   "name": "WhiteBIT",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "docs.whitebit.com",
+   "url": "https://docs.whitebit.com",
+   "desc": "European cryptocurrency exchange"
+  },
+  {
+   "name": "WorldCoinIndex",
+   "section": "Cryptocurrency",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "worldcoinindex.com",
+   "url": "https://www.worldcoinindex.com/apiservice",
+   "desc": "Cryptocurrencies Prices"
+  },
+  {
+   "name": "XRPL.to",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "xrpl.to",
+   "url": "https://xrpl.to/docs",
+   "desc": "XRP Ledger token prices, holders, trades and NFT data"
+  },
+  {
+   "name": "Zennet",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "zennet.cloud",
+   "url": "https://zennet.cloud",
+   "desc": "x402 pay-per-use APIs: Polymarket signals, CEX/DEX spreads, contract risk scores, gas oracle"
+  },
+  {
+   "name": "ZMOK",
+   "section": "Cryptocurrency",
+   "auth": "No",
+   "https": "Yes",
+   "host": "zmok.io",
+   "url": "https://zmok.io",
+   "desc": "Ethereum JSON RPC API and Web3 provider"
+  },
+  {
+   "name": "Currencylayer",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "currencylayer.com",
+   "url": "https://currencylayer.com?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+   "desc": "Exchange rates and currency conversion"
+  },
+  {
+   "name": "Exchangerate.host",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "exchangerate.host",
+   "url": "https://exchangerate.host?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+   "desc": "Foreign exchange & crypto rates API (keyless access ended 2023)"
+  },
+  {
+   "name": "Exchangeratesapi.io",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "exchangeratesapi.io",
+   "url": "https://exchangeratesapi.io?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+   "desc": "Exchange rates with currency conversion"
+  },
+  {
+   "name": "Fixer",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "No",
+   "host": "fixer.io",
+   "url": "https://fixer.io?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+   "desc": "Exchange rates and currency conversion"
+  },
+  {
+   "name": "1Forge",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "1forge.com",
+   "url": "https://1forge.com/forex-data-api/api-documentation",
+   "desc": "Forex currency market data"
+  },
+  {
+   "name": "AllRatesToday",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "allratestoday.com",
+   "url": "https://allratestoday.com/central-bank-rates-api/",
+   "desc": "Official exchange rates published by 121 central banks and tax authorities, keyless latest table"
+  },
+  {
+   "name": "Amdoren",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "amdoren.com",
+   "url": "https://www.amdoren.com/currency-api/",
+   "desc": "Free currency API with over 150 currencies"
+  },
+  {
+   "name": "api-mint",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "api-mint.hoiwan.workers.dev",
+   "url": "https://api-mint.hoiwan.workers.dev",
+   "desc": "Free utility APIs: timezone, forex rates, crypto prices, page metadata"
+  },
+  {
+   "name": "Bank of Russia",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "cbr.ru",
+   "url": "https://www.cbr.ru/development/SXML/",
+   "desc": "Exchange rates and currency conversion"
+  },
+  {
+   "name": "Currency-api",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "github.com",
+   "url": "https://github.com/fawazahmed0/currency-api#readme",
+   "desc": "Free Currency Exchange Rates API with 150+ Currencies & No Rate Limits"
+  },
+  {
+   "name": "CurrencyBeacon",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "currencybeacon.com",
+   "url": "https://currencybeacon.com/",
+   "desc": "Real-time and historical currency exchange rates with free tier"
+  },
+  {
+   "name": "CurrencyFreaks",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "currencyfreaks.com",
+   "url": "https://currencyfreaks.com/",
+   "desc": "Provides current and historical currency exchange rates with free plan 1K requests/month"
+  },
+  {
+   "name": "CurrencyScoop",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "currencyscoop.com",
+   "url": "https://currencyscoop.com/api-documentation",
+   "desc": "Real-time and historical currency rates JSON API"
+  },
+  {
+   "name": "Czech National Bank",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "cnb.cz",
+   "url": "https://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.xml",
+   "desc": "A collection of exchange rates"
+  },
+  {
+   "name": "Daleelak",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "getdaleelak.com",
+   "url": "https://getdaleelak.com/en/api",
+   "desc": "Egyptian bank and dealer exchange rates, gold and silver prices"
+  },
+  {
+   "name": "DolarKa\u00e7",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "dolarkac.com",
+   "url": "https://dolarkac.com/gelistirici-api",
+   "desc": "Turkish lira exchange rates, gold and crypto prices from the Istanbul free market"
+  },
+  {
+   "name": "Economia.Awesome",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "docs.awesomeapi.com.br",
+   "url": "https://docs.awesomeapi.com.br/api-de-moedas",
+   "desc": "Portuguese free currency prices and conversion with no rate limits"
+  },
+  {
+   "name": "ExchangeRate-API",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "exchangerate-api.com",
+   "url": "https://www.exchangerate-api.com",
+   "desc": "Free currency conversion"
+  },
+  {
+   "name": "Exchangerate.dev",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "exchangerate.dev",
+   "url": "https://exchangerate.dev/docs",
+   "desc": "Live & historical FX, 168 pairs back to 1999, Frankfurter-compatible, free 10k/mo"
+  },
+  {
+   "name": "Frankfurter",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "frankfurter.dev",
+   "url": "https://frankfurter.dev",
+   "desc": "Exchange rates, currency conversion and time series"
+  },
+  {
+   "name": "FreeCurrency",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "freecurrencyapi.com",
+   "url": "https://freecurrencyapi.com",
+   "desc": "Real-time and historical foreign exchange rates"
+  },
+  {
+   "name": "FreeForexAPI",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "freeforexapi.com",
+   "url": "https://freeforexapi.com/Home/Api",
+   "desc": "Real-time foreign exchange rates for major currency pairs"
+  },
+  {
+   "name": "Fulusly",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "fulusly.soft9.us",
+   "url": "https://fulusly.soft9.us/developers",
+   "desc": "Exchange rates for 144 currencies with daily history back to the 1990s, English and Arabic"
+  },
+  {
+   "name": "FXpeek",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "fxpeek.com",
+   "url": "https://fxpeek.com/en/api",
+   "desc": "Source-linked historical reference exchange rates with CSV, JSON and an MCP server"
+  },
+  {
+   "name": "National Bank of Poland",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "api.nbp.pl",
+   "url": "http://api.nbp.pl/en.html",
+   "desc": "A collection of currency exchange rates (data in XML and JSON)"
+  },
+  {
+   "name": "Nerkhsanj",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "nerkh.jahankhahan.shop",
+   "url": "https://nerkh.jahankhahan.shop/developers/en",
+   "desc": "Iran free-market USD, EUR, CNY, gold and coin rates in toman, live and daily archive since 2010"
+  },
+  {
+   "name": "Open Exchange Rates",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.openexchangerates.org",
+   "url": "https://docs.openexchangerates.org/",
+   "desc": "Live and historical exchange rates for 200+ currencies with free tier"
+  },
+  {
+   "name": "paralelo.bo",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "paralelo.bo",
+   "url": "https://paralelo.bo/api",
+   "desc": "Bolivia parallel-market USD/BOB exchange rate, aggregated from P2P sources every 60s"
+  },
+  {
+   "name": "Rate-API",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "rate-api.com",
+   "url": "https://rate-api.com/docs/api",
+   "desc": "Hourly exchange rates for 160+ currencies in JSON, XML or CSV with free plan 2,500 requests/month"
+  },
+  {
+   "name": "TaxID",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "taxid.dev",
+   "url": "https://www.taxid.dev/docs",
+   "desc": "EU VAT number validation with company name and address lookup across all 27 member states"
+  },
+  {
+   "name": "VATComply.com",
+   "section": "Currency Exchange",
+   "auth": "No",
+   "https": "Yes",
+   "host": "vatcomply.com",
+   "url": "https://www.vatcomply.com/documentation",
+   "desc": "Exchange rates, geolocation and VAT number validation"
+  },
+  {
+   "name": "XRates",
+   "section": "Currency Exchange",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "xratesapi.com",
+   "url": "https://xratesapi.com/docs",
+   "desc": "Latest and historical exchange rates aggregated from ECB, CBR and open data feeds, 300+ currencies"
+  },
+  {
+   "name": "Marketstack",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "marketstack.com",
+   "url": "https://marketstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+   "desc": "Real-Time, Intraday & Historical Market Data API"
+  },
+  {
+   "name": "Aletheia",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "aletheiaapi.com",
+   "url": "https://aletheiaapi.com/",
+   "desc": "Insider trading data, earnings call analysis, financial statements, and more"
+  },
+  {
+   "name": "Alpaca",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.alpaca.markets",
+   "url": "https://docs.alpaca.markets/us/docs/about-market-data-api",
+   "desc": "Realtime and historical market data on all US equities and ETFs"
+  },
+  {
+   "name": "Alpha Vantage",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "alphavantage.co",
+   "url": "https://www.alphavantage.co/",
+   "desc": "Realtime and historical stock data"
+  },
+  {
+   "name": "Arkleon",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "arkleon.com",
+   "url": "https://arkleon.com",
+   "desc": "Point-in-time SEC EDGAR fundamentals over /v1"
+  },
+  {
+   "name": "Banco do Brasil",
+   "section": "Finance",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "developers.bb.com.br",
+   "url": "https://developers.bb.com.br/home",
+   "desc": "All Banco do Brasil financial transaction APIs"
+  },
+  {
+   "name": "Bank Data",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "apilayer.com",
+   "url": "https://apilayer.com/marketplace/bank_data-api",
+   "desc": "Instant IBAN and SWIFT number validation across the globe"
+  },
+  {
+   "name": "Banking Access Index",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "globalsolo.global",
+   "url": "https://www.globalsolo.global/data/banking-access-index",
+   "desc": "Which US business banking providers accept founders by country of residence, with sources"
+  },
+  {
+   "name": "Billplz",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "billplz.com",
+   "url": "https://www.billplz.com/api",
+   "desc": "Payment platform"
+  },
+  {
+   "name": "Binlist",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "binlist.net",
+   "url": "https://binlist.net/",
+   "desc": "Public access to a database of IIN/BIN information"
+  },
+  {
+   "name": "Boleto.Cloud",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "boleto.cloud",
+   "url": "https://boleto.cloud/",
+   "desc": "A api to generate boletos in Brazil"
+  },
+  {
+   "name": "Brainy Prices",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "prices.brainy.ae",
+   "url": "https://prices.brainy.ae/developers.html",
+   "desc": "UAE living costs: KHDA fees, DLD rents, fuel, utilities, telecom and relocation, with dated sources"
+  },
+  {
+   "name": "BriefTape",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "brieftape.com",
+   "url": "https://brieftape.com",
+   "desc": "Real-time AI-summarized SEC filings, Fed, FDA and BLS data, ticker-tagged"
+  },
+  {
+   "name": "CardBinCheck",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "cardbincheck.com",
+   "url": "https://cardbincheck.com/bin-lookup-api",
+   "desc": "Card BIN/IIN lookup: network, issuer, country and card type for the first 6-8 digits"
+  },
+  {
+   "name": "Citi",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "sandbox.developerhub.citi.com",
+   "url": "https://sandbox.developerhub.citi.com/api-catalog-list",
+   "desc": "All Citigroup account and statement data APIs"
+  },
+  {
+   "name": "Clear Street",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.clearstreet.com",
+   "url": "https://docs.clearstreet.com/?utm_source=github&utm_medium=developer&utm_campaign=api_listings&utm_content=public_apis",
+   "desc": "Trade US stocks and options, with market data, fundamentals and account data"
+  },
+  {
+   "name": "CongressInvests",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "congressinvests.com",
+   "url": "https://congressinvests.com",
+   "desc": "Real-time U.S. congressional stock trade disclosures from Senate EFD and House Clerk"
+  },
+  {
+   "name": "contix",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "contix.es",
+   "url": "https://contix.es/api/#herramientas",
+   "desc": "Spain: IBAN validation with bank and BIC, EU VAT number check (VIES), Modelo 303 VAT sums"
+  },
+  {
+   "name": "Degenscan Intel Macro",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "intel.degenscan.io",
+   "url": "https://intel.degenscan.io/docs",
+   "desc": "U.S. Treasury auctions, stablecoin supply, Brazil crypto-dollar premium vs BCB PTAX; free trial key"
+  },
+  {
+   "name": "Dino.markets",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "dino.markets",
+   "url": "https://dino.markets/docs",
+   "desc": "Matched Kalshi and Polymarket prediction-market data, cross-venue spreads"
+  },
+  {
+   "name": "Drillr",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "drillr.ai",
+   "url": "https://drillr.ai/docs/api",
+   "desc": "Fundamentals, filings, earnings, ownership and events for US, China and Japan equities"
+  },
+  {
+   "name": "Econdb",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "econdb.com",
+   "url": "https://www.econdb.com/api/",
+   "desc": "Global macroeconomic data"
+  },
+  {
+   "name": "EconPulse",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "econpulse.io",
+   "url": "https://econpulse.io",
+   "desc": "Live economic data \u2014 CPI, PPI, energy, treasury rates, BTC premium"
+  },
+  {
+   "name": "EOD Historical Data",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "eodhd.com",
+   "url": "https://eodhd.com/",
+   "desc": "Real-time and historical stock market data with 150+ exchanges"
+  },
+  {
+   "name": "EstimateTax",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "estimatetax.net",
+   "url": "https://estimatetax.net/api/",
+   "desc": "US federal, state and local income tax calculation for 2026, with the source of every figure"
+  },
+  {
+   "name": "FarmDash",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "farmdash.one",
+   "url": "https://www.farmdash.one/agents",
+   "desc": "DeFi intelligence, protocol risk, yield simulation plus 84 MCP agent tools, free Scout tier"
+  },
+  {
+   "name": "Fed Treasury",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "fiscaldata.treasury.gov",
+   "url": "https://fiscaldata.treasury.gov/api-documentation/",
+   "desc": "U.S. Department of the Treasury Data"
+  },
+  {
+   "name": "Filingrail",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "rapidapi.com",
+   "url": "https://rapidapi.com/hudson-enterprises-llc-hudson-enterprises-llc-default/api/filingrail",
+   "desc": "SEC EDGAR filings, XBRL financials, Form 4 insider trades, 8-K events and 13F holdings"
+  },
+  {
+   "name": "Finage",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "finage.co.uk",
+   "url": "https://finage.co.uk",
+   "desc": "Finage is a stock, currency, cryptocurrency, indices, and ETFs real-time & historical data provider"
+  },
+  {
+   "name": "Finance Clearly Tax Rates",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "financeclearly.com",
+   "url": "https://financeclearly.com/tax-rates-api/",
+   "desc": "Current UK and US tax rates, allowances and thresholds"
+  },
+  {
+   "name": "Financial Modeling Prep",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "site.financialmodelingprep.com",
+   "url": "https://site.financialmodelingprep.com/developer/docs",
+   "desc": "Realtime and historical stock data"
+  },
+  {
+   "name": "FinBridge",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "gronox.kr",
+   "url": "https://www.gronox.kr/docs",
+   "desc": "Official-source financials, segments, valuation, peers and prices for KR, US, JP, TW companies"
+  },
+  {
+   "name": "Finnhub",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "finnhub.io",
+   "url": "https://finnhub.io/docs/api",
+   "desc": "Real-Time RESTful APIs and Websocket for Stocks, Currencies, and Crypto"
+  },
+  {
+   "name": "FloorGuard",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "floorguard-kappa.vercel.app",
+   "url": "https://floorguard-kappa.vercel.app/api/",
+   "desc": "Sourced prop firm daily-loss and max-drawdown rules, plus a drawdown-room check"
+  },
+  {
+   "name": "FRED",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "fred.stlouisfed.org",
+   "url": "https://fred.stlouisfed.org/docs/api/fred/",
+   "desc": "Economic data from the Federal Reserve Bank of St. Louis"
+  },
+  {
+   "name": "Front Accounting APIs",
+   "section": "Finance",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "frontaccounting.com",
+   "url": "https://frontaccounting.com/fawiki/index.php?n=Devel.SimpleAPIModule",
+   "desc": "Front accounting is multilingual and multicurrency software for small businesses"
+  },
+  {
+   "name": "FundBiz",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "fundbiz.co.uk",
+   "url": "https://fundbiz.co.uk/data/api/",
+   "desc": "UK specialty business finance lender terms, typical rates and decision times"
+  },
+  {
+   "name": "Futures Clock",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "futuresclock.com",
+   "url": "https://futuresclock.com/en/data-methodology/#open-data",
+   "desc": "Trading hours and session windows for 65 futures products on 16 global exchanges"
+  },
+  {
+   "name": "FXNewsBias",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "fxnewsbias.com",
+   "url": "https://fxnewsbias.com/developers",
+   "desc": "AI-scored news sentiment for the 8 major forex currencies, refreshed every 3 hours"
+  },
+  {
+   "name": "Goldprice.dev",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "goldprice.dev",
+   "url": "https://goldprice.dev/docs",
+   "desc": "Cross-validated gold, silver & copper spot, futures & 30-year history in 13 currencies"
+  },
+  {
+   "name": "Grizzly Bulls",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "grizzlybulls.com",
+   "url": "https://grizzlybulls.com/economic-data-api",
+   "desc": "U.S. GDP, CPI, unemployment, and payroll history"
+  },
+  {
+   "name": "Halal Terminal",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "api.halalterminal.com",
+   "url": "https://api.halalterminal.com/docs",
+   "desc": "Shariah-compliant stock and ETF screening across 5 methodologies, zakat and purification"
+  },
+  {
+   "name": "Helious",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "helious.io",
+   "url": "https://helious.io/developers/",
+   "desc": "US Treasury auction results with the tail and bidder split, plus scored economic releases"
+  },
+  {
+   "name": "Helium",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "heliumtrades.com",
+   "url": "https://heliumtrades.com/mcp-page/",
+   "desc": "News with media bias scoring, balanced news synthesis, live market data, AI options pricing"
+  },
+  {
+   "name": "Hotstoks",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "hotstoks.com",
+   "url": "https://hotstoks.com?utm_source=public-apis",
+   "desc": "Stock market data powered by SQL"
+  },
+  {
+   "name": "IBAN Analyzer",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "iban-analyzer.com",
+   "url": "https://iban-analyzer.com/free-iban-api",
+   "desc": "Resolve an IBAN to its bank name, BIC, city and address for 60+ countries"
+  },
+  {
+   "name": "IBANforge",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "api.ibanforge.com",
+   "url": "https://api.ibanforge.com",
+   "desc": "IBAN validation and BIC/SWIFT lookup for 89 countries with 121k+ BIC entries"
+  },
+  {
+   "name": "IEX Cloud",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "iexcloud.io",
+   "url": "https://iexcloud.io/docs/api/",
+   "desc": "Realtime & Historical Stock and Market Data"
+  },
+  {
+   "name": "IG",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "labs.ig.com",
+   "url": "https://labs.ig.com/gettingstarted",
+   "desc": "Spreadbetting and CFD Market Data"
+  },
+  {
+   "name": "India GST HSN & SAC",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "gst-hsn-sac-api.vercel.app",
+   "url": "https://gst-hsn-sac-api.vercel.app/docs",
+   "desc": "Indian GST HSN and SAC classification code lookup and search"
+  },
+  {
+   "name": "Indian Mutual Fund",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "mfapi.in",
+   "url": "https://www.mfapi.in/",
+   "desc": "Get complete history of India Mutual Funds Data"
+  },
+  {
+   "name": "Intrinio",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "intrinio.com",
+   "url": "https://intrinio.com/",
+   "desc": "A wide selection of financial data feeds"
+  },
+  {
+   "name": "Invoice & Payment ID Validator",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "rapidapi.com",
+   "url": "https://rapidapi.com/MohamedBahaa/api/invoice-payment-id-validator",
+   "desc": "Validate IBAN, BIC, EU VAT (live VIES), UK VAT and EIN, with a pay/review/hold payee check"
+  },
+  {
+   "name": "Klarna",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.klarna.com",
+   "url": "https://docs.klarna.com/klarna-payments/",
+   "desc": "Klarna payment and shopping service"
+  },
+  {
+   "name": "KmalServico Gold Price Dataset",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "kmalservico.com",
+   "url": "https://www.kmalservico.com/data",
+   "desc": "Current gold price per gram at 6 purities for 188 countries, JSON, no auth"
+  },
+  {
+   "name": "LiquiLens",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "liquilens.in",
+   "url": "https://liquilens.in/developers/",
+   "desc": "Public-record bank and lender failure-risk evidence"
+  },
+  {
+   "name": "Live SEC Form 4 Insider Trades",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "rapidapi.com",
+   "url": "https://rapidapi.com/crisp-point-studio-crisp-point-studio-default/api/live-sec-form-4-insider-trades",
+   "desc": "Latest SEC Form 4 insider trading filings from EDGAR, by ticker or market-wide"
+  },
+  {
+   "name": "matchwire.win",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "matchwire.win",
+   "url": "https://matchwire.win/docs/",
+   "desc": "Matched prediction-market games across Kalshi, Polymarket US/Intl and Predict.fun"
+  },
+  {
+   "name": "MercadoPago",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "mercadopago.com.br",
+   "url": "https://www.mercadopago.com.br/developers/es/reference",
+   "desc": "Mercado Pago API reference - all the information you need to develop your integrations"
+  },
+  {
+   "name": "Metal Sentinel",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "metal-sentinel.com",
+   "url": "https://metal-sentinel.com/endpoints",
+   "desc": "Live and historical precious and base metal prices in 180+ currencies"
+  },
+  {
+   "name": "Mono",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "mono.co",
+   "url": "https://mono.co/",
+   "desc": "Connect with users\u2019 bank accounts and access transaction data in Africa"
+  },
+  {
+   "name": "Moov",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.moov.io",
+   "url": "https://docs.moov.io/api/",
+   "desc": "The Moov API makes it simple for platforms to send, receive, and store money"
+  },
+  {
+   "name": "MortgageCalculator",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "mortgagecalculator.me",
+   "url": "https://mortgagecalculator.me/developers",
+   "desc": "16 mortgage calculators: payment, refinance, APR, rent vs. buy, points and amortization schedules"
+  },
+  {
+   "name": "Nigeria PAYE",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "orionsoftlimited.com",
+   "url": "https://www.orionsoftlimited.com/developers",
+   "desc": "Nigerian income tax (PAYE) and take-home pay under the Nigeria Tax Act 2025"
+  },
+  {
+   "name": "NORTH7 Agent",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "north7.ai",
+   "url": "https://north7.ai/v1/docs",
+   "desc": "Trading signals, market analysis and geopolitical intelligence"
+  },
+  {
+   "name": "Nordigen",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "nordigen.com",
+   "url": "https://nordigen.com/en/account_information_documenation/integration/quickstart_guide/",
+   "desc": "Connect to bank accounts using official bank APIs and get raw transaction data"
+  },
+  {
+   "name": "OpenFIGI",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "openfigi.com",
+   "url": "https://www.openfigi.com/api",
+   "desc": "Equity, index, futures, options symbology from Bloomberg LP"
+  },
+  {
+   "name": "OpenTaxRate",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "opentaxrate.com",
+   "url": "https://opentaxrate.com",
+   "desc": "US sales tax rates by street address, from the states' own published data"
+  },
+  {
+   "name": "Pink Agentic AI Payments",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "pinkwallet.com",
+   "url": "https://pinkwallet.com/agentic/developers/",
+   "desc": "Approval layer for AI agent payments: per-agent budgets, rules, single-use credentials, sandbox"
+  },
+  {
+   "name": "PIT Financial State",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "agent-economy-pit-evaluation.onrender.com",
+   "url": "https://agent-economy-pit-evaluation.onrender.com/docs",
+   "desc": "Point-in-time quarterly revenue for 20 U.S. issuers"
+  },
+  {
+   "name": "Plaid",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "plaid.com",
+   "url": "https://www.plaid.com/docs",
+   "desc": "Connect with user's bank accounts and access transaction data"
+  },
+  {
+   "name": "Polygon",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "polygon.io",
+   "url": "https://polygon.io/",
+   "desc": "Historical stock market data"
+  },
+  {
+   "name": "PolyKal Fees",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "polymarket-kalshi.com",
+   "url": "https://polymarket-kalshi.com/fee-schedule/",
+   "desc": "Kalshi & Polymarket trading fee rates and formulas as verified JSON"
+  },
+  {
+   "name": "Portfolio Optimizer",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "portfoliooptimizer.io",
+   "url": "https://portfoliooptimizer.io/",
+   "desc": "Portfolio analysis and optimization"
+  },
+  {
+   "name": "QuiVad",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "quivad.com",
+   "url": "https://www.quivad.com/api",
+   "desc": "Net short positions disclosed to 23 market regulators, fund by fund, since 2010"
+  },
+  {
+   "name": "Razorpay IFSC",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "razorpay.com",
+   "url": "https://razorpay.com/docs/",
+   "desc": "Indian Financial Systems Code (Bank Branch Codes)"
+  },
+  {
+   "name": "Real Time Finance",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "No",
+   "host": "github.com",
+   "url": "https://github.com/Real-time-finance/finance-websocket-API/",
+   "desc": "Websocket API to access realtime stock data"
+  },
+  {
+   "name": "SEC EDGAR Data",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "sec.gov",
+   "url": "https://www.sec.gov/edgar/sec-api-documentation",
+   "desc": "API to access annual reports of public US companies"
+  },
+  {
+   "name": "Segmara",
+   "section": "Finance",
+   "auth": "User-Agent",
+   "https": "Yes",
+   "host": "segmara.com",
+   "url": "https://segmara.com/syndicate",
+   "desc": "IPO calendars, filing stages and estimated lockup dates"
+  },
+  {
+   "name": "Seiche",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "seiche.info",
+   "url": "https://seiche.info/developers",
+   "desc": "Free public funding, FX and capital-market evidence with source clocks"
+  },
+  {
+   "name": "SmartAPI",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "smartapi.angelbroking.com",
+   "url": "https://smartapi.angelbroking.com/",
+   "desc": "Gain access to set of <SmartAPI> and create end-to-end broking services"
+  },
+  {
+   "name": "Stanza VAT Validator",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "stanzaapi.com",
+   "url": "https://stanzaapi.com/tools/vat-validator",
+   "desc": "Validate EU and UK VAT numbers with country formats, checksums, and VIES status"
+  },
+  {
+   "name": "StockData",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "StockData.org",
+   "url": "https://www.StockData.org",
+   "desc": "Real-Time, Intraday & Historical Market Data, News and Sentiment API"
+  },
+  {
+   "name": "StockFit",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "api.stockfit.io",
+   "url": "https://api.stockfit.io/docs",
+   "desc": "SEC filings, financial statements, earnings, ETF holdings and ownership data"
+  },
+  {
+   "name": "Styvio",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "Styvio.com",
+   "url": "https://www.Styvio.com",
+   "desc": "Realtime and historical stock data and current stock sentiment"
+  },
+  {
+   "name": "Sugra",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "sugra.ai",
+   "url": "https://sugra.ai",
+   "desc": "One API for market data, economics, commodities, climate, and global news. LLM-ready JSON"
+  },
+  {
+   "name": "Sales Tax Calculator",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "salestaxcalculatorapi.com",
+   "url": "https://salestaxcalculatorapi.com",
+   "desc": "Computes exact sales tax amounts and breakdowns for checkout and billing"
+  },
+  {
+   "name": "Sanctions Screening",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "dataandapis.com",
+   "url": "https://dataandapis.com/apis/sanctions",
+   "desc": "Fuzzy name screening against OFAC, UN, EU and UK sanctions lists plus PEPs, with list versions"
+  },
+  {
+   "name": "Tax Data",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "apilayer.com",
+   "url": "https://apilayer.com/marketplace/tax_data-api",
+   "desc": "Instant VAT number and tax validation across the globe"
+  },
+  {
+   "name": "TickerInside",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "tickerinside.com",
+   "url": "https://tickerinside.com/api/",
+   "desc": "Holdings of every US ETF, which ETFs hold a stock, and overlap between funds, each dated"
+  },
+  {
+   "name": "TickerLayer",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "tickerlayer.com",
+   "url": "https://tickerlayer.com",
+   "desc": "Real-time and historical market data for stocks, forex, crypto and more"
+  },
+  {
+   "name": "TILLA",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "tillacrypto.com",
+   "url": "https://tillacrypto.com/docs",
+   "desc": "Crypto, US stocks, FX, macro and spot ETF flows on one UTC clock, with 280,675 derived indicators"
+  },
+  {
+   "name": "Top 5 Stocks",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "top5stocks.netlify.app",
+   "url": "https://top5stocks.netlify.app/developers",
+   "desc": "Daily AI-ranked stock and crypto watchlists"
+  },
+  {
+   "name": "Tradier",
+   "section": "Finance",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "developer.tradier.com",
+   "url": "https://developer.tradier.com",
+   "desc": "US equity/option market data (delayed, intraday, historical)"
+  },
+  {
+   "name": "Tradoshi",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "tradoshi.com",
+   "url": "https://tradoshi.com/en/developers",
+   "desc": "Rankings of trading schools and prop firms, every criterion with its source"
+  },
+  {
+   "name": "Twelve Data",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "twelvedata.com",
+   "url": "https://twelvedata.com/",
+   "desc": "Stock market data (real-time & historical)"
+  },
+  {
+   "name": "Undertow",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "liquilens-undertow.com",
+   "url": "https://liquilens-undertow.com/developers/",
+   "desc": "Public market-depth and sized exit estimates, not executable quotes"
+  },
+  {
+   "name": "US Freelancer Tax",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "narwhalthepong.github.io",
+   "url": "https://narwhalthepong.github.io/gumroad-license-check/free-tax-finance-api",
+   "desc": "2026 US self-employment tax, quarterly estimates, QBI, mileage and home office deductions"
+  },
+  {
+   "name": "US Mortgage Calculator",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "usmortgagecalc.com",
+   "url": "https://www.usmortgagecalc.com/developers/api",
+   "desc": "Mortgage payment, amortization, affordability and 50-state property tax data"
+  },
+  {
+   "name": "USTariffRates",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "api.ustariffrates.com",
+   "url": "https://api.ustariffrates.com/openapi.json",
+   "desc": "US HTS lookup and origin-specific tariff breakdowns with source context"
+  },
+  {
+   "name": "VAT Validation",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "abstractapi.com",
+   "url": "https://www.abstractapi.com/vat-validation-rates-api",
+   "desc": "Validate VAT numbers and calculate VAT rates"
+  },
+  {
+   "name": "VoxOdds",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "voxodds.com",
+   "url": "https://voxodds.com/api",
+   "desc": "Polymarket and Kalshi odds, all-in executable quotes, EV checks and audited forecast scores"
+  },
+  {
+   "name": "WallstreetBets",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "dashboard.nbshare.io",
+   "url": "https://dashboard.nbshare.io/apps/reddit/api/",
+   "desc": "WallstreetBets Stock Comments Sentiment Analysis"
+  },
+  {
+   "name": "Wealthnow",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "app.wealthnow.io",
+   "url": "https://app.wealthnow.io/docs/introduction",
+   "desc": "Real-time and historical stock and crypto prices, fundamentals, SEC filings, insider and 13F data"
+  },
+  {
+   "name": "XFINLAB",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "xfinlab.com",
+   "url": "https://www.xfinlab.com/intelligence-api.html",
+   "desc": "Market events, sentiment, technical analysis and macro data for stocks"
+  },
+  {
+   "name": "XOOMAR",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "xoomar.com",
+   "url": "https://xoomar.com/markets/api",
+   "desc": "US market data from SEC, FINRA, CFTC and the Fed: filings, insiders, earnings dates, short interest"
+  },
+  {
+   "name": "Yahoo Finance",
+   "section": "Finance",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "yahoofinanceapi.com",
+   "url": "https://www.yahoofinanceapi.com/",
+   "desc": "Real time low latency Yahoo Finance API for stock market, crypto currencies, and currency exchange"
+  },
+  {
+   "name": "YNAB",
+   "section": "Finance",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "api.youneedabudget.com",
+   "url": "https://api.youneedabudget.com/",
+   "desc": "Budgeting & Planning"
+  },
+  {
+   "name": "Zelothorn",
+   "section": "Finance",
+   "auth": "No",
+   "https": "Yes",
+   "host": "zelothorn.com",
+   "url": "https://zelothorn.com/developers",
+   "desc": "Plain-English explanations of US public companies with SEC filings and earnings data"
+  },
+  {
+   "name": "Zoho Books",
+   "section": "Finance",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "zoho.com",
+   "url": "https://www.zoho.com/books/api/v3/",
+   "desc": "Online accounting software, built for your business"
+  },
+  {
+   "name": "AI Law Tracker",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "ai-law-tracker.com",
+   "url": "https://ai-law-tracker.com/developers",
+   "desc": "AI regulation laws by jurisdiction (US, EU, global) as read-only JSON; free tier"
+  },
+  {
+   "name": "apipj",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "apipj.com.br",
+   "url": "https://apipj.com.br/docs",
+   "desc": "Brazilian company data by CNPJ from Receita Federal open data, incl. alphanumeric CNPJ; free tier"
+  },
+  {
+   "name": "Ayes and Noes",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "ayesandnoes.co.uk",
+   "url": "https://ayesandnoes.co.uk/developers",
+   "desc": "UK House of Commons MPs, parties and recorded votes"
+  },
+  {
+   "name": "Bank Negara Malaysia Open Data",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "apikijangportal.bnm.gov.my",
+   "url": "https://apikijangportal.bnm.gov.my/",
+   "desc": "Malaysia Central Bank Open Data"
+  },
+  {
+   "name": "BCLaws",
+   "section": "Government",
+   "auth": "No",
+   "https": "No",
+   "host": "bclaws.gov.bc.ca",
+   "url": "https://www.bclaws.gov.bc.ca/civix/template/complete/api/index.html",
+   "desc": "Access to the laws of British Columbia"
+  },
+  {
+   "name": "Bidledger",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "jaydemks.github.io",
+   "url": "https://jaydemks.github.io/bidledger/api.html",
+   "desc": "Every open public tender in the European Union, rebuilt daily from the official TED data"
+  },
+  {
+   "name": "Bolet\u00edn Oficial del Estado (BOE)",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "boe.es",
+   "url": "https://www.boe.es/datosabiertos/",
+   "desc": "Official Spanish State Gazette open data: laws, summaries and XML/JSON APIs"
+  },
+  {
+   "name": "Brazil",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "brasilapi.com.br",
+   "url": "https://brasilapi.com.br/",
+   "desc": "Community driven API for Brazil Public Data"
+  },
+  {
+   "name": "Brazil Central Bank Open Data",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "dadosabertos.bcb.gov.br",
+   "url": "https://dadosabertos.bcb.gov.br/",
+   "desc": "Brazil Central Bank Open Data"
+  },
+  {
+   "name": "Brazil Receita WS",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "receitaws.com.br",
+   "url": "https://www.receitaws.com.br/",
+   "desc": "Consult companies by CNPJ for Brazilian companies"
+  },
+  {
+   "name": "Brazilian Chamber of Deputies Open Data",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "dadosabertos.camara.leg.br",
+   "url": "https://dadosabertos.camara.leg.br/swagger/api.html",
+   "desc": "Provides legislative information in Apis XML and JSON, as well as files in various formats"
+  },
+  {
+   "name": "Bureau of Labor Statistics",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "bls.gov",
+   "url": "https://www.bls.gov/developers/",
+   "desc": "US labor statistics: inflation, unemployment, wages and productivity"
+  },
+  {
+   "name": "CPFHub",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "cpfhub.io",
+   "url": "https://cpfhub.io",
+   "desc": "Brazilian CPF lookup \u2014 returns full name, birth date, and gender for any CPF"
+  },
+  {
+   "name": "Census.gov",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "census.gov",
+   "url": "https://www.census.gov/data/developers/data-sets.html",
+   "desc": "The US Census Bureau provides various APIs and data sets on demographics and businesses"
+  },
+  {
+   "name": "City, Berlin",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "daten.berlin.de",
+   "url": "https://daten.berlin.de/",
+   "desc": "Berlin(DE) City Open Data"
+  },
+  {
+   "name": "City, Gda\u0144sk",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "ckan.multimediagdansk.pl",
+   "url": "https://ckan.multimediagdansk.pl/en",
+   "desc": "Gda\u0144sk (PL) City Open Data"
+  },
+  {
+   "name": "City, Gdynia",
+   "section": "Government",
+   "auth": "No",
+   "https": "No",
+   "host": "otwartedane.gdynia.pl",
+   "url": "http://otwartedane.gdynia.pl/en/api_doc.html",
+   "desc": "Gdynia (PL) City Open Data"
+  },
+  {
+   "name": "City, Helsinki",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "hri.fi",
+   "url": "https://hri.fi/en_gb/",
+   "desc": "Helsinki(FI) City Open Data"
+  },
+  {
+   "name": "City, Lviv",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "opendata.city-adm.lviv.ua",
+   "url": "https://opendata.city-adm.lviv.ua/",
+   "desc": "Lviv(UA) City Open Data"
+  },
+  {
+   "name": "City, Nantes Open Data",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "data.nantesmetropole.fr",
+   "url": "https://data.nantesmetropole.fr/pages/home/",
+   "desc": "Nantes(FR) City Open Data"
+  },
+  {
+   "name": "City, New York Open Data",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "opendata.cityofnewyork.us",
+   "url": "https://opendata.cityofnewyork.us/",
+   "desc": "New York (US) City Open Data"
+  },
+  {
+   "name": "City, Prague Open Data",
+   "section": "Government",
+   "auth": "No",
+   "https": "No",
+   "host": "opendata.praha.eu",
+   "url": "http://opendata.praha.eu/en",
+   "desc": "Prague(CZ) City Open Data"
+  },
+  {
+   "name": "City, Toronto Open Data",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "open.toronto.ca",
+   "url": "https://open.toronto.ca/",
+   "desc": "Toronto (CA) City Open Data"
+  },
+  {
+   "name": "Code.gov",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "code.gov",
+   "url": "https://code.gov",
+   "desc": "The primary platform for Open Source and code sharing for the U.S. Federal Government"
+  },
+  {
+   "name": "Colorado Information Marketplace",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.colorado.gov",
+   "url": "https://data.colorado.gov/",
+   "desc": "Colorado State Government Open Data"
+  },
+  {
+   "name": "ContaCLT",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "contaclt.com",
+   "url": "https://contaclt.com/dados/api/",
+   "desc": "Brazilian payroll and labor calculations: net salary, INSS, IRRF, unemployment insurance"
+  },
+  {
+   "name": "Contratero",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "contratero.es",
+   "url": "https://contratero.es/docs",
+   "desc": "Spanish public tenders and awards from the official PLACSP platform, updated hourly"
+  },
+  {
+   "name": "Conversor IAE CNAE",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "conversoriaecnae.es",
+   "url": "https://www.conversoriaecnae.es/api/v1/docs",
+   "desc": "Spanish IAE/CNAE tax activity codes, 2009\u21922025 crosswalk and AEAT obligations"
+  },
+  {
+   "name": "Data USA",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "datausa.io",
+   "url": "https://datausa.io/about/api/",
+   "desc": "US Public Data"
+  },
+  {
+   "name": "Data.gov",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "api.data.gov",
+   "url": "https://api.data.gov/",
+   "desc": "US Government Data"
+  },
+  {
+   "name": "Data.parliament.uk",
+   "section": "Government",
+   "auth": "No",
+   "https": "No",
+   "host": "explore.data.parliament.uk",
+   "url": "https://explore.data.parliament.uk/?learnmore=Members",
+   "desc": "Contains live datasets including information about petitions, bills, MP votes, attendance and more"
+  },
+  {
+   "name": "Deutscher Bundestag DIP",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "dip.bundestag.de",
+   "url": "https://dip.bundestag.de/documents/informationsblatt_zur_dip_api_v01.pdf",
+   "desc": "This API provides read access to DIP entities (e.g. activities, persons, printed material)"
+  },
+  {
+   "name": "Disclosed Capitol",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "disclosedcapitol.com",
+   "url": "https://www.disclosedcapitol.com/data-files/api",
+   "desc": "US congressional & executive-branch stock trade disclosures (STOCK Act + OGE)"
+  },
+  {
+   "name": "District of Columbia Open Data",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "opendata.dc.gov",
+   "url": "http://opendata.dc.gov/pages/using-apis",
+   "desc": "Contains D.C. government public datasets, including crime, GIS, financial data, and so on"
+  },
+  {
+   "name": "DistrictAPI",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "districtapi.dev",
+   "url": "https://districtapi.dev/docs",
+   "desc": "US school districts and schools by address, with enrollment and boundaries"
+  },
+  {
+   "name": "eCourtsIndia",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "ecourtsindia.com",
+   "url": "https://ecourtsindia.com/api",
+   "desc": "Indian court case status, judgments, and hearing schedule API"
+  },
+  {
+   "name": "Edgrapi",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "edgrapi.com",
+   "url": "https://edgrapi.com/docs",
+   "desc": "US government data as JSON: SAM.gov contract opportunities, USAspending awards, Grants.gov grants"
+  },
+  {
+   "name": "EditalMD",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "editalmd.com",
+   "url": "https://editalmd.com/api/",
+   "desc": "Brazilian public procurement (PNCP) notices as Markdown with deadlines and requirements"
+  },
+  {
+   "name": "Election",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "election.org",
+   "url": "https://election.org/data/api",
+   "desc": "Source-linked U.S. election and civic records with coverage limits"
+  },
+  {
+   "name": "EPA",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "epa.gov",
+   "url": "https://www.epa.gov/developers/data-data-products#apis",
+   "desc": "Web services and data sets from the US Environmental Protection Agency"
+  },
+  {
+   "name": "EU VAT Rates by Commodity Code",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "github.com",
+   "url": "https://github.com/humora2504/eu-vat-by-commodity-code",
+   "desc": "EU VAT rates mapped to CN and CPA commodity codes, all 27 member states"
+  },
+  {
+   "name": "FastDOL",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "fastdol.com",
+   "url": "https://www.fastdol.com/docs",
+   "desc": "Federal enforcement records for US employers: OSHA, WHD, MSHA, EPA, NLRB, and more"
+  },
+  {
+   "name": "FBI Wanted",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "fbi.gov",
+   "url": "https://www.fbi.gov/wanted/api",
+   "desc": "Access information on the FBI Wanted program"
+  },
+  {
+   "name": "FDA Import Alert Screening",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "aerviklabs.com",
+   "url": "https://aerviklabs.com/apis/fda-import-alerts/",
+   "desc": "Screen firm names against FDA Import Alert Red, Yellow and Green Lists"
+  },
+  {
+   "name": "FEC",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "api.open.fec.gov",
+   "url": "https://api.open.fec.gov/developers/",
+   "desc": "Information on campaign donations in federal elections"
+  },
+  {
+   "name": "Federal Register",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "federalregister.gov",
+   "url": "https://www.federalregister.gov/reader-aids/developer-resources/rest-api",
+   "desc": "The Daily Journal of the United States Government"
+  },
+  {
+   "name": "FIRMSapi",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "docs.firmsapi.com",
+   "url": "https://docs.firmsapi.com/",
+   "desc": "Look up, search and validate US CBP FIRMS facility codes for ports, warehouses and FTZs"
+  },
+  {
+   "name": "gankdat",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "gankdat.com",
+   "url": "https://gankdat.com/docs",
+   "desc": "UK & EU tenders, UK planning, UK sanctions, US exclusions, UK insolvency and incorporations as JSON"
+  },
+  {
+   "name": "Gazette Data, UK",
+   "section": "Government",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "thegazette.co.uk",
+   "url": "https://www.thegazette.co.uk/data",
+   "desc": "UK official public record API"
+  },
+  {
+   "name": "GovContractScout",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "scout.govbidportals.com",
+   "url": "https://scout.govbidportals.com",
+   "desc": "US state & local government contracts: search, details, NAICS lookup and AI match scoring"
+  },
+  {
+   "name": "Gun Policy",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "gunpolicy.org",
+   "url": "https://www.gunpolicy.org/api",
+   "desc": "International firearm injury prevention and policy"
+  },
+  {
+   "name": "India LGD Index",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "india-lgd-index-api.vercel.app",
+   "url": "https://india-lgd-index-api.vercel.app/docs",
+   "desc": "Free, keyless Indian states, districts, sub-districts and development blocks with LGD codes"
+  },
+  {
+   "name": "Indian Mandi Prices",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "mandi-api.vercel.app",
+   "url": "https://mandi-api.vercel.app/docs",
+   "desc": "Free, keyless daily wholesale mandi prices for 5 Indian states, sourced from data.gov.in"
+  },
+  {
+   "name": "Indian MSP Benchmarks",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "msp-benchmarks-api.vercel.app",
+   "url": "https://msp-benchmarks-api.vercel.app/docs",
+   "desc": "Statutory Minimum Support Prices and CACP production cost benchmarks across 28 Indian crops"
+  },
+  {
+   "name": "Indian Pincode",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "indianpincode.com",
+   "url": "https://indianpincode.com/",
+   "desc": "Free India PIN code lookup with GPS coordinates, 165k+ post offices, state & district data"
+  },
+  {
+   "name": "INEI",
+   "section": "Government",
+   "auth": "No",
+   "https": "No",
+   "host": "iinei.inei.gob.pe",
+   "url": "http://iinei.inei.gob.pe/microdatos/",
+   "desc": "Peruvian Statistical Government Open Data"
+  },
+  {
+   "name": "Interpol Red Notices",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "interpol.api.bund.dev",
+   "url": "https://interpol.api.bund.dev/",
+   "desc": "Access and search Interpol Red Notices"
+  },
+  {
+   "name": "Istanbul (\u0130BB) Open Data",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.ibb.gov.tr",
+   "url": "https://data.ibb.gov.tr",
+   "desc": "Data sets from the \u0130stanbul Metropolitan Municipality (\u0130BB)"
+  },
+  {
+   "name": "Kurtaxe",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "keyset.cloud",
+   "url": "https://keyset.cloud/kurtaxe/api/",
+   "desc": "German tourist tax (Kurtaxe) rates by municipality, each quoted from the municipal statute"
+  },
+  {
+   "name": "LocalGov.jp",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "localgov.jp",
+   "url": "https://localgov.jp/",
+   "desc": "Japan grants and subsidies (central J-Grants + 1,916 municipalities)"
+  },
+  {
+   "name": "MORVS",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "morvs.ai",
+   "url": "https://morvs.ai/api/",
+   "desc": "Source-linked US regulatory and public records: SEC filings, enforcement actions, recalls"
+  },
+  {
+   "name": "National Park Service, US",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "nps.gov",
+   "url": "https://www.nps.gov/subjects/developer/",
+   "desc": "Data from the US National Park Service"
+  },
+  {
+   "name": "Neotimo DGFiP Mirror",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "neotimo.com",
+   "url": "https://neotimo.com/annuaire-dgfip",
+   "desc": "French DGFiP registry of certified e-invoicing platforms (Plateformes Agr\u00e9\u00e9es), searchable by SIRET"
+  },
+  {
+   "name": "nu:legal Deutsches Recht",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "recht.nulegal.eu",
+   "url": "https://recht.nulegal.eu/developers",
+   "desc": "German federal and state statutes and 640,000 court decisions as JSON, with citation links"
+  },
+  {
+   "name": "Open Government, ACT",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.act.gov.au",
+   "url": "https://www.data.act.gov.au/",
+   "desc": "Australian Capital Territory Open Data"
+  },
+  {
+   "name": "Open Government, Argentina",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "datos.gob.ar",
+   "url": "https://datos.gob.ar/",
+   "desc": "Argentina Government Open Data"
+  },
+  {
+   "name": "Open Government, Australia",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.gov.au",
+   "url": "https://www.data.gov.au/",
+   "desc": "Australian Government Open Data"
+  },
+  {
+   "name": "Open Government, Austria",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.gv.at",
+   "url": "https://www.data.gv.at/",
+   "desc": "Austria Government Open Data"
+  },
+  {
+   "name": "Open Government, Belgium",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.gov.be",
+   "url": "https://data.gov.be/",
+   "desc": "Belgium Government Open Data"
+  },
+  {
+   "name": "Open Government, Canada",
+   "section": "Government",
+   "auth": "No",
+   "https": "No",
+   "host": "open.canada.ca",
+   "url": "http://open.canada.ca/en",
+   "desc": "Canadian Government Open Data"
+  },
+  {
+   "name": "Open Government, Colombia",
+   "section": "Government",
+   "auth": "No",
+   "https": "No",
+   "host": "dane.gov.co",
+   "url": "https://www.dane.gov.co/",
+   "desc": "Colombia Government Open Data"
+  },
+  {
+   "name": "Open Government, Cyprus",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.gov.cy",
+   "url": "https://data.gov.cy/?language=en",
+   "desc": "Cyprus Government Open Data"
+  },
+  {
+   "name": "Open Government, Czech Republic",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.gov.cz",
+   "url": "https://data.gov.cz/english/",
+   "desc": "Czech Republic Government Open Data"
+  },
+  {
+   "name": "Open Government, Denmark",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "opendata.dk",
+   "url": "https://www.opendata.dk/",
+   "desc": "Denmark Government Open Data"
+  },
+  {
+   "name": "Open Government, Estonia",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "avaandmed.eesti.ee",
+   "url": "https://avaandmed.eesti.ee/instructions/opendata-dataset-api",
+   "desc": "Estonia Government Open Data"
+  },
+  {
+   "name": "Open Government, Finland",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "avoindata.fi",
+   "url": "https://www.avoindata.fi/en",
+   "desc": "Finland Government Open Data"
+  },
+  {
+   "name": "Open Government, France",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "data.gouv.fr",
+   "url": "https://www.data.gouv.fr/",
+   "desc": "French Government Open Data"
+  },
+  {
+   "name": "Open Government, Germany",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "govdata.de",
+   "url": "https://www.govdata.de/daten/-/details/govdata-metadatenkatalog",
+   "desc": "Germany Government Open Data"
+  },
+  {
+   "name": "Open Government, Greece",
+   "section": "Government",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "data.gov.gr",
+   "url": "https://data.gov.gr/",
+   "desc": "Greece Government Open Data"
+  },
+  {
+   "name": "Open Government, India",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "data.gov.in",
+   "url": "https://data.gov.in/",
+   "desc": "Indian Government Open Data"
+  },
+  {
+   "name": "Open Government, Indonesia",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.go.id",
+   "url": "https://data.go.id/",
+   "desc": "Indonesian Government Open Data"
+  },
+  {
+   "name": "Open Government, Ireland",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.gov.ie",
+   "url": "https://data.gov.ie/pages/developers",
+   "desc": "Ireland Government Open Data"
+  },
+  {
+   "name": "Open Government, Italy",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "dati.gov.it",
+   "url": "https://www.dati.gov.it/",
+   "desc": "Italy Government Open Data"
+  },
+  {
+   "name": "Open Government, Korea",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "data.go.kr",
+   "url": "https://www.data.go.kr/",
+   "desc": "Korea Government Open Data"
+  },
+  {
+   "name": "Open Government, Lithuania",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.gov.lt",
+   "url": "https://data.gov.lt/public/api/1",
+   "desc": "Lithuania Government Open Data"
+  },
+  {
+   "name": "Open Government, Luxembourg",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "data.public.lu",
+   "url": "https://data.public.lu",
+   "desc": "Luxembourgish Government Open Data"
+  },
+  {
+   "name": "Open Government, Mexico",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "inegi.org.mx",
+   "url": "https://www.inegi.org.mx/datos/",
+   "desc": "Mexican Statistical Government Open Data"
+  },
+  {
+   "name": "Open Government, Mexico",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "datos.gob.mx",
+   "url": "https://datos.gob.mx/",
+   "desc": "Mexico Government Open Data"
+  },
+  {
+   "name": "Open Government, Netherlands",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.overheid.nl",
+   "url": "https://data.overheid.nl/en/ondersteuning/data-publiceren/api",
+   "desc": "Netherlands Government Open Data"
+  },
+  {
+   "name": "Open Government, New South Wales",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "api.nsw.gov.au",
+   "url": "https://api.nsw.gov.au/",
+   "desc": "New South Wales Government Open Data"
+  },
+  {
+   "name": "Open Government, New Zealand",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.govt.nz",
+   "url": "https://www.data.govt.nz/",
+   "desc": "New Zealand Government Open Data"
+  },
+  {
+   "name": "Open Government, Norway",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.norge.no",
+   "url": "https://data.norge.no/dataservices",
+   "desc": "Norwegian Government Open Data"
+  },
+  {
+   "name": "Open Government, Peru",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "datosabiertos.gob.pe",
+   "url": "https://www.datosabiertos.gob.pe/",
+   "desc": "Peru Government Open Data"
+  },
+  {
+   "name": "Open Government, Poland",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "dane.gov.pl",
+   "url": "https://dane.gov.pl/en",
+   "desc": "Poland Government Open Data"
+  },
+  {
+   "name": "Open Government, Portugal",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "dados.gov.pt",
+   "url": "https://dados.gov.pt/en/recursos/desenvolvimento/referencia-api",
+   "desc": "Portugal Government Open Data"
+  },
+  {
+   "name": "Open Government, Queensland Government",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.qld.gov.au",
+   "url": "https://www.data.qld.gov.au/",
+   "desc": "Queensland Government Open Data"
+  },
+  {
+   "name": "Open Government, Romania",
+   "section": "Government",
+   "auth": "No",
+   "https": "No",
+   "host": "data.gov.ro",
+   "url": "http://data.gov.ro/",
+   "desc": "Romania Government Open Data"
+  },
+  {
+   "name": "Open Government, Saudi Arabia",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.gov.sa",
+   "url": "https://data.gov.sa",
+   "desc": "Saudi Arabia Government Open Data"
+  },
+  {
+   "name": "Open Government, Singapore",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.gov.sg",
+   "url": "https://data.gov.sg/",
+   "desc": "Singapore Government Open Data"
+  },
+  {
+   "name": "Open Government, Slovakia",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.gov.sk",
+   "url": "https://data.gov.sk/en/",
+   "desc": "Slovakia Government Open Data"
+  },
+  {
+   "name": "Open Government, Slovenia",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "podatki.gov.si",
+   "url": "https://podatki.gov.si/",
+   "desc": "Slovenia Government Open Data"
+  },
+  {
+   "name": "Open Government, South Australian Government",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.sa.gov.au",
+   "url": "https://data.sa.gov.au/",
+   "desc": "South Australian Government Open Data"
+  },
+  {
+   "name": "Open Government, Spain",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "datos.gob.es",
+   "url": "https://datos.gob.es/en",
+   "desc": "Spain Government Open Data"
+  },
+  {
+   "name": "Open Government, Sweden",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "dataportal.se",
+   "url": "https://www.dataportal.se/en/dataservice/91_29789/api-for-the-statistical-database",
+   "desc": "Sweden Government Open Data"
+  },
+  {
+   "name": "Open Government, Switzerland",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "handbook.opendata.swiss",
+   "url": "https://handbook.opendata.swiss/de/content/nutzen/api-nutzen.html",
+   "desc": "Switzerland Government Open Data"
+  },
+  {
+   "name": "Open Government, Taiwan",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.gov.tw",
+   "url": "https://data.gov.tw/",
+   "desc": "Taiwan Government Open Data"
+  },
+  {
+   "name": "Open Government, Thailand",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "data.go.th",
+   "url": "https://data.go.th/",
+   "desc": "Thailand Government Open Data"
+  },
+  {
+   "name": "Open Government, UK",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.gov.uk",
+   "url": "https://data.gov.uk/",
+   "desc": "UK Government Open Data"
+  },
+  {
+   "name": "Open Government, USA",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.gov",
+   "url": "https://www.data.gov/",
+   "desc": "United States Government Open Data"
+  },
+  {
+   "name": "Open Government, Victoria State Government",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.vic.gov.au",
+   "url": "https://www.data.vic.gov.au/",
+   "desc": "Victoria State Government Open Data"
+  },
+  {
+   "name": "Open Government, West Australia",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.wa.gov.au",
+   "url": "https://data.wa.gov.au/",
+   "desc": "West Australia Open Data"
+  },
+  {
+   "name": "OpenMercantil",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "openmercantil.es",
+   "url": "https://openmercantil.es/api/documentacion",
+   "desc": "Spanish company public data and BORME event timelines"
+  },
+  {
+   "name": "OpenRegistry",
+   "section": "Government",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "openregistry.sophymarine.com",
+   "url": "https://openregistry.sophymarine.com",
+   "desc": "Real-time queries to 80+ national company registries (UK, FR, DE, IT, ES, KR and more)"
+  },
+  {
+   "name": "OpenStates",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "openstates.org",
+   "url": "https://openstates.org/api/",
+   "desc": "US state legislature bills and lawmakers"
+  },
+  {
+   "name": "PourWire",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "github.com",
+   "url": "https://github.com/Tintin-Intellegence-Limited/us-liquor-license-applications#free-json-api",
+   "desc": "New restaurant and bar liquor license applications in 7 US metros (TX, NY, Los Angeles)"
+  },
+  {
+   "name": "PRC Exam Schedule",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "api.whenisthenextboardexam.com",
+   "url": "https://api.whenisthenextboardexam.com/docs/",
+   "desc": "Unofficial Philippine Professional Regulation Commission's examination schedule"
+  },
+  {
+   "name": "Probative Legal Marketing Data",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "probativegrowth.com",
+   "url": "https://probativegrowth.com/resources/rules-api/",
+   "desc": "US lawyer advertising rules, court filings, fees and legal-market statistics, sourced, with DOIs"
+  },
+  {
+   "name": "Radar CNPJ",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "radar-cnpj.com",
+   "url": "https://radar-cnpj.com/api/",
+   "desc": "Brazilian companies (CNPJ) lookup and search, with a market check by area and monitoring"
+  },
+  {
+   "name": "Regulations.gov",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "open.gsa.gov",
+   "url": "https://open.gsa.gov/api/regulationsgov/",
+   "desc": "US federal rulemaking comments and dockets"
+  },
+  {
+   "name": "Rent Limits",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "glazeddata.com",
+   "url": "https://glazeddata.com/rent-limits/api/",
+   "desc": "HUD Fair Market Rents by US ZIP; paid tiers add tax-credit and Section 8 limits"
+  },
+  {
+   "name": "Represent by Open North",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "represent.opennorth.ca",
+   "url": "https://represent.opennorth.ca/",
+   "desc": "Find Canadian Government Representatives"
+  },
+  {
+   "name": "Right to Disconnect",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "righttodisconnect.jdries.nl",
+   "url": "https://righttodisconnect.jdries.nl/api/",
+   "desc": "Right-to-disconnect employment law by EU country: binding status, statute, and sanctions"
+  },
+  {
+   "name": "ShelfWatch CPSC Recalls",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "stxai.app",
+   "url": "https://stxai.app/developers",
+   "desc": "US CPSC product recall notices, filterable by product category; no key required"
+  },
+  {
+   "name": "Spatial India",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "api.spatialindia.com",
+   "url": "https://api.spatialindia.com",
+   "desc": "District-level data for India: Census, NFHS-5, NCRB, RBI and more, reconciled onto one map"
+  },
+  {
+   "name": "SukuuData",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "sukuudata.com",
+   "url": "https://sukuudata.com/quickstart",
+   "desc": "Ghana's schools, 2026 SHS placement register and CSSPS choice validation"
+  },
+  {
+   "name": "Tollmint",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "api.tollmint.com",
+   "url": "https://api.tollmint.com",
+   "desc": "Advertising, subscription, AI-disclosure and accessibility rules across the US, EU and UK"
+  },
+  {
+   "name": "Travel Risk",
+   "section": "Government",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "travelriskapi.com",
+   "url": "https://travelriskapi.com/docs",
+   "desc": "Government travel advisories, disaster and conflict alerts and country risk scores"
+  },
+  {
+   "name": "UK Companies House",
+   "section": "Government",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "developer.company-information.service.gov.uk",
+   "url": "https://developer.company-information.service.gov.uk/",
+   "desc": "UK Companies House Data from the UK government"
+  },
+  {
+   "name": "UK Legislation Changes",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "uk-legal-changes.pages.dev",
+   "url": "https://uk-legal-changes.pages.dev/docs",
+   "desc": "Point-in-time amendment history for UK law"
+  },
+  {
+   "name": "UK Public Tenders by Trade",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "tools.gptshopltd.com",
+   "url": "https://tools.gptshopltd.com/api/uk-tenders/",
+   "desc": "Live open UK public sector tenders by trade from Find a Tender and Contracts Finder (OGL v3.0)"
+  },
+  {
+   "name": "US Per Diem",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "us-per-diem-api.narwhalapis.workers.dev",
+   "url": "https://us-per-diem-api.narwhalapis.workers.dev",
+   "desc": "GSA lodging and M&IE per diem rates for US cities by ZIP, state and fiscal year"
+  },
+  {
+   "name": "USAspending.gov",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "api.usaspending.gov",
+   "url": "https://api.usaspending.gov/",
+   "desc": "US federal spending data"
+  },
+  {
+   "name": "Vergabeweiser",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "vergabeweiser.de",
+   "url": "https://vergabeweiser.de/api",
+   "desc": "German public tenders and contract awards from open procurement data"
+  },
+  {
+   "name": "Veridion",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "veridionmarkets.com",
+   "url": "https://www.veridionmarkets.com/data-api/docs",
+   "desc": "US congressional stock-trade disclosures and the President's OGE reports, linked to each filing"
+  },
+  {
+   "name": "Vett",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "wimberly.solutions",
+   "url": "https://wimberly.solutions/api/free-sanctions-check/",
+   "desc": "Screen names & companies against OFAC, PEP, watchlists & recalls"
+  },
+  {
+   "name": "VotePredictor",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "votepredictor.com",
+   "url": "https://votepredictor.com/developers",
+   "desc": "US election forecasts, congressional voting records and forecaster accuracy ratings"
+  },
+  {
+   "name": "YiminShuju Visa Bulletin",
+   "section": "Government",
+   "auth": "No",
+   "https": "Yes",
+   "host": "yiminshuju.com",
+   "url": "https://yiminshuju.com/cite/",
+   "desc": "US Department of State Visa Bulletin cutoff dates (EB/F charts) as open JSON (/paiqi.json)"
+  },
+  {
+   "name": "10ML Fragrance Index",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "mcp.10ml.com",
+   "url": "https://mcp.10ml.com/openapi.json",
+   "desc": "Perfume knowledge: notes, accords, families, similar scents, houses, guides. By 10ML"
+  },
+  {
+   "name": "221",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "221.orvlabs.com",
+   "url": "https://221.orvlabs.com/documentation",
+   "desc": "Senegal reference data: public holidays, mobile operators, banks, communes, legal forms"
+  },
+  {
+   "name": "49 Gallery Historical Data",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "api.181649.com",
+   "url": "https://api.181649.com/docs",
+   "desc": "Normalized historical records and 25 daily-updated reference series"
+  },
+  {
+   "name": "AcreLens",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "acrelens.com",
+   "url": "https://www.acrelens.com",
+   "desc": "Land suitability scoring API for any US property: off-grid, rural, recreational, investment"
+  },
+  {
+   "name": "API Setu",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "apisetu.gov.in",
+   "url": "https://www.apisetu.gov.in/",
+   "desc": "An Indian Government platform that provides a lot of APIS for KYC, business, education & employment"
+  },
+  {
+   "name": "APIllow",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "apillow.co",
+   "url": "https://apillow.co/docs.html",
+   "desc": "Zillow property data: 50+ fields per listing by address, URL, ZPID or ZIP, with sold data and comps"
+  },
+  {
+   "name": "Archive.org",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "archive.readme.io",
+   "url": "https://archive.readme.io/docs",
+   "desc": "The Internet Archive"
+  },
+  {
+   "name": "Auregistre",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "auregistre.fr",
+   "url": "https://auregistre.fr/api",
+   "desc": "French company history from the official gazette (BODACC) since 2008, with insolvency counts"
+  },
+  {
+   "name": "Band Atlas",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "aiotrf.com",
+   "url": "https://www.aiotrf.com/en/ai/band-atlas/developers/",
+   "desc": "Cellular IoT bands, 2G/3G sunsets and device compatibility for 46 countries"
+  },
+  {
+   "name": "Big Data Explained",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "bigdataexplained.com",
+   "url": "https://bigdataexplained.com/data",
+   "desc": "Cloud data warehouse list prices, read daily from AWS and Azure pricing APIs, with price history"
+  },
+  {
+   "name": "Black History Facts",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "blackhistoryapi.io",
+   "url": "https://www.blackhistoryapi.io/docs",
+   "desc": "Contribute or search one of the largest black history fact databases on the web"
+  },
+  {
+   "name": "BotsArchive",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "botsarchive.com",
+   "url": "https://botsarchive.com/docs.html",
+   "desc": "JSON formatted details about Telegram Bots available in database"
+  },
+  {
+   "name": "BTU Graph",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "btugraph.com",
+   "url": "https://btugraph.com/data/",
+   "desc": "Source-reviewed energy company knowledge graph and directory exports"
+  },
+  {
+   "name": "Caliber",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "caliberapi.com",
+   "url": "https://caliberapi.com/data/",
+   "desc": "Which red dot optics fit which pistols, each fit cited to a maker or retailer"
+  },
+  {
+   "name": "Callook.info",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "callook.info",
+   "url": "https://callook.info",
+   "desc": "United States ham radio callsigns"
+  },
+  {
+   "name": "CARTO",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "carto.com",
+   "url": "https://carto.com/",
+   "desc": "Location Information Prediction"
+  },
+  {
+   "name": "CityAlert",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "cityalert.live",
+   "url": "https://cityalert.live/developers",
+   "desc": "Live public-safety incidents: crime, fire, disaster, weather and news from 650+ official feeds"
+  },
+  {
+   "name": "Close Knit",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "getcloseknit.com",
+   "url": "https://getcloseknit.com/openapi.json",
+   "desc": "Neighbourhoods and homes in London and England: sale prices, rents, crime, schools, flood risk"
+  },
+  {
+   "name": "CollegeCalcAI",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "collegecalcai.com",
+   "url": "https://collegecalcai.com/developers",
+   "desc": "US college admission chance estimates and admissions data for 1,100+ colleges"
+  },
+  {
+   "name": "CollegeScoreCard.ed.gov",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "collegescorecard.ed.gov",
+   "url": "https://collegescorecard.ed.gov/data/",
+   "desc": "Data on higher education institutions in the United States"
+  },
+  {
+   "name": "ConsumerSun Recalls",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "consumersun.com",
+   "url": "https://consumersun.com/data/recalls.json",
+   "desc": "US product, food, drug, device and vehicle recalls from CPSC, FDA and NHTSA"
+  },
+  {
+   "name": "CoworkingView",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "coworkingview.com",
+   "url": "https://coworkingview.com/en/api",
+   "desc": "Coworking spaces and offices in 63 European and Gulf cities with operator-published prices"
+  },
+  {
+   "name": "CuttingToolsAI",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "cuttingtoolsai.eu",
+   "url": "https://cuttingtoolsai.eu/api",
+   "desc": "Cross-brand carbide insert grade equivalents by ISO application class"
+  },
+  {
+   "name": "DevLifeCheck",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "devlifecheck.com",
+   "url": "https://devlifecheck.com/developers",
+   "desc": "Security-update end dates, recalls and evidence for 1,300+ phones, tablets, Chromebooks and routers"
+  },
+  {
+   "name": "Edgepedia",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "edgechat.ai",
+   "url": "https://www.edgechat.ai/developers",
+   "desc": "Search and read Edgepedia, a free and growing encyclopedia with citations"
+  },
+  {
+   "name": "ek litre",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "eklitre.pk",
+   "url": "https://eklitre.pk/data/",
+   "desc": "Pakistan's petrol, diesel and kerosene prices since 2006, with OGRA's line-by-line price build-up"
+  },
+  {
+   "name": "Enigma Public",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "developers.enigma.com",
+   "url": "https://developers.enigma.com/docs",
+   "desc": "Broadest collection of public data"
+  },
+  {
+   "name": "EOSL",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "eosl.ai",
+   "url": "https://eosl.ai/api/",
+   "desc": "Hardware end-of-sale and end-of-service-life dates by part number, source-linked"
+  },
+  {
+   "name": "French Address Search",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "geo.api.gouv.fr",
+   "url": "https://geo.api.gouv.fr/adresse",
+   "desc": "Address search via the French Government"
+  },
+  {
+   "name": "GENESIS",
+   "section": "Open Data",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "destatis.de",
+   "url": "https://www.destatis.de/EN/Service/OpenData/api-webservice.html",
+   "desc": "Federal Statistical Office Germany"
+  },
+  {
+   "name": "HousingFeed",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "housingfeed.com",
+   "url": "https://housingfeed.com/docs",
+   "desc": "US rental listings from property managers' own websites, verified weekly"
+  },
+  {
+   "name": "InfraNode",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "infranode.dev",
+   "url": "https://infranode.dev",
+   "desc": "Unified German city open data: weather, air quality, EV chargers, transit, demographics"
+  },
+  {
+   "name": "i6eal Open AI Data",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "i6eal.de",
+   "url": "https://i6eal.de/en/tools/data/",
+   "desc": "Open datasets on AI policy, regulation and public-sector adoption in Germany and the EU"
+  },
+  {
+   "name": "Joshua Project",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "api.joshuaproject.net",
+   "url": "https://api.joshuaproject.net/",
+   "desc": "People groups of the world with the fewest followers of Christ"
+  },
+  {
+   "name": "Kaggle",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "kaggle.com",
+   "url": "https://www.kaggle.com/docs/api",
+   "desc": "Create and interact with Datasets, Notebooks, and connect with Kaggle"
+  },
+  {
+   "name": "Kvartiry-Phuket",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "kvartiry-phuket.com",
+   "url": "https://kvartiry-phuket.com/otkrytye-dannye/#english",
+   "desc": "Russian-language Phuket real estate guides, asking prices, condo assessment rates, weather, beaches"
+  },
+  {
+   "name": "LinkPreview",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "linkpreview.net",
+   "url": "https://www.linkpreview.net",
+   "desc": "Get JSON formatted summary with title, description and preview image for any requested URL"
+  },
+  {
+   "name": "Lottizen",
+   "section": "Open Data",
+   "auth": "X-Mashape-Key",
+   "https": "Yes",
+   "host": "lottizen.com",
+   "url": "https://lottizen.com/api",
+   "desc": "Lottery draw history and stats (Canada, US, Europe) and Canadian scratch-ticket remaining prizes"
+  },
+  {
+   "name": "LottoLens PH",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "remo65588-boop.github.io",
+   "url": "https://remo65588-boop.github.io/lottolens-ph-public-data/api/",
+   "desc": "Fixed Philippine PCSO historical results and normal draw schedules"
+  },
+  {
+   "name": "Lowy Asia Power Index",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "github.com",
+   "url": "https://github.com/0x0is1/lowy-index-api-docs",
+   "desc": "Get measure resources and influence to rank the relative power of states in Asia"
+  },
+  {
+   "name": "Mapa Oswiatowa",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "mapaoswiatowa.pl",
+   "url": "https://mapaoswiatowa.pl/dla-deweloperow",
+   "desc": "Polish schools, preschools, nurseries and universities from public registers, with exam results"
+  },
+  {
+   "name": "Microburbs",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "microburbs.com.au",
+   "url": "https://www.microburbs.com.au/developers/api-docs",
+   "desc": "Australian property and suburb data: valuations, sales, rents, schools, demographics, risk, zoning"
+  },
+  {
+   "name": "Microlink.io",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "microlink.io",
+   "url": "https://microlink.io",
+   "desc": "Extract structured data from any website"
+  },
+  {
+   "name": "Monitly",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "monit.ly",
+   "url": "https://monit.ly/api-docs",
+   "desc": "Official statistics from Eurostat, World Bank, OECD, IMF and WHO for 150+ countries"
+  },
+  {
+   "name": "MostExpensiveWatches",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "mostexpensivewatches.net",
+   "url": "https://mostexpensivewatches.net/api",
+   "desc": "Documented luxury watch auction records, live listings, valuations and price indices"
+  },
+  {
+   "name": "ModelPartFinder Error Codes",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "modelpartfinder.com",
+   "url": "https://modelpartfinder.com/docs/api",
+   "desc": "Lookup appliance and equipment error codes by brand and code, with recommended replacement parts"
+  },
+  {
+   "name": "Namedesk",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "namedesk.app",
+   "url": "https://namedesk.app/docs/api/stats",
+   "desc": "Domain name registration statistics by TLD, registry and registrar"
+  },
+  {
+   "name": "Nasdaq Data Link",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "data.nasdaq.com",
+   "url": "https://data.nasdaq.com/",
+   "desc": "Stock market data"
+  },
+  {
+   "name": "Nobel Prize",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "nobelprize.org",
+   "url": "https://www.nobelprize.org/about/developer-zone-2/",
+   "desc": "Open data about nobel prizes and events"
+  },
+  {
+   "name": "Onyx Bazaar",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "onyx-actions.onrender.com",
+   "url": "https://onyx-actions.onrender.com/bazaar",
+   "desc": "Free public leaderboard of x402 paid HTTP services indexed from Coinbase CDP discovery API"
+  },
+  {
+   "name": "Open Data Minneapolis",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "opendata.minneapolismn.gov",
+   "url": "https://opendata.minneapolismn.gov/",
+   "desc": "Spatial (GIS) and non-spatial city data for Minneapolis"
+  },
+  {
+   "name": "Open Scholarships",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "scholarships.grudged.io",
+   "url": "https://scholarships.grudged.io",
+   "desc": "Free, openly-licensed directory of US scholarships and student aid from official sources"
+  },
+  {
+   "name": "openAFRICA",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "africaopendata.org",
+   "url": "https://africaopendata.org/",
+   "desc": "Large datasets repository of African open data"
+  },
+  {
+   "name": "OpenCorporates",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "api.opencorporates.com",
+   "url": "http://api.opencorporates.com/documentation/API-Reference",
+   "desc": "Data on corporate entities and directors in many countries"
+  },
+  {
+   "name": "OpenSanctions",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "opensanctions.org",
+   "url": "https://www.opensanctions.org/docs/api/",
+   "desc": "Data on international sanctions, crime and politically exposed persons"
+  },
+  {
+   "name": "Pan Africa Data",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "panafricadata.com",
+   "url": "https://panafricadata.com",
+   "desc": "Macroeconomic and subnational income distribution data for all 54 African countries"
+  },
+  {
+   "name": "PayCrunch",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "paycrunch.co",
+   "url": "https://paycrunch.co/api.html",
+   "desc": "US wages for 1,008 occupations and by state, from BLS OEWS May 2025, static JSON, CC BY 4.0"
+  },
+  {
+   "name": "PeakMetrics",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "rapidapi.com",
+   "url": "https://rapidapi.com/peakmetrics-peakmetrics-default/api/peakmetrics-news",
+   "desc": "News articles and public datasets"
+  },
+  {
+   "name": "ProductGuru",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "myproduct.guru",
+   "url": "https://myproduct.guru/lookup/",
+   "desc": "Consumer product-safety recall notices from 11 government registers, looked up by barcode (EAN/GTIN)"
+  },
+  {
+   "name": "PropRaven",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "propraven.com",
+   "url": "https://propraven.com/developers",
+   "desc": "US parcel, owner and permit records for all 50 states, with an OpenAPI 3.1 spec"
+  },
+  {
+   "name": "PublicDataHub",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "publicdatahub.org",
+   "url": "https://publicdatahub.org/api",
+   "desc": "US public schools, hospitals and federal agency budgets as JSON/CSV, with provenance"
+  },
+  {
+   "name": "RebateHub",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "rebatehub.ca",
+   "url": "https://rebatehub.ca/data",
+   "desc": "Canadian home energy rebate, grant and loan programs with status, deadlines and official sources"
+  },
+  {
+   "name": "Recreation Information Database",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "ridb.recreation.gov",
+   "url": "https://ridb.recreation.gov/",
+   "desc": "Recreational areas, federal lands, historic sites, museums, and other attractions/resources(US)"
+  },
+  {
+   "name": "Registrum",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "api.registrum.co.uk",
+   "url": "https://api.registrum.co.uk/docs",
+   "desc": "UK company data: profiles, directors, PSC, iXBRL-parsed financials, ECCTA status"
+  },
+  {
+   "name": "Scoop.it",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "No",
+   "host": "scoop.it",
+   "url": "http://www.scoop.it/dev",
+   "desc": "Content Curation Service"
+  },
+  {
+   "name": "Security Startups",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "securitystartups.com",
+   "url": "https://securitystartups.com/for-agents",
+   "desc": "Curated directory of young security companies with proof-of-life signals"
+  },
+  {
+   "name": "SlashYear",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "slashyear.com",
+   "url": "https://slashyear.com/api",
+   "desc": "Dated historical events as JSON, each quoted from a cited Wikipedia revision"
+  },
+  {
+   "name": "Socrata",
+   "section": "Open Data",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "dev.socrata.com",
+   "url": "https://dev.socrata.com/",
+   "desc": "Access to Open Data from Governments, Non-profits and NGOs around the world"
+  },
+  {
+   "name": "StackRates",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "stackrates.ai",
+   "url": "https://stackrates.ai/ask/",
+   "desc": "VPS and cloud server prices from 46 providers, read daily from their own pricing pages and APIs"
+  },
+  {
+   "name": "Statistics of the World",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "statisticsoftheworld.com",
+   "url": "https://statisticsoftheworld.com/api-docs",
+   "desc": "Economic data for 218 countries \u2014 GDP, population, inflation, and 440+ indicators from IMF and World Bank"
+  },
+  {
+   "name": "StatOrigin",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "statorigin.org",
+   "url": "https://statorigin.org/docs/api",
+   "desc": "Industry statistics, each traced to its primary source with a verbatim quote, CC BY 4.0"
+  },
+  {
+   "name": "Teleport",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "developers.teleport.org",
+   "url": "https://developers.teleport.org/",
+   "desc": "Quality of Life Data"
+  },
+  {
+   "name": "TerraScoutX",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "terrascoutx.com",
+   "url": "https://terrascoutx.com/developers/",
+   "desc": "US property records by address: parcel, owner, appraised value, tax, flood zone and nearby schools"
+  },
+  {
+   "name": "The Deploy Log",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "github.com",
+   "url": "https://github.com/dotcomjack/the-deploy-log",
+   "desc": "1,000+ AI deployments, each linked to the publisher's own page, JSON and CSV, CC BY 4.0"
+  },
+  {
+   "name": "Tickerz",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "tickerz.com",
+   "url": "https://tickerz.com/docs",
+   "desc": "Daily indexes of real-world activity from public data, each reading timestamped in Bitcoin"
+  },
+  {
+   "name": "Tilth",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "tilth.uk",
+   "url": "https://www.tilth.uk/data",
+   "desc": "Free daily UK fertiliser price index across nine grades, CC BY 4.0 licensed"
+  },
+  {
+   "name": "Turkpidya",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "turkpidya.com",
+   "url": "https://turkpidya.com/developers/",
+   "desc": "T\u00fcrkiye data: gold prices, lira rates, earthquakes, prayer times, fuel, duty pharmacies"
+  },
+  {
+   "name": "Ume\u00e5 Open Data",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "opendata.umea.se",
+   "url": "https://opendata.umea.se/api/",
+   "desc": "Open data of the city Ume\u00e5 in northen Sweden"
+  },
+  {
+   "name": "Universities List",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "github.com",
+   "url": "https://github.com/Hipo/university-domains-list",
+   "desc": "University names, countries and domains"
+  },
+  {
+   "name": "University of Oslo",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "data.uio.no",
+   "url": "https://data.uio.no/",
+   "desc": "Courses, lecture videos, detailed information for courses etc. for the University of Oslo (Norway)"
+  },
+  {
+   "name": "UPC database",
+   "section": "Open Data",
+   "auth": "apiKey",
+   "https": "Yes",
+   "host": "upcdatabase.org",
+   "url": "https://upcdatabase.org/api",
+   "desc": "More than 1.5 million barcode numbers from all around the world"
+  },
+  {
+   "name": "Urban Observatory",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "No",
+   "host": "urbanobservatory.ac.uk",
+   "url": "https://urbanobservatory.ac.uk",
+   "desc": "The largest set of publicly available real time urban data in the UK"
+  },
+  {
+   "name": "Verified Handles",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "verifiedhandles.org",
+   "url": "https://verifiedhandles.org/developers",
+   "desc": "Official social media handles and identifiers of 155,000+ notable people and organisations"
+  },
+  {
+   "name": "Voidly",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "voidly.ai",
+   "url": "https://voidly.ai/api-docs",
+   "desc": "Internet censorship measurements, incidents, and ISP-level blocking data across 126 countries"
+  },
+  {
+   "name": "Vuntum",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "vuntum.com",
+   "url": "https://vuntum.com/en/api-mcp",
+   "desc": "Sourced, dated facts on consumer robots and physical AI, licensed CC BY 4.0"
+  },
+  {
+   "name": "w14n",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "api.w14n.dev",
+   "url": "https://api.w14n.dev/v1",
+   "desc": "Brazilian company profiles by CNPJ, CNAE establishment counts and municipality coordinates"
+  },
+  {
+   "name": "Warnely",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "warnely.com",
+   "url": "https://warnely.com/developers",
+   "desc": "Composite travel-safety scores for 180 countries (FCDO + US State + GPI + WGI + live incident wire), OpenAPI 3.1 spec, CC BY 4.0"
+  },
+  {
+   "name": "WhatsApp Rate Cards",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "github.com",
+   "url": "https://github.com/tobachat/whatsapp-api-rates#json",
+   "desc": "Meta's WhatsApp Business API per-message rates per country in 16 currencies, checked weekly"
+  },
+  {
+   "name": "Wikidata",
+   "section": "Open Data",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "wikidata.org",
+   "url": "https://www.wikidata.org/w/api.php?action=help",
+   "desc": "Collaboratively edited knowledge base operated by the Wikimedia Foundation"
+  },
+  {
+   "name": "Wikipedia",
+   "section": "Open Data",
+   "auth": "No",
+   "https": "Yes",
+   "host": "mediawiki.org",
+   "url": "https://www.mediawiki.org/wiki/API:Main_page",
+   "desc": "Mediawiki Encyclopedia"
+  },
+  {
+   "name": "Yelp",
+   "section": "Open Data",
+   "auth": "OAuth",
+   "https": "Yes",
+   "host": "yelp.com",
+   "url": "https://www.yelp.com/developers/documentation/v3",
+   "desc": "Find Local Business"
+  }
+ ],
+ "meta": [
+  {
+   "label": "Directory",
+   "value": "public-apis/public-apis README, 13 Nov 2026"
+  },
+  {
+   "label": "Probes",
+   "value": "WebFetch, one request per source, 13 Nov 2026"
+  },
+  {
+   "label": "registry_build.py",
+   "value": "\"\"\"Chablis job 004: build the source registry from (1) harvested public-API directories and\n(2) the probes run 13 Nov 2026. Writes out/registry.json, out/candidates.json, out/by_section.json\nas {rows, meta}. Probes were made with the fetch tool (the shell's egress allowlist blocks these\nhosts); chablis_probe.py re-runs them at scale from any open network.\"\"\"\nimport json, collections, sys\nfrom urllib.parse import urlparse\n\nD = '2026-11-13'\n# id, name, category, endpoint, auth, result, format, newest, use, alt\nP = [\n ('sec-submissions','SEC EDGAR submissions','Filings','data.sec.gov/submissions/CIK{cik}.json','none','Working','JSON','Form 4 filed 2026-11-06','Every filing and insider Form 4 for any issuer, by CIK',''),\n ('sec-tickers','SEC company tickers','Reference','www.sec.gov/files/company_tickers.json','none','Working','JSON','Static map; 797K chars','Ticker to CIK map to drive every EDGAR call',''),\n ('treasury-yield','Treasury daily yield curve','Rates','home.treasury.gov/.../pages/xml?data=daily_treasury_yield_curve','none','Working','Atom XML','2026-11-12','Full Treasury curve, daily',''),\n ('treasury-fiscal','Treasury FiscalData','Rates / fiscal','api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/...','none','Working','JSON','2026-10-31 (monthly series)','Debt, average interest rates, auctions, outlays; hundreds of tables',''),\n ('nyfed-sofr','New York Fed reference rates','Rates','markets.newyorkfed.org/api/rates/secured/sofr/last/{n}.json','none','Working','JSON','2026-10-23','SOFR and related funding rates','Newest row is three weeks old on 13 Nov; check before relying on it'),\n ('fred-csv','FRED graph CSV','Macro / credit','fred.stlouisfed.org/graph/fredgraph.csv?id={SERIES}','none','Working','CSV','2026-11-11','Hundreds of thousands of series incl. ICE BofA credit spreads and mirrors of BLS series',''),\n ('cboe-quotes','Cboe delayed quotes','Equities / volatility','cdn-api.cboe.com/api/global/delayed_quotes/quotes/{TICKER}.json','none','Working','JSON','Snapshot per ticker; stamps vary','Price and 30-day implied volatility per ticker','Check the timestamp on every ticker; CoreWeave read 12 Nov 01:05'),\n ('cboe-chain','Cboe delayed options chain','Equities / volatility','cdn-api.cboe.com/api/global/delayed_quotes/options/{TICKER}.json','none','Working','JSON','2026-11-13 01:04','Full option chain with greeks','About 2 MB; the fetch tool truncates it, so use it from an open network'),\n ('cboe-vix','Cboe VIX history','Volatility','cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv','none','Working','CSV','Full history from 1990','Complete daily VIX history','Fetch tool shows the first 100K of 475K characters; full file from an open network'),\n ('stockanalysis','stockanalysis.com','Prices / statistics','stockanalysis.com/stocks/{ticker}/history, /statistics, /forecast','none','Working','HTML + JSON','2026-11-12 close','Daily history, short interest, ownership, estimates, analyst actions','Cached pages need a fresh request key (v=) to be current; rate limited, one page at a time'),\n ('frankfurter','Frankfurter','FX','api.frankfurter.dev/v1/latest','none','Working','JSON','2026-11-12','29 ECB reference currencies, history back to 1999',''),\n ('nbp','National Bank of Poland','FX','api.nbp.pl/api/exchangerates/tables/A/','none','Working','JSON','2026-11-12','Daily mid rates for the major currencies',''),\n ('worldbank','World Bank','Macro','api.worldbank.org/v2/country/{c}/indicator/{id}','none','Working','JSON','Annual; newest 2025','Country indicators, 66 years of GDP alone',''),\n ('imf-datamapper','IMF DataMapper','Macro','www.imf.org/external/datamapper/api/v1/{indicator}','none','Working','JSON','Forecasts to 2031','World Economic Outlook series by country',''),\n ('federal-register','Federal Register','Policy / export controls','www.federalregister.gov/api/v1/documents.json','none','Working','JSON','2026-11-10','Rulemaking and notices; 118 documents mention Nvidia',''),\n ('usaspending','USAspending','Government contracts','api.usaspending.gov/api/v2/...','none','Working','JSON','FY2026 Q4','Federal awards by agency and recipient',''),\n ('cftc-cot','CFTC Commitments of Traders','Positioning','publicreporting.cftc.gov/resource/jun7-fc8e.json','none','Working','JSON','2026-09-22','Futures positioning by trader class','Newest record in this dataset is seven weeks old; confirm the dataset id before use'),\n ('nasdaq-trader','Nasdaq Trader symbol directory','Reference','www.nasdaqtrader.com/dynamic/symdir/nasdaqlisted.txt','none','Working','Pipe-delimited','Current listing file','Every Nasdaq-listed symbol with ETF flag',''),\n ('polymarket','Polymarket Gamma','Prediction markets','gamma-api.polymarket.com/markets','none','Working','JSON','Live','Event probabilities with liquidity',''),\n ('cnn-fng','CNN Fear and Greed','Sentiment','production.dataviz.cnn.io/index/fearandgreed/graphdata','none','Working','JSON','2026-11-13 (score 39.83)','Index plus momentum, breadth and put/call components',''),\n ('hn-algolia','Hacker News (Algolia)','News / sentiment','hn.algolia.com/api/v1/search_by_date','none','Working','JSON','Newest Nvidia story 2026-09-29','Technology-community story and comment flow','Sparse for Nvidia since late September'),\n ('kraken','Kraken public API','Crypto','api.kraken.com/0/public/Ticker','none','Working','JSON','Live','Crypto spot, depth and trades',''),\n ('defillama','DeFiLlama coins','Crypto','coins.llama.fi/prices/current/{coin}','none','Working','JSON','Live','Prices for coins and tokens','Bitcoin read 68,919 against Kraken 71,290 in the same hour; cross-check before use'),\n ('eurostat','Eurostat','Macro','ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/{dataset}','none','No data','JSON','Empty response','Euro-area statistics','Reachable, but the query returned an empty value set; the dimension filters need a different shape'),\n ('alphavantage','Alpha Vantage','Prices / fundamentals','www.alphavantage.co/query','Free key','Needs key','JSON','','Prices, fundamentals, indicators','Demo key returns a notice only; a free key is a one-time signup'),\n ('coingecko','CoinGecko','Crypto','api.coingecko.com/api/v3/...','none','Denied by robots','JSON','','','Kraken and DeFiLlama cover crypto spot'),\n ('bls','BLS public API','Macro','api.bls.gov/publicAPI/v2/timeseries/data/{id}','none','Denied by robots','JSON','','','FRED carries the headline BLS series (unemployment, payrolls, CPI)'),\n ('gdelt','GDELT DOC API','News / events','api.gdeltproject.org/api/v2/doc/doc','none','Denied by robots','JSON','','','Federal Register and Hacker News cover policy and tech news'),\n ('ecb','ECB data portal','FX / rates','data-api.ecb.europa.eu/service/data/...','none','Denied by robots','CSV','','','Frankfurter republishes the ECB reference rates'),\n ('treasurydirect','TreasuryDirect web services','Rates','www.treasurydirect.gov/TA_WS/securities/auctioned','none','Denied by robots','JSON','','','Treasury FiscalData carries auction and rate tables'),\n ('yahoo','Yahoo Finance chart API','Prices','query1.finance.yahoo.com/v8/finance/chart/{T}','none','Denied by robots','JSON','','','stockanalysis.com history and Cboe quotes'),\n ('stooq','Stooq CSV','Prices','stooq.com/q/d/l/?s={t}&i=d','none','Denied by robots','CSV','','','stockanalysis.com history'),\n ('nasdaq-api','Nasdaq.com API','Prices / short interest','api.nasdaq.com/api/...','none','Denied by robots','JSON','','','stockanalysis.com statistics for short interest'),\n ('coinbase','Coinbase spot price','Crypto','api.coinbase.com/v2/prices/{pair}/spot','none','Error','JSON','','','Client error with no detail; not retried'),\n ('kalshi','Kalshi markets','Prediction markets','api.elections.kalshi.com/trade-api/v2/markets','none','Error','JSON','','','Client error with no detail; not retried. Polymarket covers prediction markets'),\n ('wikimedia','Wikimedia pageviews','Attention','wikimedia.org/api/rest_v1/metrics/pageviews/...','none','Error','JSON','','','URL not found; the path shape needs checking'),\n]\nrows=[dict(id=i,name=n,category=c,endpoint=e,auth=a,result=r,format=f,newest=nw,use=u,note=al,probed=D) for i,n,c,e,a,r,f,nw,u,al in P]\ncnt=collections.Counter(r['result'] for r in rows)\n\n# harvested directory\nsrc=json.load(open('pubapis.json'))\nREL=('Finance','Cryptocurrency','Currency Exchange','Government','Business','Open Data')\ncand=[]\nfor r in src:\n    if r['section'] in REL:\n        host=urlparse(r['url']).netloc.replace('www.','')\n        cand.append(dict(name=r['name'],section=r['section'],auth=(r['auth'] or 'No'),https=r['https'],host=host,url=r['url'],desc=r['desc']))\nsec=collections.defaultdict(lambda: collections.Counter())\nfor r in cand: sec[r['section']][r['auth']]+=1\nby=[dict(section=s,total=sum(c.values()),no_key=c.get('No',0),free_key=c.get('apiKey',0),oauth=c.get('OAuth',0)) for s,c in sorted(sec.items())]\ntot=dict(directory_total=len(src),relevant=len(cand),no_key=sum(1 for r in cand if r['auth']=='No'),\n         probed=len(rows),working=cnt['Working'],denied=cnt['Denied by robots'],other=len(rows)-cnt['Working']-cnt['Denied by robots'])\nmeta=[{'label':'Directory','value':'public-apis/public-apis README, 13 Nov 2026'},\n      {'label':'Probes','value':'WebFetch, one request per source, 13 Nov 2026'},\n      {'label':'registry_build.py','value':open(__file__).read(),'type':'code','lang':'python'}]\nfor name,rr in (('registry',rows),('candidates',cand),('by_section',by),('totals',[tot])):\n    json.dump({'rows':rr,'meta':meta},open(f'../out/{name}.json','w'),indent=1)\nprint(tot); print(dict(cnt)); print(by)\n",
+   "type": "code",
+   "lang": "python"
+  }
+ ]
+}

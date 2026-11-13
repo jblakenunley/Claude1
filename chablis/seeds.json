@@ -1,0 +1,157 @@
+[
+ {
+  "id": "sec-submissions",
+  "name": "SEC EDGAR submissions",
+  "test_url": "https://data.sec.gov/submissions/CIK0001045810.json"
+ },
+ {
+  "id": "sec-tickers",
+  "name": "SEC company tickers",
+  "test_url": "https://www.sec.gov/files/company_tickers.json"
+ },
+ {
+  "id": "treasury-yield",
+  "name": "Treasury daily yield curve",
+  "test_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=202611"
+ },
+ {
+  "id": "treasury-fiscal",
+  "name": "Treasury FiscalData",
+  "test_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/avg_interest_rates?page[size]=2&sort=-record_date"
+ },
+ {
+  "id": "nyfed-sofr",
+  "name": "New York Fed reference rates",
+  "test_url": "https://markets.newyorkfed.org/api/rates/secured/sofr/last/3.json"
+ },
+ {
+  "id": "fred-csv",
+  "name": "FRED graph CSV",
+  "test_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2&cosd=2026-10-01"
+ },
+ {
+  "id": "cboe-quotes",
+  "name": "Cboe delayed quotes",
+  "test_url": "https://cdn-api.cboe.com/api/global/delayed_quotes/quotes/NVDA.json"
+ },
+ {
+  "id": "cboe-chain",
+  "name": "Cboe delayed options chain",
+  "test_url": "https://cdn-api.cboe.com/api/global/delayed_quotes/options/NVDA.json"
+ },
+ {
+  "id": "cboe-vix",
+  "name": "Cboe VIX history",
+  "test_url": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+ },
+ {
+  "id": "frankfurter",
+  "name": "Frankfurter",
+  "test_url": "https://api.frankfurter.dev/v1/latest?base=USD"
+ },
+ {
+  "id": "nbp",
+  "name": "National Bank of Poland",
+  "test_url": "https://api.nbp.pl/api/exchangerates/tables/A/?format=json"
+ },
+ {
+  "id": "worldbank",
+  "name": "World Bank",
+  "test_url": "https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD?format=json&per_page=3"
+ },
+ {
+  "id": "imf-datamapper",
+  "name": "IMF DataMapper",
+  "test_url": "https://www.imf.org/external/datamapper/api/v1/NGDP_RPCH/USA"
+ },
+ {
+  "id": "federal-register",
+  "name": "Federal Register",
+  "test_url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=nvidia&order=newest&per_page=3"
+ },
+ {
+  "id": "usaspending",
+  "name": "USAspending",
+  "test_url": "https://api.usaspending.gov/api/v2/references/toptier_agencies/"
+ },
+ {
+  "id": "cftc-cot",
+  "name": "CFTC Commitments of Traders",
+  "test_url": "https://publicreporting.cftc.gov/resource/jun7-fc8e.json?$limit=2&$order=report_date_as_yyyy_mm_dd DESC"
+ },
+ {
+  "id": "nasdaq-trader",
+  "name": "Nasdaq Trader symbol directory",
+  "test_url": "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqlisted.txt"
+ },
+ {
+  "id": "polymarket",
+  "name": "Polymarket Gamma",
+  "test_url": "https://gamma-api.polymarket.com/markets?limit=2&active=true&closed=false"
+ },
+ {
+  "id": "cnn-fng",
+  "name": "CNN Fear and Greed",
+  "test_url": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata"
+ },
+ {
+  "id": "hn-algolia",
+  "name": "Hacker News (Algolia)",
+  "test_url": "https://hn.algolia.com/api/v1/search_by_date?query=nvidia&tags=story&hitsPerPage=3"
+ },
+ {
+  "id": "kraken",
+  "name": "Kraken public API",
+  "test_url": "https://api.kraken.com/0/public/Ticker?pair=XBTUSD"
+ },
+ {
+  "id": "defillama",
+  "name": "DeFiLlama coins",
+  "test_url": "https://coins.llama.fi/prices/current/coingecko:bitcoin"
+ },
+ {
+  "id": "eurostat",
+  "name": "Eurostat",
+  "test_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/une_rt_m?geo=EA20&s_adj=SA&age=TOTAL&sex=T&unit=PC_ACT&lastTimePeriod=2"
+ },
+ {
+  "id": "alphavantage",
+  "name": "Alpha Vantage",
+  "test_url": "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=demo"
+ },
+ {
+  "id": "coingecko",
+  "name": "CoinGecko",
+  "test_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd"
+ },
+ {
+  "id": "bls",
+  "name": "BLS public API",
+  "test_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/LNS14000000"
+ },
+ {
+  "id": "gdelt",
+  "name": "GDELT DOC API",
+  "test_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=nvidia&mode=artlist&maxrecords=3&format=json"
+ },
+ {
+  "id": "ecb",
+  "name": "ECB data portal",
+  "test_url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?lastNObservations=3&format=csvdata"
+ },
+ {
+  "id": "treasurydirect",
+  "name": "TreasuryDirect",
+  "test_url": "https://www.treasurydirect.gov/TA_WS/securities/auctioned?format=json&type=Bill&pagesize=2"
+ },
+ {
+  "id": "coinbase",
+  "name": "Coinbase spot price",
+  "test_url": "https://api.coinbase.com/v2/prices/BTC-USD/spot"
+ },
+ {
+  "id": "kalshi",
+  "name": "Kalshi markets",
+  "test_url": "https://api.elections.kalshi.com/trade-api/v2/markets?limit=2"
+ }
+]
