@@ -34,7 +34,7 @@ jobs:
           D=$(date -u +%F)
           git clone --depth 1 --branch chablis-data "$REPO_URL" chablis-data 2>/dev/null || {
             mkdir chablis-data && cd chablis-data && git init -q -b chablis-data && git remote add origin "$REPO_URL" && cd ..; }
-          mkdir -p chablis-data/probe
+          mkdir -p chablis-data/keyed
           cp results.json "chablis-data/keyed/$D.json"; cp results.json chablis-data/keyed/latest.json
           cd chablis-data
           git config user.name "chablis-bot"
