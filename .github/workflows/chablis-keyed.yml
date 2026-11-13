@@ -27,6 +27,8 @@ jobs:
           CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
           ALPHAVANTAGE_API_KEY: ${{ secrets.ALPHAVANTAGE_API_KEY }}
         run: python3 chablis/keyed_probe.py > results.json
+      - name: Probe live GitHub-list sources
+        run: python3 chablis/chablis_probe.py chablis/empty.json chablis/live_candidates.json > live.json
       - name: Commit to chablis-data
         env:
           REPO_URL: https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
@@ -35,7 +37,7 @@ jobs:
           git clone --depth 1 --branch chablis-data "$REPO_URL" chablis-data 2>/dev/null || {
             mkdir chablis-data && cd chablis-data && git init -q -b chablis-data && git remote add origin "$REPO_URL" && cd ..; }
           mkdir -p chablis-data/keyed
-          cp results.json "chablis-data/keyed/$D.json"; cp results.json chablis-data/keyed/latest.json
+          cp results.json "chablis-data/keyed/$D.json"; cp results.json chablis-data/keyed/latest.json; cp live.json chablis-data/keyed/live.json
           cd chablis-data
           git config user.name "chablis-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
