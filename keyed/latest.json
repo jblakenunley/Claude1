@@ -1,0 +1,25 @@
+{
+ "run": "2026-11-13T15:55:06.390680Z",
+ "openfigi": {
+  "status": 200,
+  "rows": [
+   "BBG000BBJQV0",
+   "BBG000BQLTW7",
+   "BBG011ZTRJ21",
+   "BBG001NVJ6W4",
+   "BBG000MYZDJ3",
+   "BBG00DW3SZS1",
+   "BBG000BBQCY0",
+   "BBG00KHY5S69"
+  ]
+ },
+ "census": {
+  "status": 200,
+  "body": "[[\"NAME\",\"B01001_001E\",\"state\"],\n[\"California\",\"38965193\",\"06\"]]"
+ },
+ "alphavantage": {
+  "GLOBAL_QUOTE": "ok",
+  "EARNINGS": "ok",
+  "OVERVIEW": "premium"
+ }
+}
