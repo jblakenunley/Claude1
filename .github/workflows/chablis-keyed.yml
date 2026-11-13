@@ -1,0 +1,46 @@
+# Chablis source probe: runs chablis/chablis_probe.py on GitHub's servers, which can reach the public data hosts the
+# Claude workspace cannot. Writes keyed/DATE.json and keyed/latest.json to the chablis-data branch.
+# Start it with Run workflow, or by pushing a new chablis-keyed-trigger-<name> branch (deleted after the run).
+name: chablis-keyed
+on:
+  workflow_dispatch:
+  push:
+    branches: ["chablis-keyed-trigger-*"]
+permissions:
+  contents: write
+concurrency:
+  group: chablis-keyed
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Probe keyed sources
+        env:
+          OPENFIGI_API_KEY: ${{ secrets.OPENFIGI_API_KEY }}
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
+          ALPHAVANTAGE_API_KEY: ${{ secrets.ALPHAVANTAGE_API_KEY }}
+        run: python3 chablis/keyed_probe.py > results.json
+      - name: Commit to chablis-data
+        env:
+          REPO_URL: https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
+        run: |
+          D=$(date -u +%F)
+          git clone --depth 1 --branch chablis-data "$REPO_URL" chablis-data 2>/dev/null || {
+            mkdir chablis-data && cd chablis-data && git init -q -b chablis-data && git remote add origin "$REPO_URL" && cd ..; }
+          mkdir -p chablis-data/probe
+          cp results.json "chablis-data/keyed/$D.json"; cp results.json chablis-data/keyed/latest.json
+          cd chablis-data
+          git config user.name "chablis-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "probe $D" && git push origin chablis-data || echo "nothing new"
+      - name: Delete the trigger branch
+        if: startsWith(github.ref_name, 'chablis-keyed-trigger-')
+        run: git push "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" --delete "${{ github.ref_name }}" || true
