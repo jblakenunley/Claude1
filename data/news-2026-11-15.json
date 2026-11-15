@@ -1,17 +1,479 @@
 [
 {
+"outlet": "CNBC",
+"hint": "markets",
+"title": "DOT Sec. Duffy blames router for issues that lead to nationwide ground stop",
+"url": "https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html",
+"published": "2026-11-15T10:47-07:00"
+},
+{
+"outlet": "NPR",
+"hint": "us",
+"title": "New Orleans port sues owners of tanker involved in Mississippi crash",
+"url": "https://www.npr.org/2026/11/15/nx-s1-6041677/new-orleans-port-sues-miracle-mississippi-cruise-ship",
+"published": "2026-11-15T10:45-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Anti-Houthi forces retreat in Yemen as Iran strikes Bahrain in attack on U.S. base",
+"url": "https://www.cnbc.com/2026/11/15/bahrain-iran-drone-attacks-tehran-us-base.html",
+"published": "2026-11-15T10:43-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Trump blasts judge's 2-week halt to his Washington golf project and says administration will appeal",
+"url": "https://www.pbs.org/newshour/politics/trump-blasts-judges-2-week-halt-to-his-washington-golf-project-and-says-administration-will-appeal",
+"published": "2026-11-15T10:39-07:00"
+},
+{
 "outlet": "The Guardian",
 "hint": "world",
-"title": "Iran targets Bahrain airbase as strikes resume in Gulf - Middle East crisis live",
-"url": "https://www.theguardian.com/world/live/2026/nov/15/middle-east-crisis-live-iran-bahrain-strikes-gulf-donald-trump-us-israel-yemen-houthis",
-"published": "2026-11-15T05:21-07:00"
+"title": "Iran launches drone attacks against US military base in Bahrain",
+"url": "https://www.theguardian.com/world/2026/nov/15/iran-launches-drone-attacks-against-us-military-base-in-bahrain",
+"published": "2026-11-15T10:36-07:00"
 },
 {
 "outlet": "Al Jazeera",
 "hint": "world",
-"title": "Iran targets US military radar in Bahrain in ‘retaliatory’ drone strikes",
-"url": "https://www.aljazeera.com/video/newsfeed/2026/11/15/iran-targets-us-military-radar-in-bahrain-in-retaliatory-drone-strikes?traffic_source=rss",
-"published": "2026-11-15T05:15-07:00"
+"title": "Morocco becomes first Arab nation in FIFA’s top five men’s rankings",
+"url": "https://www.aljazeera.com/sports/2026/11/15/morocco-becomes-first-arab-nation-in-fifas-top-five-mens-rankings?traffic_source=rss",
+"published": "2026-11-15T10:33-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Yemeni government forces redeploy from Bab al-Mandeb to defend Aden",
+"url": "https://www.aljazeera.com/news/2026/11/15/yemeni-government-forces-redeploy-from-bab-al-mandeb-to-defend-aden?traffic_source=rss",
+"published": "2026-11-15T10:33-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "The Guardian view on Cop31: the green transition must not be derailed | Editorial",
+"url": "https://www.theguardian.com/commentisfree/2026/nov/15/the-guardian-view-on-cop31-the-green-transition-must-not-be-derailed",
+"published": "2026-11-15T10:30-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "The hidden costs of the US AI boom",
+"url": "https://www.aljazeera.com/video/newsfeed/2026/11/15/the-hidden-costs-of-the-us-ai-boom?traffic_source=rss",
+"published": "2026-11-15T10:24-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Czechs rally against plan to switch funding of public media",
+"url": "https://www.bbc.co.uk/news/articles/cm8e0knr7604o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-15T10:23-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "19 slow worms mistaken for vipers rescued from water meter chamber",
+"url": "https://www.euronews.com/2026/11/15/19-slow-worms-mistaken-for-vipers-rescued-from-water-meter-chamber",
+"published": "2026-11-15T10:16-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Hundreds of thousands in Prague protest Czech government's public media funding plans",
+"url": "https://www.euronews.com/2026/11/15/hundreds-of-thousands-in-prague-protest-czech-governments-public-media-funding-plans",
+"published": "2026-11-15T10:16-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "UK: London's Santa School trains Father Christmas performers for 2026",
+"url": "https://www.euronews.com/video/2026/11/15/uk-londons-santa-school-trains-father-christmas-performers-for-2026",
+"published": "2026-11-15T10:13-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Could everything be broken? Grounded jets, Microsoft outage, AI chaos make some wonder",
+"url": "https://www.pbs.org/newshour/nation/could-everything-be-broken-grounded-jets-microsoft-outage-ai-chaos-make-some-wonder",
+"published": "2026-11-15T10:05-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "TechCrunch Mobility: The Nvidia backup plan for China’s self-driving industry",
+"url": "https://techcrunch.com/2026/11/15/techcrunch-mobility-the-nvidia-backup-plan-for-chinas-self-driving-industry/",
+"published": "2026-11-15T10:05-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Burnham pledges early intervention and ‘benefits backstop’ to tackle youth jobs crisis",
+"url": "https://www.theguardian.com/society/2026/nov/15/no-free-lunch-milburn-mcfadden-kuenssberg-uk-benefits-youth-unemployment-neet",
+"published": "2026-11-15T10:04-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Latest news bulletin | November 15th, 2026 – Evening",
+"url": "https://www.euronews.com/video/2026/11/15/latest-news-bulletin-november-15th-2026-evening",
+"published": "2026-11-15T10:00-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Trump breaks silence about FAA nationwide ground stop, blames Biden administration",
+"url": "https://www.cnbc.com/2026/11/15/trump-breaks-silence-on-faa-nationwide-ground-stop-blames-biden-.html",
+"published": "2026-11-15T09:56-07:00"
+},
+{
+"outlet": "investingLive",
+"hint": "economy",
+"title": "Nvida stock analysis before its earnings",
+"url": "https://investinglive.com/stocks/nvida-stock-analysis-before-its-earnings/",
+"published": "2026-11-15T09:51-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Bessent calls for ‘dramatic shakeup’ at Nvidia, urges outside CEO",
+"url": "https://www.cnbc.com/2026/11/15/bessent-nvidia-ceo-lutnick-megaspeed.html",
+"published": "2026-11-15T09:49-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Megaspeed says Alice Huang left in 2025 as company conducts internal probe over Nvidia fallout",
+"url": "https://www.pbs.org/newshour/world/megaspeed-says-alice-huang-left-in-2025-as-company-conducts-internal-probe-over-nvidia-fallout",
+"published": "2026-11-15T09:48-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Planned asylum seeker detention centre next to Oxfordshire sewage works criticised",
+"url": "https://www.theguardian.com/uk-news/2026/nov/15/planned-asylum-seeker-detention-centre-next-to-oxfordshire-sewage-works-criticised",
+"published": "2026-11-15T09:47-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Somalia: We would not have recovered without the international community",
+"url": "https://www.aljazeera.com/video/talk-to-al-jazeera/2026/11/15/somalia-we-would-not-have-recovered-without-the-international-community?traffic_source=rss",
+"published": "2026-11-15T09:47-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "LIVE: Spain vs England – UEFA Nations League",
+"url": "https://www.aljazeera.com/sports/liveblog/2026/11/15/live-spain-vs-england-uefa-nations-league?traffic_source=rss",
+"published": "2026-11-15T09:45-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Australia and Philippines sign new defence pact amid South China Sea tensions",
+"url": "https://www.euronews.com/2026/11/15/australia-and-philippines-sign-new-defence-pact-amid-south-china-sea-tensions",
+"published": "2026-11-15T09:42-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Megaspeed says alleged Chinese spy, Alice Huang, left company last year",
+"url": "https://www.euronews.com/2026/11/15/megaspeed-says-alleged-chinese-spy-alice-huang-left-company-last-year",
+"published": "2026-11-15T09:41-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "world",
+"title": "Hundreds of thousands of Czechs protest in Prague over media freedom",
+"url": "https://www.theguardian.com/world/2026/nov/15/czechia-protest-prague-media-freedom",
+"published": "2026-11-15T09:40-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Mysterious object in space: Could it be a Soviet probe missing for 40 years?",
+"url": "https://www.euronews.com/2026/11/15/mysterious-object-in-space-could-it-be-a-soviet-probe-missing-for-40-years",
+"published": "2026-11-15T09:34-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Thousands rally in Czech Republic against state media funding changes",
+"url": "https://www.aljazeera.com/news/2026/11/15/thousands-rally-in-czech-republic-against-state-media-funding-changes?traffic_source=rss",
+"published": "2026-11-15T09:32-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Trump breaks silence on nationwide ground stop and demands more money from Congress",
+"url": "https://www.pbs.org/newshour/politics/trump-breaks-silence-on-nationwide-ground-stop-and-demands-more-money-from-congress",
+"published": "2026-11-15T09:32-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Judge temporarily blocks Trump from moving ahead on D.C. public golf course redevelopment",
+"url": "https://www.pbs.org/newshour/politics/judge-temporarily-blocks-trump-from-moving-ahead-on-d-c-public-golf-course-redevelopment",
+"published": "2026-11-15T09:20-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "Transportation secretary Sean Duffy blames prior presidents and Congress for flight stoppage",
+"url": "https://www.theguardian.com/us-news/2026/nov/15/transportation-secretary-sean-duffy-faa-flight-stoppag",
+"published": "2026-11-15T09:18-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "British tourist smashes Jesus statue outside Vilnius church",
+"url": "https://www.aljazeera.com/video/newsfeed/2026/11/15/british-tourist-smashes-jesus-statue-outside-vilnius-church?traffic_source=rss",
+"published": "2026-11-15T09:04-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "The tech products we enthusiastically recommend this holiday season",
+"url": "https://techcrunch.com/2026/11/15/the-tech-products-we-enthusiastically-recommend-this-holiday-season/",
+"published": "2026-11-15T09:00-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "world",
+"title": "Saudi Arabia, Qatar, Jordan, Egypt condemn Iranian attack on Bahrain - as it happened",
+"url": "https://www.theguardian.com/world/live/2026/nov/15/middle-east-crisis-live-iran-bahrain-strikes-gulf-donald-trump-us-israel-yemen-houthis",
+"published": "2026-11-15T08:59-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Judge blocks Trump closure of 'Trash Island' Washington DC golf course on Sunday",
+"url": "https://www.bbc.co.uk/news/articles/c6j9mn7l14y0o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-15T08:57-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "\"Dans Gaza\" wins best documentary at Montreal's Cinemania festival",
+"url": "https://www.euronews.com/2026/11/15/dans-gaza-wins-best-documentary-at-montreals-cinemania-festival",
+"published": "2026-11-15T08:45-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "Two planes collide on taxiway at Miami airport one day after national grounding",
+"url": "https://www.theguardian.com/us-news/2026/nov/15/miami-airport-planes-collide",
+"published": "2026-11-15T08:40-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "70 bodies recovered from Gaza rubble, thousands still missing",
+"url": "https://www.aljazeera.com/video/newsfeed/2026/11/15/70-bodies-recovered-from-gaza-rubble-thousands-still-missing?traffic_source=rss",
+"published": "2026-11-15T08:32-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Will Iraq’s oil smuggling crackdown disarm militias without a conflict?",
+"url": "https://www.aljazeera.com/news/2026/11/15/will-iraqs-oil-smuggllng-crackdown-disarm-militias-without-a-conflict?traffic_source=rss",
+"published": "2026-11-15T08:21-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "20 years of Al Jazeera English: Our story is still being written",
+"url": "https://www.aljazeera.com/opinions/2026/11/15/20-years-of-al-jazeera-english-our-story-is-still-being-written?traffic_source=rss",
+"published": "2026-11-15T08:21-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Record number of migrants arrive in Spain’s Canary Islands",
+"url": "https://www.aljazeera.com/news/2026/11/15/record-number-of-migrants-arrive-in-spains-canary-islands?traffic_source=rss",
+"published": "2026-11-15T08:16-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Burgundy's Beaune wine auction hit as climate change halves harvest",
+"url": "https://www.euronews.com/2026/11/15/burgundys-beaune-wine-auction-hit-as-climate-change-halves-harvest",
+"published": "2026-11-15T08:13-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Jerusalem Daily: Mass funeral in Gaza as Netanyahu clings to power",
+"url": "https://www.aljazeera.com/video/newsfeed/2026/11/15/jerusalem-daily-mass-funeral-in-gaza-as-netanyahu-clings-to-power?traffic_source=rss",
+"published": "2026-11-15T08:01-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "FBI raids and a recycling firm: how a promising US mayor wound up at the center of a bribery scandal",
+"url": "https://www.theguardian.com/us-news/2026/nov/15/oakland-mayor-bribery-scandal-recycling",
+"published": "2026-11-15T08:00-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "companies",
+"title": "When the boss has an affair, the whole family business can pay the price",
+"url": "https://www.theguardian.com/business/2026/nov/15/nvidia-ceo-jensen-huang-affair-business",
+"published": "2026-11-15T08:00-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Dutch government holds weekend crisis talks to stave off collapse",
+"url": "https://www.euronews.com/2026/11/15/dutch-government-holds-weekend-crisis-talks-to-stave-off-collapse",
+"published": "2026-11-15T08:00-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Suspected China spy linked to Nvidia's ex-boss left in 2025, Megaspeed says",
+"url": "https://www.bbc.co.uk/news/articles/cmdx1vpprk9vo?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-15T07:56-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Estonian drone maker targeted in 'GRU-ordered' sabotage attempt, PM says",
+"url": "https://www.euronews.com/2026/11/15/estonian-drone-maker-targeted-by-gru-ordered-sabotage-attempt-pm-says",
+"published": "2026-11-15T07:52-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "New Orleans port files $1m lawsuit over 'miracle on the Mississippi' tanker collision",
+"url": "https://www.bbc.co.uk/news/articles/cwe89y2r5j20o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-15T07:33-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Social Security and the blue wave: What could happen to payroll taxes and senior tax breaks",
+"url": "https://www.cnbc.com/2026/11/15/social-security-tax-changes-midterm-election.html",
+"published": "2026-11-15T07:30-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Southeast Asian nations sign digital trade deal to ease payments and cut paperwork",
+"url": "https://www.euronews.com/2026/11/15/southeast-asian-nations-sign-digital-trade-deal-to-ease-payments-and-cut-paperwork",
+"published": "2026-11-15T07:24-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "'We slept here.' Flight delays linger as airlines scramble to recover from ground stop",
+"url": "https://www.cnbc.com/2026/11/15/flight-delays-ground-faa-stop.html",
+"published": "2026-11-15T07:24-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Two killed in Leeds after car pursued by police crashes into another vehicle",
+"url": "https://www.theguardian.com/uk-news/2026/nov/15/leeds-car-pursued-by-police-crashes-into-another-vehicle",
+"published": "2026-11-15T07:01-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "world",
+"title": "Gender-diverse Australian sailors barred from US submarines despite Aukus deal, documents reveal",
+"url": "https://www.theguardian.com/australia-news/2026/nov/16/gender-diverse-australian-sailors-barred-from-us-submarines-despite-aukus-deal-documents-reveal-ntwnfb",
+"published": "2026-11-15T07:00-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "‘We gotta do something’: the coalition that helped elect Scott Colom to Senate",
+"url": "https://www.theguardian.com/us-news/2026/nov/15/coalition-scott-colom-mississippi-senate-win",
+"published": "2026-11-15T07:00-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Ethnic minority groups in Wales four times more likely to be target of police facial scans",
+"url": "https://www.theguardian.com/technology/2026/nov/15/ethnic-minorities-wales-police-facial-scans-data",
+"published": "2026-11-15T07:00-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "world",
+"title": "I'm a psychologist who studies couples—5 signs you've fallen into a common rut: 'It builds through small habits that each look harmless'",
+"url": "https://www.cnbc.com/make-it/2026/11/15/couples-coexisting-without-connecting.html",
+"published": "2026-11-15T06:48-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Iran targets US military base in Bahrain with drone attack",
+"url": "https://www.bbc.co.uk/news/articles/cqn4e2py48kwo?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-15T06:42-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Poundland pins rescue hopes on Yorkshire Tea, Pot Noodle and Gloria Gaynor",
+"url": "https://www.theguardian.com/business/2026/nov/15/poundland-pins-rescue-hopes-on-yorkshire-tea-pot-noodle-and-gloria-gaynor",
+"published": "2026-11-15T06:41-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "South Korea's top scorer in tax accountancy exam admits cheating",
+"url": "https://www.bbc.co.uk/news/articles/ckvg2ezvpe08o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-15T06:37-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Cold and health alerts issued for Scotland and northern England as snow and ice expected",
+"url": "https://www.theguardian.com/uk-news/2026/nov/15/uk-weather-cold-health-alerts-scotland-northern-england-snow-ice",
+"published": "2026-11-15T06:30-07:00"
+},
+{
+"outlet": "NPR",
+"hint": "us",
+"title": "In calling for an end to the Iran War, Vance walks a fine line with Trump",
+"url": "https://www.npr.org/2026/11/15/nx-s1-6040447/in-calling-for-an-end-to-the-iran-war-vance-walks-a-fine-line-with-trump",
+"published": "2026-11-15T06:11-07:00"
+},
+{
+"outlet": "NPR",
+"hint": "us",
+"title": "Politics chat: Duffy calls for more funding, Democrats plans for accountability",
+"url": "https://www.npr.org/2026/11/15/nx-s1-6040041/politics-chat-duffy-calls-for-more-funding-democrats-plans-for-accountability",
+"published": "2026-11-15T06:09-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "economy",
+"title": "Minister backs legal right to job support for young people",
+"url": "https://www.bbc.co.uk/news/articles/cqr7gn1zmlj1o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-15T06:06-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "‘Shameless venality’: how a flurry of lawsuits has thwarted Trump’s self-enrichment schemes",
+"url": "https://www.theguardian.com/us-news/2026/nov/15/trump-self-enrichment-lawsuits",
+"published": "2026-11-15T06:00-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Rivian, Lucid, Scout CEOs aren’t counting on Democrats to restore EV federal support after midterm wins",
+"url": "https://www.cnbc.com/2026/11/15/rivian-lucid-scout-arent-counting-on-dems-to-restore-ev-incentives.html",
+"published": "2026-11-15T06:00-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Top Wall Street analysts are bullish on these 3 stocks for the long term",
+"url": "https://www.cnbc.com/2026/11/15/top-wall-street-analysts-are-bullish-on-these-3-stocks-for-the-long-term.html",
+"published": "2026-11-15T05:49-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -19,13 +481,6 @@
 "title": "Trident nuclear submarine concludes record underwater deployment",
 "url": "https://www.theguardian.com/uk-news/2026/nov/15/trident-nuclear-submarine-hms-vengeance-record-tour",
 "published": "2026-11-15T05:09-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Siege on Hebron’s Beit Ula industrial zone threatens Palestinian economy",
-"url": "https://www.aljazeera.com/economy/2026/11/15/siege-on-hebrons-beit-ula-industrial-zone-threatens-palestinian-economy?traffic_source=rss",
-"published": "2026-11-15T05:02-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -37,15 +492,15 @@
 {
 "outlet": "The Guardian",
 "hint": "us",
-"title": "Black voters helped Democrats win in Georgia. Now they expect to be heard",
-"url": "https://www.theguardian.com/us-news/2026/nov/15/georgia-midterm-elections-black-voters",
+"title": "Trump administration planning to reimburse doctors treating vaccine ‘injury’",
+"url": "https://www.theguardian.com/us-news/2026/nov/15/vaccine-policy-rfk-jr-trump-administration",
 "published": "2026-11-15T05:00-07:00"
 },
 {
 "outlet": "The Guardian",
 "hint": "us",
-"title": "Trump administration planning to reimburse doctors treating vaccine ‘injury’",
-"url": "https://www.theguardian.com/us-news/2026/nov/15/vaccine-policy-rfk-jr-trump-administration",
+"title": "Black voters helped Democrats win in Georgia. Now they expect to be heard",
+"url": "https://www.theguardian.com/us-news/2026/nov/15/georgia-midterm-elections-black-voters",
 "published": "2026-11-15T05:00-07:00"
 },
 {
@@ -70,46 +525,11 @@
 "published": "2026-11-15T05:00-07:00"
 },
 {
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Two aircraft collide at Miami International Airport",
-"url": "https://www.euronews.com/2026/11/15/two-aircraft-collide-at-miami-international-airport",
-"published": "2026-11-15T04:59-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Israel coalition talks put Arab party leader under pressure over Hamas",
-"url": "https://www.aljazeera.com/news/2026/11/15/israel-coalition-talks-put-arab-party-leader-under-pressure-over-hamas?traffic_source=rss",
-"published": "2026-11-15T04:56-07:00"
-},
-{
 "outlet": "The Guardian",
 "hint": "europe",
 "title": "Reform UK losing support to Labour after ‘difficult year’, says Danny Kruger",
 "url": "https://www.theguardian.com/politics/2026/nov/15/reform-uk-losing-support-to-labour-after-difficult-year-says-danny-kruger",
 "published": "2026-11-15T04:53-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Athletes rewrite the rules as Dakar 2026 Youth Olympics come to an end",
-"url": "https://www.aljazeera.com/sports/2026/11/15/dakar-youth-olympics-2026-senegal-games-come-to-an-end?traffic_source=rss",
-"published": "2026-11-15T04:53-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "MMA fighters jailed after Abu Dhabi hotel lobby brawl",
-"url": "https://www.aljazeera.com/video/newsfeed/2026/11/15/mma-fighters-jailed-after-abu-dhabi-hotel-lobby-brawl?traffic_source=rss",
-"published": "2026-11-15T04:33-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "world",
-"title": "Protest in Prague over media freedom expected to be one of biggest in Czechia’s history",
-"url": "https://www.theguardian.com/world/2026/nov/15/czechia-protest-prague-media-freedom",
-"published": "2026-11-15T04:17-07:00"
 },
 {
 "outlet": "BBC",
@@ -119,53 +539,11 @@
 "published": "2026-11-15T04:06-07:00"
 },
 {
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Police confront protesters in clashes across France and Germany",
-"url": "https://www.aljazeera.com/video/newsfeed/2026/11/15/police-confront-protesters-in-clashes-across-france-and-germany?traffic_source=rss",
-"published": "2026-11-15T04:04-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Latest news bulletin | November 15th, 2026 – Midday",
-"url": "https://www.euronews.com/video/2026/11/15/latest-news-bulletin-november-15th-2026-midday",
-"published": "2026-11-15T04:00-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Give Donbas, take NATO seat: Could new US pitch work for Ukraine, Russia?",
-"url": "https://www.aljazeera.com/news/2026/11/15/give-donbas-take-nato-seat-could-new-us-pitch-work-for-ukraine-russia?traffic_source=rss",
-"published": "2026-11-15T03:58-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "India’s Under-19 Asia Cup win over Pakistan marred by post-match aggression",
-"url": "https://www.aljazeera.com/sports/2026/11/15/indias-under-19-asia-cup-win-over-pakistan-marred-by-post-match-aggression?traffic_source=rss",
-"published": "2026-11-15T03:52-07:00"
-},
-{
 "outlet": "BBC",
 "hint": "science",
 "title": "How to spot November's planetary parade in the pre-dawn sky",
 "url": "https://www.bbc.co.uk/weather/articles/cke8rr37lrryo?at_medium=RSS&at_campaign=rss",
 "published": "2026-11-15T03:49-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "EU forces board suspected Russian shadow fleet tanker in Mediterranean, Kallas says",
-"url": "https://www.euronews.com/2026/11/15/eu-forces-board-suspected-russian-shadow-fleet-tanker-in-mediterranean-kallas-says",
-"published": "2026-11-15T03:41-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Spain football coach denies racism ahead of England match",
-"url": "https://www.aljazeera.com/video/newsfeed/2026/11/15/spain-football-coach-denies-racism-ahead-of-england-match?traffic_source=rss",
-"published": "2026-11-15T03:28-07:00"
 },
 {
 "outlet": "Colorado Sun",
@@ -175,25 +553,11 @@
 "published": "2026-11-15T03:07-07:00"
 },
 {
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Watch: SpaceX catches Starship in midair on return to launch tower",
-"url": "https://www.euronews.com/video/2026/11/15/watch-spacex-catches-starship-in-midair-on-return-to-launch-tower",
-"published": "2026-11-15T03:05-07:00"
-},
-{
 "outlet": "Colorado Sun",
 "hint": "us",
 "title": "Littwin: It’s finally official. Colorado’s 4th CD voters have canned the carpetbagging canoodler.",
 "url": "https://coloradosun.com/2026/11/15/littwin-lauren-boebert-canned-carpetbagging-canoodler/",
 "published": "2026-11-15T03:05-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Polls open in Cape Verde in race with first female presidential candidate",
-"url": "https://www.aljazeera.com/news/2026/11/15/polls-open-in-cape-verde-in-race-with-first-female-presidential-candidate?traffic_source=rss",
-"published": "2026-11-15T03:03-07:00"
 },
 {
 "outlet": "Colorado Sun",
@@ -208,13 +572,6 @@
 "title": "Carman: The sun is setting on TABOR and the generation of Colorado voters who supported it",
 "url": "https://coloradosun.com/2026/11/15/tabor-colorado-taxes-opinion-carman/",
 "published": "2026-11-15T03:02-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "Lucy Beaumont thought she’d never work in TV again after speaking up on David Walliams. Something different happened",
-"url": "https://www.theguardian.com/tv-and-radio/2026/nov/15/lucy-beaumont-work-tv-david-walliams",
-"published": "2026-11-15T03:00-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -245,25 +602,11 @@
 "published": "2026-11-15T03:00-07:00"
 },
 {
-"outlet": "CNBC",
-"hint": "markets",
-"title": "Bahrain intercepts Iranian aerial attacks as Tehran says it attacked US base",
-"url": "https://www.cnbc.com/2026/11/15/bahrain-iran-drone-attacks-tehran-us-base.html",
-"published": "2026-11-15T03:00-07:00"
-},
-{
 "outlet": "ProPublica",
 "hint": "longread",
 "title": "A Cop Was Charged With Causing His Wife’s Miscarriage. Alabama’s Laws Came Down Harder on Pregnant Women Who Used Drugs.",
 "url": "https://www.propublica.org/article/alabama-fetal-personhood-laws-punishment",
 "published": "2026-11-15T03:00-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Drone attacks on power stations plunge Sudan’s cities into darkness",
-"url": "https://www.aljazeera.com/features/2026/11/15/drone-strikes-on-power-stations-plunges-sudans-cities-into-darkness?traffic_source=rss",
-"published": "2026-11-15T02:59-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -280,32 +623,11 @@
 "published": "2026-11-15T02:57-07:00"
 },
 {
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Protesters condemn US policies as ASEAN summit begins in Manila",
-"url": "https://www.aljazeera.com/video/newsfeed/2026/11/15/protesters-condemn-us-policies-as-asean-summit-begins-in-manila?traffic_source=rss",
-"published": "2026-11-15T02:49-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Cape Verde heads to the polls in presidential election",
-"url": "https://www.euronews.com/2026/11/15/cape-verde-heads-to-the-polls-in-presidential-election",
-"published": "2026-11-15T02:45-07:00"
-},
-{
 "outlet": "BBC",
 "hint": "world",
 "title": "Fifth Canadian soldier dies from injuries caused by large fire at military base",
 "url": "https://www.bbc.co.uk/news/articles/cmrlgn4x2xw8o?at_medium=RSS&at_campaign=rss",
 "published": "2026-11-15T02:26-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "Digital finance products used to abuse almost 20% of young women and girls, UK report finds",
-"url": "https://www.theguardian.com/society/2026/nov/15/digital-finance-products-abuse-against-young-women-and-girls-report",
-"published": "2026-11-15T02:22-07:00"
 },
 {
 "outlet": "Colorado Sun",
@@ -350,20 +672,6 @@
 "published": "2026-11-15T01:56-07:00"
 },
 {
-"outlet": "CNBC",
-"hint": "markets",
-"title": "Megaspeed says Alice Huang left in 2025 as it launches internal probe into reports about its business",
-"url": "https://www.cnbc.com/2026/11/15/megaspeed-alice-huang-probe-nvidia-scandal.html",
-"published": "2026-11-15T01:34-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "SpaceX catches part of its Starship rocket in historic first",
-"url": "https://www.euronews.com/2026/11/15/spacex-catches-part-of-its-starship-rocket-in-historic-first",
-"published": "2026-11-15T01:32-07:00"
-},
-{
 "outlet": "BBC",
 "hint": "world",
 "title": "Israel kills Hamas commander in strike on Gaza camp, officials say",
@@ -378,34 +686,6 @@
 "published": "2026-11-15T01:00-07:00"
 },
 {
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Zelenskyy questions SpaceX over reported Starshield speed restrictions",
-"url": "https://www.euronews.com/2026/11/15/zelenskyy-questions-spacex-over-reported-starshield-speed-restrictions",
-"published": "2026-11-15T00:15-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "Copper wire upgrade behind US flight suspension, transport secretary says",
-"url": "https://www.bbc.co.uk/news/articles/c6wy9lynq4qno?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-15T00:10-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Judo: double gold for Canada on day 2 at Zagreb Grand Prix",
-"url": "https://www.euronews.com/2026/11/15/judo-double-gold-for-canada-on-day-2-at-zagreb-grand-prix",
-"published": "2026-11-15T00:06-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Hope springs eternal in award-winning photos showcasing nature’s resilience",
-"url": "https://www.euronews.com/2026/11/15/hope-springs-eternal-in-award-winning-photos-showcasing-natures-resilience",
-"published": "2026-11-15T00:02-07:00"
-},
-{
 "outlet": "The Guardian",
 "hint": "world",
 "title": "Anthony Albanese welcomes Trump-Xi-Putin summit – even as European leaders express reservations",
@@ -414,35 +694,21 @@
 },
 {
 "outlet": "The Guardian",
-"hint": "europe",
-"title": "Gymshark in trademark battle that threatens future of small fitness business",
-"url": "https://www.theguardian.com/law/2026/nov/15/gymshark-trademark-battle-the-conditioning-club-gloucestershire",
+"hint": "world",
+"title": "World’s top court to rule if Myanmar committed genocide against Rohingya",
+"url": "https://www.theguardian.com/world/2026/nov/15/myanmar-rohingya-genocide-icj",
 "published": "2026-11-14T23:00-07:00"
 },
 {
 "outlet": "The Guardian",
-"hint": "europe",
-"title": "Planned asylum seeker detention centre next to Oxfordshire sewage works criticised",
-"url": "https://www.theguardian.com/uk-news/2026/nov/15/planned-asylum-seeker-detention-centre-next-to-oxfordshire-sewage-works-criticised",
-"published": "2026-11-14T23:00-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Feeling the winter chill? Thermal baths and scenic outdoor saunas worth visiting in Europe",
-"url": "https://www.euronews.com/2026/11/15/feeling-the-winter-chill-thermal-baths-and-scenic-outdoor-saunas-worth-visiting-in-europe",
-"published": "2026-11-14T23:00-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Latest news bulletin | November 15th, 2026 – Morning",
-"url": "https://www.euronews.com/video/2026/11/15/latest-news-bulletin-november-15th-2026-morning",
+"hint": "companies",
+"title": "‘Jensen Huang lost his mind’: how AI’s smartest man fell for the world’s oldest trick",
+"url": "https://www.theguardian.com/technology/2026/nov/14/jensen-huang-affair-nvidia-nightmare",
 "published": "2026-11-14T23:00-07:00"
 },
 {
 "outlet": "CNBC",
-"hint": "markets",
+"hint": "world",
 "title": "Could Budapest be the next digital nomad hotspot?",
 "url": "https://www.cnbc.com/2026/11/15/budapest-europes-next-digital-nomad-hotspot.html",
 "published": "2026-11-14T23:00-07:00"
@@ -474,20 +740,6 @@
 "title": "Anthony Albanese apologises for hot-mic gaffe after Coalition criticises ‘locker-room talk’",
 "url": "https://www.theguardian.com/australia-news/2026/nov/15/anthony-albanese-apologises-for-hot-mic-gaffe-after-coalition-criticises-locker-room-talk",
 "published": "2026-11-14T20:49-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "Judge temporarily blocks Trump from closing Washington DC golf course for renovation",
-"url": "https://www.bbc.co.uk/news/articles/c6j9mn7l14y0o?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-14T20:21-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "markets",
-"title": "Nationwide ground stop followed contractor upgrade to L3Harris telecommunication system: DOT’s Duffy",
-"url": "https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html",
-"published": "2026-11-14T19:53-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -546,15 +798,8 @@
 "published": "2026-11-14T16:10-07:00"
 },
 {
-"outlet": "The Guardian",
-"hint": "world",
-"title": "David Jones’ future looks grim. Is Myer next?",
-"url": "https://www.theguardian.com/business/2026/nov/15/myer-david-jones-stores-closures-administration",
-"published": "2026-11-14T16:00-07:00"
-},
-{
 "outlet": "CNBC",
-"hint": "markets",
+"hint": "world",
 "title": "'Root cause’ of nationwide ground stop is unknown, FAA says",
 "url": "https://www.cnbc.com/2026/11/14/root-cause-of-nationwide-ground-stop-is-unknown-faa-says.html",
 "published": "2026-11-14T15:54-07:00"
@@ -586,13 +831,6 @@
 "title": "$180 million Van Gogh tests the art market and collector confidence",
 "url": "https://www.cnbc.com/2026/11/14/180-million-van-gogh-tests-the-art-market-and-collector-confidence-.html",
 "published": "2026-11-14T15:34-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "New Orleans port files $1m lawsuit over 'miracle on the Mississippi' tanker collision",
-"url": "https://www.bbc.co.uk/news/articles/cwe89y2r5j20o?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-14T15:27-07:00"
 },
 {
 "outlet": "BBC",
@@ -637,13 +875,6 @@
 "published": "2026-11-14T14:17-07:00"
 },
 {
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Moscow says it will not dictate EU delegation's participation in Ukraine talks",
-"url": "https://www.euronews.com/2026/11/14/moscow-says-it-will-not-dictate-eu-delegations-participation-in-ukraine-talks",
-"published": "2026-11-14T14:05-07:00"
-},
-{
 "outlet": "PBS NewsHour",
 "hint": "us",
 "title": "The U.S. flu season is off to a very early start. It's hitting the South and West now",
@@ -656,20 +887,6 @@
 "title": "Zelenskyy says a new European security framework floated by U.S. could benefit Putin",
 "url": "https://www.pbs.org/newshour/world/zelenskyy-says-a-new-european-security-framework-floated-by-u-s-could-benefit-putin",
 "published": "2026-11-14T13:23-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "Evacuation zone lifted after bomb found at Illinois ethanol plant",
-"url": "https://www.theguardian.com/us-news/2026/nov/14/peoria-illinois-evacuation-bomb",
-"published": "2026-11-14T13:14-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "Bomb found near ethanol plant in central Illinois forces evacuations",
-"url": "https://www.npr.org/2026/11/14/g-s1-153781/bomb-ethanol-plant-peoria-illinois-evacuations",
-"published": "2026-11-14T13:12-07:00"
 },
 {
 "outlet": "PBS NewsHour",
@@ -721,13 +938,6 @@
 "published": "2026-11-14T11:43-07:00"
 },
 {
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "What to know about flights after the U.S. nationwide ground stop",
-"url": "https://www.pbs.org/newshour/nation/what-to-know-about-flights-after-the-u-s-nationwide-ground-stop",
-"published": "2026-11-14T11:32-07:00"
-},
-{
 "outlet": "CNBC",
 "hint": "world",
 "title": "All passengers and crew on New Orleans cruise ship survive crash with tanker on Mississippi River",
@@ -736,17 +946,10 @@
 },
 {
 "outlet": "BBC",
-"hint": "world",
+"hint": "tech",
 "title": "Italy fines Meta €805m over accessing users' photos",
 "url": "https://www.bbc.co.uk/news/articles/cwn83gxemk35o?at_medium=RSS&at_campaign=rss",
 "published": "2026-11-14T11:28-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Democrats try out a strange new emotion at post-midterms What's Next conference: hope",
-"url": "https://www.pbs.org/newshour/politics/democrats-try-out-a-strange-new-emotion-at-post-midterms-whats-next-conference-hope",
-"published": "2026-11-14T11:19-07:00"
 },
 {
 "outlet": "BBC",
@@ -756,25 +959,18 @@
 "published": "2026-11-14T11:17-07:00"
 },
 {
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "U.S. gives states another 6 months before they have to remove people from Medicaid for not working",
-"url": "https://www.pbs.org/newshour/health/u-s-gives-states-another-6-months-before-they-have-to-remove-people-from-medicaid-for-not-working",
-"published": "2026-11-14T11:05-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "Sotheby's auction of $180m Van Gogh challenged over claims it was 'sold under duress'",
-"url": "https://www.bbc.co.uk/news/articles/cmwy05gg75lvo?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-14T11:00-07:00"
-},
-{
 "outlet": "TechCrunch",
 "hint": "tech",
 "title": "Got an iPhone Duo? These 9 settings make it easier to use",
 "url": "https://techcrunch.com/2026/11/14/got-an-iphone-duo-these-9-settings-make-it-easier-to-use/",
 "published": "2026-11-14T11:00-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Nvidia board urged to consider 'potential return of Jensen Huang' by two major investors",
+"url": "https://www.cnbc.com/2026/11/14/nvidia-investors-jensen-huang-return-board-letter.html",
+"published": "2026-11-14T10:46-07:00"
 },
 {
 "outlet": "TechCrunch",
@@ -799,31 +995,10 @@
 },
 {
 "outlet": "The Guardian",
-"hint": "europe",
-"title": "NHS England on track to miss key cancer treatment target by 10,000 patients",
-"url": "https://www.theguardian.com/society/2026/nov/14/nhs-england-62-day-cancer-treatment-target-by-10000-patients",
-"published": "2026-11-14T10:00-07:00"
-},
-{
-"outlet": "The Guardian",
 "hint": "us",
 "title": "Democrat wins Alaska governor’s seat for first time in nearly 30 years",
 "url": "https://www.theguardian.com/us-news/2026/nov/14/alaska-governor-democrat-jonathan-kreiss-tomkins-wins",
 "published": "2026-11-14T09:58-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "WATCH: Rubio delivers keynote address at Federalist Society National Lawyers Convention",
-"url": "https://www.pbs.org/newshour/politics/watch-rubio-delivers-keynote-address-at-federalist-society-national-lawyers-convention",
-"published": "2026-11-14T09:56-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Jonathan Kreiss-Tomkins becomes first Democrat since 1998 elected governor in Alaska",
-"url": "https://www.pbs.org/newshour/politics/jonathan-kreiss-tomkins-becomes-first-democrat-since-1998-elected-governor-in-alaska",
-"published": "2026-11-14T09:38-07:00"
 },
 {
 "outlet": "TechCrunch",
@@ -833,95 +1008,11 @@
 "published": "2026-11-14T09:34-07:00"
 },
 {
-"outlet": "BBC",
-"hint": "world",
-"title": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
-"url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-14T08:53-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "markets",
-"title": "How Nvidia turmoil and a Democratic Congress could reshape the AI trade, according to ETF experts",
-"url": "https://www.cnbc.com/2026/11/14/nvidia-ai-trade-data-centers-congress.html",
-"published": "2026-11-14T08:50-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "Progressive versus moderate? Democrats deny party rift as they head into new Congress",
-"url": "https://www.theguardian.com/us-news/2026/nov/14/democrats-moderate-progressive-congress",
-"published": "2026-11-14T08:28-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "world",
-"title": "How a US extradition bid over Hamas allegations put a wealthy activist before a Spanish court",
-"url": "https://www.theguardian.com/us-news/2026/nov/14/activist-extradition-gaza-hamas-spanish-court",
-"published": "2026-11-14T08:00-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "How ICE raids in Kansas meatpacking country sparked fury – and turned voters against Trump",
-"url": "https://www.theguardian.com/us-news/2026/nov/14/kansas-ice-meatpacking-raids-trump-midterms",
-"published": "2026-11-14T08:00-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "markets",
-"title": "How Rockstar's 'GTA VI' release could reshape gaming, streaming and even paid time off",
-"url": "https://www.cnbc.com/2026/11/14/gta-6-grand-theft-auto-launch.html",
-"published": "2026-11-14T07:54-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "markets",
-"title": "How Canadian stocks could be big winners of U.S. midterms",
-"url": "https://www.cnbc.com/2026/11/14/canada-stocks-us-midterms-tariffs.html",
-"published": "2026-11-14T07:11-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "Torture survivors may have been sent to Sussex asylum camp unlawfully, documentary reveals",
-"url": "https://www.theguardian.com/uk-news/2026/nov/14/asylum-seekers-crowborough-torture-survivors-military-camp",
-"published": "2026-11-14T07:07-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "world",
-"title": "Berkshire breaks out to record high with fourth-quarter rally reaching 19%",
-"url": "https://www.cnbc.com/2026/11/14/berkshire-breaks-out-to-record-high-with-fourth-quarter-rally-reaching-19percent.html",
-"published": "2026-11-14T07:02-07:00"
-},
-{
 "outlet": "The Guardian",
 "hint": "science",
 "title": "Indigenous students retrace Lewis and Clark’s historic journey: ‘We can’t protect what we cannot see’",
 "url": "https://www.theguardian.com/us-news/2026/nov/14/lewis-clark-indigenous-students",
 "published": "2026-11-14T07:00-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "Alaska voters aren't ditching ranked choice voting, top-four primaries",
-"url": "https://www.npr.org/2026/11/14/nx-s1-6034952/alaska-results-ranked-choice-voting-nonpartisan-primary",
-"published": "2026-11-14T06:08-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "world",
-"title": "Choking fires, deadly heat and devastating floods: 2026 in extreme weather",
-"url": "https://www.theguardian.com/world/2026/nov/14/fires-heat-floods-extreme-weather-2026",
-"published": "2026-11-14T06:00-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "Trump ‘whiplash’ on deportations putting Afghans in turmoil: ‘People already survived a war’",
-"url": "https://www.theguardian.com/us-news/2026/nov/14/afghan-deportations-trump-administration",
-"published": "2026-11-14T06:00-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -931,80 +1022,17 @@
 "published": "2026-11-14T06:00-07:00"
 },
 {
-"outlet": "CNBC",
-"hint": "world",
-"title": "Retailers are turning to entertainment to win shoppers’ attention",
-"url": "https://www.cnbc.com/2026/11/14/retailers-invest-entertainment.html",
+"outlet": "The Guardian",
+"hint": "science",
+"title": "Choking fires, deadly heat and devastating floods: 2026 in extreme weather",
+"url": "https://www.theguardian.com/world/2026/nov/14/fires-heat-floods-extreme-weather-2026",
 "published": "2026-11-14T06:00-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "world",
-"title": "U.S. floated idea of Ukraine ceding Donbas for NATO membership, Zelenskyy says",
-"url": "https://www.cnbc.com/2026/11/14/zelenskyy-us-ukraine-donbas-nato-membership.html",
-"published": "2026-11-14T05:44-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "Week in Politics: Battle for Senate leader; young and independent midterm turnout",
-"url": "https://www.npr.org/2026/11/14/nx-s1-6040156/week-in-politics-battle-for-senate-leader-young-and-independent-midterm-turnout",
-"published": "2026-11-14T05:40-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "Legal scholar Stephen Vladeck on Texas' new Democratic AG and federal litigation",
-"url": "https://www.npr.org/2026/11/14/nx-s1-6039286/legal-scholar-stephen-vladeck-on-texas-new-democratic-ag-and-federal-litigation",
-"published": "2026-11-14T05:40-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "Trump faces bipartisan backlash over plan to sell public lands to states and tribes",
-"url": "https://www.npr.org/2026/11/14/nx-s1-6039155/trump-faces-bipartisan-backlash-over-plan-to-sell-public-lands-to-states-and-tribes",
-"published": "2026-11-14T05:40-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "‘Enough is enough’: rising number of deadly ebike battery fires spark fear in New York City",
-"url": "https://www.theguardian.com/us-news/2026/nov/14/new-york-city-ebike-battery-fires-deaths",
-"published": "2026-11-14T05:00-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "markets",
-"title": "Eric Trump-backed robot soldier startup can't pay staff after founder borrowed $4.6 million from company to buy home",
-"url": "https://www.cnbc.com/2026/11/14/foundation-payroll-ceo-loan.html",
-"published": "2026-11-14T05:00-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "‘We must deliver’: jubilant Democrats gather in Denver to chart way forward",
-"url": "https://www.theguardian.com/us-news/2026/nov/14/democrats-denver-whats-next-conference",
-"published": "2026-11-14T04:00-07:00"
 },
 {
 "outlet": "The Guardian",
 "hint": "science",
 "title": "Greenpeace boulders may delay building of £12bn windfarms in North Sea",
 "url": "https://www.theguardian.com/environment/2026/nov/14/greenpeace-boulders-norfolk-vanguard-windfarms",
-"published": "2026-11-14T04:00-07:00"
-},
-{
-"outlet": "Colorado Sun",
-"hint": "us",
-"title": "What’s Working: What happens when AI bots take over landscaping? An Aspen company finds out",
-"url": "https://coloradosun.com/2026/11/14/ai-bots-landscaping-work-aspen-small-business-artificial-intelligence/",
-"published": "2026-11-14T04:00-07:00"
-},
-{
-"outlet": "Colorado Sun",
-"hint": "us",
-"title": "From above: Photos reveal devastation caused by back-to-back historic floods in southwestern Colorado",
-"url": "https://coloradosun.com/2026/11/14/photos-reveal-devastation-caused-by-historic-colorado-floods/",
 "published": "2026-11-14T04:00-07:00"
 },
 {
@@ -1064,25 +1092,11 @@
 "published": "2026-11-13T11:50-07:00"
 },
 {
-"outlet": "The Guardian",
-"hint": "science",
-"title": "The Guardian view on M John Harrison’s Booker win: a new frontier for science fiction | Editorial",
-"url": "https://www.theguardian.com/commentisfree/2026/nov/13/the-guardian-view-on-m-john-harrisons-booker-win-a-new-frontier-for-science-fiction",
-"published": "2026-11-13T11:00-07:00"
-},
-{
 "outlet": "Noema",
 "hint": "longread",
 "title": "Serbia’s Experiment: Combining Democracy & Meritocracy",
 "url": "https://www.noemamag.com/serbias-experiment-combining-democracy-meritocracy",
 "published": "2026-11-13T10:50-07:00"
-},
-{
-"outlet": "SEC",
-"hint": "financials",
-"title": "SEC Proposes Executive and Director Compensation Disclosure Reforms",
-"url": "https://www.sec.gov/newsroom/press-releases/2026-114-sec-proposes-executive-director-compensation-disclosure-reforms",
-"published": "2026-11-13T09:57-07:00"
 },
 {
 "outlet": "The Guardian",
