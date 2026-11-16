@@ -1,94 +1,1018 @@
 [
 {
-"outlet": "TechCrunch",
-"hint": "tech",
-"title": "Freshworks alums raise $53M to take on Salesforce, HubSpot with AI-native CRM",
-"url": "https://techcrunch.com/2026/11/16/freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-with-ai-native-crm/",
-"published": "2026-11-16T05:30-07:00"
-},
-{
-"outlet": "The Guardian",
+"outlet": "Euronews",
 "hint": "europe",
-"title": "Burnham sets three tests for EU deal, saying it should make Brexit ‘closer to what people thought they were voting for’ – UK politics live",
-"url": "https://www.theguardian.com/politics/live/2026/nov/16/ed-miliband-russell-brand-andy-burnham-brexit-eu-milburn-review-young-people-employment-uk-politics-latest-news",
-"published": "2026-11-16T05:23-07:00"
+"title": "Europe Tonight: MEPs debate Rwanda deportation scheme announced by five EU countries",
+"url": "https://www.euronews.com/2026/11/16/europe-tonight-meps-debate-rwanda-deportation-scheme-announced-by-five-eu-countries",
+"published": "2026-11-16T14:05-07:00"
 },
 {
 "outlet": "CNBC",
 "hint": "markets",
-"title": "Stock futures are lower as traders brace for Nvidia earnings, Anthropic IPO this week: Live updates",
+"title": "Robert Pattinson cast as next James Bond",
+"url": "https://www.cnbc.com/2026/11/16/robert-pattinson-james-bond.html",
+"published": "2026-11-16T14:03-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Pope Leo XIV struck in eye by rosary during tour of South America",
+"url": "https://www.euronews.com/2026/11/16/pope-leo-xiv-struck-in-eye-by-rosary-during-tour-of-south-america",
+"published": "2026-11-16T14:02-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "world",
+"title": "Nasdaq falls more than 2%, extending slide to third day as Nvidia drags down AI trade: Live updates",
 "url": "https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html",
-"published": "2026-11-16T05:23-07:00"
+"published": "2026-11-16T14:02-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "Apple reveals new Mac security controls as AI agents raise privacy risks",
+"url": "https://techcrunch.com/2026/11/16/apple-reveals-new-mac-security-controls-as-ai-agents-raise-privacy-risks/",
+"published": "2026-11-16T14:01-07:00"
 },
 {
 "outlet": "The Guardian",
-"hint": "science",
-"title": "Cop31 live: draft climate deal calls for faster shift away from fossil fuels",
-"url": "https://www.theguardian.com/environment/live/2026/nov/16/cop31-climate-crisis-talks-turkey-latest-news-updates",
-"published": "2026-11-16T05:21-07:00"
+"hint": "world",
+"title": "Albanese signs onto Trump’s AI supply chain pact ahead of leaders meeting at Quad summit",
+"url": "https://www.theguardian.com/australia-news/2026/nov/16/albanese-treads-tightrope-in-upcoming-trump-meeting-wanting-indo-pacific-engagement-and-end-to-iran-and-ukraine-wars",
+"published": "2026-11-16T14:00-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Read the full White House memo requiring agencies to get approval before testifying in front of Congress",
+"url": "https://www.pbs.org/newshour/politics/read-the-full-white-house-memo-requiring-agencies-to-get-approval-before-testifying-in-front-of-congress",
+"published": "2026-11-16T14:00-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "Trump defends commerce secretary Lutnick for allegedly slow-walking Nvidia chip export restrictions – live",
+"url": "https://www.theguardian.com/us-news/live/2026/nov/16/donald-trump-asia-visit-democrats-republicans-elizabeth-warren-faa-air-disruption-latest-news-updates",
+"published": "2026-11-16T13:54-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "U.S. crude oil declines to $85 a barrel on recovering Middle East exports",
+"url": "https://www.cnbc.com/2026/11/16/us-crude-oil-declines-to-87-a-barrel-on-recovering-middle-east-exports.html",
+"published": "2026-11-16T13:51-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Anthropic’s Wall Street whisperer: Meet CFO Krishna Rao",
+"url": "https://www.cnbc.com/2026/11/16/anthropic-cfo-krishna-rao-ipo.html",
+"published": "2026-11-16T13:44-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Photos: California residents gather to watch massive El Nino-fuelled waves",
+"url": "https://www.aljazeera.com/gallery/2026/11/16/photos-california-residents-gather-to-watch-massive-el-nino-fuelled-waves?traffic_source=rss",
+"published": "2026-11-16T13:42-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "London Palestine Film Festival returns for 27th year",
+"url": "https://www.aljazeera.com/video/newsfeed/2026/11/16/london-palestine-film-festival-returns-for-27th-year?traffic_source=rss",
+"published": "2026-11-16T13:36-07:00"
 },
 {
 "outlet": "BBC",
 "hint": "world",
-"title": "Elon Musk joins 'Bring Jensen Back' campaign to reinstate the ex-Nvidia boss",
-"url": "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-16T05:20-07:00"
+"title": "Forensic expert says his analysis of autopsy photos suggest Epstein was killed",
+"url": "https://www.bbc.co.uk/news/articles/c5n4exg1kkmyo?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-16T13:33-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "Suspect in custody after bomb found at Illinois ethanol plant",
+"url": "https://www.theguardian.com/us-news/2026/nov/16/illinois-bomb-ethanol-plant-suspect",
+"published": "2026-11-16T13:25-07:00"
 },
 {
 "outlet": "CNBC",
 "hint": "markets",
-"title": "Stocks making the biggest moves premarket: Nvidia, Take-Two Interactive, Yeti, American Airlines & more",
+"title": "California sues OpenAI over Hugging Face, other AI model loss of control",
+"url": "https://www.cnbc.com/2026/11/16/openai-california-bonta-ai-lawsuit.html",
+"published": "2026-11-16T13:24-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "UEFA backs Diallo to challenge Infantino for FIFA presidency",
+"url": "https://www.aljazeera.com/video/newsfeed/2026/11/16/uefa-backs-diallo-to-challenge-infantino-for-fifa-presidency?traffic_source=rss",
+"published": "2026-11-16T13:20-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "What will Europe do next in Ukraine?",
+"url": "https://www.aljazeera.com/video/inside-story/2026/11/16/what-will-europe-do-next-in-ukraine?traffic_source=rss",
+"published": "2026-11-16T13:12-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "California state AG sues OpenAI over rogue agent incidents",
+"url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/",
+"published": "2026-11-16T13:07-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Refused UK asylum seekers to lose five-day grace period and face immediate removal",
+"url": "https://www.theguardian.com/uk-news/2026/nov/16/failed-uk-asylum-seekers-to-lose-five-day-grace-period-and-face-immediate-removal",
+"published": "2026-11-16T13:06-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "world",
+"title": "Stocks making the biggest moves Monday: Lumentum, Sandisk, Coinbase, Nvidia & more",
 "url": "https://www.cnbc.com/2026/11/16/stocks-moving-the-most-today-live-updates.html",
-"published": "2026-11-16T05:20-07:00"
+"published": "2026-11-16T13:06-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Nationwide ground stop could cost US airlines hundreds of millions",
+"url": "https://www.aljazeera.com/news/2026/11/16/nationwide-ground-stop-could-cost-us-airlines-hundreds-of-millions?traffic_source=rss",
+"published": "2026-11-16T13:05-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Israeli opposition accuses Netanyahu of attempted ‘coup’",
+"url": "https://www.aljazeera.com/news/2026/11/16/israeli-opposition-accuses-netanyahu-of-attempted-coup?traffic_source=rss",
+"published": "2026-11-16T13:00-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Ministers to end Palantir’s contract with NHS in England in 2029",
+"url": "https://www.theguardian.com/society/2026/nov/16/ministers-to-end-palantir-contract-nhs-england-2029",
+"published": "2026-11-16T12:59-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "If the AI bubble is popping, history shows these stocks could boom",
+"url": "https://www.cnbc.com/2026/11/16/if-the-ai-bubble-is-popping-history-shows-these-stocks-could-boom.html",
+"published": "2026-11-16T12:53-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "Uber says hackers stole information on close to 150,000 driver’s licenses during data breach",
+"url": "https://techcrunch.com/2026/11/16/uber-confirms-hackers-stole-thousands-of-drivers-license-information-in-data-breach/",
+"published": "2026-11-16T12:53-07:00"
+},
+{
+"outlet": "The Register",
+"hint": "tech",
+"title": "Attackers are using AI agents to automate cybercrime at 'industrial scale,' FBI and AWS warn",
+"url": "https://www.theregister.com/cyber-crime/2026/11/16/attackers-are-using-ai-agents-to-automate-cybercrime-at-industrial-scale-fbi-and-aws-warn/5310223",
+"published": "2026-11-16T12:52-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Nvidia board is not considering bringing Jensen Huang back as CEO, source tells CNBC",
+"url": "https://www.cnbc.com/2026/11/16/nvidia-ceo-jensen-huang.html",
+"published": "2026-11-16T12:46-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Leave.EU and Vote Leave veterans launch rival campaigns to defend Brexit",
+"url": "https://www.theguardian.com/politics/2026/nov/16/people-behind-vote-leave-eu-launch-new-incarnations-brexit",
+"published": "2026-11-16T12:38-07:00"
+},
+{
+"outlet": "The Register",
+"hint": "tech",
+"title": "HTML-in-Canvas ships and could make the web a lot more creative...and a lot stupider",
+"url": "https://www.theregister.com/devops/2026/11/16/html-in-canvas-ships-and-could-make-the-web-a-lot-more-creativeand-a-lot-stupider/5310135",
+"published": "2026-11-16T12:33-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Customers at major banks are experiencing issues accessing their accounts",
+"url": "https://www.pbs.org/newshour/nation/customers-at-major-banks-are-experiencing-issues-accessing-their-accounts",
+"published": "2026-11-16T12:32-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Lindsay Clancy to face retrial next year for deaths of her three children",
+"url": "https://www.bbc.co.uk/news/articles/cw5y1v8de35go?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-16T12:30-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Video shows rocket failure that destroys 40 Amazon satellites",
+"url": "https://www.euronews.com/video/2026/11/16/video-shows-rocket-failure-that-destroys-40-amazon-satellites",
+"published": "2026-11-16T12:29-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "France can no longer support Kyiv 'financially,' Le Pen tells Ukrainian ambassador",
+"url": "https://www.euronews.com/2026/11/16/france-can-no-longer-support-kyiv-financially-le-pen-tells-ukrainian-ambassador",
+"published": "2026-11-16T12:28-07:00"
+},
+{
+"outlet": "investingLive",
+"hint": "economy",
+"title": "Hammack: Economy can handle more restriction, unclear how far Fed has to go",
+"url": "https://investinglive.com/central-banks/hammack-economy-can-handle-more-restriction-unclear-how-far-fed-has-to-go/",
+"published": "2026-11-16T12:28-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Five EU countries announce plan to send rejected asylum seekers to Rwanda",
+"url": "https://www.aljazeera.com/news/2026/11/16/five-eu-countries-announce-plan-to-send-rejected-asylum-seekers-to-rwanda?traffic_source=rss",
+"published": "2026-11-16T12:26-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "Apple adds ‘face unlock’ to the iPhone Duo, but it’s not Face ID",
+"url": "https://techcrunch.com/2026/11/16/apple-adds-face-unlock-to-the-iphone-duo-but-its-not-face-id/",
+"published": "2026-11-16T12:26-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Saudi Arabia dismisses commander of coalition forces fighting Houthis",
+"url": "https://www.aljazeera.com/news/2026/11/16/saudi-arabia-dismisses-commander-of-coalition-forces-fighting-houthis?traffic_source=rss",
+"published": "2026-11-16T12:19-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Thousands report difficulties accessing accounts online at major US banks",
+"url": "https://www.aljazeera.com/news/2026/11/16/thousands-report-difficulties-accessing-accounts-online-at-major-us-banks?traffic_source=rss",
+"published": "2026-11-16T12:18-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Trump backs return of ex-Nvidia boss after 'Bring Jensen Back' campaign launched",
+"url": "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-16T12:16-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Freeman Johnson, the oldest of the dwindling number of Pearl Harbor survivors, dies at 106",
+"url": "https://www.pbs.org/newshour/nation/freeman-johnson-the-oldest-of-the-dwindling-number-of-pearl-harbor-survivors-dies-at-106",
+"published": "2026-11-16T12:12-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "Trump says ex-Nvidia CEO Jensen Huang’s affair with an alleged Chinese spy did not threaten national security",
+"url": "https://techcrunch.com/2026/11/16/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-alleged-chinese-spy-did-not-threaten-national-security/",
+"published": "2026-11-16T12:12-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "world",
+"title": "Altimeter's Brad Gerstner aims to invest $5 billion in Anthropic IPO",
+"url": "https://www.cnbc.com/2026/11/16/altimeters-brad-gerstner-investing-5-billion-in-anthropic-ipo.html",
+"published": "2026-11-16T12:11-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "Cornell announces full review of Greek life after scrutiny over sexual assault case",
+"url": "https://www.theguardian.com/us-news/2026/nov/16/cornell-review-greek-life-sexual-assault-case",
+"published": "2026-11-16T12:09-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Is Israel’s Eisenkot bloc less right wing than Netanyahu?",
+"url": "https://www.aljazeera.com/news/2026/11/16/is-israels-opposition-less-right-wing-than-netanyahu?traffic_source=rss",
+"published": "2026-11-16T12:09-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Third U.S. aircraft carrier in Middle East as Trump keeps options open in Iran war",
+"url": "https://www.pbs.org/newshour/world/third-u-s-aircraft-carrier-in-middle-east-as-trump-keeps-options-open-in-iran-war",
+"published": "2026-11-16T12:02-07:00"
+},
+{
+"outlet": "The Register",
+"hint": "tech",
+"title": "China’s grip on Top500 remains uncontested as US chases AI-HPC fusion",
+"url": "https://www.theregister.com/systems/2026/11/16/chinas-grip-on-top500-remains-uncontested-as-us-chases-ai-hpc-fusion/5310205",
+"published": "2026-11-16T12:00-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Market's Nvidia obsession obscuring an opportunity in this name",
+"url": "https://www.cnbc.com/2026/11/16/disney-options-trade-before-earnings.html",
+"published": "2026-11-16T11:56-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Man appears in court over deaths of two people in Leeds police pursuit crash",
+"url": "https://www.theguardian.com/uk-news/2026/nov/16/man-charged-after-two-people-die-in-leeds-police-pursuit-crash",
+"published": "2026-11-16T11:55-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "Island is a new screen-time app that turns staying off your phone into a game",
+"url": "https://techcrunch.com/2026/11/16/island-is-a-new-screen-time-app-that-turns-staying-off-your-phone-into-a-game/",
+"published": "2026-11-16T11:54-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "science",
+"title": "Massive wave knocks down onlooker in California – video",
+"url": "https://www.theguardian.com/us-news/video/2026/nov/16/massive-wave-knocks-down-onlooker-in-california-video",
+"published": "2026-11-16T11:52-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Trump administration moves to block China from indirect access to American AI tech",
+"url": "https://www.pbs.org/newshour/science/trump-administration-moves-to-block-china-from-indirect-access-to-american-ai-tech",
+"published": "2026-11-16T11:51-07:00"
+},
+{
+"outlet": "Longreads",
+"hint": "longread",
+"title": "Alysa Liu Feels It All",
+"url": "https://longreads.com/2026/11/16/alysa-liu-spike-jonze-life-magazine/",
+"published": "2026-11-16T11:51-07:00"
+},
+{
+"outlet": "NPR",
+"hint": "us",
+"title": "U.S. tightens controls on remote access to AI technology amid Nvidia fallout",
+"url": "https://www.npr.org/2026/11/16/nx-s1-6042883/nvidia-jensen-huang-commerce-department",
+"published": "2026-11-16T11:49-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "ICE agents pepper spray pregnant US citizen in California, video shows",
+"url": "https://www.theguardian.com/us-news/2026/nov/16/ice-agents-pepper-spray-pregnant-california-citizen",
+"published": "2026-11-16T11:48-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "companies",
+"title": "The man with the golden touch: James Bond franchise is a money-spinner",
+"url": "https://www.theguardian.com/film/2026/nov/16/man-with-golden-touch-james-bond-franchise-money-spinner",
+"published": "2026-11-16T11:47-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Devon police renewed shotgun licence of known abuser who later killed his wife",
+"url": "https://www.theguardian.com/uk-news/2026/nov/16/domestic-abuser-john-perkins-shotguns-kathryn-devon-police",
+"published": "2026-11-16T11:46-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Fed Chairman Kevin Warsh stresses importance of AI to economy, but says it could ‘disappoint’",
+"url": "https://www.cnbc.com/2026/11/16/fed-ai-task-force-kevin-warsh.html",
+"published": "2026-11-16T11:46-07:00"
+},
+{
+"outlet": "investingLive",
+"hint": "economy",
+"title": "US banking websites are having problems",
+"url": "https://investinglive.com/news/us-banking-websites-are-having-problems/",
+"published": "2026-11-16T11:42-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "Abdul El-Sayed’s victory is a blow to the politics of Islamophobia",
+"url": "https://www.aljazeera.com/opinions/2026/11/16/abdul-el-sayeds-victory-is-a-blow-to-the-politics-of-islamophobia?traffic_source=rss",
+"published": "2026-11-16T11:38-07:00"
+},
+{
+"outlet": "The Register",
+"hint": "tech",
+"title": "‘123456’ has been the world’s most popular password for 7 out of the last 8 years",
+"url": "https://www.theregister.com/security/2026/11/16/123456-has-been-the-worlds-most-popular-password-for-7-out-of-the-last-8-years/5310189",
+"published": "2026-11-16T11:33-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Raye leads 2027 Grammy nominations as women dominate top categories",
+"url": "https://www.pbs.org/newshour/arts/raye-leads-2027-grammy-nominations-as-women-dominate-top-categories",
+"published": "2026-11-16T11:32-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "companies",
+"title": "Trump backs calls for reinstatement of Jensen Huang as Nvidia CEO",
+"url": "https://www.theguardian.com/technology/2026/nov/16/trump-backs-calls-for-reinstatement-of-jensen-huang-as-nvidia-ceo",
+"published": "2026-11-16T11:30-07:00"
+},
+{
+"outlet": "The Register",
+"hint": "tech",
+"title": "NoisyTCP bug gives Linux servers a remote crash problem 11 years in the making",
+"url": "https://www.theregister.com/security/2026/11/16/noisytcp-bug-gives-linux-servers-a-remote-crash-problem-11-years-in-the-making/5310144",
+"published": "2026-11-16T11:28-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Germany's 'bratwurst tax' sparks backlash as community groups face new VAT rules",
+"url": "https://www.euronews.com/2026/11/16/germanys-bratwurst-tax-sparks-backlash-as-community-groups-face-new-vat-rules",
+"published": "2026-11-16T11:25-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Ministry of Justice investigating Russell Brand message from prison claiming he is not guilty",
+"url": "https://www.theguardian.com/news/2026/nov/16/ministry-of-justice-investigating-russell-brand-message",
+"published": "2026-11-16T11:24-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "Tesla goes all-in on the Cybercab with upcoming €3B Berlin Gigafactory expansion",
+"url": "https://techcrunch.com/2026/11/16/tesla-goes-all-in-on-the-cybercab-with-upcoming-e3b-berlin-gigafactory-expansion/",
+"published": "2026-11-16T11:21-07:00"
+},
+{
+"outlet": "Al Jazeera",
+"hint": "world",
+"title": "British actor Robert Pattinson named as new James Bond",
+"url": "https://www.aljazeera.com/news/2026/11/16/british-actor-robert-pattinson-named-as-new-james-bond?traffic_source=rss",
+"published": "2026-11-16T11:13-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "OpenAI inks agreements with four independent evaluators to boost company's safety work",
+"url": "https://www.cnbc.com/2026/11/16/openai-independent-ai-safety-evaluators.html",
+"published": "2026-11-16T11:11-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "Sam Altman on Nvidia without Jensen Huang: the industry will be ‘fine’",
+"url": "https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine/",
+"published": "2026-11-16T11:11-07:00"
+},
+{
+"outlet": "NPR",
+"hint": "us",
+"title": "U.N. talks seek to rein in 'killer robots' as fears over AI weapons grow",
+"url": "https://www.npr.org/2026/11/16/nx-s1-6042548/un-killer-robots-ai-weapons-drones",
+"published": "2026-11-16T11:04-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Brand statement from prison claiming his innocence ‘appalling’ and could breach rules, says No 10 – as it happened",
+"url": "https://www.theguardian.com/politics/live/2026/nov/16/ed-miliband-russell-brand-andy-burnham-brexit-eu-milburn-review-young-people-employment-uk-politics-latest-news",
+"published": "2026-11-16T11:02-07:00"
+},
+{
+"outlet": "The Register",
+"hint": "tech",
+"title": "Ubuntu gets AI-generated security fixes for those feeling brave",
+"url": "https://www.theregister.com/os-platforms/2026/11/16/ubuntu-gets-ai-generated-security-fixes-for-those-feeling-brave/5310139",
+"published": "2026-11-16T11:01-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Police ‘retreating from streets’ due to major funding crisis, chief constables say",
+"url": "https://www.theguardian.com/uk-news/2026/nov/16/police-retreating-from-streets-major-funding-crisis-england-wales",
+"published": "2026-11-16T11:00-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "Several companies are using Trump tariff refunds for corporate bonuses",
+"url": "https://www.theguardian.com/us-news/2026/nov/16/companies-trump-tariff-refunds-corporate-bonuses",
+"published": "2026-11-16T10:52-07:00"
+},
+{
+"outlet": "investingLive",
+"hint": "economy",
+"title": "Tiff Macklem should have been fired, not celebrated",
+"url": "https://investinglive.com/central-banks/tiff-macklem-to-retire-he-will-be-remembered-for-the-worst-forward-guidance-in-central-bank-history/",
+"published": "2026-11-16T10:51-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "The Nvidia scandal is heightening America's AI rivalry with China ahead of Trump's visit",
+"url": "https://www.pbs.org/newshour/world/the-nvidia-scandal-is-heightening-americas-ai-rivalry-with-china-ahead-of-trumps-visit",
+"published": "2026-11-16T10:50-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Qatar Sustainability Week explores ways to cut food waste, track carbon emissions and support wellbeing",
+"url": "https://www.euronews.com/2026/11/16/qatar-sustainability-week-explores-ways-to-cut-food-waste-track-carbon-emissions-and-suppo",
+"published": "2026-11-16T10:45-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Italian schools hit by new wave of bomb and poison threats",
+"url": "https://www.euronews.com/2026/11/16/italian-schools-hit-by-new-wave-of-bomb-and-poison-threats",
+"published": "2026-11-16T10:41-07:00"
 },
 {
 "outlet": "CNBC",
 "hint": "markets",
 "title": "Warren Buffett donates $5.5 billion, says kindness 'compounds' in Thanksgiving letter",
 "url": "https://www.cnbc.com/2026/11/16/warren-buffett-donates-5point5-billion-thanksgiving.html",
-"published": "2026-11-16T05:16-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Which cricket teams can qualify for the LA 2028 Olympics and how?",
-"url": "https://www.aljazeera.com/sports/2026/11/16/which-cricket-teams-can-qualify-for-the-la-2028-olympics-and-how?traffic_source=rss",
-"published": "2026-11-16T05:15-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "world",
-"title": "The tech world's calls for Jensen Huang to return to Nvidia are growing",
-"url": "https://www.cnbc.com/2026/11/16/nvidia-jensen-huang-return-tech.html",
-"published": "2026-11-16T05:15-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "world",
-"title": "Lutnick faces questions over Nvidia spy scandal. His sons' firm has ties to the chipmaker",
-"url": "https://www.cnbc.com/2026/11/13/howard-lutnick-nvidia-jensen-huang-china-cantor-fitzgerald.html",
-"published": "2026-11-16T05:14-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "markets",
-"title": "Cantwell urges Lutnick to stop AI chip sales to China ahead of Xi meeting",
-"url": "https://www.cnbc.com/2026/11/16/cantwell-lutnick-ai-chip-china.html",
-"published": "2026-11-16T05:13-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "Trump’s justice department warns Elizabeth Warren over Democrats’ plans for future investigations – live",
-"url": "https://www.theguardian.com/us-news/live/2026/nov/16/donald-trump-asia-visit-democrats-republicans-elizabeth-warren-faa-air-disruption-latest-news-updates",
-"published": "2026-11-16T05:11-07:00"
+"published": "2026-11-16T10:39-07:00"
 },
 {
 "outlet": "Euronews",
 "hint": "europe",
-"title": "US airports slowly return to normal after three days of disruption caused by take-off ban",
-"url": "https://www.euronews.com/2026/11/16/us-airports-slowly-return-to-normal-after-three-days-of-disruption-caused-by-take-off-ban",
-"published": "2026-11-16T05:11-07:00"
+"title": "Euronews Verify: Is Europe prepared and able to defend against hybrid threats?",
+"url": "https://www.euronews.com/2026/11/16/euronews-verify-is-europe-prepared-and-able-to-defend-against-hybrid-threats",
+"published": "2026-11-16T10:37-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "FBI says Artex AI open-source hacking tool used to breach networks in ‘under three hours’",
+"url": "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/",
+"published": "2026-11-16T10:36-07:00"
+},
+{
+"outlet": "NPR",
+"hint": "us",
+"title": "Nearly two million people are behind bars in the US. How did we get here?",
+"url": "https://www.npr.org/2026/11/16/nx-s1-6042432/nearly-two-million-people-are-behind-bars-in-the-us-how-did-we-get-here",
+"published": "2026-11-16T10:34-07:00"
+},
+{
+"outlet": "The Register",
+"hint": "tech",
+"title": "Microsoft fixes Windows activation as admins pick through Exchange outage wreckage",
+"url": "https://www.theregister.com/software/2026/11/16/microsoft-fixes-windows-activation-as-admins-pick-through-exchange-outage-wreckage/5310102",
+"published": "2026-11-16T10:27-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "When will we see Robert Pattinson as Bond in cinemas?",
+"url": "https://www.bbc.co.uk/news/videos/cmd91xjd9zk2o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-16T10:18-07:00"
+},
+{
+"outlet": "investingLive",
+"hint": "economy",
+"title": "Natural gas analysis with the \"perfect\" trading range",
+"url": "https://investinglive.com/commodities/natural-gas-analysis-with-the-perfect-trading-range/",
+"published": "2026-11-16T10:17-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Preliminary study finds a clue in the quest to help diagnose CTE in the living",
+"url": "https://www.pbs.org/newshour/science/preliminary-study-finds-a-clue-in-the-quest-to-help-diagnose-cte-in-the-living",
+"published": "2026-11-16T10:14-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Eric Trump-backed robot soldier startup can't pay staff after founder borrowed $4.6 million from company to buy home",
+"url": "https://www.cnbc.com/2026/11/14/foundation-payroll-ceo-loan.html",
+"published": "2026-11-16T10:14-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "Jordan Belfort’s new AI voice startup, Tone, wants to sell like the ‘Wolf of Wall Street’",
+"url": "https://techcrunch.com/2026/11/16/jordan-belforts-new-ai-voice-startup-tone-wants-to-sell-like-the-wolf-of-wall-street/",
+"published": "2026-11-16T10:10-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "Judge sets Lindsay Clancy retrial for March in killings of her three children",
+"url": "https://www.theguardian.com/us-news/2026/nov/16/lindsay-clancy-retrial-march",
+"published": "2026-11-16T10:07-07:00"
+},
+{
+"outlet": "investingLive",
+"hint": "economy",
+"title": "Fed’s Warsh doesn’t talk about monetary policy in a speech on AI",
+"url": "https://investinglive.com/central-banks/fed-s-warsh-doesn-t-talk-about-monetary-policy-in-a-speech-on-ai/",
+"published": "2026-11-16T10:06-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "world",
+"title": "This food giant has gone nowhere for a year. Jay Woods sees a breakout ahead",
+"url": "https://www.cnbc.com/2026/11/16/kraft-stock-jay-woods.html",
+"published": "2026-11-16T10:03-07:00"
+},
+{
+"outlet": "The Register",
+"hint": "tech",
+"title": "Crook turns free trials into phishing factory, as LearnWorlds sends 13,000 fake YouTube copyright notices",
+"url": "https://www.theregister.com/security/2026/11/16/crook-turns-free-trials-into-phishing-factory-as-learnworlds-sends-13000-fake-youtube-copyright-notices/5310122",
+"published": "2026-11-16T10:03-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Europe Tonight: Five EU states announce Rwanda deportation hubs as EU warns Russia is ‘weaponising winter’",
+"url": "https://www.euronews.com/2026/11/16/europe-tonight-five-eu-states-announce-rwanda-deportation-hubs-as-eu-warns-russia-is-weapo",
+"published": "2026-11-16T10:02-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "OpenAI will embed safety researchers to investigate AI subversion",
+"url": "https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion/",
+"published": "2026-11-16T10:02-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "Even Hawaiʻi’s most Republican island can’t escape the blue wave",
+"url": "https://www.theguardian.com/us-news/2026/nov/16/hawaii-niihau-midterm-elections",
+"published": "2026-11-16T10:00-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Latest news bulletin | November 16th, 2026 – Evening",
+"url": "https://www.euronews.com/video/2026/11/16/latest-news-bulletin-november-16th-2026-evening",
+"published": "2026-11-16T10:00-07:00"
+},
+{
+"outlet": "TechCrunch",
+"hint": "tech",
+"title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
+"url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
+"published": "2026-11-16T10:00-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "science",
+"title": "Cop31 draft text is attempt to ‘draw out parties’ to find agreement, president of talks says",
+"url": "https://www.theguardian.com/environment/2026/nov/16/cop31-draft-text-draw-out-parties-find-agreement-president-talks-says",
+"published": "2026-11-16T09:54-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "French football chief Diallo set to run against Infantino for FIFA presidency",
+"url": "https://www.euronews.com/2026/11/16/french-football-chief-diallo-set-to-run-against-infantino-for-fifa-presidency",
+"published": "2026-11-16T09:54-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Coalition to move away from fossil fuels presses ahead without Colombia, its original champion",
+"url": "https://www.pbs.org/newshour/world/coalition-to-move-away-from-fossil-fuels-presses-ahead-without-colombia-its-original-champion",
+"published": "2026-11-16T09:50-07:00"
+},
+{
+"outlet": "Euronews",
+"hint": "europe",
+"title": "Serbia to accelerate work on EU accession, Student List representative says",
+"url": "https://www.euronews.com/2026/11/16/serbia-to-accelerate-work-on-eu-accession-student-list-representative-says",
+"published": "2026-11-16T09:32-07:00"
+},
+{
+"outlet": "NPR",
+"hint": "us",
+"title": "Lindsay Clancy to face a new trial in spring of 2027 over children's killing",
+"url": "https://www.npr.org/2026/11/16/nx-s1-5983473/clancy-trial-retrial-murder-charges",
+"published": "2026-11-16T09:28-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Five EU countries announce migrant deportation centre in Rwanda",
+"url": "https://www.bbc.co.uk/news/articles/cw987343352go?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-16T09:27-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "world",
+"title": "Five EU states announce plans for immigration ‘return hubs’ in Rwanda",
+"url": "https://www.theguardian.com/world/2026/nov/16/eu-states-immigration-return-hubs-rwanda",
+"published": "2026-11-16T09:21-07:00"
+},
+{
+"outlet": "The Register",
+"hint": "tech",
+"title": "US allies deepen deal to guard AI supply chains against 'hostile actors' (cough, China, cough)",
+"url": "https://www.theregister.com/systems/2026/11/16/us-allies-deepen-deal-to-guard-ai-supply-chains-against-hostile-actors-cough-china-cough/5310094",
+"published": "2026-11-16T09:15-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "world",
+"title": "Two ‘Best Stocks’ are pulling back from highs. Josh Brown on how to trade them from here",
+"url": "https://www.cnbc.com/2026/11/16/moderna-delta-stock-pullbacks-josh-brown-says-watch-these-levels.html",
+"published": "2026-11-16T09:10-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "EU accuses Russia of stalling Ukraine peace talks to target power plants as winter nears",
+"url": "https://www.pbs.org/newshour/world/eu-accuses-russia-of-stalling-ukraine-peace-talks-to-target-power-plants-as-winter-nears",
+"published": "2026-11-16T09:07-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "science",
+"title": "AI models ‘weak and fallible’ on climate science, UN-backed study reports",
+"url": "https://www.theguardian.com/environment/2026/nov/16/ai-models-fallible-denial-climate-science-unesco-cop31",
+"published": "2026-11-16T09:05-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "Surge of US datacenters adds equivalent of Denmark’s annual emissions, study finds",
+"url": "https://www.theguardian.com/us-news/2026/nov/16/datacenter-emissions-study",
+"published": "2026-11-16T09:00-07:00"
+},
+{
+"outlet": "The Register",
+"hint": "tech",
+"title": "Has AI’s ‘Black October’ changed the way you secure your code?",
+"url": "https://www.theregister.com/security/2026/11/16/partner-content-has-ais-black-october-changed-the-way-you-secure-your-code/5309775",
+"published": "2026-11-16T09:00-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "DoJ warns Elizabeth Warren of ‘consequences’ unless she preserves Trump records",
+"url": "https://www.theguardian.com/us-news/2026/nov/16/doj-elizabeth-warren-trump-investigation-records",
+"published": "2026-11-16T08:50-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "economy",
+"title": "Faisal Islam: What's in the Brexit reset food deal and are there trade-offs?",
+"url": "https://www.bbc.co.uk/news/articles/c6wy4l8nl42wo?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-16T08:40-07:00"
+},
+{
+"outlet": "investingLive",
+"hint": "economy",
+"title": "Forget the petro-dollar, introducing the chip-dollar",
+"url": "https://investinglive.com/forex/forget-the-petro-dollar-introducing-the-chip-dollar/",
+"published": "2026-11-16T08:28-07:00"
+},
+{
+"outlet": "The Register",
+"hint": "tech",
+"title": "Criminals attack French postal operator subsidiary, grab contact details of 22M people",
+"url": "https://www.theregister.com/cyber-crime/2026/11/16/criminals-attack-french-postal-operator-subsidiary-grab-contact-details-of-22m-people/5310070",
+"published": "2026-11-16T08:28-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "science",
+"title": "Cop31 as it happened: draft climate deal calls for faster shift away from fossil fuels",
+"url": "https://www.theguardian.com/environment/live/2026/nov/16/cop31-climate-crisis-talks-turkey-latest-news-updates",
+"published": "2026-11-16T08:27-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "Russia says its defenses intercepted over 1,300 Ukrainian drones in a major attack",
+"url": "https://www.pbs.org/newshour/world/russia-says-its-defenses-intercepted-over-1300-ukrainian-drones-in-a-major-attack",
+"published": "2026-11-16T08:20-07:00"
+},
+{
+"outlet": "Quanta",
+"hint": "science",
+"title": "What Makes Up the Cosmos? A 20-Year Survey Hints That Something Is Missing.",
+"url": "https://www.quantamagazine.org/what-makes-up-the-cosmos-a-20-year-survey-hints-that-something-is-missing-20261116/",
+"published": "2026-11-16T08:15-07:00"
+},
+{
+"outlet": "PBS NewsHour",
+"hint": "us",
+"title": "At least 17 people killed in 2 mass shootings on the same day in South Africa",
+"url": "https://www.pbs.org/newshour/world/at-least-17-people-killed-in-2-mass-shootings-on-the-same-day-in-south-africa",
+"published": "2026-11-16T08:04-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Two charged after man run over by van during flags incident in Birmingham",
+"url": "https://www.theguardian.com/uk-news/2026/nov/16/two-charged-man-run-over-by-van-midlands",
+"published": "2026-11-16T08:01-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "world",
+"title": "Novo says Wegovy injection lowers BMI and obesity rates in children in trial",
+"url": "https://www.cnbc.com/2026/11/16/novo-wegovy-obesity-children-trial.html",
+"published": "2026-11-16T08:00-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Landmark Crimea bridge hit as Russia reports biggest Ukrainian drone attack of war",
+"url": "https://www.bbc.co.uk/news/articles/ckx27v6dpjz0o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-16T07:58-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "Mamdani disbands NYPD unit accused of using excessive force",
+"url": "https://www.theguardian.com/us-news/2026/nov/16/nypd-strategic-response-group-mamdani",
+"published": "2026-11-16T07:57-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Raye, Rosalía and Dolly Parton recognised in Grammy nominations",
+"url": "https://www.bbc.co.uk/news/articles/cq9vwkggpx73o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-16T07:48-07:00"
+},
+{
+"outlet": "investingLive",
+"hint": "economy",
+"title": "Trump says he wouldn’t mind seeing Huang reinstated as Nvidia CEO",
+"url": "https://investinglive.com/stocks/trump-says-he-wouldn-t-mind-seeing-huang-reinstated-as-nvidia-ceo/",
+"published": "2026-11-16T07:46-07:00"
+},
+{
+"outlet": "The Register",
+"hint": "tech",
+"title": "Microsoft Outlook outage blamed after 15 injured in hotel pool chlorine incident",
+"url": "https://www.theregister.com/saas/2026/11/16/microsoft-outlook-outage-blamed-after-15-injured-in-hotel-pool-chlorine-incident/5310087",
+"published": "2026-11-16T07:42-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "science",
+"title": "Passing bill to speed up gas projects and datacenters would be ‘serious mistake’, Al Gore says",
+"url": "https://www.theguardian.com/us-news/2026/nov/16/al-gore-baaja-cop-31-climate",
+"published": "2026-11-16T07:34-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "Democrat writes off Trump’s attempt to blame party for flight grounding as ‘absurd’",
+"url": "https://www.theguardian.com/us-news/2026/nov/16/trump-flight-grounding-democrats-blame",
+"published": "2026-11-16T07:24-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Estonia to close Russia border crossings after attempted drone factory arson attack",
+"url": "https://www.bbc.co.uk/news/articles/cqp83nk673reo?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-16T07:22-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "science",
+"title": "Mushroom lovers in UK told to avoid grow kits owing to invasive species risk",
+"url": "https://www.theguardian.com/environment/2026/nov/16/mushroom-lovers-uk-told-to-avoid-grow-kits-invasive-species-golden-oyster",
+"published": "2026-11-16T07:00-07:00"
+},
+{
+"outlet": "investingLive",
+"hint": "economy",
+"title": "Goldman Sachs gets bearish on oil prices but doesn't see help for consumers",
+"url": "https://investinglive.com/commodities/goldman-sachs-gets-bearish-on-oil-prices-but-doesn-t-see-help-for-consumers/",
+"published": "2026-11-16T07:00-07:00"
+},
+{
+"outlet": "Colorado Sun",
+"hint": "us",
+"title": "Republican Gabe Evans announces 2028 bid in Colorado’s 4th Congressional District after losing in 8th District this year",
+"url": "https://coloradosun.com/2026/11/16/gabe-evans-4th-congressional-district-2028/",
+"published": "2026-11-16T07:00-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "markets",
+"title": "Nvidia's Colette Kress confronts key questions in first earnings report since Jensen Huang’s exit",
+"url": "https://www.cnbc.com/2026/11/16/nvidia-earnings-jensen-huang-resignation.html",
+"published": "2026-11-16T06:42-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Gérard Depardieu drops appeal against sexual assault conviction",
+"url": "https://www.bbc.co.uk/news/articles/cm20vexye1d0o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-16T06:40-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "europe",
+"title": "Under-threat lidos get lifeline as Andy Burnham sets up fund to rebuild pools",
+"url": "https://www.theguardian.com/lifeandstyle/2026/nov/16/lidos-lifeline-andy-burnham-fund-rebuild-outdoor-pools",
+"published": "2026-11-16T06:35-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "tech",
+"title": "GTA 6 hacker pleads guilty after release from secure hospital",
+"url": "https://www.bbc.co.uk/news/articles/cq99exy89dngo?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-16T06:34-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "us",
+"title": "International student enrollments at US universities plunge this fall, data shows",
+"url": "https://www.theguardian.com/us-news/2026/nov/16/us-international-student-enrollment-trump",
+"published": "2026-11-16T06:32-07:00"
+},
+{
+"outlet": "investingLive",
+"hint": "economy",
+"title": "Canada October CPI 3.1% vs +3.2% expected",
+"url": "https://investinglive.com/news/canada-october-cpi-3-1-vs-3-2-expected/",
+"published": "2026-11-16T06:30-07:00"
+},
+{
+"outlet": "investingLive",
+"hint": "economy",
+"title": "US November Empire Manufacturing index +7.80 vs +18.00 expected",
+"url": "https://investinglive.com/news/us-november-empire-manufacturing-index-7-80-vs-18-00-expected/",
+"published": "2026-11-16T06:30-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "economy",
+"title": "Create more jobs for under-25s by cutting National Insurance, key report urges",
+"url": "https://www.bbc.co.uk/news/articles/c6p9dzmj514ko?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-16T06:19-07:00"
+},
+{
+"outlet": "The Guardian",
+"hint": "world",
+"title": "US basketball player arrested with 75lb of marijuana at Nigerian airport, say authorities",
+"url": "https://www.theguardian.com/sport/2026/nov/16/us-basketball-player-arrested-with-75lb-of-marijuana-at-nigerian-airport-say-authorities",
+"published": "2026-11-16T06:16-07:00"
+},
+{
+"outlet": "investingLive",
+"hint": "economy",
+"title": "Why the AI trade is a macro trade: the risks to the US economy",
+"url": "https://investinglive.com/education/why-the-ai-trade-is-a-macro-trade-the-risks-to-the-us-economy/",
+"published": "2026-11-16T06:05-07:00"
+},
+{
+"outlet": "ECB",
+"hint": "economy",
+"title": "Frank Elderson: Smart supervision for small banks",
+"url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261116_1~11dd7f62af.en.html",
+"published": "2026-11-16T06:00-07:00"
+},
+{
+"outlet": "BBC",
+"hint": "world",
+"title": "Ashes of exiled Nobel Laureate Miguel Ángel Asturias returned to Guatemala",
+"url": "https://www.bbc.co.uk/news/articles/cvde1klewg88o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-16T05:42-07:00"
+},
+{
+"outlet": "investingLive",
+"hint": "economy",
+"title": "investingLive European news wrap: Risk sentiment remains negative",
+"url": "https://investinglive.com/news/investinglive-european-news-wrap-risk-sentiment-remains-negative/",
+"published": "2026-11-16T05:37-07:00"
+},
+{
+"outlet": "CNBC",
+"hint": "world",
+"title": "Cantwell urges Lutnick to stop AI chip sales to China ahead of Xi meeting",
+"url": "https://www.cnbc.com/2026/11/16/cantwell-lutnick-ai-chip-china.html",
+"published": "2026-11-16T05:13-07:00"
 },
 {
 "outlet": "NPR",
@@ -98,123 +1022,32 @@
 "published": "2026-11-16T05:08-07:00"
 },
 {
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Five things you need to know before Anthropic goes public",
-"url": "https://www.euronews.com/2026/11/16/five-things-you-need-to-know-before-anthropic-goes-public",
-"published": "2026-11-16T05:02-07:00"
-},
-{
 "outlet": "The Guardian",
-"hint": "us",
-"title": "Catholic priest released from Louisiana prison after serving seven years for sexually abusing altar server",
-"url": "https://www.theguardian.com/us-news/2026/nov/16/louisiana-catholic-priest-prison-sexual-abuse",
-"published": "2026-11-16T05:00-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "‘No rhyme or reason’: how Trump’s immigration courts put families on a fast track to deportation",
-"url": "https://www.theguardian.com/us-news/2026/nov/16/trump-immigration-courts-families-mass-deportations",
-"published": "2026-11-16T05:00-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "Flying blind: inside the decline of the EPA’s chemical-detection plane",
-"url": "https://www.theguardian.com/environment/2026/nov/16/epa-chemical-detection-plane",
+"hint": "science",
+"title": "Working in Cape Cod’s waters, he saw an unusual clam. It was the start of an invasion",
+"url": "https://www.theguardian.com/environment/2026/nov/16/cape-cod-invasive-manila-clams",
 "published": "2026-11-16T05:00-07:00"
 },
 {
 "outlet": "The Guardian",
 "hint": "science",
-"title": "Working in Cape Cod’s waters, he saw a unusual clam. It was the start of an invasion",
-"url": "https://www.theguardian.com/environment/2026/nov/16/cape-cod-invasive-manila-clams",
+"title": "Flying blind: inside the decline of the EPA’s chemical-detection plane",
+"url": "https://www.theguardian.com/environment/2026/nov/16/epa-chemical-detection-plane",
 "published": "2026-11-16T05:00-07:00"
 },
 {
-"outlet": "CNBC",
-"hint": "markets",
-"title": "Big-ticket holiday items may be harder to find as shipping costs rise",
-"url": "https://www.cnbc.com/2026/11/16/holiday-big-ticket-inventory-shipping-costs.html",
-"published": "2026-11-16T05:00-07:00"
-},
-{
-"outlet": "TechCrunch",
-"hint": "tech",
-"title": "Zoox robotaxis are now on the Uber app in Las Vegas",
-"url": "https://techcrunch.com/2026/11/16/zoox-robotaxis-are-now-on-the-uber-app-in-las-vegas/",
-"published": "2026-11-16T05:00-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "Great Britain’s oldest renewables projects could rake in nearly £9bn next year",
-"url": "https://www.theguardian.com/business/2026/nov/16/great-britain-renewable-energy-subsidies-wind-solar",
-"published": "2026-11-16T04:56-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "Five EU countries expected to announce migrant deportation centre in Rwanda",
-"url": "https://www.bbc.co.uk/news/articles/cw987343352go?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-16T04:55-07:00"
-},
-{
-"outlet": "The Guardian",
+"outlet": "NPR",
 "hint": "us",
-"title": "First Thing: Trump administration blames travel chaos on former presidents and Congress",
-"url": "https://www.theguardian.com/us-news/2026/nov/16/first-thing-trump-administration-blames-travel-chaos-on-former-presidents-and-congress",
-"published": "2026-11-16T04:46-07:00"
+"title": "Chris Van Hollen says he can beat Chuck Schumer. Here's his case",
+"url": "https://www.npr.org/2026/11/16/nx-s1-6041687/chris-van-hollen-chuck-schumer-senate-leader",
+"published": "2026-11-16T04:39-07:00"
 },
 {
-"outlet": "Euronews",
-"hint": "europe",
-"title": "US and Iran slide closer to fresh all-out war as new exchange of fire increases",
-"url": "https://www.euronews.com/2026/11/16/us-and-iran-slide-closer-to-fresh-all-out-war-as-new-exchange-of-fire-increases",
-"published": "2026-11-16T04:42-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Who is Ahmad Tibi, the Arab MP elected deputy speaker of Israel’s Knesset?",
-"url": "https://www.aljazeera.com/news/2026/11/16/who-is-ahmad-tibi-the-arab-mp-elected-israels-knesset-deputy-speaker?traffic_source=rss",
-"published": "2026-11-16T04:40-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Sweden calls for new EU plan to unlock frozen Russian assets for Ukraine",
-"url": "https://www.euronews.com/2026/11/16/sweden-calls-for-new-eu-plan-to-unlock-frozen-russian-assets-for-ukraine",
+"outlet": "NPR",
+"hint": "us",
+"title": "Regulating AI will being a top priority for congressional Democrats in the new year",
+"url": "https://www.npr.org/2026/11/16/nx-s1-6037801/regulating-ai-will-being-a-top-priority-for-congressional-democrats-in-the-new-year",
 "published": "2026-11-16T04:38-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "Klopp says Infantino worse than Blatter",
-"url": "https://www.bbc.co.uk/sport/football/articles/cjr4gr2k41dxo?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-16T04:27-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "EU ministers demand united response as Russian attacks spill beyond Ukraine",
-"url": "https://www.euronews.com/2026/11/16/eu-ministers-demand-united-response-as-russian-attacks-spill-beyond-ukraine",
-"published": "2026-11-16T04:24-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "As homes seized, Jericho’s Palestinian residents fear settler takeover",
-"url": "https://www.aljazeera.com/news/2026/11/16/jerichos-palestinian-residents-lay-in-wait-of-an-israeli-settler-takeover?traffic_source=rss",
-"published": "2026-11-16T04:23-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Millions of red crabs begin annual migration on Australia’s Christmas Island",
-"url": "https://www.euronews.com/video/2026/11/16/millions-of-red-crabs-begin-annual-migration-on-australias-christmas-island",
-"published": "2026-11-16T04:18-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -226,8 +1059,8 @@
 {
 "outlet": "Colorado Sun",
 "hint": "us",
-"title": "Boyd family, which sold 17 ski areas to Vail Resorts in 2019, now buying Wyoming’s Snowy Range resort",
-"url": "https://coloradosun.com/2026/11/16/boyd-family-which-sold-17-ski-areas-to-vail-resorts-in-2019-now-buying-wyomings-snowy-range-resort/",
+"title": "Boyd family, which sold 17 ski areas to Vail Resorts in 2019, is now buying Wyoming’s Snowy Range",
+"url": "https://coloradosun.com/2026/11/16/snowy-range-boyd-family-purchase/",
 "published": "2026-11-16T04:10-07:00"
 },
 {
@@ -236,20 +1069,6 @@
 "title": "Yemeni forces retreat to defend port city from Houthis",
 "url": "https://www.bbc.co.uk/news/articles/cqvg2xgyvnjpo?at_medium=RSS&at_campaign=rss",
 "published": "2026-11-16T04:09-07:00"
-},
-{
-"outlet": "investingLive",
-"hint": "economy",
-"title": "Zcash needs a dovish Fed or a US-Iran breakthrough to reverse the bearish trend",
-"url": "https://investinglive.com/cryptocurrency/zcash-needs-a-dovish-fed-or-a-us-iran-breakthrough-to-reverse-the-bearish-trend/",
-"published": "2026-11-16T04:06-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Why Silicon Valley is backing Nvidia ex-CEO Jensen Huang after his ouster",
-"url": "https://www.aljazeera.com/news/2026/11/16/why-silicon-valley-is-backing-nvidia-ex-ceo-jensen-huang-after-his-ouster?traffic_source=rss",
-"published": "2026-11-16T04:05-07:00"
 },
 {
 "outlet": "Colorado Sun",
@@ -274,16 +1093,9 @@
 },
 {
 "outlet": "The Guardian",
-"hint": "us",
-"title": "‘Two dictators in my story – Duterte and Zuckerberg’: Nobel peace prize winner’s warning for democracy",
-"url": "https://www.theguardian.com/us-news/2026/nov/16/duterte-zuckerberg-maria-ressa-book",
-"published": "2026-11-16T04:00-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Latest news bulletin | November 16th, 2026 – Midday",
-"url": "https://www.euronews.com/video/2026/11/16/latest-news-bulletin-november-16th-2026-midday",
+"hint": "companies",
+"title": "Americans relying on heating oil brace for harsh winter: ‘We’re often cold in our own home’",
+"url": "https://www.theguardian.com/business/2026/nov/16/heating-oil-price-increase-winter",
 "published": "2026-11-16T04:00-07:00"
 },
 {
@@ -322,102 +1134,11 @@
 "published": "2026-11-16T03:57-07:00"
 },
 {
-"outlet": "Euronews",
-"hint": "europe",
-"title": "French actor Gerard Depardieu drops appeal for sexual assault conviction",
-"url": "https://www.euronews.com/2026/11/16/french-actor-gerard-depardieu-drops-appeal-for-sexual-assault-conviction",
-"published": "2026-11-16T03:55-07:00"
-},
-{
 "outlet": "Colorado Sun",
 "hint": "us",
 "title": "This Longmont employee is deaf. His coworkers started a sign language class to communicate with him.",
 "url": "https://coloradosun.com/2026/11/16/longmont-city-workers-sign-language-class-deaf-employee/",
 "published": "2026-11-16T03:54-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "economy",
-"title": "Create more jobs for under-25s by cutting National Insurance, key report urges",
-"url": "https://www.bbc.co.uk/news/articles/c6p9dzmj514ko?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-16T03:51-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "EU clears UniCredit takeover of Germany's Commerzbank",
-"url": "https://www.euronews.com/2026/11/16/eu-clears-unicredit-takeover-of-germanys-commerzbank",
-"published": "2026-11-16T03:50-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "markets",
-"title": "NATO member Estonia to close Russia border after attempted 'sabotage' of drone maker",
-"url": "https://www.cnbc.com/2026/11/16/nato-estonia-russia-border-ukraine-war.html",
-"published": "2026-11-16T03:44-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "Man charged after two people die in Leeds police pursuit crash",
-"url": "https://www.theguardian.com/uk-news/2026/nov/16/man-charged-after-two-people-die-in-leeds-police-pursuit-crash",
-"published": "2026-11-16T03:43-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "world",
-"title": "Birth keeper told mother of baby who later died to ‘go home and rest’, NSW inquest hears",
-"url": "https://www.theguardian.com/australia-news/2026/nov/16/nsw-inquest-four-babies-freebirth-home-birth-northern-rivers-ntwnfb",
-"published": "2026-11-16T03:41-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Fewer students are traveling from abroad to study at US universities, new report shows",
-"url": "https://www.euronews.com/2026/11/16/fewer-students-are-traveling-from-abroad-to-study-at-us-universities-new-report-shows",
-"published": "2026-11-16T03:40-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "markets",
-"title": "From AI to oil, here are Goldman and Morgan Stanley’s outlooks for 2027",
-"url": "https://www.cnbc.com/2026/11/16/goldman-sachs-morgan-stanley-2027-outlook-markets.html",
-"published": "2026-11-16T03:39-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "Italy fines Meta €805m for accessing Facebook Android photos and videos without consent",
-"url": "https://www.euronews.com/2026/11/16/italy-fines-meta-805m-for-accessing-facebook-android-photos-and-videos-without-consent",
-"published": "2026-11-16T03:34-07:00"
-},
-{
-"outlet": "Euronews",
-"hint": "europe",
-"title": "'Temu Harry Potter': New clip of HBO's series gets panned online",
-"url": "https://www.euronews.com/2026/11/16/temu-harry-potter-new-clip-of-hbos-series-gets-panned-online",
-"published": "2026-11-16T03:33-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "Boots to begin prescribing medical cannabis in UK",
-"url": "https://www.theguardian.com/business/2026/nov/16/boots-pharmacy-begin-prescribing-medical-cannabis-uk",
-"published": "2026-11-16T03:32-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Lebanon’s second airport could provide economic and political benefits",
-"url": "https://www.aljazeera.com/features/2026/11/16/lebanons-second-airport-could-provide-economic-and-political-benefits?traffic_source=rss",
-"published": "2026-11-16T03:28-07:00"
-},
-{
-"outlet": "investingLive",
-"hint": "economy",
-"title": "FX option expiries for 16 November 10am New York cut",
-"url": "https://investinglive.com/orders/fx-option-expiries-for-16-november-10am-new-york-cut/",
-"published": "2026-11-16T03:28-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -434,34 +1155,6 @@
 "published": "2026-11-16T03:16-07:00"
 },
 {
-"outlet": "The Register",
-"hint": "tech",
-"title": "Omaxian takes the Omarchy look down a different Linux backstreet",
-"url": "https://www.theregister.com/os-platforms/2026/11/16/omaxian-takes-the-omarchy-look-down-a-different-linux-backstreet/5309750",
-"published": "2026-11-16T03:15-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "USS Roosevelt arrives in Middle East: Is the US-Iran war about to resume?",
-"url": "https://www.aljazeera.com/news/2026/11/16/uss-roosevelt-arrives-in-middle-east-is-the-us-iran-war-about-to-resume?traffic_source=rss",
-"published": "2026-11-16T03:14-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Jordan bans Telegram over national security concerns",
-"url": "https://www.aljazeera.com/news/2026/11/16/jordan-bans-telegram-messing-app-over-national-security-concerns?traffic_source=rss",
-"published": "2026-11-16T03:12-07:00"
-},
-{
-"outlet": "investingLive",
-"hint": "economy",
-"title": "Crude oil remains supported amid the prolonged US-Iran standoff and risks of military escalation",
-"url": "https://investinglive.com/commodities/crude-oil-remains-supported-amid-the-prolonged-us-iran-standoff-and-risks-of-military-escalation/",
-"published": "2026-11-16T03:10-07:00"
-},
-{
 "outlet": "Colorado Sun",
 "hint": "us",
 "title": "Silverman: MAGA cut my mic on talk radio. But now Americans are tuning it out",
@@ -469,32 +1162,11 @@
 "published": "2026-11-16T03:05-07:00"
 },
 {
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "‘NATO will collapse’: Russia stalls Ukraine talks, seeks to divide Europe",
-"url": "https://www.aljazeera.com/news/2026/11/16/nato-will-collapse-russia-stalls-ukraine-talks-seeks-to-divide-europe?traffic_source=rss",
-"published": "2026-11-16T03:03-07:00"
-},
-{
 "outlet": "BBC",
 "hint": "science",
 "title": "Yellow weather warnings issued for snow as temperatures plummet",
 "url": "https://www.bbc.co.uk/weather/articles/c6y97j2xq531o?at_medium=RSS&at_campaign=rss",
 "published": "2026-11-16T03:02-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "As millions lose food aid nationwide, this SNAP office is doubling up as a food pantry",
-"url": "https://www.npr.org/2026/11/16/nx-s1-6034048/snap-san-diego-food-assistance",
-"published": "2026-11-16T03:00-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout",
-"url": "https://www.npr.org/2026/11/16/nx-s1-6041738/trump-xi-and-putin-china-nvidia",
-"published": "2026-11-16T03:00-07:00"
 },
 {
 "outlet": "NPR",
@@ -513,8 +1185,15 @@
 {
 "outlet": "NPR",
 "hint": "us",
-"title": "Why sleep matters when it comes to weight gain and loss",
-"url": "https://www.npr.org/2026/11/16/nx-s1-6037761/sleep-weight-gain-loss",
+"title": "They saw people losing food benefits. So they started handing out free groceries",
+"url": "https://www.npr.org/2026/11/16/nx-s1-6034048/snap-san-diego-food-assistance",
+"published": "2026-11-16T03:00-07:00"
+},
+{
+"outlet": "NPR",
+"hint": "us",
+"title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout",
+"url": "https://www.npr.org/2026/11/16/nx-s1-6041738/trump-xi-and-putin-china-nvidia",
 "published": "2026-11-16T03:00-07:00"
 },
 {
@@ -532,13 +1211,6 @@
 "published": "2026-11-16T02:58-07:00"
 },
 {
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Antimicrobial resistance could kill 39 million people over 25 years: WHO",
-"url": "https://www.aljazeera.com/news/2026/11/16/un-health-agency-sounds-alarm-on-antimicrobial-resistance-threat?traffic_source=rss",
-"published": "2026-11-16T02:57-07:00"
-},
-{
 "outlet": "ProPublica",
 "hint": "longread",
 "title": "Three of the Financial Sins That Left Chicago $55 Billion in Debt — and Counting",
@@ -546,18 +1218,11 @@
 "published": "2026-11-16T02:55-07:00"
 },
 {
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Sadiq Khan: Global North must take responsibility for climate change",
-"url": "https://www.aljazeera.com/video/newsfeed/2026/11/16/sadiq-khan-global-north-must-take-responsibility-for-climate-change?traffic_source=rss",
-"published": "2026-11-16T02:52-07:00"
-},
-{
 "outlet": "NPR",
 "hint": "us",
-"title": "Morning news brief",
-"url": "https://www.npr.org/2026/11/16/nx-s1-6038373/morning-news-brief",
-"published": "2026-11-16T02:46-07:00"
+"title": "Affordability was a key issue for midterm voters. It helped make childcare one, too",
+"url": "https://www.npr.org/2026/11/13/nx-s1-6034941/affordability-childcare-midterms",
+"published": "2026-11-16T02:45-07:00"
 },
 {
 "outlet": "NPR",
@@ -567,46 +1232,11 @@
 "published": "2026-11-16T02:44-07:00"
 },
 {
-"outlet": "investingLive",
-"hint": "economy",
-"title": "Trade Tech Solutions adds perpetuals to its prop firm technology following prediction markets launch",
-"url": "https://investinglive.com/education/trade-tech-solutions-adds-perpetuals-to-its-prop-firm-technology-following-prediction-markets-launch/",
-"published": "2026-11-16T02:44-07:00"
-},
-{
-"outlet": "investingLive",
-"hint": "economy",
-"title": "What Does Big Tech’s AI Spending Tell Us About Nvidia’s Sales?",
-"url": "https://investinglive.com/education/what-does-big-tech-s-ai-spending-tell-us-about-nvidia-s-sales/",
-"published": "2026-11-16T02:42-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "world",
-"title": "Albanese treads tightrope in upcoming Trump meeting, wanting Indo-Pacific engagement and end to Iran and Ukraine wars",
-"url": "https://www.theguardian.com/australia-news/2026/nov/16/albanese-treads-tightrope-in-upcoming-trump-meeting-wanting-indo-pacific-engagement-and-end-to-iran-and-ukraine-wars",
-"published": "2026-11-16T02:40-07:00"
-},
-{
 "outlet": "CNBC",
 "hint": "world",
 "title": "AI is reshaping banking jobs – but its ability to drive profits remains unclear",
 "url": "https://www.cnbc.com/2026/11/16/how-ai-is-changing-banking-jobs-hiring-and-revenue.html",
 "published": "2026-11-16T02:35-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Third US aircraft carrier arrives in Middle East amid tensions with Iran",
-"url": "https://www.aljazeera.com/video/newsfeed/2026/11/16/third-us-aircraft-carrier-arrives-in-middle-east-amid-tensions-with-iran?traffic_source=rss",
-"published": "2026-11-16T02:31-07:00"
-},
-{
-"outlet": "The Register",
-"hint": "tech",
-"title": "We don't need no education platform evolution. Hey, Redmond, leave those kids alone",
-"url": "https://www.theregister.com/columnists/2026/11/16/we-dont-need-no-education-platform-evolution-hey-redmond-leave-those-kids-alone/5309271",
-"published": "2026-11-16T02:31-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -616,25 +1246,11 @@
 "published": "2026-11-16T02:27-07:00"
 },
 {
-"outlet": "investingLive",
-"hint": "economy",
-"title": "Hawkish Fed repricing and Iran tensions trigger a major Bitcoin liquidation wave",
-"url": "https://investinglive.com/cryptocurrency/hawkish-fed-repricing-and-iran-tensions-trigger-a-major-bitcoin-liquidation-wave/",
-"published": "2026-11-16T02:21-07:00"
-},
-{
 "outlet": "CNBC",
-"hint": "markets",
+"hint": "world",
 "title": "‘Standing on one leg’: IMF chief warns about global economy as AI circular financing hits $1 trillion",
 "url": "https://www.cnbc.com/2026/11/16/imf-georgieva-warning-ai-circular-financing.html",
 "published": "2026-11-16T02:14-07:00"
-},
-{
-"outlet": "investingLive",
-"hint": "economy",
-"title": "Market outlook for the week of 16th - 20th November",
-"url": "https://investinglive.com/forex/market-outlook-for-the-week-of-16th-20th-november/",
-"published": "2026-11-16T02:08-07:00"
 },
 {
 "outlet": "Markets Media",
@@ -644,39 +1260,11 @@
 "published": "2026-11-16T02:00-07:00"
 },
 {
-"outlet": "BBC",
-"hint": "world",
-"title": "UK and allies call on Israel to allow rapid humanitarian access to Gaza",
-"url": "https://www.bbc.co.uk/news/articles/cwm2mllj1pp8o?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-16T01:56-07:00"
-},
-{
-"outlet": "Al Jazeera",
-"hint": "world",
-"title": "Ronaldinho comes out retirement for 45 mins in Italy’s third division",
-"url": "https://www.aljazeera.com/video/newsfeed/2026/11/16/ronaldinho-comes-out-retirement-for-45-mins-in-italys-third-division?traffic_source=rss",
-"published": "2026-11-16T01:54-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "world",
-"title": "NSW halts new law to crack down on underquoting by real estate agents at 11th hour",
-"url": "https://www.theguardian.com/australia-news/2026/nov/16/nsw-halts-new-law-to-crack-down-on-underquoting-by-real-estate-agents-at-11th-hour",
-"published": "2026-11-16T01:53-07:00"
-},
-{
 "outlet": "CNBC",
-"hint": "markets",
+"hint": "world",
 "title": "China confirms Xi-Trump-Putin historic summit. What will be on the agenda?",
 "url": "https://www.cnbc.com/2026/11/16/trump-xi-putin-ukraine-nuclear-tariffs-russia-iran-.html",
 "published": "2026-11-16T01:38-07:00"
-},
-{
-"outlet": "investingLive",
-"hint": "economy",
-"title": "Gold threatens a major breakdown amid a more hawkish Fed. What to watch next?",
-"url": "https://investinglive.com/commodities/gold-threatens-a-major-breakdown-amid-a-more-hawkish-fed-what-to-watch-next/",
-"published": "2026-11-16T01:30-07:00"
 },
 {
 "outlet": "ECB",
@@ -686,74 +1274,11 @@
 "published": "2026-11-16T01:30-07:00"
 },
 {
-"outlet": "investingLive",
-"hint": "economy",
-"title": "Global broker Elev8 introduces AI access to help clients see more of their trading data",
-"url": "https://investinglive.com/education/global-broker-elev8-introduces-ai-access-to-help-clients-see-more-of-their-trading-data/",
-"published": "2026-11-16T01:17-07:00"
-},
-{
 "outlet": "The Guardian",
 "hint": "europe",
 "title": "Burnham pledges early intervention and ‘benefits backstop’ to tackle youth jobs crisis",
 "url": "https://www.theguardian.com/society/2026/nov/15/no-free-lunch-milburn-mcfadden-kuenssberg-uk-benefits-youth-unemployment-neet",
 "published": "2026-11-16T00:43-07:00"
-},
-{
-"outlet": "investingLive",
-"hint": "economy",
-"title": "What are the main events for today?",
-"url": "https://investinglive.com/news/what-are-the-main-events-for-today-86/",
-"published": "2026-11-16T00:34-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "US basketball player arrested with 34kg of cannabis at Nigerian airport",
-"url": "https://www.bbc.co.uk/news/articles/cj93rggenq4xo?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-16T00:24-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "Andy Burnham to say Brexit ‘has not worked’ and he will sign new deal with EU",
-"url": "https://www.theguardian.com/politics/2026/nov/16/andy-burnham-brexit-has-not-worked-sign-new-deal-with-eu",
-"published": "2026-11-16T00:00-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "UK blood services issue urgent appeal for donations as winter approaches",
-"url": "https://www.theguardian.com/society/2026/nov/16/uk-blood-services-urgent-appeal-donations-winter",
-"published": "2026-11-16T00:00-07:00"
-},
-{
-"outlet": "TechCrunch",
-"hint": "tech",
-"title": "Helsing backer Plural raises $1.1B to fund Europe’s next moonshots",
-"url": "https://techcrunch.com/2026/11/15/helsing-backer-plural-raises-1-1b-to-fund-europes-next-moonshots/",
-"published": "2026-11-16T00:00-07:00"
-},
-{
-"outlet": "investingLive",
-"hint": "economy",
-"title": "Nvidia earnings could test a fragile market. Five stocks are already offering clues",
-"url": "https://investinglive.com/stocks/nvidia-earnings-could-test-a-fragile-market-five-stocks-are-already-offering-clues/",
-"published": "2026-11-15T23:55-07:00"
-},
-{
-"outlet": "The Register",
-"hint": "tech",
-"title": "Techie rigged off-spec fan near flammable liquid and an exposed motherboard, then left it to run for days",
-"url": "https://www.theregister.com/on-prem/2026/11/16/techie-rigged-off-spec-fan-near-flammable-liquid-and-an-exposed-motherboard-then-left-it-to-run-for-days/5309601",
-"published": "2026-11-15T23:37-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "UK exposed to polycrisis of threats amid government ‘complacency’",
-"url": "https://www.theguardian.com/society/2026/nov/16/uk-exposed-to-polycrisis-of-threats-amid-government-complacency",
-"published": "2026-11-15T23:30-07:00"
 },
 {
 "outlet": "BBC",
@@ -770,13 +1295,6 @@
 "published": "2026-11-15T23:24-07:00"
 },
 {
-"outlet": "CNBC",
-"hint": "world",
-"title": "Bitcoin may drop 40% or more as it nears technical warning level, strategist says",
-"url": "https://www.cnbc.com/2026/11/16/bitcoin-technical-warning-level.html",
-"published": "2026-11-15T23:18-07:00"
-},
-{
 "outlet": "BBC",
 "hint": "science",
 "title": "Pupils fascinated by space get astronomy lesson",
@@ -784,25 +1302,18 @@
 "published": "2026-11-15T23:11-07:00"
 },
 {
-"outlet": "The Register",
-"hint": "tech",
-"title": "Microsoft’s Azure Linux dons Fedora to dress itself up for mainstream workloads",
-"url": "https://www.theregister.com/os-platforms/2026/11/16/microsofts-azure-linux-dons-fedora-to-dress-itself-up-for-mainstream-workloads/5310016",
-"published": "2026-11-15T23:04-07:00"
+"outlet": "BBC",
+"hint": "economy",
+"title": "Thrift shop asks shoppers to nominate a charity",
+"url": "https://www.bbc.co.uk/news/articles/c804wp1y2ky1o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-15T23:03-07:00"
 },
 {
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "Special needs overhaul in England could bring in new avenues for extra support",
-"url": "https://www.theguardian.com/education/2026/nov/16/families-rights-appeal-support-send-overhaul-england",
-"published": "2026-11-15T23:00-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "science",
-"title": "Weakening UK electric vehicle targets would hurt car industry, ministers told",
-"url": "https://www.theguardian.com/environment/2026/nov/16/weakening-uk-electric-vehicle-targets-would-hurt-car-industry-ministers-told",
-"published": "2026-11-15T23:00-07:00"
+"outlet": "BBC",
+"hint": "economy",
+"title": "'Break-in and rising costs could kill my business'",
+"url": "https://www.bbc.co.uk/news/articles/c9n731r5mej5o?at_medium=RSS&at_campaign=rss",
+"published": "2026-11-15T22:57-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -819,34 +1330,6 @@
 "published": "2026-11-15T21:39-07:00"
 },
 {
-"outlet": "investingLive",
-"hint": "economy",
-"title": "investingLive Asia-Pacific market news: Chipmakers hit ahead of Nvidia",
-"url": "https://investinglive.com/news/investinglive-asia-pacific-market-news-chipmakers-hit-ahead-of-nvidia/",
-"published": "2026-11-15T21:34-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "world",
-"title": "China’s slowdown deepens in October as industrial output, retail sales, investment miss estimates",
-"url": "https://www.cnbc.com/2026/11/16/china-retail-sales-october-industrial-output-investment.html",
-"published": "2026-11-15T20:53-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "Mexican drug lord Miguel Ángel Félix Gallardo dies age 80",
-"url": "https://www.bbc.co.uk/news/articles/c51k9nkwrndxo?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-15T20:21-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "Australian MP 'full of gratitude' upon leaving hospital after alleged car attack",
-"url": "https://www.bbc.co.uk/news/articles/cmpqr9j81888o?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-15T20:09-07:00"
-},
-{
 "outlet": "BBC",
 "hint": "economy",
 "title": "Intel sued by investors after PC sales slump hits share price",
@@ -854,39 +1337,11 @@
 "published": "2026-11-15T20:04-07:00"
 },
 {
-"outlet": "CNBC",
-"hint": "world",
-"title": "Japan's economy unexpectedly contracts in third-quarter as elevated energy costs bite",
-"url": "https://www.cnbc.com/2026/11/16/japan-q3-gdp-energy-oil-prices.html",
-"published": "2026-11-15T19:56-07:00"
-},
-{
 "outlet": "BBC",
 "hint": "economy",
 "title": "Suspected China spy linked to Nvidia's ex-boss left in 2025, Megaspeed says",
 "url": "https://www.bbc.co.uk/news/articles/cmdx1vpprk9vo?at_medium=RSS&at_campaign=rss",
 "published": "2026-11-15T18:47-07:00"
-},
-{
-"outlet": "The Register",
-"hint": "tech",
-"title": "Amazon loses first batch of broadband satellites launched on custom rocket",
-"url": "https://www.theregister.com/networks/2026/11/16/amazon-loses-first-batch-of-broadband-satellites-launched-on-custom-rocket/5310000",
-"published": "2026-11-15T18:32-07:00"
-},
-{
-"outlet": "TechCrunch",
-"hint": "tech",
-"title": "Apple launches new app to study how people use AI for health",
-"url": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
-"published": "2026-11-15T18:30-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "Flight disruptions expected to last into Monday",
-"url": "https://www.npr.org/2026/11/15/nx-s1-6041683/flight-disruptions-expected-to-last-into-monday",
-"published": "2026-11-15T18:19-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -903,249 +1358,11 @@
 "published": "2026-11-15T18:13-07:00"
 },
 {
-"outlet": "BBC",
-"hint": "world",
-"title": "Clothing factories shut in Bangladesh as workers strike over pay",
-"url": "https://www.bbc.co.uk/news/articles/cx5y1pzr9604o?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-15T18:05-07:00"
-},
-{
 "outlet": "The Guardian",
-"hint": "us",
+"hint": "science",
 "title": "Huge waves pummel California coast, forcing closure of popular piers",
 "url": "https://www.theguardian.com/us-news/2026/nov/15/california-coast-waves-piers-closed",
 "published": "2026-11-15T18:00-07:00"
-},
-{
-"outlet": "The Register",
-"hint": "tech",
-"title": "Microsoft lifts Indian cloud prices by 15 percent, cuts costs in China",
-"url": "https://www.theregister.com/off-prem/2026/11/15/microsoft-lifts-indian-cloud-prices-by-15-percent-cuts-costs-in-china/5309993",
-"published": "2026-11-15T16:46-07:00"
-},
-{
-"outlet": "TechCrunch",
-"hint": "tech",
-"title": "Indian chip startup Bharat Semi lands $24M seed round as it eyes global AI sensor market",
-"url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
-"published": "2026-11-15T16:30-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "US officials recover audio from ‘Mississippi miracle’ cruise ship and tanker crash",
-"url": "https://www.theguardian.com/us-news/2026/nov/15/audio-new-orleans-mississippi-river-cruise-tanker-crash",
-"published": "2026-11-15T16:20-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "Teenager Andreeva caps stunning week with WTA Finals title",
-"url": "https://www.bbc.co.uk/sport/tennis/articles/c61740145y7wo?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-15T16:18-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Officials say a tanker's steering failed before it crashed into a cruise ship in New Orleans",
-"url": "https://www.pbs.org/newshour/nation/officials-say-a-tankers-steering-failed-before-it-crashed-into-a-cruise-ship-in-new-orleans",
-"published": "2026-11-15T16:02-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Trump's handpicked party chair faces a rebellion as midterm losses challenge president's grip on GOP",
-"url": "https://www.pbs.org/newshour/politics/trumps-handpicked-party-chair-faces-a-rebellion-as-midterm-losses-challenge-presidents-grip-on-gop",
-"published": "2026-11-15T15:43-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "Far from home. Voyager 1 is now farther than anything man has sent into space",
-"url": "https://www.npr.org/2026/11/15/nx-s1-6041716/a-long-long-ways-from-home-voyager-1-is-now-farther-than-anything-man-has-sent-into-space",
-"published": "2026-11-15T15:41-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "2 planes collide on the ground in Miami, only minor injuries reported",
-"url": "https://www.pbs.org/newshour/nation/2-planes-collide-on-the-ground-in-miami-only-minor-injuries-reported",
-"published": "2026-11-15T15:16-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "Who makes Sydney Sweeney's American Eagle jeans — and under what conditions?",
-"url": "https://www.npr.org/2026/11/15/nx-s1-6013327/sydney-sweeney-jeans-american-eagle-garment-industry",
-"published": "2026-11-15T15:07-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "economy",
-"title": "UK will have 'voice' but no vote on EU food rules in Brexit reset",
-"url": "https://www.bbc.co.uk/news/articles/c6wy4l8nl42wo?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-15T15:00-07:00"
-},
-{
-"outlet": "TechCrunch",
-"hint": "tech",
-"title": "Is bad news for Jensen Huang also bad news for the AI industry?",
-"url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/",
-"published": "2026-11-15T14:56-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Southeast Asian leaders open annual summit with major conflicts and their impact topping the agenda",
-"url": "https://www.pbs.org/newshour/world/southeast-asian-leaders-open-annual-summit-with-major-conflicts-and-their-impact-topping-the-agenda",
-"published": "2026-11-15T14:21-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "Somali-American Uber driver brutally assaulted in alleged hate crime in Minnesota",
-"url": "https://www.theguardian.com/us-news/2026/nov/15/somali-american-uber-driver-attack-minnesota",
-"published": "2026-11-15T14:10-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Ebola outbreak remains out of control in Congo 6 months into response",
-"url": "https://www.pbs.org/newshour/world/ebola-outbreak-remains-out-of-control-in-congo-6-months-into-response",
-"published": "2026-11-15T14:07-07:00"
-},
-{
-"outlet": "TechCrunch",
-"hint": "tech",
-"title": "SNL gathers all the tech tycoons for a lesson in dating and spycraft",
-"url": "https://techcrunch.com/2026/11/15/snl-gathers-all-the-tech-tycoons-for-a-lesson-in-dating-and-spycraft/",
-"published": "2026-11-15T13:20-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Pope crosses Peru in the finale of a trip home to visit flock high in Andes and deep in Amazon",
-"url": "https://www.pbs.org/newshour/world/pope-crosses-peru-in-the-finale-of-a-trip-home-to-visit-flock-high-in-andes-and-deep-in-amazon",
-"published": "2026-11-15T12:57-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "world",
-"title": "Zelensky urges US and Musk to lift Starlink restrictions and be on 'right side of history'",
-"url": "https://www.bbc.co.uk/news/articles/c6m25zg88k45o?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-15T12:32-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "Trident nuclear submarine concludes record underwater deployment",
-"url": "https://www.theguardian.com/uk-news/2026/nov/15/trident-nuclear-submarine-hms-vengeance-record-tour",
-"published": "2026-11-15T11:50-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "Senator-elect Scott Colom vows to ensure Trump follows through on his promises",
-"url": "https://www.theguardian.com/us-news/2026/nov/15/scott-colom-mississippi-senate-trump",
-"published": "2026-11-15T11:48-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "Chris Van Hollen says he has path to win Senate leader over Chuck Schumer",
-"url": "https://www.theguardian.com/us-news/2026/nov/15/chris-van-hollen-senate-majority-leader",
-"published": "2026-11-15T11:46-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Zelenskyy says Starshield restrictions threaten Ukraine's energy defenses ahead of winter",
-"url": "https://www.pbs.org/newshour/world/zelenskyy-says-starshield-restrictions-threaten-ukraines-energy-defenses-ahead-of-winter",
-"published": "2026-11-15T11:40-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "europe",
-"title": "Labour rebellion over Rosebank oilfield expected to top 100 MPs",
-"url": "https://www.theguardian.com/business/2026/nov/15/rosebank-oilfield-mps-rebellion",
-"published": "2026-11-15T11:35-07:00"
-},
-{
-"outlet": "TechCrunch",
-"hint": "tech",
-"title": "Flaming Hydra’s new Kickstarter campaign rethinks e-book ownership and digital lending",
-"url": "https://techcrunch.com/2026/11/15/flaming-hydras-new-kickstarter-campaign-rethinks-e-book-ownership-and-digital-lending/",
-"published": "2026-11-15T11:29-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "world",
-"title": "DOT Sec. Duffy ties router in southern Arkansas to issues that led to nationwide ground stop",
-"url": "https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html",
-"published": "2026-11-15T11:15-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Trump blasts judge's 2-week halt to his Washington golf project and says administration will appeal",
-"url": "https://www.pbs.org/newshour/politics/trump-blasts-judges-2-week-halt-to-his-washington-golf-project-and-says-administration-will-appeal",
-"published": "2026-11-15T10:39-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Could everything be broken? Grounded jets, Microsoft outage, AI chaos make some wonder",
-"url": "https://www.pbs.org/newshour/nation/could-everything-be-broken-grounded-jets-microsoft-outage-ai-chaos-make-some-wonder",
-"published": "2026-11-15T10:05-07:00"
-},
-{
-"outlet": "TechCrunch",
-"hint": "tech",
-"title": "TechCrunch Mobility: The Nvidia backup plan for China’s self-driving industry",
-"url": "https://techcrunch.com/2026/11/15/techcrunch-mobility-the-nvidia-backup-plan-for-chinas-self-driving-industry/",
-"published": "2026-11-15T10:05-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "world",
-"title": "Trump breaks silence about FAA nationwide ground stop, blames Biden administration",
-"url": "https://www.cnbc.com/2026/11/15/trump-breaks-silence-on-faa-nationwide-ground-stop-blames-biden-.html",
-"published": "2026-11-15T09:56-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Megaspeed says Alice Huang left in 2025 as company conducts internal probe over Nvidia fallout",
-"url": "https://www.pbs.org/newshour/world/megaspeed-says-alice-huang-left-in-2025-as-company-conducts-internal-probe-over-nvidia-fallout",
-"published": "2026-11-15T09:48-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Transportation head vows to find 'root cause' of ground stop. Trump breaks his silence on breakdown",
-"url": "https://www.pbs.org/newshour/politics/trump-breaks-silence-on-nationwide-ground-stop-and-demands-more-money-from-congress",
-"published": "2026-11-15T09:32-07:00"
-},
-{
-"outlet": "PBS NewsHour",
-"hint": "us",
-"title": "Judge temporarily blocks Trump from moving ahead on D.C. public golf course redevelopment",
-"url": "https://www.pbs.org/newshour/politics/judge-temporarily-blocks-trump-from-moving-ahead-on-d-c-public-golf-course-redevelopment",
-"published": "2026-11-15T09:20-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "us",
-"title": "Transportation secretary Sean Duffy blames prior presidents and Congress for flight stoppage",
-"url": "https://www.theguardian.com/us-news/2026/nov/15/transportation-secretary-sean-duffy-faa-flight-stoppag",
-"published": "2026-11-15T09:18-07:00"
-},
-{
-"outlet": "TechCrunch",
-"hint": "tech",
-"title": "The tech products we enthusiastically recommend this holiday season",
-"url": "https://techcrunch.com/2026/11/15/the-tech-products-we-enthusiastically-recommend-this-holiday-season/",
-"published": "2026-11-15T09:00-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -1155,32 +1372,11 @@
 "published": "2026-11-15T08:00-07:00"
 },
 {
-"outlet": "CNBC",
-"hint": "markets",
-"title": "Social Security and the blue wave: What could happen to payroll taxes and senior tax breaks",
-"url": "https://www.cnbc.com/2026/11/15/social-security-tax-changes-midterm-election.html",
-"published": "2026-11-15T07:30-07:00"
-},
-{
 "outlet": "BBC",
 "hint": "tech",
 "title": "South Korea's top scorer in tax accountancy exam admits cheating",
 "url": "https://www.bbc.co.uk/news/articles/ckvg2ezvpe08o?at_medium=RSS&at_campaign=rss",
 "published": "2026-11-15T06:37-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "In calling for an end to the Iran War, Vance walks a fine line with Trump",
-"url": "https://www.npr.org/2026/11/15/nx-s1-6040447/in-calling-for-an-end-to-the-iran-war-vance-walks-a-fine-line-with-trump",
-"published": "2026-11-15T06:11-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "Politics chat: Duffy calls for more funding, Democrats plans for accountability",
-"url": "https://www.npr.org/2026/11/15/nx-s1-6040041/politics-chat-duffy-calls-for-more-funding-democrats-plans-for-accountability",
-"published": "2026-11-15T06:09-07:00"
 },
 {
 "outlet": "BBC",
@@ -1239,39 +1435,11 @@
 "published": "2026-11-15T03:02-07:00"
 },
 {
-"outlet": "NPR",
-"hint": "us",
-"title": "Midterm voters ended the long-running GOP dominance in state legislatures",
-"url": "https://www.npr.org/2026/11/15/nx-s1-6039175/midterms-legislatures-states-democrats-gop",
-"published": "2026-11-15T03:00-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "New Mexico wanted free childcare for all. This is what's worked — and what hasn't",
-"url": "https://www.npr.org/2026/11/15/nx-s1-6040194/new-mexico-free-universal-childcare-families",
-"published": "2026-11-15T03:00-07:00"
-},
-{
 "outlet": "ProPublica",
 "hint": "longread",
 "title": "A Cop Was Charged With Causing His Wife’s Miscarriage. Alabama’s Laws Came Down Harder on Pregnant Women Who Used Drugs.",
 "url": "https://www.propublica.org/article/alabama-fetal-personhood-laws-punishment",
 "published": "2026-11-15T03:00-07:00"
-},
-{
-"outlet": "Colorado Sun",
-"hint": "us",
-"title": "“The Devil’s Own Purgatory”: Union boats run a Confederate gauntlet",
-"url": "https://coloradosun.com/2026/11/15/sunlit-the-devils-own-purgatory-robert-gudmestad/",
-"published": "2026-11-15T02:15-07:00"
-},
-{
-"outlet": "The Register",
-"hint": "tech",
-"title": "LEO gets a birthday bash, 75 years after clocking in",
-"url": "https://www.theregister.com/offbeat/2026/11/15/leo-gets-a-birthday-bash-75-years-after-clocking-in/5308806",
-"published": "2026-11-15T02:03-07:00"
 },
 {
 "outlet": "The Guardian",
@@ -1282,38 +1450,10 @@
 },
 {
 "outlet": "CNBC",
-"hint": "markets",
+"hint": "world",
 "title": "Megaspeed says Alice Huang left in 2025 as it launches internal probe into reports about its business",
 "url": "https://www.cnbc.com/2026/11/15/megaspeed-alice-huang-probe-nvidia-scandal.html",
 "published": "2026-11-15T01:34-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "companies",
-"title": "‘Jensen Huang lost his mind’: how AI’s smartest man fell for the world’s oldest trick",
-"url": "https://www.theguardian.com/technology/2026/nov/14/jensen-huang-affair-nvidia-nightmare",
-"published": "2026-11-14T23:00-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "Trump blasts judge for halting his Washington golf project and says he will appeal",
-"url": "https://www.npr.org/2026/11/14/nx-s1-6041152/judge-trump-golf-course-blocks",
-"published": "2026-11-14T21:28-07:00"
-},
-{
-"outlet": "TechCrunch",
-"hint": "tech",
-"title": "Where was Nvidia’s security team?",
-"url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/",
-"published": "2026-11-14T17:08-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "Florida city cancels St. Patrick's Day parade, citing new anti-DEI law",
-"url": "https://www.npr.org/2026/11/14/nx-s1-6041093/st-patricks-day-parade-canceled-florida-dei",
-"published": "2026-11-14T17:03-07:00"
 },
 {
 "outlet": "BBC",
@@ -1330,13 +1470,6 @@
 "published": "2026-11-14T16:15-07:00"
 },
 {
-"outlet": "CNBC",
-"hint": "world",
-"title": "SpaceX catches upper stage of Starship rocket in historic first",
-"url": "https://www.cnbc.com/2026/11/14/spacex-plans-to-try-first-ever-catch-of-starship-rocket-from-orbit.html",
-"published": "2026-11-14T16:10-07:00"
-},
-{
 "outlet": "BBC",
 "hint": "science",
 "title": "SpaceX successfully catches top of huge Starship rocket for first time",
@@ -1349,20 +1482,6 @@
 "title": "'Can you believe it?': SpaceX catches part of its Starship rocket on return to Earth",
 "url": "https://www.bbc.co.uk/news/videos/cwlym2gy3y3eo?at_medium=RSS&at_campaign=rss",
 "published": "2026-11-14T15:09-07:00"
-},
-{
-"outlet": "TechCrunch",
-"hint": "tech",
-"title": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
-"url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
-"published": "2026-11-14T14:41-07:00"
-},
-{
-"outlet": "NPR",
-"hint": "us",
-"title": "'We can't let them down' -- After midterm wins, Democrats turn to charting path ahead",
-"url": "https://www.npr.org/2026/11/14/nx-s1-6037777/democrats-midterms-whats-next-conference",
-"published": "2026-11-14T12:13-07:00"
 },
 {
 "outlet": "BBC",
@@ -1386,27 +1505,6 @@
 "published": "2026-11-14T06:00-07:00"
 },
 {
-"outlet": "The Guardian",
-"hint": "science",
-"title": "Underwater salt mine closure in Ohio raises safety and supply concerns for winter",
-"url": "https://www.theguardian.com/us-news/2026/nov/14/salt-mine-ohio-flooding-safety-winter",
-"published": "2026-11-14T06:00-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "markets",
-"title": "Eric Trump-backed robot soldier startup can't pay staff after founder borrowed $4.6 million from company to buy home",
-"url": "https://www.cnbc.com/2026/11/14/foundation-payroll-ceo-loan.html",
-"published": "2026-11-14T05:00-07:00"
-},
-{
-"outlet": "The Register",
-"hint": "tech",
-"title": "Microsoft's school email bill gives rivals something to smile about",
-"url": "https://www.theregister.com/saas/2026/11/14/microsofts-school-email-bill-gives-rivals-something-to-smile-about/5309296",
-"published": "2026-11-14T03:27-07:00"
-},
-{
 "outlet": "ProPublica",
 "hint": "longread",
 "title": "I Investigated the Online Sports Betting Industry. DraftKings Shut Down My Account.",
@@ -1414,25 +1512,11 @@
 "published": "2026-11-14T03:00-07:00"
 },
 {
-"outlet": "The Register",
-"hint": "tech",
-"title": "Big Tech takes a beating as online safety experts accuse companies of doing bare minimum",
-"url": "https://www.theregister.com/security/2026/11/14/big-tech-takes-a-beating-as-online-safety-experts-accuse-companies-of-doing-bare-minimum/5309302",
-"published": "2026-11-14T01:18-07:00"
-},
-{
 "outlet": "BBC",
 "hint": "science",
 "title": "Extreme weather leaves gardeners hedging their bets",
 "url": "https://www.bbc.co.uk/news/articles/c6qj5r2qzqpwo?at_medium=RSS&at_campaign=rss",
 "published": "2026-11-14T00:12-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "world",
-"title": "Analysis: Companies love a ‘rockstar’ CEO. Until they depend on one",
-"url": "https://www.cnbc.com/2026/11/14/nvidia-jensen-huang-ceo-succession-risk.html",
-"published": "2026-11-14T00:08-07:00"
 },
 {
 "outlet": "BBC",
@@ -1454,13 +1538,6 @@
 "title": "‘It’s frustrating’: chaos at US airports as stoppage grinds travel plans to a halt",
 "url": "https://www.theguardian.com/us-news/2026/nov/13/us-airports-flight-stoppage",
 "published": "2026-11-13T19:49-07:00"
-},
-{
-"outlet": "CNBC",
-"hint": "world",
-"title": "Fertiglobe CEO on Hormuz disruption, fertilizer crisis and global food security",
-"url": "https://www.cnbc.com/video/2026/11/13/fertiglobe-ceo-managing-middle-east.html",
-"published": "2026-11-13T19:00-07:00"
 },
 {
 "outlet": "BBC",
@@ -1491,25 +1568,11 @@
 "published": "2026-11-13T16:00-07:00"
 },
 {
-"outlet": "The Register",
-"hint": "tech",
-"title": "FAA blames ground stop on faulty copper wiring",
-"url": "https://www.theregister.com/offbeat/2026/11/13/faa-blames-ground-stop-on-faulty-copper-wiring/5309912",
-"published": "2026-11-13T15:42-07:00"
-},
-{
 "outlet": "ProPublica",
 "hint": "longread",
 "title": "Ethics Watchdog Urges Investigation Into Top Health Official, Alleging Conflict of Interest Over Hormone Therapy Policy",
 "url": "https://www.propublica.org/article/hhs-alicia-jackson-ethics-complaint",
 "published": "2026-11-13T14:50-07:00"
-},
-{
-"outlet": "The Register",
-"hint": "tech",
-"title": "Chinese AI labs are training models on Nvidia's Blackwell despite export controls, says ex-OpenAI engineer",
-"url": "https://www.theregister.com/ai-and-ml/2026/11/13/chinese-ai-labs-are-training-models-on-nvidias-blackwell-despite-export-controls-says-ex-openai-engineer/5309891",
-"published": "2026-11-13T14:16-07:00"
 },
 {
 "outlet": "BBC",
@@ -1526,109 +1589,11 @@
 "published": "2026-11-13T14:13-07:00"
 },
 {
-"outlet": "The Register",
-"hint": "tech",
-"title": "This year’s bug count just passed 100K",
-"url": "https://www.theregister.com/security/2026/11/13/this-years-bug-count-just-passed-100k/5309882",
-"published": "2026-11-13T13:52-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "science",
-"title": "Send us your questions about climate crisis and politics for the next Stateside guest: Bill McKibben",
-"url": "https://www.theguardian.com/us-news/2026/nov/13/climate-environment-questions-bill-mckibben",
-"published": "2026-11-13T13:23-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "economy",
-"title": "Pressure grows on Trump's Commerce Secretary Lutnick in fallout from Nvidia scandal",
-"url": "https://www.bbc.co.uk/news/articles/cqvg2d1eg7zro?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-13T12:53-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "science",
-"title": "What could El Niño mean for winter weather in the US and Canada?",
-"url": "https://www.bbc.co.uk/weather/articles/c6pvg22k2w2do?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-13T11:50-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "economy",
-"title": "Why is Microsoft's outage lasting so long and will emails be lost?",
-"url": "https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-13T11:36-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "science",
-"title": "The Guardian view on M John Harrison’s Booker win: a new frontier for science fiction | Editorial",
-"url": "https://www.theguardian.com/commentisfree/2026/nov/13/the-guardian-view-on-m-john-harrisons-booker-win-a-new-frontier-for-science-fiction",
-"published": "2026-11-13T11:00-07:00"
-},
-{
 "outlet": "Noema",
 "hint": "longread",
 "title": "Serbia’s Experiment: Combining Democracy & Meritocracy",
 "url": "https://www.noemamag.com/serbias-experiment-combining-democracy-meritocracy",
 "published": "2026-11-13T10:50-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "tech",
-"title": "Courts, spies and MPs: How the Microsoft outage has been felt around the world",
-"url": "https://www.bbc.co.uk/news/articles/cqp9d58eldlro?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-13T10:34-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "companies",
-"title": "Home sales hit 16-year low in October amid soaring mortgage rates",
-"url": "https://www.theguardian.com/business/2026/nov/12/home-sales-october-low",
-"published": "2026-11-13T10:20-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "science",
-"title": "Fight the climate crisis or go for growth? There is a way Burnham can do both | Jonathan Freedland",
-"url": "https://www.theguardian.com/commentisfree/2026/nov/13/fight-climate-crisis-growth-andy-burnham-economic-leaders",
-"published": "2026-11-13T10:10-07:00"
-},
-{
-"outlet": "Markets Media",
-"hint": "financials",
-"title": "Hilbert Group Prepares for Capital Moving Onchain",
-"url": "https://www.marketsmedia.com/hilbert-group-prepares-for-capital-moving-onchain/",
-"published": "2026-11-13T09:59-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "science",
-"title": "California governor Gavin Newsom endorses global fossil fuel phaseout",
-"url": "https://www.theguardian.com/environment/2026/nov/13/california-gavin-newsom-endorses-fossil-fuel-phaseout",
-"published": "2026-11-13T09:31-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "science",
-"title": "Climate action discussed at youth COP meeting",
-"url": "https://www.bbc.co.uk/news/articles/ckx28ly7y387o?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-13T07:39-07:00"
-},
-{
-"outlet": "BBC",
-"hint": "tech",
-"title": "NHS, schools and police forces hit by Microsoft outage",
-"url": "https://www.bbc.co.uk/news/articles/c6vg2ljjpj32o?at_medium=RSS&at_campaign=rss",
-"published": "2026-11-13T06:41-07:00"
-},
-{
-"outlet": "The Guardian",
-"hint": "companies",
-"title": "Global oil supply returns to surplus for first time since start of Iran war, says IEA",
-"url": "https://www.theguardian.com/business/2026/nov/13/global-oil-supply-returns-to-surplus-for-first-time-since-start-of-iran-war-says-iea",
-"published": "2026-11-13T06:35-07:00"
 },
 {
 "outlet": "ProPublica",
@@ -1799,13 +1764,6 @@
 "published": "2026-11-10T10:39-07:00"
 },
 {
-"outlet": "Quanta",
-"hint": "science",
-"title": "The Case for a Bubble at Life’s Start",
-"url": "https://www.quantamagazine.org/the-case-for-a-bubble-at-lifes-start-20261110/",
-"published": "2026-11-10T08:08-07:00"
-},
-{
 "outlet": "Longreads",
 "hint": "longread",
 "title": "Pinot Noir: Inside the Criminal Gangs Making Fake Wine",
@@ -1818,13 +1776,6 @@
 "title": "Inside the Trial of Russell Brand",
 "url": "https://longreads.com/2026/11/10/inside-the-trial-of-russell-brand/",
 "published": "2026-11-10T06:00-07:00"
-},
-{
-"outlet": "Longreads",
-"hint": "longread",
-"title": "When Anesthesia Goes Wrong",
-"url": "https://longreads.com/2026/11/10/when-anesthesia-goes-wrong/",
-"published": "2026-11-10T05:00-07:00"
 },
 {
 "outlet": "Aeon",
