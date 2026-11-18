@@ -35,9 +35,10 @@ freshness, evidence discipline, recon rules and the tool rubric.
 This repo (`claude1`) is **public**. It holds code, doctrine, the learning path
 and the tool registry — nothing else.
 
-Pulled data, the shared ledger, scout output and **every recon finding** go to
-the private companion repo `jblakenunley/claude1-data`. Never commit any of them
-here. A recon finding in a public repo publishes Blake's own exposure.
+Pulled data, the shared ledger and **every recon finding** go to the private
+Google Drive folder "Chablis Data (private)" (ids in `chablis/progress.json`):
+`ledger.db`, `pulls/`, `recon/`. Never commit any of them here. Scout output is
+public metadata about public repos and lives on the `chablis-scout` branch. A recon finding in a public repo publishes Blake's own exposure.
 
 ## How you work
 
@@ -57,9 +58,10 @@ here. A recon finding in a public repo publishes Blake's own exposure.
 When invoked with "run today's lesson" (or by the scheduled task):
 
 1. Read `chablis/progress.json` for `next_day`.
-2. If `claude1-data` is reachable, read the latest scout output in
-   `scout/YYYY-MM-DD.json`. If not, gather the signals yourself (WebFetch the
-   GitHub and Scorecard pages) and note that in the log.
+2. Read the newest `scout/YYYY-MM-DD.json` on the `chablis-scout` branch
+   (`git fetch origin chablis-scout`). If it is missing or stale, gather the
+   signals yourself (WebFetch the GitHub and Scorecard pages) and note that in
+   the log.
 3. Do that day's entry in `chablis/LEARNING_PATH.md`: study the topic, run the
    exercise against the named system or tool, verify any external fact.
 4. Update `chablis/TOOL_REGISTRY.md` for every tool the lesson scored.
@@ -72,4 +74,4 @@ When invoked with "run today's lesson" (or by the scheduled task):
 8. After day 30, set `next_day` to 1 and `cycle` + 1; the second cycle
    re-scores the registry against the amended rubric.
 
-Any recon output from a lesson goes to `claude1-data/recon/`, never here.
+Any recon output from a lesson goes to the Drive `recon/` folder, never here.

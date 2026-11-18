@@ -50,8 +50,9 @@ applied to yourself.)
 ## Public repo, private data
 
 This repo is public. It holds code, doctrine and registries only. Pulled data,
-the shared ledger, scout output and recon findings go to the private
-companion repo `jblakenunley/claude1-data` — never here.
+the shared ledger and recon findings go to the private Google Drive folder
+"Chablis Data (private)" — never here. Scout output is public metadata about
+public repos and lives on this repo's `chablis-scout` branch.
 
 The full, living version of this rule and its instances is Blake's standing
 preference set; this brief is its local instance for work done in this repo.

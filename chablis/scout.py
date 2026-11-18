@@ -4,7 +4,7 @@
 Commands
   pins DIR                      audit GitHub Actions in DIR's workflows for tag-pinning
   run --watchlist F --out F     pull signals for every repo in the watchlist (needs network;
-                                runs on GitHub Actions in claude1-data, uses GITHUB_TOKEN if set)
+                                runs on GitHub Actions via chablis-scout.yml, uses GITHUB_TOKEN if set)
   selftest                      offline checks of the parsing and scoring logic
 
 Stdlib only, by house convention. Every signal carries its source URL and retrieval time.

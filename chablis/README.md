@@ -13,7 +13,6 @@ tool quality and selection. "Chablis exists to connect you to data."
 | `watchlist.json` | Repos the nightly scout pulls signals for |
 | `scout.py` | Signal collector and Actions pin audit (stdlib, no model) |
 | `ledger/schema.sql` | Shared ledger schema |
-| `data-repo/` | Versioned source for the private `claude1-data` repo's README and scout workflow |
 | `progress.json` | Where the path stands |
 
 ## Use
@@ -26,13 +25,16 @@ In Claude Code from this repo:
 
 ## How it runs on its own
 
-1. **Scout** — a GitHub Actions workflow in the private `claude1-data` repo runs
-   nightly, pulls tool signals (GitHub API, OpenSSF Scorecard) and commits them.
+1. **Scout** — `.github/workflows/chablis-scout.yml` runs nightly on GitHub,
+   pulls tool signals (GitHub API, OpenSSF Scorecard) and commits them to the
+   `chablis-scout` branch.
    No model, no token cost.
 2. **Lesson** — a scheduled task runs the daily lesson on sonnet: reads the
    scout output, scores tools, updates the registry and log, commits here.
 
 ## Public vs private
 
-This repo is public: code, doctrine, registry. Data, the ledger, scout output
-and recon findings live only in the private `claude1-data`.
+This repo is public: code, doctrine, registry, and scout output (public
+metadata about public repos) on the `chablis-scout` branch. Pulled data, the
+shared ledger and recon findings live only in the private Google Drive folder
+"Chablis Data (private)": `ledger.db`, `pulls/`, `recon/`.

@@ -52,8 +52,8 @@ agrees; adjacent-identifier search often resolves faster than name search.
 Normalize (ISO-8601 UTC dates, consistent nulls). Quarantine failing rows with
 a reason.
 
-**Load.** Into the shared ledger in `claude1-data` (schema:
-`chablis/ledger/schema.sql`), landing → staged → curated, with lineage columns
+**Load.** Into the shared ledger, `ledger.db` in the private Drive folder
+"Chablis Data (private)" (schema: `chablis/ledger/schema.sql`), landing → staged → curated, with lineage columns
 carried to curated so any value can be recomputed, not just cited backward.
 
 ## 4. Provenance and freshness
@@ -124,7 +124,7 @@ authorization (target, scope, date, grantor) before any active step.
   internet-scan data, technology fingerprinting. No packets to the target.
 - **Active only within scope** — service enumeration, surface mapping,
   misconfiguration checks. A target not named in the authorization is out of scope.
-- Findings go to `claude1-data/recon/`, each a scoped statement with method and time.
+- Findings go to the private Drive folder's `recon/`, each a scoped statement with method and time.
 
 ## 9. Cost
 

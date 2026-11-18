@@ -12,9 +12,9 @@ yet scored, not zero.
 | Tool | Where | Adoption | Upkeep | Security | Fit | Hard stop | Pin | Evidence | Scored | Review by |
 |---|---|---|---|---|---|---|---|---|---|---|
 | actions/checkout | morning-brief-data.yml | | | | | | **tag `@v4`, not SHA** | `scout.py pins`, 2026-11-18 | | |
-| actions/checkout | claude1-data chablis-scout.yml | | | | | | SHA `11d5960` (v4.4.0) | git ls-remote, 2026-11-18 | | |
+| actions/checkout | chablis-scout.yml | | | | | | SHA `11d5960` (v4.4.0) | git ls-remote, 2026-11-18 | | |
 | actions/setup-python | morning-brief-data.yml | | | | | | **tag `@v5`, not SHA** | `scout.py pins`, 2026-11-18 | | |
-| actions/setup-python | claude1-data chablis-scout.yml | | | | | | SHA `a26af69` (v5.6.0) | git ls-remote, 2026-11-18 | | |
+| actions/setup-python | chablis-scout.yml | | | | | | SHA `a26af69` (v5.6.0) | git ls-remote, 2026-11-18 | | |
 
 ## Candidates
 

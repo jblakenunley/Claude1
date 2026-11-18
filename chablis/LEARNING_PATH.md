@@ -8,7 +8,7 @@ registry current.
 
 Rules for every lesson: verify any external fact before logging it; log
 findings, not verdicts; record the tokens the lesson cost if the runtime
-reports them; recon output goes to `claude1-data/recon/`, never this repo.
+reports them; recon output goes to the private Drive folder's `recon/`, never this repo.
 
 ## Week 1 — Reading a repository's vital signs (Doctrine §6)
 
@@ -26,7 +26,7 @@ reports them; recon output goes to `claude1-data/recon/`, never this repo.
 
 | Day | Topic | Exercise |
 |---|---|---|
-| 8 | Permissions | Audit `permissions:` in every workflow here and in `claude1-data`. Justify each write. |
+| 8 | Permissions | Audit `permissions:` in every workflow in this repo. Justify each write. |
 | 9 | Third-party Actions | First-party vs verified vs unverified: score every Action the repos use. |
 | 10 | Secrets in workflows | Review how `CDOT_API_KEY` is guarded in morning-brief; generalize the pattern. |
 | 11 | Keeping pins current | Dependabot vs Renovate for SHA-pinned Actions; recommend one with cost. |
@@ -50,9 +50,9 @@ reports them; recon output goes to `claude1-data/recon/`, never this repo.
 
 | Day | Topic | Exercise |
 |---|---|---|
-| 22 | Passive subdomain discovery | Score subfinder and amass (passive modes only); run against a domain Blake owns. Output to `claude1-data/recon/`. |
+| 22 | Passive subdomain discovery | Score subfinder and amass (passive modes only); run against a domain Blake owns. Output to Drive `recon/`. |
 | 23 | Certificate transparency | Compare crt.sh with one alternative on the same owned domain. |
-| 24 | Secret scanning | gitleaks vs trufflehog: score both, scan this repo's history, findings to `claude1-data`. |
+| 24 | Secret scanning | gitleaks vs trufflehog: score both, scan this repo's history, findings to Drive `recon/`. |
 | 25 | SBOM and dependency graph | Generate an SBOM for this repo; note what it reveals. |
 | 26 | Abandonment | Archived repos and community forks: when does a fork become the real project? |
 | 27 | Model-powered tools | claude-code-action, Copilot: permissions and current pricing, verified and cited. |

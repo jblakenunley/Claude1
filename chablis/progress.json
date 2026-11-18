@@ -2,6 +2,12 @@
   "next_day": 1,
   "cycle": 1,
   "last_run": null,
-  "data_repo": "jblakenunley/claude1-data",
-  "data_repo_ready": false
+  "scout_branch": "chablis-scout",
+  "private_data": {
+    "drive_folder": "Chablis Data (private)",
+    "folder_id": "1gv0FENQwvIAOqJ94EpHzIVDnuccOJ37p",
+    "recon_folder_id": "1QsgXH6jgEOOyXctZicf20AXQqhTcJq3J",
+    "pulls_folder_id": "1Nw2K7V7-EqWue2pKSxR28PbkpaDl8-WS",
+    "ledger_file_id": "1NmfGNmlYmEVqDeiQ3UMlKN-P0kj92uxO"
+  }
 }

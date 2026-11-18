@@ -1,4 +1,5 @@
--- Chablis shared ledger. One SQLite file, kept in the private repo claude1-data at ledger/ledger.db.
+-- Chablis shared ledger. One SQLite file, kept in the private Google Drive folder "Chablis Data (private)" as ledger.db.
+-- Never commit it to the public repo.
 -- Create: sqlite3 ledger/ledger.db < claude1/chablis/ledger/schema.sql   (safe to re-run)
 PRAGMA foreign_keys = ON;
 
