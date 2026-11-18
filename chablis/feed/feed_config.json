@@ -1,0 +1,20 @@
+{
+  "note": "Chablis feed configuration. The public lane holds US-government sources only; it runs nightly on GitHub and lands on the chablis-feed branch. The private lane is for Blake's own use and never writes inside the public repo.",
+  "lookback_days": 30,
+  "public": {
+    "treasury_curve": {"enabled": true},
+    "fred": {"series": ["DGS1MO", "DGS3MO", "DGS2", "DGS10", "DGS30", "T10Y2Y", "T10YIE", "DFF", "SOFR",
+                        "WALCL", "RRPONTSYD", "M2SL", "CPIAUCSL", "UNRATE", "PAYEMS"]},
+    "cftc_cot": {"enabled": true, "market_codes": []},
+    "sec": {
+      "companies": [{"ticker": "NVDA", "cik": "1045810"}],
+      "concepts": ["Revenues", "NetIncomeLoss", "AccountsReceivableNetCurrent", "InventoryNet",
+                   "CashAndCashEquivalentsAtCarryingValue", "LongTermDebtNoncurrent"]
+    }
+  },
+  "private": {
+    "crypto": {"exchange": "kraken", "symbols": ["BTC/USD", "ETH/USD"]},
+    "yahoo": {"tickers": ["NVDA"]},
+    "massive": {"tickers": ["NVDA"]}
+  }
+}

@@ -130,3 +130,35 @@ authorization (target, scope, date, grantor) before any active step.
 
 Token spend and Actions minutes are real costs; count both. The scout runs
 without a model. The model runs on sonnet; opus only on named escalations.
+
+## 10. The market data feed
+
+*Decision 2026-11-18 (Blake): the feed is for Blake and his agents only — internal
+research and thesis work, not redistributed.* Convenience sources that forbid
+commercial use or redistribution (Yahoo via yfinance) and AGPL code (OpenBB)
+are acceptable inside that boundary. If the feed is ever passed to others, re-test
+every source and library against that use first.
+
+**Three tiers, two lanes.**
+
+| Tier | Sources | Lane | Runs |
+|---|---|---|---|
+| 1 | US-government: Treasury curve, FRED government series, CFTC COT, SEC EDGAR | public | GitHub Actions nightly → `chablis-feed` branch (public domain) |
+| 2 | Crypto exchange public data via ccxt | private | On demand, Blake's Mac or another private runner |
+| 3 | Licensed vendors (Massive, Databento, Alpaca…) behind Blake's keys | private | Same, only with a key |
+
+**Rules.**
+- The public lane carries only US-government data. A FRED series enters it only
+  if its originator is a government body (Fed, Treasury, BLS, BEA); no
+  index-vendor or exchange series.
+- The private lane never writes inside the public repo; `feed.py` refuses.
+- Point-in-time: SEC facts carry `as_of` = filing date, so a restated value is a
+  new row, never an overwrite. Never backfill history with today's revised figure.
+- A closed bar or a filed fact is `reference` class; a series subject to
+  revision (macro) is `structural` and gets re-pulled.
+- Every new source enters with a `Silent on:` scope, a license line and a
+  rubric score for the library behind it (§6).
+
+**Learning from GitHub.** Before writing an adapter, check whether a maintained
+library already does it (edgartools, fredapi, ccxt, OpenBB providers), score it,
+and use it if it clears the rubric; write stdlib code only where none does.

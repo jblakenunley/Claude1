@@ -1,0 +1,49 @@
+# Chablis market-data feed, public lane: runs chablis/feed/feed.py on GitHub's servers, which can reach
+# Treasury, FRED, CFTC and SEC. Commits feed/DATE/ (one JSONL per source + manifest.json) to the
+# chablis-feed branch; the 4:53am daily lesson loads it into the private ledger in Drive.
+# Public lane = US-government sources only (public domain). Nothing from the private lane comes through here.
+# SEC requires a declared contact in the User-Agent: set the repo variable SEC_USER_AGENT
+# (Settings > Secrets and variables > Actions > Variables) to "Name contact@domain"; the fallback below is used until then.
+name: chablis-feed
+on:
+  schedule:
+    - cron: "41 10 * * *"   # 3:41am MST / 4:41am MDT
+  workflow_dispatch:
+permissions:
+  contents: write   # commit to the chablis-feed branch
+concurrency:
+  group: chablis-feed
+  cancel-in-progress: false
+jobs:
+  feed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+        with:
+          ref: chablis-feed
+          path: out
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
+        with:
+          python-version: "3.12"
+      - name: Run public lane
+        env:
+          SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT || 'Chablis research feed jblakenunley@users.noreply.github.com' }}
+        run: |
+          D=$(TZ=America/Denver date +%F)
+          mkdir -p "out/feed/$D" out/logs
+          L="out/logs/feed-$D.txt"
+          echo "run $(date -u +%FT%TZ)" > "$L"
+          python3 chablis/feed/feed.py selftest >> "$L" 2>&1
+          python3 chablis/feed/feed.py run --lane public --config chablis/feed/feed_config.json --out "out/feed/$D" >> "$L" 2>&1 || echo "feed failed" >> "$L"
+      - name: Commit to chablis-feed
+        working-directory: out
+        run: |
+          git config user.name "chablis-feed"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "feed $(TZ=America/Denver date +%F)" && git push || echo "nothing new"

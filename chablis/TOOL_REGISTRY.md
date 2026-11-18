@@ -41,6 +41,14 @@ by the learning path, week 1 onward.
 | trufflesecurity/trufflehog | secret-scanning | | | | | | | | |
 | ossf/scorecard | supply-chain | | | | | | | | |
 | anthropics/claude-code-action | model-powered | | | | | | | | |
+| OpenBB-finance/OpenBB | market-data | | | | | | AGPL-3.0 per secondary sources, 2026-11-18 — internal use only under §10; confirm from the repo | | |
+| ccxt/ccxt | market-data | | | | | | | | |
+| ranaroussi/yfinance | market-data | | | | | | Code Apache-2.0; Yahoo data personal use only (Yahoo API terms) — internal use only under §10 | | |
+| dgunning/edgartools | market-data | | | | | | | | |
+| mortada/fredapi | market-data | | | | | | | | |
+| databento/databento-python | market-data | | | | | | | | |
+| alpacahq/alpaca-py | market-data | | | | | | | | |
+| polygon-io/client-python | market-data | | | | | | Polygon.io renamed Massive 2025-10-30; client repo may have moved | | |
 
 ## Rejected
 

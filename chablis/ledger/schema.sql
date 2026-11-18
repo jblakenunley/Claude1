@@ -73,3 +73,20 @@ CREATE TABLE IF NOT EXISTS depends_on (
   recorded_at  TEXT NOT NULL,
   PRIMARY KEY (finding_ref, pull_id, row_key)
 );
+
+-- Market data feed (chablis/feed/feed.py). Point-in-time: as_of is the filing or publication date where it
+-- matters (SEC facts), '' otherwise. A revised value arrives as a new as_of row; history is never overwritten.
+CREATE TABLE IF NOT EXISTS market_observation (
+  series TEXT NOT NULL, date TEXT NOT NULL, as_of TEXT NOT NULL DEFAULT '',
+  value REAL, unit TEXT, label TEXT, extra TEXT,
+  _source_id TEXT NOT NULL REFERENCES source(source_id), _pull_id TEXT NOT NULL REFERENCES pull(pull_id),
+  _retrieved_at TEXT NOT NULL, _source_class TEXT NOT NULL, _valid_until TEXT NOT NULL, _current INTEGER NOT NULL DEFAULT 1,
+  PRIMARY KEY (series, date, as_of)
+);
+CREATE TABLE IF NOT EXISTS market_filing (
+  series TEXT NOT NULL, date TEXT NOT NULL, as_of TEXT NOT NULL DEFAULT '',
+  value REAL, unit TEXT, label TEXT, extra TEXT,
+  _source_id TEXT NOT NULL REFERENCES source(source_id), _pull_id TEXT NOT NULL REFERENCES pull(pull_id),
+  _retrieved_at TEXT NOT NULL, _source_class TEXT NOT NULL, _valid_until TEXT NOT NULL, _current INTEGER NOT NULL DEFAULT 1,
+  PRIMARY KEY (series, date, as_of, extra)
+);

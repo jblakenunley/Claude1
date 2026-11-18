@@ -12,7 +12,9 @@ tool quality and selection. "Chablis exists to connect you to data."
 | `TOOL_REGISTRY.md` | Every tool vetted: scores, evidence, review dates |
 | `watchlist.json` | Repos the nightly scout pulls signals for |
 | `scout.py` | Signal collector and Actions pin audit (stdlib, no model) |
-| `ledger/schema.sql` | Shared ledger schema |
+| `ledger/schema.sql` | Shared ledger schema, including the market data tables |
+| `feed/feed.py` | Market data feed: public lane (US-government sources), private lane (crypto, Yahoo, Massive), ledger loader |
+| `feed/feed_config.json` | Which series, contracts and companies the feed pulls |
 | `progress.json` | Where the path stands |
 
 ## Use
@@ -29,8 +31,11 @@ In Claude Code from this repo:
    pulls tool signals (GitHub API, OpenSSF Scorecard) and commits them to the
    `chablis-scout` branch.
    No model, no token cost.
-2. **Lesson** — a scheduled task runs the daily lesson on sonnet: reads the
-   scout output, scores tools, updates the registry and log, commits here.
+2. **Feed** — `.github/workflows/chablis-feed.yml` runs nightly on GitHub, pulls
+   the public lane and commits it to the `chablis-feed` branch.
+3. **Lesson** — a scheduled task runs the daily lesson on sonnet: reads the
+   scout output, loads last night's feed into the private ledger, scores tools,
+   updates the registry and log, commits here.
 
 ## Public vs private
 

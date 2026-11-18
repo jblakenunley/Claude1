@@ -1,25 +1,117 @@
 {
   "note": "Repos the scout pulls signals for nightly. Chablis adds and removes entries; every change is logged.",
   "repos": [
-    {"repo": "actions/checkout", "category": "actions-in-use"},
-    {"repo": "actions/setup-python", "category": "actions-in-use"},
-    {"repo": "scrapy/scrapy", "category": "crawling"},
-    {"repo": "apify/crawlee-python", "category": "crawling"},
-    {"repo": "dlt-hub/dlt", "category": "elt"},
-    {"repo": "meltano/meltano", "category": "elt"},
-    {"repo": "airbytehq/airbyte", "category": "elt"},
-    {"repo": "duckdb/duckdb", "category": "ledger-engine"},
-    {"repo": "simonw/sqlite-utils", "category": "ledger-engine"},
-    {"repo": "great-expectations/great_expectations", "category": "validation"},
-    {"repo": "frictionlessdata/frictionless-py", "category": "validation"},
-    {"repo": "moj-analytical-services/splink", "category": "entity-resolution"},
-    {"repo": "dedupeio/dedupe", "category": "entity-resolution"},
-    {"repo": "J535D165/recordlinkage", "category": "entity-resolution"},
-    {"repo": "projectdiscovery/subfinder", "category": "recon-passive"},
-    {"repo": "owasp-amass/amass", "category": "recon-passive"},
-    {"repo": "gitleaks/gitleaks", "category": "secret-scanning"},
-    {"repo": "trufflesecurity/trufflehog", "category": "secret-scanning"},
-    {"repo": "ossf/scorecard", "category": "supply-chain"},
-    {"repo": "anthropics/claude-code-action", "category": "model-powered"}
+    {
+      "repo": "actions/checkout",
+      "category": "actions-in-use"
+    },
+    {
+      "repo": "actions/setup-python",
+      "category": "actions-in-use"
+    },
+    {
+      "repo": "scrapy/scrapy",
+      "category": "crawling"
+    },
+    {
+      "repo": "apify/crawlee-python",
+      "category": "crawling"
+    },
+    {
+      "repo": "dlt-hub/dlt",
+      "category": "elt"
+    },
+    {
+      "repo": "meltano/meltano",
+      "category": "elt"
+    },
+    {
+      "repo": "airbytehq/airbyte",
+      "category": "elt"
+    },
+    {
+      "repo": "duckdb/duckdb",
+      "category": "ledger-engine"
+    },
+    {
+      "repo": "simonw/sqlite-utils",
+      "category": "ledger-engine"
+    },
+    {
+      "repo": "great-expectations/great_expectations",
+      "category": "validation"
+    },
+    {
+      "repo": "frictionlessdata/frictionless-py",
+      "category": "validation"
+    },
+    {
+      "repo": "moj-analytical-services/splink",
+      "category": "entity-resolution"
+    },
+    {
+      "repo": "dedupeio/dedupe",
+      "category": "entity-resolution"
+    },
+    {
+      "repo": "J535D165/recordlinkage",
+      "category": "entity-resolution"
+    },
+    {
+      "repo": "projectdiscovery/subfinder",
+      "category": "recon-passive"
+    },
+    {
+      "repo": "owasp-amass/amass",
+      "category": "recon-passive"
+    },
+    {
+      "repo": "gitleaks/gitleaks",
+      "category": "secret-scanning"
+    },
+    {
+      "repo": "trufflesecurity/trufflehog",
+      "category": "secret-scanning"
+    },
+    {
+      "repo": "ossf/scorecard",
+      "category": "supply-chain"
+    },
+    {
+      "repo": "anthropics/claude-code-action",
+      "category": "model-powered"
+    },
+    {
+      "repo": "OpenBB-finance/OpenBB",
+      "category": "market-data"
+    },
+    {
+      "repo": "ccxt/ccxt",
+      "category": "market-data"
+    },
+    {
+      "repo": "ranaroussi/yfinance",
+      "category": "market-data"
+    },
+    {
+      "repo": "dgunning/edgartools",
+      "category": "market-data"
+    },
+    {
+      "repo": "mortada/fredapi",
+      "category": "market-data"
+    },
+    {
+      "repo": "databento/databento-python",
+      "category": "market-data"
+    },
+    {
+      "repo": "alpacahq/alpaca-py",
+      "category": "market-data"
+    },
+    {
+      "repo": "polygon-io/client-python",
+      "category": "market-data"
+    }
   ]
 }

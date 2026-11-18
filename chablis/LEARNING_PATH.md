@@ -2,8 +2,8 @@
 
 One lesson a day, 30 days a cycle. Each lesson = one topic, one exercise run
 against a real tool or system, one logged finding, and registry updates for
-every tool scored. Weeks 1–2 build the rubric; week 3 applies it to Chablis's
-own stack; week 4 covers recon tooling and the discipline of keeping the
+every tool scored. Weeks 1–2 build the rubric; week 3 applies it to the market
+data feed; week 4 covers recon tooling and the discipline of keeping the
 registry current.
 
 Rules for every lesson: verify any external fact before logging it; log
@@ -34,17 +34,17 @@ reports them; recon output goes to the private Drive folder's `recon/`, never th
 | 13 | Actions cost | Measure the scout's run time; verify current GitHub minutes terms for private repos; cite them. |
 | 14 | Actions policy | Write the house Actions policy for both repos into §6. |
 
-## Week 3 — Choosing Chablis's own stack
+## Week 3 — The market data feed (Doctrine §10)
 
 | Day | Topic | Exercise |
 |---|---|---|
-| 15 | Crawling | scrapy vs crawlee vs stdlib `urllib`: score all three; fit test on one real source. |
-| 16 | ELT frameworks | dlt vs meltano vs airbyte: build-vs-buy for the ledger, with cost. |
-| 17 | Ledger engine | SQLite vs DuckDB for the shared ledger; test one real query on each. |
-| 18 | Validation | great_expectations vs frictionless vs hand-rolled contracts. |
-| 19 | Discovery lists | Score three "awesome" data lists: how current, how many dead links. |
-| 20 | Entity resolution | splink vs dedupe vs recordlinkage on a sample from the ledger. |
-| 21 | Stack v1 | Recommend Chablis's stack with scores, cost, and what would change the call. |
+| 15 | Feed health | Read the last week of `chablis-feed` manifests: rows per source, errors, gaps. Fix the worst one. |
+| 16 | EDGAR | Score edgartools against `feed.py`'s stdlib SEC adapter; adopt it if it wins. Add full-text search and 13F holdings as candidate sources. |
+| 17 | Macro | Score fredapi; decide whether vintages (ALFRED) belong in the feed for revision-sensitive series. |
+| 18 | Crypto | Score ccxt; map which exchanges' public endpoints carry usable terms for internal use. |
+| 19 | Equities, free tier | Measure yfinance reliability for a week (errors, gaps, adjustment differences vs Massive's free plan). Log both sides. |
+| 20 | Vendors | Massive vs Databento vs Alpaca vs Tiingo: coverage, history, price for internal use — every side verified and cited. |
+| 21 | Identifiers | CIK ↔ ticker ↔ FIGI ↔ LEI: build the security master the feed joins on; score the open libraries for it. |
 
 ## Week 4 — Recon tooling and registry discipline
 
