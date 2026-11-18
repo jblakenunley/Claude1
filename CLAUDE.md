@@ -54,5 +54,13 @@ the shared ledger and recon findings go to the private Google Drive folder
 "Chablis Data (private)" — never here. Scout output is public metadata about
 public repos and lives on this repo's `chablis-scout` branch.
 
+## Hand off to Claude Code, never to Blake
+
+When a step needs Blake's Mac, a browser signed in as him, GitHub settings or
+secrets, local files, or an unrestricted network, append it to
+`.claude/handoff/QUEUE.md` (format and rules at the top of that file) and carry
+on with everything else. Claude Code on the Mac works the queue with
+`/handoff`. Do not ask Blake to run the step himself.
+
 The full, living version of this rule and its instances is Blake's standing
 preference set; this brief is its local instance for work done in this repo.
