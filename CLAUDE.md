@@ -47,5 +47,11 @@ applied to yourself.)
   risk. The repetition — re-raising the same concern across turns — is the
   nanny behavior he objects to, not the limit itself.
 
+## Public repo, private data
+
+This repo is public. It holds code, doctrine and registries only. Pulled data,
+the shared ledger, scout output and recon findings go to the private
+companion repo `jblakenunley/claude1-data` — never here.
+
 The full, living version of this rule and its instances is Blake's standing
 preference set; this brief is its local instance for work done in this repo.
