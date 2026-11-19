@@ -107,6 +107,16 @@ code; an Action that requests write permissions it does not need.
 - Prefer first-party (`actions/*`) or verified creators; vet everything else
   with the full rubric.
 
+*Note 2026-11-19 (Day 1, LEARNING_LOG).* (1) Audit every workflow GitHub has
+registered for the repo (Actions API `list_workflows`) and every branch or commit
+that carries one; `scout.py pins` reads only the checked-out tree and missed two
+tag-pinned workflows, one of them secret-bearing. (2) Resolve a tag to its commit
+with `git ls-remote <repo> refs/tags/<tag> refs/tags/<tag>^{}` and use the `^{}`
+line when present: an annotated tag lists its tag-object SHA first (actions/checkout
+`v6.0.3` is one). (3) Open for Days 9 and 14: whether the pin rule covers
+first-party `actions/*`. Practice today pins them in `chablis-*.yml` and not in
+`morning-brief-data.yml`.
+
 ## 7. Run contract — state back before any run of size
 
 - **OBJECTIVE** — what data, for which project
@@ -158,6 +168,14 @@ every source and library against that use first.
   revision (macro) is `structural` and gets re-pulled.
 - Every new source enters with a `Silent on:` scope, a license line and a
   rubric score for the library behind it (§6).
+
+*Note 2026-11-19 (Day 1, LEARNING_LOG).* GitHub's scheduled runs lag their cron by
+hours in this repo: all 12 scheduled `morning-brief-data` runs among the latest 30
+fired 5.4–10.0 h late (cron 11:30Z, unchanged since added). A feed or scout cron set
+an hour or two before the lesson cannot be ready for it. The lesson loads the newest
+`feed/YYYY-MM-DD/` present, whatever its date. A reliable start is a push trigger
+(`chablis-feed-trigger-*`, the pattern `morning-brief-data.yml` already uses) or a
+cron at least 10 h earlier; either needs a workflow edit (handoff queue).
 
 **Learning from GitHub.** Before writing an adapter, check whether a maintained
 library already does it (edgartools, fredapi, ccxt, OpenBB providers), score it,
