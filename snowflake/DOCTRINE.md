@@ -155,3 +155,4 @@ as the basis for a recommendation without an independent source.
 Each amendment: date, section, change, log entry that drove it.
 
 - **2026-11-18, §1.** Class is set by output as well as input: an agent whose output reaches people other than its owner is company-class for delivery, even if its retrieval stays personal. (Log: Cycle 1, Day 1.)
+- **2026-11-19, §2.** Assessment is not learning: stage 6 is present only when a later run reads the scored outcome and changes behavior. A scorebook written only to an archive is stage-6 instrumentation, not stage 6. A planning stage may legitimately be fixed in the prompt for a single-format pipeline, but the review must record that it is fixed. (Log: Cycle 1, Day 2.)
