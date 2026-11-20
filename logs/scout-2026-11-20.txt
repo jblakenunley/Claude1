@@ -1,0 +1,3 @@
+run 2026-11-20T17:47:37Z
+selftest ok (28 watchlist repos)
+wrote out/scout/2026-11-20.json: 28 repos, 11 with at least one error
