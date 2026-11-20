@@ -117,6 +117,16 @@ line when present: an annotated tag lists its tag-object SHA first (actions/chec
 first-party `actions/*`. Practice today pins them in `chablis-*.yml` and not in
 `morning-brief-data.yml`.
 
+*Note 2026-11-20 (Day 2, LEARNING_LOG).* (1) Adoption is scored from dependents, and none
+of the routes tried this run supplied them: `scout.py` collects none, and WebFetch was
+refused for `api.deps.dev` and `github.com` in an unattended run (PROVENANCE_REQUIRED). Until
+the scout carries dependents, Adoption stays blank, never filled from stars, forks or
+contributors. A signal the lesson needs from a host WebFetch refuses belongs in the scout,
+which has Actions egress. (2) Resolve a repo's current owner and name before pulling its
+signals: `search/repositories` with `repo:<owner>/<name>` returning 422, or a same-name hit
+under a different owner, means the watchlist name may be stale (OpenBB today). Hold the score
+until a second source confirms the move.
+
 ## 7. Run contract — state back before any run of size
 
 - **OBJECTIVE** — what data, for which project

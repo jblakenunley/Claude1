@@ -29,14 +29,21 @@ could not be fetched in the 2026-11-19 run and the scout branch was empty.
 Watchlist in `watchlist.json`; the nightly scout pulls their signals. Scored
 by the learning path, week 1 onward.
 
+Day 2 (2026-11-20) scored nothing. Adoption is scored from dependents, and none were
+obtained: WebFetch was refused for `api.deps.dev` and `github.com/*/network/dependents`
+(PROVENANCE_REQUIRED, unanswered permission request) and `scout.py` collects no dependents
+(queue #14). Stars, forks and contributors are recorded in the Evidence column for the
+five tools above and are not a substitute. Scout Scorecard coverage on 2026-11-19: 16 of
+28 repos; 404 for 10, 406 for 2.
+
 | Tool | Category | Adoption | Upkeep | Security | Fit | Hard stop | Evidence | Scored | Review by |
 |---|---|---|---|---|---|---|---|---|---|
-| scrapy/scrapy | crawling | | | | | | | | |
+| scrapy/scrapy | crawling | | | | | | Day 2: stars 65,499, 381 default-branch commits in 90 d, Scorecard 7.1 (scout 2026-11-19; search re-read 2026-11-20: 65,508 stars). Dependents not pulled | | |
 | apify/crawlee-python | crawling | | | | | | | | |
 | dlt-hub/dlt | elt | | | | | | | | |
 | meltano/meltano | elt | | | | | | | | |
 | airbytehq/airbyte | elt | | | | | | | | |
-| duckdb/duckdb | ledger-engine | | | | | | | | |
+| duckdb/duckdb | ledger-engine | | | | | | Day 2: stars 43,190, 11,889 default-branch commits in 90 d, MIT; Scorecard API 404 (scout 2026-11-19). Dependents not pulled | | |
 | simonw/sqlite-utils | ledger-engine | | | | | | | | |
 | great-expectations/great_expectations | validation | | | | | | | | |
 | frictionlessdata/frictionless-py | validation | | | | | | | | |
@@ -49,11 +56,11 @@ by the learning path, week 1 onward.
 | trufflesecurity/trufflehog | secret-scanning | | | | | | | | |
 | ossf/scorecard | supply-chain | | | | | | | | |
 | anthropics/claude-code-action | model-powered | | | | | | | | |
-| OpenBB-finance/OpenBB | market-data | | | | | | AGPL-3.0 per secondary sources, 2026-11-18 — internal use only under §10; confirm from the repo | | |
+| OpenBB-finance/OpenBB | market-data | | | | | | AGPL-3.0 per secondary sources, 2026-11-18 — internal use only under §10; confirm from the repo. Day 2: GitHub's licence detector returns NOASSERTION (scout 2026-11-19; search 2026-11-20), so AGPL stays unconfirmed. **Identity open:** `search/repositories` with `repo:OpenBB-finance/OpenBB` returns 422 on 2026-11-20; the 75.6k-star repo (created 2020-12-20, not a fork, homepage openbb.co) is listed under owner `openbq-org`. Move not confirmed from a second source (queue #16); hold any score until it is. Stars 75,567, 26 commits in 90 d (scout) | | |
 | ccxt/ccxt | market-data | | | | | | | | |
-| ranaroussi/yfinance | market-data | | | | | | Code Apache-2.0; Yahoo data personal use only (Yahoo API terms) — internal use only under §10 | | |
+| ranaroussi/yfinance | market-data | | | | | | Code Apache-2.0; Yahoo data personal use only (Yahoo API terms) — internal use only under §10. Day 2: stars 25,965, 87 default-branch commits in 90 d, Scorecard 5.6 (scout 2026-11-19; search re-read 2026-11-20: 25,968 stars). Dependents not pulled | | |
 | dgunning/edgartools | market-data | | | | | | | | |
-| mortada/fredapi | market-data | | | | | | | | |
+| mortada/fredapi | market-data | | | | | | Day 2: stars 1,675, 0 default-branch commits in 90 d, last push 2026-01-28, latest release v0.5.2 (2024-05-05); Scorecard API 404 (scout 2026-11-19). Dependents not pulled | | |
 | databento/databento-python | market-data | | | | | | | | |
 | alpacahq/alpaca-py | market-data | | | | | | | | |
 | polygon-io/client-python | market-data | | | | | | Polygon.io renamed Massive 2025-10-30; client repo may have moved | | |
