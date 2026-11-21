@@ -9,7 +9,7 @@ Commands
 
 Stdlib only, by house convention. Every signal carries its source URL and retrieval time.
 """
-import json, os, re, sys, time, urllib.error, urllib.request
+import json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timedelta, timezone
 
 UA = "chablis-scout/1.0 (+https://github.com/jblakenunley/claude1)"
@@ -62,8 +62,9 @@ def cmd_pins(d):
 
 def get(url, token=None):
     """GET JSON. Returns (data, headers, error). Honors Retry-After once on 403/429."""
-    h = {"User-Agent": UA, "Accept": "application/vnd.github+json"}
-    if token and "api.github.com" in url:
+    gh = "api.github.com" in url
+    h = {"User-Agent": UA, "Accept": "application/vnd.github+json" if gh else "application/json"}
+    if token and gh:
         h["Authorization"] = f"Bearer {token}"
     for attempt in (1, 2):
         try:
@@ -93,7 +94,70 @@ def count_via_link(url, token):
     return (n if n is not None else len(data or [])), None
 
 
-def signals(full_name, token=None):
+DEPS = "https://api.deps.dev"
+
+
+def q(x):
+    return urllib.parse.quote(x, safe="")
+
+
+def default_version(pkg_record):
+    """The version deps.dev marks isDefault, else None."""
+    for v in (pkg_record or {}).get("versions", []):
+        if v.get("isDefault"):
+            return v.get("versionKey", {}).get("version")
+    return None
+
+
+def dependents(packages, full_name):
+    """deps.dev dependents per package: package -> default version -> :dependents (v3alpha).
+    Counts are per version, so the version used is recorded. source_repo_match says whether
+    deps.dev links that version back to this repo (a wrong mapping shows up as false)."""
+    out = []
+    for p in packages:
+        system, name = p["system"].lower(), p["name"]
+        base = f"{DEPS}/v3/systems/{system}/packages/{q(name)}"
+        row = {"system": system, "name": name, "version": None, "dependent_count": None,
+               "direct": None, "indirect": None, "source_repo_match": None, "error": None, "source": base}
+        pkg, _, err = get(base)
+        ver = default_version(pkg)
+        if not ver:
+            row["error"] = err or "no default version"
+            out.append(row)
+            continue
+        row["version"] = ver
+        vrec, _, _ = get(f"{base}/versions/{q(ver)}")
+        if vrec:
+            ids = [r.get("projectKey", {}).get("id", "").lower() for r in vrec.get("relatedProjects", [])]
+            row["source_repo_match"] = f"github.com/{full_name}".lower() in ids
+        url = f"{DEPS}/v3alpha/systems/{system}/packages/{q(name)}/versions/{q(ver)}:dependents"
+        dep, _, err = get(url)
+        row["source"] = url
+        if dep:
+            row.update(dependent_count=dep.get("dependentCount"), direct=dep.get("directDependentCount"),
+                       indirect=dep.get("indirectDependentCount"))
+        else:
+            row["error"] = err
+        out.append(row)
+    return out
+
+
+def scorecard_from_depsdev(full_name):
+    """Second Scorecard route: the deps.dev project record carries OpenSSF Scorecard results."""
+    pid = f"github.com/{full_name}"
+    for pid in dict.fromkeys([pid, pid.lower()]):  # try as written, then lowercased
+        url = f"{DEPS}/v3/projects/{q(pid)}"
+        pr, _, err = get(url)
+        sc = (pr or {}).get("scorecard")
+        if sc:
+            return {"score": sc.get("overallScore"), "date": sc.get("date"), "via": "deps.dev", "source": url,
+                    "checks": {c["name"]: c.get("score") for c in sc.get("checks", [])}}, None
+        if pr:
+            err = "no scorecard in deps.dev project record"
+    return None, err
+
+
+def signals(full_name, token=None, packages=()):
     """All raw signals for one repo. Scores are assigned by Chablis, not here."""
     api = f"https://api.github.com/repos/{full_name}"
     s = {"repo": full_name, "retrieved_at": now(), "errors": {}}
@@ -121,14 +185,20 @@ def signals(full_name, token=None):
     s["contributors"], err = count_via_link(f"{api}/contributors?per_page=1&anon=1", token)
     if err:
         s["errors"]["contributors"] = err
-    sc, _, err = get(f"https://api.securityscorecards.dev/projects/github.com/{full_name}")
+    sc_url = f"https://api.securityscorecards.dev/projects/github.com/{full_name}"
+    sc, _, err = get(sc_url)
     if sc:
-        s["scorecard"] = {"score": sc.get("score"), "date": sc.get("date"),
+        s["scorecard"] = {"score": sc.get("score"), "date": sc.get("date"), "via": "securityscorecards.dev",
                           "checks": {c["name"]: c.get("score") for c in sc.get("checks", [])}}
     else:
-        s["scorecard"] = None
-        s["errors"]["scorecard"] = err
-    s["sources"] = [api, f"https://api.securityscorecards.dev/projects/github.com/{full_name}"]
+        s["scorecard"], err2 = scorecard_from_depsdev(full_name)
+        if not s["scorecard"]:
+            s["errors"]["scorecard"] = f"{err}; deps.dev: {err2}"
+    s["dependents"] = dependents(packages, full_name)
+    for d in s["dependents"]:
+        if d["error"]:
+            s["errors"][f"dependents:{d['system']}:{d['name']}"] = d["error"]
+    s["sources"] = [api, sc_url] + [d["source"] for d in s["dependents"]]
     return s
 
 
@@ -138,7 +208,7 @@ def cmd_run(watchlist, out):
     token = os.environ.get("GITHUB_TOKEN")
     rows = []
     for item in wl["repos"]:
-        rows.append({**signals(item["repo"], token), "category": item.get("category")})
+        rows.append({**signals(item["repo"], token, item.get("packages", [])), "category": item.get("category")})
         time.sleep(0.5)  # politeness
     os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
     with open(out, "w", encoding="utf-8") as fh:
@@ -168,6 +238,10 @@ def cmd_selftest():
     with open(os.path.join(os.path.dirname(__file__), "watchlist.json"), encoding="utf-8") as fh:
         wl = json.load(fh)
     assert all("/" in r["repo"] and r.get("category") for r in wl["repos"]), "watchlist malformed"
+    assert all(p.get("system") and p.get("name") for r in wl["repos"] for p in r.get("packages", [])), "packages malformed"
+    assert default_version({"versions": [{"versionKey": {"version": "1.0"}}, {"versionKey": {"version": "2.0"}, "isDefault": True}]}) == "2.0"
+    assert default_version(None) is None
+    assert q("github.com/zricethezav/gitleaks/v8") == "github.com%2Fzricethezav%2Fgitleaks%2Fv8"
     print(f"selftest ok ({len(wl['repos'])} watchlist repos)")
     return 0
 
