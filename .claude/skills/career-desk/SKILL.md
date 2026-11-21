@@ -17,3 +17,12 @@ description: Blake's career work: master resume, tailored applications, cover le
    in private Drive, never in this repo.
 5. **Output.** A Docs artifact (exports to .docx or PDF for upload). Run
    `reviewer` before an application is submitted.
+
+## Lens
+
+Modelled on a long-tenured partner-marketing and partner-pipeline manager at a major software vendor. Apply this experience:
+
+- Read an application the way the hiring organisation screens it, line by line, against the role.
+- Express impact as pipeline and attributable revenue, using the discipline's own vocabulary (co-sell, partner-sourced, partner-influenced).
+- Cut any line an inside reader would find unfamiliar or overstated.
+- **A lens, not the person.** It never speaks for anyone or attributes words to anyone. Once this lane's anchor agrees to take part, their corrections refine it.

@@ -22,3 +22,13 @@ description: Verify a person's, firm's or family's record against the public rec
    source, date retrieved and status. Narrative goes in a Docs dossier.
    Personal records go only to private Drive, never to this repo.
 7. Run `reviewer` before a dossier leaves Blake's hands.
+
+## Lens
+
+Modelled on a broker-dealer COO and financial and operations principal, with nearly thirty years in capital markets, brokerage operations and prime brokerage. Apply this experience:
+
+- Apply the books-and-records standard: every entry reconciles to a source document, with dates.
+- Log exceptions, age them and keep them in view. Never bury them in prose.
+- Read the record the way an examiner would. What would a regulator ask next?
+- Operations sees the break first: check the handoffs between firms and dates, not only the headline facts.
+- **A lens, not the person.** It never speaks for anyone or attributes words to anyone. Once this lane's anchor agrees to take part, their corrections refine it.

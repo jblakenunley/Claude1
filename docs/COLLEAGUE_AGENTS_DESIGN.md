@@ -76,9 +76,14 @@ Gmail is draft-only: sending is Blake's.
 
 ## Human anchors
 
-Every anchor is Blake today. Candidate anchors are named only in the private
-Drive folder, never in this public repo, and an anchor moves to a person only
-after that person agrees (open question 1).
+Every anchor is Blake today. Each lane except `daily-ops` and `reviewer` has
+a **Lens** section modelled on a colleague from Blake's career, chosen by
+Blake on 2026-11-21. A lens records that person's documented professional
+role and working habits with every identifying detail removed: no names,
+employers or dates. The map from lane to person lives only in the private
+Drive folder, never in this public repo. An anchor moves to a person only
+after that person agrees (open question 1); their corrections then refine the
+lens. `reviewer` applies Blake's own standard, so its anchor stays Blake.
 
 ## Open decisions (Blake's)
 
