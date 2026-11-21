@@ -127,6 +127,20 @@ signals: `search/repositories` with `repo:<owner>/<name>` returning 422, or a sa
 under a different owner, means the watchlist name may be stale (OpenBB today). Hold the score
 until a second source confirms the move.
 
+*Note 2026-11-21 (Day 3, LEARNING_LOG).* **Upkeep bands v1**, scored from git history with
+`chablis/upkeep.py` (treeless clone; no API quota; scheduled runs are denied GitHub API reads of
+repos outside the session scope). Windows end on the scoring date; bots are excluded; authors are
+merged by email. **L**, days since the last human commit on the default branch: ≤30 → 3, ≤90 → 2,
+≤365 → 1, else 0. **R**, latest full-version release tag and distinct release *days* in 365 d (a
+monorepo or a same-day backport counts once): age ≤90 d and ≥4 days → 3; ≤180 d and ≥2 → 2; ≤365 d
+→ 1; else 0. **Bus**: the CHAOSS Contributor Absence Factor, the fewest people behind 50% of the
+last 365 d of human commits ([CHAOSS](https://www.chaoss.community/kb/metric-contributor-absence-factor/),
+page modified 2024-11-07); with ≥20 human commits and a factor of 1, deduct 1. **Upkeep =
+max(0, min(L, R) − deduction)**; an archived repo is 0. The scout's `commits_90d` matched git for
+7 of 7 repos but counts bots (setup-python: 14 of 17), so score from human counts. Open for Day 7:
+(1) a stable first-party Action silent for 90+ days scores low (checkout 1; Scorecard Maintained
+is also 0); (2) the 50% line is a cliff (scrapy's top author is 52%, its top two 85%, so factor 1).
+
 ## 7. Run contract — state back before any run of size
 
 - **OBJECTIVE** — what data, for which project
@@ -186,6 +200,12 @@ an hour or two before the lesson cannot be ready for it. The lesson loads the ne
 `feed/YYYY-MM-DD/` present, whatever its date. A reliable start is a push trigger
 (`chablis-feed-trigger-*`, the pattern `morning-brief-data.yml` already uses) or a
 cron at least 10 h earlier; either needs a workflow edit (handoff queue).
+
+*Note 2026-11-21 (Day 3, LEARNING_LOG).* The Drive connector's `update_file` changes metadata
+only, so the canonical `ledger.db` stays empty (queue #15). The lesson therefore loads each feed
+into the newest dated ledger copy, which is cumulative, and saves the result as a new dated copy;
+loading into the empty canonical would leave each dated copy holding one day. `load` is idempotent:
+2026-11-21 read 9,986 rows and added 24.
 
 **Learning from GitHub.** Before writing an adapter, check whether a maintained
 library already does it (edgartools, fredapi, ccxt, OpenBB providers), score it,

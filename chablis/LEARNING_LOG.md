@@ -41,3 +41,17 @@ Template:
 **Registry:** no scores; evidence added for the five and OpenBB.
 **Doctrine change:** §6 dated note: Adoption stays blank without dependents; resolve canonical repo name first.
 **Cost:** tokens not reported; fetch subagents 20.5k.
+
+## Day 3 — Upkeep (2026-11-21, cycle 1)
+**Exercise:** Defined the Upkeep bands and ran them on scrapy, duckdb, OpenBB, yfinance, fredapi, plus checkout and setup-python, from treeless git clones (`chablis/upkeep.py`). Scout 2026-11-20 was current (11 of 28 repos with errors). Git was the route: the GitHub API is denied here for out-of-scope repos.
+**Findings:**
+- Scores as of 2026-11-21: duckdb 3, setup-python 3, scrapy 2, yfinance 2, OpenBB 2, checkout 1, fredapi 0.
+- 90-day commits from git match the scout for 7 of 7 (scrapy also `search/commits`, 381). The scout counts bots: 14 of setup-python's 17.
+- Bus factor: scrapy's top author made 52% of the year's human commits, the top two 85%; yfinance's top author 54%; duckdb needs 9 people for half. fredapi: 2 commits in 365 d, last release 2024-05-05.
+- checkout: last human commit 2026-07-20, but v2.8.0, v3.7.0, v4.4.0, v6.1.0 were tagged 2026-07-16 and v7.0.1 on 07-17. Scout `pushed_at` 2026-10-17 is dependabot branches. Day 1 named v6.1.0 and v6.3.0 as the newer majors; checkout v7.0.1 and setup-python v7.1.0 are newer (`git ls-remote`).
+- OpenBB: openbb.co names openbq-org its steward (edit 2026-10-01); both owner names serve HEAD f0f1852b. `LICENSE` is Apache-2.0 on `main` and `develop`, not AGPL. A WebFetch of the raw README said AGPLv3, contradicting git; not used.
+- WebFetch worked on 4 of 4 URLs a WebSearch had just returned. Day 1–2 refusals were on URLs from no search; cause untested.
+**Feed load:** 9,986 rows read, 24 new (Treasury +14, FRED +10), ledger 11,890. SEC-EDGAR failed: NVDA HTTP 403, as 2026-11-19. `update_file` cannot write content, so saved as `ledger-2026-11-21.db` (queue #15).
+**Registry:** Upkeep scored for 7 tools; Day 1 majors corrected; OpenBB licence and owner updated.
+**Doctrine change:** §6 Upkeep bands v1; §10 ledger-continuity note.
+**Cost:** tokens not reported; fetch subagent 36.4k.
