@@ -101,43 +101,52 @@ def q(x):
     return urllib.parse.quote(x, safe="")
 
 
-def default_version(pkg_record):
-    """The version deps.dev marks isDefault, else None."""
-    for v in (pkg_record or {}).get("versions", []):
-        if v.get("isDefault"):
-            return v.get("versionKey", {}).get("version")
-    return None
+PRE = re.compile(r"(?i)(dev|rc|alpha|beta|pre|[0-9](a|b)[0-9]|-)")  # pre-release or Go pseudo-version
+
+
+def candidate_versions(pkg_record, limit=4):
+    """Versions to ask for dependents, best first: the isDefault version if stable, then the
+    newest stable versions. deps.dev answers 404 for a version whose dependents it has not yet
+    computed, which on 2026-11-21 was typically a release a few days old."""
+    vs = (pkg_record or {}).get("versions", [])
+    name = lambda v: v.get("versionKey", {}).get("version")
+    default = next((name(v) for v in vs if v.get("isDefault")), None)
+    stable = [name(v) for v in sorted(vs, key=lambda v: v.get("publishedAt") or "", reverse=True)
+              if name(v) and not PRE.search(name(v).lstrip("vV"))]
+    order = ([default] if default and default in stable else []) + stable
+    return default, list(dict.fromkeys(order))[:limit]
 
 
 def dependents(packages, full_name):
-    """deps.dev dependents per package: package -> default version -> :dependents (v3alpha).
-    Counts are per version, so the version used is recorded. source_repo_match says whether
-    deps.dev links that version back to this repo (a wrong mapping shows up as false)."""
+    """deps.dev dependents per package: package -> version -> :dependents (v3alpha). Counts are
+    per version, so the version used is recorded next to the default one. source_repo_match says
+    whether deps.dev links that version back to this repo (a wrong mapping shows up as false)."""
     out = []
     for p in packages:
         system, name = p["system"].lower(), p["name"]
         base = f"{DEPS}/v3/systems/{system}/packages/{q(name)}"
-        row = {"system": system, "name": name, "version": None, "dependent_count": None,
-               "direct": None, "indirect": None, "source_repo_match": None, "error": None, "source": base}
+        row = {"system": system, "name": name, "default_version": None, "version": None,
+               "dependent_count": None, "direct": None, "indirect": None, "source_repo_match": None,
+               "tried": [], "error": None, "source": base}
         pkg, _, err = get(base)
-        ver = default_version(pkg)
-        if not ver:
-            row["error"] = err or "no default version"
+        row["default_version"], cands = candidate_versions(pkg)
+        if not cands:
+            row["error"] = err or "no stable version"
             out.append(row)
             continue
-        row["version"] = ver
-        vrec, _, _ = get(f"{base}/versions/{q(ver)}")
+        for ver in cands:
+            url = f"{DEPS}/v3alpha/systems/{system}/packages/{q(name)}/versions/{q(ver)}:dependents"
+            dep, _, err = get(url)
+            row["tried"].append(ver)
+            if dep:
+                row.update(version=ver, source=url, error=None, dependent_count=dep.get("dependentCount"),
+                           direct=dep.get("directDependentCount"), indirect=dep.get("indirectDependentCount"))
+                break
+            row["error"] = f"{err} for {', '.join(row['tried'])}"
+        vrec, _, _ = get(f"{base}/versions/{q(row['version'] or cands[0])}")
         if vrec:
             ids = [r.get("projectKey", {}).get("id", "").lower() for r in vrec.get("relatedProjects", [])]
             row["source_repo_match"] = f"github.com/{full_name}".lower() in ids
-        url = f"{DEPS}/v3alpha/systems/{system}/packages/{q(name)}/versions/{q(ver)}:dependents"
-        dep, _, err = get(url)
-        row["source"] = url
-        if dep:
-            row.update(dependent_count=dep.get("dependentCount"), direct=dep.get("directDependentCount"),
-                       indirect=dep.get("indirectDependentCount"))
-        else:
-            row["error"] = err
         out.append(row)
     return out
 
@@ -239,8 +248,12 @@ def cmd_selftest():
         wl = json.load(fh)
     assert all("/" in r["repo"] and r.get("category") for r in wl["repos"]), "watchlist malformed"
     assert all(p.get("system") and p.get("name") for r in wl["repos"] for p in r.get("packages", [])), "packages malformed"
-    assert default_version({"versions": [{"versionKey": {"version": "1.0"}}, {"versionKey": {"version": "2.0"}, "isDefault": True}]}) == "2.0"
-    assert default_version(None) is None
+    v = lambda n, t, d=False: {"versionKey": {"version": n}, "publishedAt": t, "isDefault": d}
+    rec = {"versions": [v("1.0", "2026-01"), v("2.1.0.dev5", "2026-11", True), v("2.0", "2026-10"),
+                        v("v0.0.0-2026-abc", "2026-11"), v("2.0rc1", "2026-09")]}
+    assert candidate_versions(rec) == ("2.1.0.dev5", ["2.0", "1.0"]), candidate_versions(rec)
+    assert candidate_versions({"versions": [v("1.0", "2026-01"), v("1.1", "2026-02", True)]}) == ("1.1", ["1.1", "1.0"])
+    assert candidate_versions(None) == (None, [])
     assert q("github.com/zricethezav/gitleaks/v8") == "github.com%2Fzricethezav%2Fgitleaks%2Fv8"
     print(f"selftest ok ({len(wl['repos'])} watchlist repos)")
     return 0
