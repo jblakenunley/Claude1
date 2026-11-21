@@ -12,6 +12,22 @@ Snowflake keeps this file; a new agent is added before its first run.
 | chablis | Data acquisition with provenance | Data sourcing | sonnet | Blake | C2 | Snowflake |
 | data-simplifier | Cleanup after changes; behavior and data preserved | Data layer: Python, SQL, schema | opus | Blake | C1 (producer side), C2 | Snowflake via review queue |
 | experience-simplifier | Cleanup after changes; behavior preserved | Presentation layer: TS/React, HTML, CSS, templates | opus | Blake | C1 (consumer side) | Snowflake via review queue |
+| reviewer | Clean-context review of any deliverable before it leaves Blake's hands; read-only | Every lane | opus | Blake | None (reads) | Blake |
+
+## Skills (lanes the main session runs; no separate context)
+
+Design and costs: `docs/COLLEAGUE_AGENTS_DESIGN.md`. Each skill writes only to
+its output surface; anything structural goes to the review queue.
+
+| Skill | Lane | Output surface | Agents it calls | Human anchor |
+|---|---|---|---|---|
+| exec-memo | Executive summaries, decision memos | Docs | panel, reviewer | Blake |
+| record-verification | Records, dossiers, registers, genealogy | Sheets, Docs | reviewer | Blake |
+| ecosystem-intel | Ecosystem briefs, market theses, dashboards | Dashboard, Docs | chablis, reviewer | Blake |
+| creator-studio | Books, bio, lectures, course materials | Docs, Slides | reviewer | Blake |
+| career-desk | Resume, applications, outreach | Docs, Gmail drafts | reviewer | Blake |
+| client-advisory | Client and venture engagements, pipeline | Docs, Sheets, Slides | panel, chablis, reviewer | Blake |
+| daily-ops | Morning Brief, Snowcast, reminders | Scheduled tasks | none | Blake |
 
 ## Rules
 

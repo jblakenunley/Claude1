@@ -65,6 +65,24 @@ on with everything else. Claude Code on the Mac works the queue with
 The full, living version of this rule and its instances is Blake's standing
 preference set; this brief is its local instance for work done in this repo.
 
+## Routing: the main session is the coordinator
+
+There is no coordinator agent. The main session routes each request to a skill
+in `.claude/skills/` and calls an agent only for judgment: `chablis` for data,
+the `snowflake` + `salesforce` panel for platform decisions, and `reviewer` once
+before a deliverable leaves Blake's hands. An agent costs roughly 15x a chat
+turn, so don't spawn one for typing. Lanes, models and costs:
+`docs/COLLEAGUE_AGENTS_DESIGN.md`.
+
+Presentation defaults to Claude's artifact types (Docs, Sheets, Slides,
+Dashboards) or Python-generated HTML. TypeScript/React is used when a product
+ships into another surface, such as Salesforce Lightning Web Components or a
+client-installed interface.
+
+Every PR description states, in plain English: the behaviour that changed, the
+acceptance checks Blake approved, the test result, and any review-queue item.
+Blake signs off on that, not on the diff.
+
 ## Code cleanup agents and the review desk
 
 After writing or changing code, run the simplifier for each layer the change touched:
