@@ -7,7 +7,8 @@ Snowflake keeps this file; a new agent is added before its first run.
 
 | Agent | Function | Layer / scope | Model | Human anchor | Contracts it touches | Escalates to |
 |---|---|---|---|---|---|---|
-| snowflake | Architecture advisor; contract registry and review desk | Whole system | opus | Blake | All (reviews) | Contract owner |
+| snowflake | Architecture advisor (how would Snowflake Inc. proceed); contract registry and review desk | Whole system | opus | Blake | All (reviews) | Contract owner |
+| salesforce | Vendor-perspective advisor: how would Salesforce Inc. proceed | CRM, integration, data platforms | opus | Blake | None (advises) | Panel, then Blake |
 | chablis | Data acquisition with provenance | Data sourcing | sonnet | Blake | C2 | Snowflake |
 | data-simplifier | Cleanup after changes; behavior and data preserved | Data layer: Python, SQL, schema | opus | Blake | C1 (producer side), C2 | Snowflake via review queue |
 | experience-simplifier | Cleanup after changes; behavior preserved | Presentation layer: TS/React, HTML, CSS, templates | opus | Blake | C1 (consumer side) | Snowflake via review queue |

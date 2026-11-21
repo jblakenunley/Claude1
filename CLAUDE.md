@@ -75,3 +75,9 @@ After writing or changing code, run the simplifier for each layer the change tou
 Contracts listed in `snowflake/CONTRACTS.md` are frozen for every agent. Anything an agent may not change
 itself goes to `snowflake/REVIEW_QUEUE.md`; Snowflake reviews it and the contract's human owner decides.
 `snowflake/ORG.md` lists every agent and its human anchor.
+
+## Platform panel
+
+For any platform or Salesforce-integration decision, run `snowflake` and `salesforce` on the same brief.
+Each gives its vendor's best case, when that vendor is not the answer, and what the vendor gains.
+The main session compares the two and adds the no-new-platform option. Blake decides; neither agent does.
