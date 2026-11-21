@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-21T16:47:56Z",
+  "generated_at": "2026-11-21T19:39:44Z",
   "count": 28,
   "repos": [
     {
       "repo": "actions/checkout",
-      "retrieved_at": "2026-11-21T16:47:14Z",
+      "retrieved_at": "2026-11-21T19:39:04Z",
       "errors": {},
       "stars": 9028,
       "forks": 2747,
@@ -47,7 +47,7 @@
     },
     {
       "repo": "actions/setup-python",
-      "retrieved_at": "2026-11-21T16:47:15Z",
+      "retrieved_at": "2026-11-21T19:39:05Z",
       "errors": {},
       "stars": 2256,
       "forks": 757,
@@ -90,9 +90,9 @@
     },
     {
       "repo": "scrapy/scrapy",
-      "retrieved_at": "2026-11-21T16:47:17Z",
+      "retrieved_at": "2026-11-21T19:39:07Z",
       "errors": {},
-      "stars": 65523,
+      "stars": 65526,
       "forks": 12151,
       "open_issues": 170,
       "archived": false,
@@ -133,11 +133,11 @@
     },
     {
       "repo": "apify/crawlee-python",
-      "retrieved_at": "2026-11-21T16:47:18Z",
+      "retrieved_at": "2026-11-21T19:39:08Z",
       "errors": {
         "scorecard": "HTTP 404"
       },
-      "stars": 9679,
+      "stars": 9680,
       "forks": 836,
       "open_issues": 86,
       "archived": false,
@@ -159,7 +159,7 @@
     },
     {
       "repo": "dlt-hub/dlt",
-      "retrieved_at": "2026-11-21T16:47:20Z",
+      "retrieved_at": "2026-11-21T19:39:09Z",
       "errors": {
         "scorecard": "HTTP 404"
       },
@@ -174,7 +174,7 @@
         "tag": "1.32.0",
         "published_at": "2026-10-29T23:35:12Z"
       },
-      "commits_90d": 105,
+      "commits_90d": 104,
       "contributors": 226,
       "scorecard": null,
       "sources": [
@@ -185,7 +185,7 @@
     },
     {
       "repo": "meltano/meltano",
-      "retrieved_at": "2026-11-21T16:47:21Z",
+      "retrieved_at": "2026-11-21T19:39:11Z",
       "errors": {
         "scorecard": "HTTP 404"
       },
@@ -211,11 +211,11 @@
     },
     {
       "repo": "airbytehq/airbyte",
-      "retrieved_at": "2026-11-21T16:47:23Z",
+      "retrieved_at": "2026-11-21T19:39:12Z",
       "errors": {},
       "stars": 22426,
       "forks": 5553,
-      "open_issues": 2817,
+      "open_issues": 2818,
       "archived": false,
       "pushed_at": "2026-11-21T00:09:14Z",
       "license": "NOASSERTION",
@@ -254,12 +254,12 @@
     },
     {
       "repo": "duckdb/duckdb",
-      "retrieved_at": "2026-11-21T16:47:25Z",
+      "retrieved_at": "2026-11-21T19:39:14Z",
       "errors": {
         "scorecard": "HTTP 404"
       },
-      "stars": 43217,
-      "forks": 4170,
+      "stars": 43219,
+      "forks": 4172,
       "open_issues": 1264,
       "archived": false,
       "pushed_at": "2026-11-20T17:24:08Z",
@@ -269,7 +269,7 @@
         "tag": "v2.0.1",
         "published_at": "2026-11-20T13:34:16Z"
       },
-      "commits_90d": 12166,
+      "commits_90d": 12157,
       "contributors": 1006,
       "scorecard": null,
       "sources": [
@@ -280,9 +280,9 @@
     },
     {
       "repo": "simonw/sqlite-utils",
-      "retrieved_at": "2026-11-21T16:47:26Z",
+      "retrieved_at": "2026-11-21T19:39:15Z",
       "errors": {},
-      "stars": 2209,
+      "stars": 2210,
       "forks": 240,
       "open_issues": 196,
       "archived": false,
@@ -323,7 +323,7 @@
     },
     {
       "repo": "great-expectations/great_expectations",
-      "retrieved_at": "2026-11-21T16:47:28Z",
+      "retrieved_at": "2026-11-21T19:39:16Z",
       "errors": {},
       "stars": 11942,
       "forks": 1891,
@@ -366,7 +366,7 @@
     },
     {
       "repo": "frictionlessdata/frictionless-py",
-      "retrieved_at": "2026-11-21T16:47:30Z",
+      "retrieved_at": "2026-11-21T19:39:18Z",
       "errors": {},
       "stars": 859,
       "forks": 203,
@@ -409,9 +409,9 @@
     },
     {
       "repo": "moj-analytical-services/splink",
-      "retrieved_at": "2026-11-21T16:47:31Z",
+      "retrieved_at": "2026-11-21T19:39:20Z",
       "errors": {},
-      "stars": 2592,
+      "stars": 2593,
       "forks": 290,
       "open_issues": 222,
       "archived": false,
@@ -452,7 +452,7 @@
     },
     {
       "repo": "dedupeio/dedupe",
-      "retrieved_at": "2026-11-21T16:47:33Z",
+      "retrieved_at": "2026-11-21T19:39:21Z",
       "errors": {},
       "stars": 4531,
       "forks": 578,
@@ -492,7 +492,7 @@
     },
     {
       "repo": "J535D165/recordlinkage",
-      "retrieved_at": "2026-11-21T16:47:34Z",
+      "retrieved_at": "2026-11-21T19:39:23Z",
       "errors": {
         "scorecard": "HTTP 404"
       },
@@ -518,20 +518,20 @@
     },
     {
       "repo": "projectdiscovery/subfinder",
-      "retrieved_at": "2026-11-21T16:47:35Z",
+      "retrieved_at": "2026-11-21T19:39:24Z",
       "errors": {},
-      "stars": 14843,
+      "stars": 14845,
       "forks": 1660,
-      "open_issues": 7,
+      "open_issues": 5,
       "archived": false,
-      "pushed_at": "2026-11-21T04:41:56Z",
+      "pushed_at": "2026-11-21T17:52:41Z",
       "license": "MIT",
       "default_branch": "dev",
       "latest_release": {
         "tag": "v2.17.0",
         "published_at": "2026-10-08T07:09:35Z"
       },
-      "commits_90d": 81,
+      "commits_90d": 83,
       "contributors": 148,
       "scorecard": {
         "score": 6,
@@ -561,7 +561,7 @@
     },
     {
       "repo": "owasp-amass/amass",
-      "retrieved_at": "2026-11-21T16:47:37Z",
+      "retrieved_at": "2026-11-21T19:39:25Z",
       "errors": {
         "scorecard": "HTTP 406"
       },
@@ -569,7 +569,7 @@
       "forks": 2210,
       "open_issues": 255,
       "archived": false,
-      "pushed_at": "2026-11-21T16:30:53Z",
+      "pushed_at": "2026-11-21T19:33:17Z",
       "license": "NOASSERTION",
       "default_branch": "main",
       "latest_release": {
@@ -587,7 +587,7 @@
     },
     {
       "repo": "gitleaks/gitleaks",
-      "retrieved_at": "2026-11-21T16:47:38Z",
+      "retrieved_at": "2026-11-21T19:39:27Z",
       "errors": {
         "scorecard": "HTTP 404"
       },
@@ -613,11 +613,11 @@
     },
     {
       "repo": "trufflesecurity/trufflehog",
-      "retrieved_at": "2026-11-21T16:47:40Z",
+      "retrieved_at": "2026-11-21T19:39:28Z",
       "errors": {},
-      "stars": 29562,
+      "stars": 29563,
       "forks": 2792,
-      "open_issues": 622,
+      "open_issues": 623,
       "archived": false,
       "pushed_at": "2026-11-20T19:09:26Z",
       "license": "AGPL-3.0",
@@ -656,9 +656,9 @@
     },
     {
       "repo": "ossf/scorecard",
-      "retrieved_at": "2026-11-21T16:47:41Z",
+      "retrieved_at": "2026-11-21T19:39:30Z",
       "errors": {},
-      "stars": 5853,
+      "stars": 5854,
       "forks": 784,
       "open_issues": 348,
       "archived": false,
@@ -703,12 +703,12 @@
     },
     {
       "repo": "anthropics/claude-code-action",
-      "retrieved_at": "2026-11-21T16:47:43Z",
+      "retrieved_at": "2026-11-21T19:39:31Z",
       "errors": {
         "scorecard": "HTTP 404"
       },
-      "stars": 10037,
-      "forks": 2286,
+      "stars": 10040,
+      "forks": 2287,
       "open_issues": 972,
       "archived": false,
       "pushed_at": "2026-11-21T01:35:16Z",
@@ -729,11 +729,11 @@
     },
     {
       "repo": "OpenBB-finance/OpenBB",
-      "retrieved_at": "2026-11-21T16:47:44Z",
+      "retrieved_at": "2026-11-21T19:39:32Z",
       "errors": {
         "scorecard": "HTTP 404"
       },
-      "stars": 75618,
+      "stars": 75620,
       "forks": 7892,
       "open_issues": 132,
       "archived": false,
@@ -755,10 +755,10 @@
     },
     {
       "repo": "ccxt/ccxt",
-      "retrieved_at": "2026-11-21T16:47:46Z",
+      "retrieved_at": "2026-11-21T19:39:34Z",
       "errors": {},
-      "stars": 44945,
-      "forks": 8995,
+      "stars": 44948,
+      "forks": 8994,
       "open_issues": 758,
       "archived": false,
       "pushed_at": "2026-11-20T14:13:48Z",
@@ -798,9 +798,9 @@
     },
     {
       "repo": "ranaroussi/yfinance",
-      "retrieved_at": "2026-11-21T16:47:47Z",
+      "retrieved_at": "2026-11-21T19:39:36Z",
       "errors": {},
-      "stars": 25974,
+      "stars": 25976,
       "forks": 3506,
       "open_issues": 112,
       "archived": false,
@@ -841,22 +841,22 @@
     },
     {
       "repo": "dgunning/edgartools",
-      "retrieved_at": "2026-11-21T16:47:49Z",
+      "retrieved_at": "2026-11-21T19:39:37Z",
       "errors": {
         "scorecard": "HTTP 404"
       },
-      "stars": 2866,
+      "stars": 2867,
       "forks": 532,
       "open_issues": 39,
       "archived": false,
-      "pushed_at": "2026-11-21T15:17:30Z",
+      "pushed_at": "2026-11-21T17:09:24Z",
       "license": "MIT",
       "default_branch": "main",
       "latest_release": {
         "tag": "v6.3.0",
         "published_at": "2026-11-17T22:36:16Z"
       },
-      "commits_90d": 490,
+      "commits_90d": 487,
       "contributors": 86,
       "scorecard": null,
       "sources": [
@@ -867,7 +867,7 @@
     },
     {
       "repo": "mortada/fredapi",
-      "retrieved_at": "2026-11-21T16:47:50Z",
+      "retrieved_at": "2026-11-21T19:39:38Z",
       "errors": {
         "scorecard": "HTTP 404"
       },
@@ -893,7 +893,7 @@
     },
     {
       "repo": "databento/databento-python",
-      "retrieved_at": "2026-11-21T16:47:51Z",
+      "retrieved_at": "2026-11-21T19:39:40Z",
       "errors": {},
       "stars": 315,
       "forks": 58,
@@ -936,7 +936,7 @@
     },
     {
       "repo": "alpacahq/alpaca-py",
-      "retrieved_at": "2026-11-21T16:47:53Z",
+      "retrieved_at": "2026-11-21T19:39:41Z",
       "errors": {
         "scorecard": "HTTP 404"
       },
@@ -962,7 +962,7 @@
     },
     {
       "repo": "polygon-io/client-python",
-      "retrieved_at": "2026-11-21T16:47:54Z",
+      "retrieved_at": "2026-11-21T19:39:43Z",
       "errors": {},
       "stars": 1525,
       "forks": 365,
