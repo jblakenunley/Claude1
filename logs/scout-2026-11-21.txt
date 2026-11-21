@@ -1,4 +1,4 @@
-run 2026-11-21T19:52:06Z
+run 2026-11-21T21:32:20Z
 selftest ok (28 watchlist repos)
 wrote out/scout/2026-11-21.json: 28 repos, 13 with at least one error
 upkeep: 28 of 28 repos scored into out/scout/2026-11-21.json
