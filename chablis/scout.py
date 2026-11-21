@@ -171,29 +171,29 @@ def signals(full_name, token=None, packages=()):
     api = f"https://api.github.com/repos/{full_name}"
     s = {"repo": full_name, "retrieved_at": now(), "errors": {}}
     repo, _, err = get(api, token)
-    if err:
+    if err:  # GitHub failed: still pull Scorecard and dependents, which do not depend on it
         s["errors"]["repo"] = err
-        return s
-    s.update({
-        "stars": repo.get("stargazers_count"),
-        "forks": repo.get("forks_count"),
-        "open_issues": repo.get("open_issues_count"),
-        "archived": repo.get("archived"),
-        "pushed_at": repo.get("pushed_at"),
-        "license": (repo.get("license") or {}).get("spdx_id"),
-        "default_branch": repo.get("default_branch"),
-    })
-    rel, _, err = get(f"{api}/releases/latest", token)
-    s["latest_release"] = {"tag": rel.get("tag_name"), "published_at": rel.get("published_at")} if rel else None
-    if err and err != "HTTP 404":
-        s["errors"]["release"] = err
-    since = (datetime.now(timezone.utc) - timedelta(days=90)).strftime("%Y-%m-%dT%H:%M:%SZ")
-    s["commits_90d"], err = count_via_link(f"{api}/commits?since={since}&per_page=1", token)
-    if err:
-        s["errors"]["commits"] = err
-    s["contributors"], err = count_via_link(f"{api}/contributors?per_page=1&anon=1", token)
-    if err:
-        s["errors"]["contributors"] = err
+    else:
+        s.update({
+            "stars": repo.get("stargazers_count"),
+            "forks": repo.get("forks_count"),
+            "open_issues": repo.get("open_issues_count"),
+            "archived": repo.get("archived"),
+            "pushed_at": repo.get("pushed_at"),
+            "license": (repo.get("license") or {}).get("spdx_id"),
+            "default_branch": repo.get("default_branch"),
+        })
+        rel, _, err = get(f"{api}/releases/latest", token)
+        s["latest_release"] = {"tag": rel.get("tag_name"), "published_at": rel.get("published_at")} if rel else None
+        if err and err != "HTTP 404":
+            s["errors"]["release"] = err
+        since = (datetime.now(timezone.utc) - timedelta(days=90)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        s["commits_90d"], err = count_via_link(f"{api}/commits?since={since}&per_page=1", token)
+        if err:
+            s["errors"]["commits"] = err
+        s["contributors"], err = count_via_link(f"{api}/contributors?per_page=1&anon=1", token)
+        if err:
+            s["errors"]["contributors"] = err
     sc_url = f"https://api.securityscorecards.dev/projects/github.com/{full_name}"
     sc, _, err = get(sc_url)
     if sc:
