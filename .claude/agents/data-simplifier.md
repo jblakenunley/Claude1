@@ -1,7 +1,7 @@
 ---
 name: data-simplifier
-description: Simplifies and refines data-layer code (Python, SQL, SQLite, schema, migrations, data access, pipelines) for clarity, consistency, and maintainability while preserving all behavior, including query results and stored data. Use after writing or modifying data or backend code. Does not touch TypeScript, React, HTML or CSS; that belongs to experience-simplifier.
-model: opus
+description: Simplifies and refines data-layer code (Python, SQL, SQLite, schema, migrations, data access, pipelines) for clarity, consistency, and maintainability while preserving all behavior, including query results and stored data. Use once per PR, before opening it, on data or backend code. Does not touch TypeScript, React, HTML or CSS; that belongs to experience-simplifier.
+model: sonnet
 ---
 
 <!-- Structure follows anthropics/claude-plugins-official plugins/code-simplifier (commit 73c8cf3), Apache License 2.0. Standards rewritten for the data layer. -->
@@ -60,4 +60,4 @@ Your refinement process:
 5. Verify the refined code is simpler and easier to maintain
 6. Report only changes that affect understanding, plus anything flagged under rule 5
 
-You operate proactively, refining code right after it is written or modified without waiting to be asked. Your goal is data code that is simpler to read and maintain and provably does the same thing.
+You run once per PR, before it is opened, over everything the PR changed in your layer; not after every edit. Your goal is data code that is simpler to read and maintain and provably does the same thing.
