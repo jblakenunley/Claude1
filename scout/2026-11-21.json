@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-21T19:39:44Z",
+  "generated_at": "2026-11-21T19:50:31Z",
   "count": 28,
   "repos": [
     {
       "repo": "actions/checkout",
-      "retrieved_at": "2026-11-21T19:39:04Z",
+      "retrieved_at": "2026-11-21T19:49:41Z",
       "errors": {},
       "stars": 9028,
       "forks": 2747,
@@ -22,6 +22,7 @@
       "scorecard": {
         "score": 5.8,
         "date": "2026-11-16",
+        "via": "securityscorecards.dev",
         "checks": {
           "Code-Review": 10,
           "Dangerous-Workflow": 10,
@@ -39,15 +40,41 @@
           "SAST": 10
         }
       },
+      "dependents": [],
       "sources": [
         "https://api.github.com/repos/actions/checkout",
         "https://api.securityscorecards.dev/projects/github.com/actions/checkout"
       ],
-      "category": "actions-in-use"
+      "category": "actions-in-use",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 1,
+          "R": 2,
+          "bus_deduction": 0,
+          "upkeep": 1,
+          "bus_scored": false
+        },
+        "last_human_commit": "2026-07-20",
+        "days_since_last_human_commit": 124,
+        "latest_release_tag": [
+          "v7.0.1",
+          "2026-07-17"
+        ],
+        "latest_release_age": 127,
+        "release_days_90d": 0,
+        "release_days_365d": 6,
+        "absence_factor_90d": null,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 0,
+        "commits_human_365d": 17,
+        "human_authors_365d": 3,
+        "error": null
+      }
     },
     {
       "repo": "actions/setup-python",
-      "retrieved_at": "2026-11-21T19:39:05Z",
+      "retrieved_at": "2026-11-21T19:49:43Z",
       "errors": {},
       "stars": 2256,
       "forks": 757,
@@ -65,6 +92,7 @@
       "scorecard": {
         "score": 6.6,
         "date": "2026-11-16",
+        "via": "securityscorecards.dev",
         "checks": {
           "Code-Review": 10,
           "Binary-Artifacts": 10,
@@ -82,17 +110,43 @@
           "SAST": 9
         }
       },
+      "dependents": [],
       "sources": [
         "https://api.github.com/repos/actions/setup-python",
         "https://api.securityscorecards.dev/projects/github.com/actions/setup-python"
       ],
-      "category": "actions-in-use"
+      "category": "actions-in-use",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 0,
+          "upkeep": 3,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-19",
+        "days_since_last_human_commit": 2,
+        "latest_release_tag": [
+          "v7.1.0",
+          "2026-10-21"
+        ],
+        "latest_release_age": 31,
+        "release_days_90d": 1,
+        "release_days_365d": 5,
+        "absence_factor_90d": 1,
+        "absence_factor_365d": 3,
+        "commits_human_90d": 3,
+        "commits_human_365d": 23,
+        "human_authors_365d": 12,
+        "error": null
+      }
     },
     {
       "repo": "scrapy/scrapy",
-      "retrieved_at": "2026-11-21T19:39:07Z",
+      "retrieved_at": "2026-11-21T19:49:44Z",
       "errors": {},
-      "stars": 65526,
+      "stars": 65527,
       "forks": 12151,
       "open_issues": 170,
       "archived": false,
@@ -108,6 +162,7 @@
       "scorecard": {
         "score": 7.1,
         "date": "2026-11-09",
+        "via": "securityscorecards.dev",
         "checks": {
           "Code-Review": 7,
           "Maintained": 10,
@@ -125,17 +180,56 @@
           "SAST": 0
         }
       },
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "scrapy",
+          "version": "2.20.0",
+          "dependent_count": 552,
+          "direct": 477,
+          "indirect": 78,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/scrapy/versions/2.20.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/scrapy/scrapy",
-        "https://api.securityscorecards.dev/projects/github.com/scrapy/scrapy"
+        "https://api.securityscorecards.dev/projects/github.com/scrapy/scrapy",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/scrapy/versions/2.20.0:dependents"
       ],
-      "category": "crawling"
+      "category": "crawling",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 1,
+          "upkeep": 2,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-19",
+        "days_since_last_human_commit": 2,
+        "latest_release_tag": [
+          "2.20.0",
+          "2026-11-06"
+        ],
+        "latest_release_age": 15,
+        "release_days_90d": 2,
+        "release_days_365d": 11,
+        "absence_factor_90d": 1,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 375,
+        "commits_human_365d": 825,
+        "human_authors_365d": 77,
+        "error": null
+      }
     },
     {
       "repo": "apify/crawlee-python",
-      "retrieved_at": "2026-11-21T19:39:08Z",
+      "retrieved_at": "2026-11-21T19:49:46Z",
       "errors": {
-        "scorecard": "HTTP 404"
+        "scorecard": "HTTP 404; deps.dev: no scorecard in deps.dev project record"
       },
       "stars": 9680,
       "forks": 836,
@@ -151,17 +245,56 @@
       "commits_90d": 218,
       "contributors": 60,
       "scorecard": null,
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "crawlee",
+          "version": "1.11.2",
+          "dependent_count": 12,
+          "direct": 11,
+          "indirect": 1,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/crawlee/versions/1.11.2:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/apify/crawlee-python",
-        "https://api.securityscorecards.dev/projects/github.com/apify/crawlee-python"
+        "https://api.securityscorecards.dev/projects/github.com/apify/crawlee-python",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/crawlee/versions/1.11.2:dependents"
       ],
-      "category": "crawling"
+      "category": "crawling",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 0,
+          "upkeep": 3,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-20",
+        "days_since_last_human_commit": 1,
+        "latest_release_tag": [
+          "v1.11.2",
+          "2026-11-10"
+        ],
+        "latest_release_age": 11,
+        "release_days_90d": 9,
+        "release_days_365d": 32,
+        "absence_factor_90d": 2,
+        "absence_factor_365d": 2,
+        "commits_human_90d": 161,
+        "commits_human_365d": 573,
+        "human_authors_365d": 35,
+        "error": null
+      }
     },
     {
       "repo": "dlt-hub/dlt",
-      "retrieved_at": "2026-11-21T19:39:09Z",
+      "retrieved_at": "2026-11-21T19:49:48Z",
       "errors": {
-        "scorecard": "HTTP 404"
+        "scorecard": "HTTP 404; deps.dev: no scorecard in deps.dev project record"
       },
       "stars": 6116,
       "forks": 666,
@@ -177,17 +310,56 @@
       "commits_90d": 104,
       "contributors": 226,
       "scorecard": null,
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "dlt",
+          "version": "1.32.0",
+          "dependent_count": 103,
+          "direct": 94,
+          "indirect": 10,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/dlt/versions/1.32.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/dlt-hub/dlt",
-        "https://api.securityscorecards.dev/projects/github.com/dlt-hub/dlt"
+        "https://api.securityscorecards.dev/projects/github.com/dlt-hub/dlt",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/dlt/versions/1.32.0:dependents"
       ],
-      "category": "elt"
+      "category": "elt",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 0,
+          "upkeep": 3,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-17",
+        "days_since_last_human_commit": 4,
+        "latest_release_tag": [
+          "1.32.0",
+          "2026-10-29"
+        ],
+        "latest_release_age": 23,
+        "release_days_90d": 2,
+        "release_days_365d": 22,
+        "absence_factor_90d": 4,
+        "absence_factor_365d": 5,
+        "commits_human_90d": 91,
+        "commits_human_365d": 553,
+        "human_authors_365d": 104,
+        "error": null
+      }
     },
     {
       "repo": "meltano/meltano",
-      "retrieved_at": "2026-11-21T19:39:11Z",
+      "retrieved_at": "2026-11-21T19:49:50Z",
       "errors": {
-        "scorecard": "HTTP 404"
+        "scorecard": "HTTP 404; deps.dev: no scorecard in deps.dev project record"
       },
       "stars": 2683,
       "forks": 282,
@@ -203,15 +375,54 @@
       "commits_90d": 161,
       "contributors": 207,
       "scorecard": null,
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "meltano",
+          "version": "4.4.1",
+          "dependent_count": 2,
+          "direct": 2,
+          "indirect": 0,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/meltano/versions/4.4.1:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/meltano/meltano",
-        "https://api.securityscorecards.dev/projects/github.com/meltano/meltano"
+        "https://api.securityscorecards.dev/projects/github.com/meltano/meltano",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/meltano/versions/4.4.1:dependents"
       ],
-      "category": "elt"
+      "category": "elt",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 1,
+          "upkeep": 2,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-09",
+        "days_since_last_human_commit": 12,
+        "latest_release_tag": [
+          "v4.4.1",
+          "2026-10-07"
+        ],
+        "latest_release_age": 45,
+        "release_days_90d": 3,
+        "release_days_365d": 13,
+        "absence_factor_90d": 2,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 111,
+        "commits_human_365d": 479,
+        "human_authors_365d": 27,
+        "error": null
+      }
     },
     {
       "repo": "airbytehq/airbyte",
-      "retrieved_at": "2026-11-21T19:39:12Z",
+      "retrieved_at": "2026-11-21T19:49:52Z",
       "errors": {},
       "stars": 22426,
       "forks": 5553,
@@ -229,6 +440,7 @@
       "scorecard": {
         "score": 5,
         "date": "2026-11-16",
+        "via": "securityscorecards.dev",
         "checks": {
           "Maintained": 10,
           "Code-Review": -1,
@@ -246,17 +458,44 @@
           "SAST": 7
         }
       },
+      "dependents": [],
       "sources": [
         "https://api.github.com/repos/airbytehq/airbyte",
         "https://api.securityscorecards.dev/projects/github.com/airbytehq/airbyte"
       ],
-      "category": "elt"
+      "category": "elt",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 0,
+          "bus_deduction": 0,
+          "upkeep": 0,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-17",
+        "days_since_last_human_commit": 4,
+        "latest_release_tag": [
+          "v2.0.0",
+          "2025-10-15"
+        ],
+        "latest_release_age": 402,
+        "release_days_90d": 0,
+        "release_days_365d": 0,
+        "absence_factor_90d": 3,
+        "absence_factor_365d": 5,
+        "commits_human_90d": 657,
+        "commits_human_365d": 1722,
+        "human_authors_365d": 148,
+        "error": null
+      }
     },
     {
       "repo": "duckdb/duckdb",
-      "retrieved_at": "2026-11-21T19:39:14Z",
+      "retrieved_at": "2026-11-21T19:49:53Z",
       "errors": {
-        "scorecard": "HTTP 404"
+        "scorecard": "HTTP 404; deps.dev: no scorecard in deps.dev project record",
+        "dependents:pypi:duckdb": "HTTP 404"
       },
       "stars": 43219,
       "forks": 4172,
@@ -272,15 +511,54 @@
       "commits_90d": 12157,
       "contributors": 1006,
       "scorecard": null,
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "duckdb",
+          "version": "2.1.0.dev2611161157",
+          "dependent_count": null,
+          "direct": null,
+          "indirect": null,
+          "source_repo_match": false,
+          "error": "HTTP 404",
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/duckdb/versions/2.1.0.dev2611161157:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/duckdb/duckdb",
-        "https://api.securityscorecards.dev/projects/github.com/duckdb/duckdb"
+        "https://api.securityscorecards.dev/projects/github.com/duckdb/duckdb",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/duckdb/versions/2.1.0.dev2611161157:dependents"
       ],
-      "category": "ledger-engine"
+      "category": "ledger-engine",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 0,
+          "upkeep": 3,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-20",
+        "days_since_last_human_commit": 1,
+        "latest_release_tag": [
+          "v2.0.1",
+          "2026-11-19"
+        ],
+        "latest_release_age": 2,
+        "release_days_90d": 3,
+        "release_days_365d": 12,
+        "absence_factor_90d": 6,
+        "absence_factor_365d": 9,
+        "commits_human_90d": 12181,
+        "commits_human_365d": 29715,
+        "human_authors_365d": 449,
+        "error": null
+      }
     },
     {
       "repo": "simonw/sqlite-utils",
-      "retrieved_at": "2026-11-21T19:39:15Z",
+      "retrieved_at": "2026-11-21T19:49:55Z",
       "errors": {},
       "stars": 2210,
       "forks": 240,
@@ -298,6 +576,7 @@
       "scorecard": {
         "score": 3.7,
         "date": "2026-11-16",
+        "via": "securityscorecards.dev",
         "checks": {
           "Dangerous-Workflow": 10,
           "Packaging": -1,
@@ -315,16 +594,57 @@
           "SAST": -1
         }
       },
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "sqlite-utils",
+          "version": "4.2.1",
+          "dependent_count": 760,
+          "direct": 266,
+          "indirect": 503,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/sqlite-utils/versions/4.2.1:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/simonw/sqlite-utils",
-        "https://api.securityscorecards.dev/projects/github.com/simonw/sqlite-utils"
+        "https://api.securityscorecards.dev/projects/github.com/simonw/sqlite-utils",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/sqlite-utils/versions/4.2.1:dependents"
       ],
-      "category": "ledger-engine"
+      "category": "ledger-engine",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 2,
+          "R": 2,
+          "bus_deduction": 1,
+          "upkeep": 1,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-10-10",
+        "days_since_last_human_commit": 42,
+        "latest_release_tag": [
+          "4.2.1",
+          "2026-08-13"
+        ],
+        "latest_release_age": 100,
+        "release_days_90d": 0,
+        "release_days_365d": 6,
+        "absence_factor_90d": 1,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 5,
+        "commits_human_365d": 198,
+        "human_authors_365d": 12,
+        "error": null
+      }
     },
     {
       "repo": "great-expectations/great_expectations",
-      "retrieved_at": "2026-11-21T19:39:16Z",
-      "errors": {},
+      "retrieved_at": "2026-11-21T19:49:57Z",
+      "errors": {
+        "dependents:pypi:great-expectations": "HTTP 404"
+      },
       "stars": 11942,
       "forks": 1891,
       "open_issues": 45,
@@ -341,6 +661,7 @@
       "scorecard": {
         "score": 5.1,
         "date": "2026-11-16",
+        "via": "securityscorecards.dev",
         "checks": {
           "Maintained": 10,
           "Code-Review": 5,
@@ -358,15 +679,54 @@
           "SAST": -1
         }
       },
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "great-expectations",
+          "version": "1.25.0",
+          "dependent_count": null,
+          "direct": null,
+          "indirect": null,
+          "source_repo_match": false,
+          "error": "HTTP 404",
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/great-expectations/versions/1.25.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/great-expectations/great_expectations",
-        "https://api.securityscorecards.dev/projects/github.com/great-expectations/great_expectations"
+        "https://api.securityscorecards.dev/projects/github.com/great-expectations/great_expectations",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/great-expectations/versions/1.25.0:dependents"
       ],
-      "category": "validation"
+      "category": "validation",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 0,
+          "upkeep": 3,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-17",
+        "days_since_last_human_commit": 4,
+        "latest_release_tag": [
+          "1.25.0",
+          "2026-11-12"
+        ],
+        "latest_release_age": 9,
+        "release_days_90d": 7,
+        "release_days_365d": 32,
+        "absence_factor_90d": 2,
+        "absence_factor_365d": 2,
+        "commits_human_90d": 129,
+        "commits_human_365d": 433,
+        "human_authors_365d": 70,
+        "error": null
+      }
     },
     {
       "repo": "frictionlessdata/frictionless-py",
-      "retrieved_at": "2026-11-21T19:39:18Z",
+      "retrieved_at": "2026-11-21T19:49:59Z",
       "errors": {},
       "stars": 859,
       "forks": 203,
@@ -384,6 +744,7 @@
       "scorecard": {
         "score": 4.9,
         "date": "2026-11-16",
+        "via": "securityscorecards.dev",
         "checks": {
           "Code-Review": 2,
           "Maintained": 10,
@@ -401,15 +762,54 @@
           "SAST": 0
         }
       },
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "frictionless",
+          "version": "5.21.0",
+          "dependent_count": 113,
+          "direct": 67,
+          "indirect": 50,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/frictionless/versions/5.21.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/frictionlessdata/frictionless-py",
-        "https://api.securityscorecards.dev/projects/github.com/frictionlessdata/frictionless-py"
+        "https://api.securityscorecards.dev/projects/github.com/frictionlessdata/frictionless-py",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/frictionless/versions/5.21.0:dependents"
       ],
-      "category": "validation"
+      "category": "validation",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 2,
+          "R": 3,
+          "bus_deduction": 1,
+          "upkeep": 1,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-10-15",
+        "days_since_last_human_commit": 37,
+        "latest_release_tag": [
+          "v5.21.0",
+          "2026-10-15"
+        ],
+        "latest_release_age": 37,
+        "release_days_90d": 3,
+        "release_days_365d": 4,
+        "absence_factor_90d": 2,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 16,
+        "commits_human_365d": 33,
+        "human_authors_365d": 10,
+        "error": null
+      }
     },
     {
       "repo": "moj-analytical-services/splink",
-      "retrieved_at": "2026-11-21T19:39:20Z",
+      "retrieved_at": "2026-11-21T19:50:01Z",
       "errors": {},
       "stars": 2593,
       "forks": 290,
@@ -427,6 +827,7 @@
       "scorecard": {
         "score": 7.2,
         "date": "2026-10-26",
+        "via": "securityscorecards.dev",
         "checks": {
           "Code-Review": 10,
           "Dangerous-Workflow": 10,
@@ -444,15 +845,54 @@
           "SAST": 10
         }
       },
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "splink",
+          "version": "5.0.0",
+          "dependent_count": 10,
+          "direct": 10,
+          "indirect": 0,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/splink/versions/5.0.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/moj-analytical-services/splink",
-        "https://api.securityscorecards.dev/projects/github.com/moj-analytical-services/splink"
+        "https://api.securityscorecards.dev/projects/github.com/moj-analytical-services/splink",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/splink/versions/5.0.0:dependents"
       ],
-      "category": "entity-resolution"
+      "category": "entity-resolution",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 0,
+          "upkeep": 3,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-11",
+        "days_since_last_human_commit": 10,
+        "latest_release_tag": [
+          "v5.0.0",
+          "2026-09-28"
+        ],
+        "latest_release_age": 54,
+        "release_days_90d": 2,
+        "release_days_365d": 7,
+        "absence_factor_90d": 2,
+        "absence_factor_365d": 2,
+        "commits_human_90d": 174,
+        "commits_human_365d": 1248,
+        "human_authors_365d": 14,
+        "error": null
+      }
     },
     {
       "repo": "dedupeio/dedupe",
-      "retrieved_at": "2026-11-21T19:39:21Z",
+      "retrieved_at": "2026-11-21T19:50:03Z",
       "errors": {},
       "stars": 4531,
       "forks": 578,
@@ -467,6 +907,7 @@
       "scorecard": {
         "score": 3.2,
         "date": "2026-11-16",
+        "via": "securityscorecards.dev",
         "checks": {
           "Code-Review": 0,
           "Binary-Artifacts": 10,
@@ -484,18 +925,55 @@
           "SAST": 7
         }
       },
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "dedupe",
+          "version": "3.0.3",
+          "dependent_count": 18,
+          "direct": 10,
+          "indirect": 8,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/dedupe/versions/3.0.3:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/dedupeio/dedupe",
-        "https://api.securityscorecards.dev/projects/github.com/dedupeio/dedupe"
+        "https://api.securityscorecards.dev/projects/github.com/dedupeio/dedupe",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/dedupe/versions/3.0.3:dependents"
       ],
-      "category": "entity-resolution"
+      "category": "entity-resolution",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 0,
+          "R": 0,
+          "bus_deduction": 0,
+          "upkeep": 0,
+          "bus_scored": false
+        },
+        "last_human_commit": "2025-07-28",
+        "days_since_last_human_commit": 481,
+        "latest_release_tag": [
+          "v3.0.3",
+          "2024-08-15"
+        ],
+        "latest_release_age": 828,
+        "release_days_90d": 0,
+        "release_days_365d": 0,
+        "absence_factor_90d": null,
+        "absence_factor_365d": null,
+        "commits_human_90d": 0,
+        "commits_human_365d": 0,
+        "human_authors_365d": 0,
+        "error": null
+      }
     },
     {
       "repo": "J535D165/recordlinkage",
-      "retrieved_at": "2026-11-21T19:39:23Z",
-      "errors": {
-        "scorecard": "HTTP 404"
-      },
+      "retrieved_at": "2026-11-21T19:50:04Z",
+      "errors": {},
       "stars": 1065,
       "forks": 153,
       "open_issues": 64,
@@ -509,17 +987,79 @@
       },
       "commits_90d": 0,
       "contributors": 21,
-      "scorecard": null,
+      "scorecard": {
+        "score": 2.8,
+        "date": "2026-08-24T00:00:00Z",
+        "via": "deps.dev",
+        "source": "https://api.deps.dev/v3/projects/github.com%2FJ535D165%2Frecordlinkage",
+        "checks": {
+          "Dangerous-Workflow": 10,
+          "Maintained": 0,
+          "Code-Review": 3,
+          "Binary-Artifacts": 10,
+          "Token-Permissions": 0,
+          "Pinned-Dependencies": 0,
+          "CII-Best-Practices": 0,
+          "Fuzzing": 0,
+          "Security-Policy": 0,
+          "License": 10,
+          "Packaging": -1,
+          "Branch-Protection": 0,
+          "Signed-Releases": 0,
+          "SAST": 0
+        }
+      },
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "recordlinkage",
+          "version": "0.16.0",
+          "dependent_count": 18,
+          "direct": 11,
+          "indirect": 7,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/recordlinkage/versions/0.16.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/J535D165/recordlinkage",
-        "https://api.securityscorecards.dev/projects/github.com/J535D165/recordlinkage"
+        "https://api.securityscorecards.dev/projects/github.com/J535D165/recordlinkage",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/recordlinkage/versions/0.16.0:dependents"
       ],
-      "category": "entity-resolution"
+      "category": "entity-resolution",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 0,
+          "R": 0,
+          "bus_deduction": 0,
+          "upkeep": 0,
+          "bus_scored": false
+        },
+        "last_human_commit": "2023-07-20",
+        "days_since_last_human_commit": 1220,
+        "latest_release_tag": [
+          "v0.16",
+          "2023-07-20"
+        ],
+        "latest_release_age": 1220,
+        "release_days_90d": 0,
+        "release_days_365d": 0,
+        "absence_factor_90d": null,
+        "absence_factor_365d": null,
+        "commits_human_90d": 0,
+        "commits_human_365d": 0,
+        "human_authors_365d": 0,
+        "error": null
+      }
     },
     {
       "repo": "projectdiscovery/subfinder",
-      "retrieved_at": "2026-11-21T19:39:24Z",
-      "errors": {},
+      "retrieved_at": "2026-11-21T19:50:06Z",
+      "errors": {
+        "dependents:go:github.com/projectdiscovery/subfinder/v2": "HTTP 404"
+      },
       "stars": 14845,
       "forks": 1660,
       "open_issues": 5,
@@ -536,6 +1076,7 @@
       "scorecard": {
         "score": 6,
         "date": "2026-11-16",
+        "via": "securityscorecards.dev",
         "checks": {
           "Code-Review": 9,
           "Dangerous-Workflow": 10,
@@ -553,23 +1094,62 @@
           "SAST": 9
         }
       },
+      "dependents": [
+        {
+          "system": "go",
+          "name": "github.com/projectdiscovery/subfinder/v2",
+          "version": "v2.17.0",
+          "dependent_count": null,
+          "direct": null,
+          "indirect": null,
+          "source_repo_match": true,
+          "error": "HTTP 404",
+          "source": "https://api.deps.dev/v3alpha/systems/go/packages/github.com%2Fprojectdiscovery%2Fsubfinder%2Fv2/versions/v2.17.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/projectdiscovery/subfinder",
-        "https://api.securityscorecards.dev/projects/github.com/projectdiscovery/subfinder"
+        "https://api.securityscorecards.dev/projects/github.com/projectdiscovery/subfinder",
+        "https://api.deps.dev/v3alpha/systems/go/packages/github.com%2Fprojectdiscovery%2Fsubfinder%2Fv2/versions/v2.17.0:dependents"
       ],
-      "category": "recon-passive"
+      "category": "recon-passive",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 0,
+          "upkeep": 3,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-21",
+        "days_since_last_human_commit": 0,
+        "latest_release_tag": [
+          "v2.17.0",
+          "2026-10-08"
+        ],
+        "latest_release_age": 44,
+        "release_days_90d": 2,
+        "release_days_365d": 8,
+        "absence_factor_90d": 3,
+        "absence_factor_365d": 3,
+        "commits_human_90d": 74,
+        "commits_human_365d": 191,
+        "human_authors_365d": 42,
+        "error": null
+      }
     },
     {
       "repo": "owasp-amass/amass",
-      "retrieved_at": "2026-11-21T19:39:25Z",
+      "retrieved_at": "2026-11-21T19:50:08Z",
       "errors": {
-        "scorecard": "HTTP 406"
+        "dependents:go:github.com/owasp-amass/amass/v5": "HTTP 404"
       },
       "stars": 15546,
       "forks": 2210,
       "open_issues": 255,
       "archived": false,
-      "pushed_at": "2026-11-21T19:33:17Z",
+      "pushed_at": "2026-11-21T19:45:51Z",
       "license": "NOASSERTION",
       "default_branch": "main",
       "latest_release": {
@@ -578,18 +1158,78 @@
       },
       "commits_90d": 4,
       "contributors": 75,
-      "scorecard": null,
+      "scorecard": {
+        "score": 3.2,
+        "date": "2026-11-02",
+        "via": "securityscorecards.dev",
+        "checks": {
+          "Maintained": 3,
+          "Code-Review": 0,
+          "Dangerous-Workflow": 10,
+          "Token-Permissions": 0,
+          "Binary-Artifacts": 10,
+          "SAST": 0,
+          "CII-Best-Practices": 0,
+          "Fuzzing": 0,
+          "License": 9,
+          "Packaging": 10,
+          "Pinned-Dependencies": 1,
+          "Branch-Protection": 0,
+          "Security-Policy": 0,
+          "Signed-Releases": 0
+        }
+      },
+      "dependents": [
+        {
+          "system": "go",
+          "name": "github.com/owasp-amass/amass/v5",
+          "version": "v5.1.3",
+          "dependent_count": null,
+          "direct": null,
+          "indirect": null,
+          "source_repo_match": true,
+          "error": "HTTP 404",
+          "source": "https://api.deps.dev/v3alpha/systems/go/packages/github.com%2Fowasp-amass%2Famass%2Fv5/versions/v5.1.3:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/owasp-amass/amass",
-        "https://api.securityscorecards.dev/projects/github.com/owasp-amass/amass"
+        "https://api.securityscorecards.dev/projects/github.com/owasp-amass/amass",
+        "https://api.deps.dev/v3alpha/systems/go/packages/github.com%2Fowasp-amass%2Famass%2Fv5/versions/v5.1.3:dependents"
       ],
-      "category": "recon-passive"
+      "category": "recon-passive",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 2,
+          "bus_deduction": 1,
+          "upkeep": 1,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-10-25",
+        "days_since_last_human_commit": 27,
+        "latest_release_tag": [
+          "v5.1.3",
+          "2026-10-25"
+        ],
+        "latest_release_age": 27,
+        "release_days_90d": 2,
+        "release_days_365d": 3,
+        "absence_factor_90d": 1,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 4,
+        "commits_human_365d": 273,
+        "human_authors_365d": 2,
+        "error": null
+      }
     },
     {
       "repo": "gitleaks/gitleaks",
-      "retrieved_at": "2026-11-21T19:39:27Z",
+      "retrieved_at": "2026-11-21T19:50:10Z",
       "errors": {
-        "scorecard": "HTTP 404"
+        "scorecard": "HTTP 404; deps.dev: no scorecard in deps.dev project record",
+        "dependents:go:github.com/zricethezav/gitleaks/v8": "HTTP 404"
       },
       "stars": 31241,
       "forks": 2401,
@@ -605,16 +1245,57 @@
       "commits_90d": 2,
       "contributors": 234,
       "scorecard": null,
+      "dependents": [
+        {
+          "system": "go",
+          "name": "github.com/zricethezav/gitleaks/v8",
+          "version": "v8.30.1",
+          "dependent_count": null,
+          "direct": null,
+          "indirect": null,
+          "source_repo_match": false,
+          "error": "HTTP 404",
+          "source": "https://api.deps.dev/v3alpha/systems/go/packages/github.com%2Fzricethezav%2Fgitleaks%2Fv8/versions/v8.30.1:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/gitleaks/gitleaks",
-        "https://api.securityscorecards.dev/projects/github.com/gitleaks/gitleaks"
+        "https://api.securityscorecards.dev/projects/github.com/gitleaks/gitleaks",
+        "https://api.deps.dev/v3alpha/systems/go/packages/github.com%2Fzricethezav%2Fgitleaks%2Fv8/versions/v8.30.1:dependents"
       ],
-      "category": "secret-scanning"
+      "category": "secret-scanning",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 1,
+          "bus_deduction": 1,
+          "upkeep": 0,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-10-23",
+        "days_since_last_human_commit": 29,
+        "latest_release_tag": [
+          "v8.30.1",
+          "2026-03-12"
+        ],
+        "latest_release_age": 254,
+        "release_days_90d": 0,
+        "release_days_365d": 2,
+        "absence_factor_90d": 1,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 1,
+        "commits_human_365d": 23,
+        "human_authors_365d": 5,
+        "error": null
+      }
     },
     {
       "repo": "trufflesecurity/trufflehog",
-      "retrieved_at": "2026-11-21T19:39:28Z",
-      "errors": {},
+      "retrieved_at": "2026-11-21T19:50:11Z",
+      "errors": {
+        "dependents:go:github.com/trufflesecurity/trufflehog/v3": "HTTP 404"
+      },
       "stars": 29563,
       "forks": 2792,
       "open_issues": 623,
@@ -631,6 +1312,7 @@
       "scorecard": {
         "score": 7.6,
         "date": "2026-11-02",
+        "via": "securityscorecards.dev",
         "checks": {
           "Maintained": 10,
           "Dangerous-Workflow": 10,
@@ -648,16 +1330,57 @@
           "SAST": -1
         }
       },
+      "dependents": [
+        {
+          "system": "go",
+          "name": "github.com/trufflesecurity/trufflehog/v3",
+          "version": "v3.100.0",
+          "dependent_count": null,
+          "direct": null,
+          "indirect": null,
+          "source_repo_match": true,
+          "error": "HTTP 404",
+          "source": "https://api.deps.dev/v3alpha/systems/go/packages/github.com%2Ftrufflesecurity%2Ftrufflehog%2Fv3/versions/v3.100.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/trufflesecurity/trufflehog",
-        "https://api.securityscorecards.dev/projects/github.com/trufflesecurity/trufflehog"
+        "https://api.securityscorecards.dev/projects/github.com/trufflesecurity/trufflehog",
+        "https://api.deps.dev/v3alpha/systems/go/packages/github.com%2Ftrufflesecurity%2Ftrufflehog%2Fv3/versions/v3.100.0:dependents"
       ],
-      "category": "secret-scanning"
+      "category": "secret-scanning",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 0,
+          "upkeep": 3,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-20",
+        "days_since_last_human_commit": 1,
+        "latest_release_tag": [
+          "v3.100.0",
+          "2026-11-19"
+        ],
+        "latest_release_age": 2,
+        "release_days_90d": 16,
+        "release_days_365d": 44,
+        "absence_factor_90d": 4,
+        "absence_factor_365d": 6,
+        "commits_human_90d": 146,
+        "commits_human_365d": 428,
+        "human_authors_365d": 73,
+        "error": null
+      }
     },
     {
       "repo": "ossf/scorecard",
-      "retrieved_at": "2026-11-21T19:39:30Z",
-      "errors": {},
+      "retrieved_at": "2026-11-21T19:50:13Z",
+      "errors": {
+        "dependents:go:github.com/ossf/scorecard/v5": "HTTP 404"
+      },
       "stars": 5854,
       "forks": 784,
       "open_issues": 348,
@@ -674,6 +1397,7 @@
       "scorecard": {
         "score": 8.8,
         "date": "2026-11-21T01:38:51Z",
+        "via": "securityscorecards.dev",
         "checks": {
           "Code-Review": 4,
           "Security-Policy": 10,
@@ -695,17 +1419,56 @@
           "Contributors": 10
         }
       },
+      "dependents": [
+        {
+          "system": "go",
+          "name": "github.com/ossf/scorecard/v5",
+          "version": "v5.7.0",
+          "dependent_count": null,
+          "direct": null,
+          "indirect": null,
+          "source_repo_match": true,
+          "error": "HTTP 404",
+          "source": "https://api.deps.dev/v3alpha/systems/go/packages/github.com%2Fossf%2Fscorecard%2Fv5/versions/v5.7.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/ossf/scorecard",
-        "https://api.securityscorecards.dev/projects/github.com/ossf/scorecard"
+        "https://api.securityscorecards.dev/projects/github.com/ossf/scorecard",
+        "https://api.deps.dev/v3alpha/systems/go/packages/github.com%2Fossf%2Fscorecard%2Fv5/versions/v5.7.0:dependents"
       ],
-      "category": "supply-chain"
+      "category": "supply-chain",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 2,
+          "bus_deduction": 0,
+          "upkeep": 2,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-19",
+        "days_since_last_human_commit": 2,
+        "latest_release_tag": [
+          "v5.7.0",
+          "2026-11-18"
+        ],
+        "latest_release_age": 3,
+        "release_days_90d": 2,
+        "release_days_365d": 3,
+        "absence_factor_90d": 2,
+        "absence_factor_365d": 2,
+        "commits_human_90d": 117,
+        "commits_human_365d": 151,
+        "human_authors_365d": 29,
+        "error": null
+      }
     },
     {
       "repo": "anthropics/claude-code-action",
-      "retrieved_at": "2026-11-21T19:39:31Z",
+      "retrieved_at": "2026-11-21T19:50:15Z",
       "errors": {
-        "scorecard": "HTTP 404"
+        "scorecard": "HTTP 404; deps.dev: no scorecard in deps.dev project record"
       },
       "stars": 10040,
       "forks": 2287,
@@ -721,17 +1484,43 @@
       "commits_90d": 112,
       "contributors": 143,
       "scorecard": null,
+      "dependents": [],
       "sources": [
         "https://api.github.com/repos/anthropics/claude-code-action",
         "https://api.securityscorecards.dev/projects/github.com/anthropics/claude-code-action"
       ],
-      "category": "model-powered"
+      "category": "model-powered",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 1,
+          "upkeep": 2,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-20",
+        "days_since_last_human_commit": 1,
+        "latest_release_tag": [
+          "v1.0.286",
+          "2026-11-20"
+        ],
+        "latest_release_age": 1,
+        "release_days_90d": 61,
+        "release_days_365d": 199,
+        "absence_factor_90d": 1,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 113,
+        "commits_human_365d": 515,
+        "human_authors_365d": 93,
+        "error": null
+      }
     },
     {
       "repo": "OpenBB-finance/OpenBB",
-      "retrieved_at": "2026-11-21T19:39:32Z",
+      "retrieved_at": "2026-11-21T19:50:16Z",
       "errors": {
-        "scorecard": "HTTP 404"
+        "scorecard": "HTTP 404; deps.dev: no scorecard in deps.dev project record"
       },
       "stars": 75620,
       "forks": 7892,
@@ -747,16 +1536,57 @@
       "commits_90d": 26,
       "contributors": 280,
       "scorecard": null,
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "openbb",
+          "version": "5.0.0",
+          "dependent_count": 2,
+          "direct": 2,
+          "indirect": 0,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/openbb/versions/5.0.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/OpenBB-finance/OpenBB",
-        "https://api.securityscorecards.dev/projects/github.com/OpenBB-finance/OpenBB"
+        "https://api.securityscorecards.dev/projects/github.com/OpenBB-finance/OpenBB",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/openbb/versions/5.0.0:dependents"
       ],
-      "category": "market-data"
+      "category": "market-data",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 1,
+          "upkeep": 2,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-18",
+        "days_since_last_human_commit": 3,
+        "latest_release_tag": [
+          "openbb-v5.0.0",
+          "2026-09-29"
+        ],
+        "latest_release_age": 53,
+        "release_days_90d": 4,
+        "release_days_365d": 8,
+        "absence_factor_90d": 2,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 26,
+        "commits_human_365d": 133,
+        "human_authors_365d": 30,
+        "error": null
+      }
     },
     {
       "repo": "ccxt/ccxt",
-      "retrieved_at": "2026-11-21T19:39:34Z",
-      "errors": {},
+      "retrieved_at": "2026-11-21T19:50:19Z",
+      "errors": {
+        "dependents:pypi:ccxt": "HTTP 404"
+      },
       "stars": 44948,
       "forks": 8994,
       "open_issues": 758,
@@ -773,6 +1603,7 @@
       "scorecard": {
         "score": 4.9,
         "date": "2026-11-16",
+        "via": "securityscorecards.dev",
         "checks": {
           "Maintained": 10,
           "Code-Review": 1,
@@ -790,15 +1621,66 @@
           "Fuzzing": 0
         }
       },
+      "dependents": [
+        {
+          "system": "npm",
+          "name": "ccxt",
+          "version": "4.5.92",
+          "dependent_count": 101,
+          "direct": 86,
+          "indirect": 16,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/npm/packages/ccxt/versions/4.5.92:dependents"
+        },
+        {
+          "system": "pypi",
+          "name": "ccxt",
+          "version": "4.5.93",
+          "dependent_count": null,
+          "direct": null,
+          "indirect": null,
+          "source_repo_match": true,
+          "error": "HTTP 404",
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/ccxt/versions/4.5.93:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/ccxt/ccxt",
-        "https://api.securityscorecards.dev/projects/github.com/ccxt/ccxt"
+        "https://api.securityscorecards.dev/projects/github.com/ccxt/ccxt",
+        "https://api.deps.dev/v3alpha/systems/npm/packages/ccxt/versions/4.5.92:dependents",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/ccxt/versions/4.5.93:dependents"
       ],
-      "category": "market-data"
+      "category": "market-data",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 0,
+          "upkeep": 3,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-20",
+        "days_since_last_human_commit": 1,
+        "latest_release_tag": [
+          "v4.5.93",
+          "2026-11-17"
+        ],
+        "latest_release_age": 4,
+        "release_days_90d": 16,
+        "release_days_365d": 70,
+        "absence_factor_90d": 4,
+        "absence_factor_365d": 3,
+        "commits_human_90d": 617,
+        "commits_human_365d": 2706,
+        "human_authors_365d": 118,
+        "error": null
+      }
     },
     {
       "repo": "ranaroussi/yfinance",
-      "retrieved_at": "2026-11-21T19:39:36Z",
+      "retrieved_at": "2026-11-21T19:50:20Z",
       "errors": {},
       "stars": 25976,
       "forks": 3506,
@@ -816,6 +1698,7 @@
       "scorecard": {
         "score": 5.6,
         "date": "2026-11-09",
+        "via": "securityscorecards.dev",
         "checks": {
           "Code-Review": 7,
           "Maintained": 10,
@@ -833,17 +1716,57 @@
           "SAST": 0
         }
       },
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "yfinance",
+          "version": "1.8.0",
+          "dependent_count": 894,
+          "direct": 793,
+          "indirect": 111,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/yfinance/versions/1.8.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/ranaroussi/yfinance",
-        "https://api.securityscorecards.dev/projects/github.com/ranaroussi/yfinance"
+        "https://api.securityscorecards.dev/projects/github.com/ranaroussi/yfinance",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/yfinance/versions/1.8.0:dependents"
       ],
-      "category": "market-data"
+      "category": "market-data",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 1,
+          "upkeep": 2,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-07",
+        "days_since_last_human_commit": 14,
+        "latest_release_tag": [
+          "1.8.0",
+          "2026-11-03"
+        ],
+        "latest_release_age": 18,
+        "release_days_90d": 2,
+        "release_days_365d": 13,
+        "absence_factor_90d": 1,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 87,
+        "commits_human_365d": 386,
+        "human_authors_365d": 64,
+        "error": null
+      }
     },
     {
       "repo": "dgunning/edgartools",
-      "retrieved_at": "2026-11-21T19:39:37Z",
+      "retrieved_at": "2026-11-21T19:50:22Z",
       "errors": {
-        "scorecard": "HTTP 404"
+        "scorecard": "HTTP 404; deps.dev: no scorecard in deps.dev project record",
+        "dependents:pypi:edgartools": "HTTP 404"
       },
       "stars": 2867,
       "forks": 532,
@@ -856,21 +1779,58 @@
         "tag": "v6.3.0",
         "published_at": "2026-11-17T22:36:16Z"
       },
-      "commits_90d": 487,
+      "commits_90d": 486,
       "contributors": 86,
       "scorecard": null,
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "edgartools",
+          "version": "6.3.0",
+          "dependent_count": null,
+          "direct": null,
+          "indirect": null,
+          "source_repo_match": true,
+          "error": "HTTP 404",
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/edgartools/versions/6.3.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/dgunning/edgartools",
-        "https://api.securityscorecards.dev/projects/github.com/dgunning/edgartools"
+        "https://api.securityscorecards.dev/projects/github.com/dgunning/edgartools",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/edgartools/versions/6.3.0:dependents"
       ],
-      "category": "market-data"
+      "category": "market-data",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 1,
+          "upkeep": 2,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-21",
+        "days_since_last_human_commit": 0,
+        "latest_release_tag": [
+          "v6.3.0",
+          "2026-11-17"
+        ],
+        "latest_release_age": 4,
+        "release_days_90d": 15,
+        "release_days_365d": 126,
+        "absence_factor_90d": 1,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 494,
+        "commits_human_365d": 2147,
+        "human_authors_365d": 55,
+        "error": null
+      }
     },
     {
       "repo": "mortada/fredapi",
-      "retrieved_at": "2026-11-21T19:39:38Z",
-      "errors": {
-        "scorecard": "HTTP 404"
-      },
+      "retrieved_at": "2026-11-21T19:50:24Z",
+      "errors": {},
       "stars": 1676,
       "forks": 242,
       "open_issues": 36,
@@ -884,16 +1844,76 @@
       },
       "commits_90d": 0,
       "contributors": 10,
-      "scorecard": null,
+      "scorecard": {
+        "score": 3.1,
+        "date": "2026-08-24T00:00:00Z",
+        "via": "deps.dev",
+        "source": "https://api.deps.dev/v3/projects/github.com%2Fmortada%2Ffredapi",
+        "checks": {
+          "Code-Review": 3,
+          "Packaging": -1,
+          "Binary-Artifacts": 10,
+          "Token-Permissions": 0,
+          "Maintained": 0,
+          "Dangerous-Workflow": 10,
+          "Pinned-Dependencies": 0,
+          "CII-Best-Practices": 0,
+          "Fuzzing": 0,
+          "Security-Policy": 0,
+          "License": 10,
+          "Signed-Releases": -1,
+          "Branch-Protection": 0,
+          "SAST": 0
+        }
+      },
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "fredapi",
+          "version": "0.5.2",
+          "dependent_count": 39,
+          "direct": 38,
+          "indirect": 1,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/fredapi/versions/0.5.2:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/mortada/fredapi",
-        "https://api.securityscorecards.dev/projects/github.com/mortada/fredapi"
+        "https://api.securityscorecards.dev/projects/github.com/mortada/fredapi",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/fredapi/versions/0.5.2:dependents"
       ],
-      "category": "market-data"
+      "category": "market-data",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 1,
+          "R": 0,
+          "bus_deduction": 0,
+          "upkeep": 0,
+          "bus_scored": false
+        },
+        "last_human_commit": "2026-01-28",
+        "days_since_last_human_commit": 297,
+        "latest_release_tag": [
+          "v0.5.2",
+          "2024-05-05"
+        ],
+        "latest_release_age": 930,
+        "release_days_90d": 0,
+        "release_days_365d": 0,
+        "absence_factor_90d": null,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 0,
+        "commits_human_365d": 2,
+        "human_authors_365d": 2,
+        "error": null
+      }
     },
     {
       "repo": "databento/databento-python",
-      "retrieved_at": "2026-11-21T19:39:40Z",
+      "retrieved_at": "2026-11-21T19:50:25Z",
       "errors": {},
       "stars": 315,
       "forks": 58,
@@ -911,6 +1931,7 @@
       "scorecard": {
         "score": 3.8,
         "date": "2026-11-16",
+        "via": "securityscorecards.dev",
         "checks": {
           "Dangerous-Workflow": 10,
           "Code-Review": 0,
@@ -928,17 +1949,56 @@
           "Security-Policy": 0
         }
       },
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "databento",
+          "version": "0.90.0",
+          "dependent_count": 5,
+          "direct": 5,
+          "indirect": 0,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/databento/versions/0.90.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/databento/databento-python",
-        "https://api.securityscorecards.dev/projects/github.com/databento/databento-python"
+        "https://api.securityscorecards.dev/projects/github.com/databento/databento-python",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/databento/versions/0.90.0:dependents"
       ],
-      "category": "market-data"
+      "category": "market-data",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 1,
+          "upkeep": 2,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-03",
+        "days_since_last_human_commit": 18,
+        "latest_release_tag": [
+          "v0.90.0",
+          "2026-11-03"
+        ],
+        "latest_release_age": 18,
+        "release_days_90d": 6,
+        "release_days_365d": 27,
+        "absence_factor_90d": 1,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 34,
+        "commits_human_365d": 155,
+        "human_authors_365d": 11,
+        "error": null
+      }
     },
     {
       "repo": "alpacahq/alpaca-py",
-      "retrieved_at": "2026-11-21T19:39:41Z",
+      "retrieved_at": "2026-11-21T19:50:27Z",
       "errors": {
-        "scorecard": "HTTP 404"
+        "scorecard": "HTTP 404; deps.dev: HTTP 404"
       },
       "stars": 1600,
       "forks": 431,
@@ -954,15 +2014,54 @@
       "commits_90d": 116,
       "contributors": 72,
       "scorecard": null,
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "alpaca-py",
+          "version": "0.45.0",
+          "dependent_count": 48,
+          "direct": 46,
+          "indirect": 3,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/alpaca-py/versions/0.45.0:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/alpacahq/alpaca-py",
-        "https://api.securityscorecards.dev/projects/github.com/alpacahq/alpaca-py"
+        "https://api.securityscorecards.dev/projects/github.com/alpacahq/alpaca-py",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/alpaca-py/versions/0.45.0:dependents"
       ],
-      "category": "market-data"
+      "category": "market-data",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 1,
+          "upkeep": 2,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-20",
+        "days_since_last_human_commit": 1,
+        "latest_release_tag": [
+          "v0.45.0",
+          "2026-11-05"
+        ],
+        "latest_release_age": 16,
+        "release_days_90d": 1,
+        "release_days_365d": 5,
+        "absence_factor_90d": 1,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 71,
+        "commits_human_365d": 91,
+        "human_authors_365d": 23,
+        "error": null
+      }
     },
     {
       "repo": "polygon-io/client-python",
-      "retrieved_at": "2026-11-21T19:39:43Z",
+      "retrieved_at": "2026-11-21T19:50:29Z",
       "errors": {},
       "stars": 1525,
       "forks": 365,
@@ -980,6 +2079,7 @@
       "scorecard": {
         "score": 6.6,
         "date": "2026-11-16",
+        "via": "securityscorecards.dev",
         "checks": {
           "Maintained": 10,
           "Code-Review": 6,
@@ -997,11 +2097,51 @@
           "SAST": 10
         }
       },
+      "dependents": [
+        {
+          "system": "pypi",
+          "name": "polygon-api-client",
+          "version": "1.16.3",
+          "dependent_count": 26,
+          "direct": 26,
+          "indirect": 0,
+          "source_repo_match": true,
+          "error": null,
+          "source": "https://api.deps.dev/v3alpha/systems/pypi/packages/polygon-api-client/versions/1.16.3:dependents"
+        }
+      ],
       "sources": [
         "https://api.github.com/repos/polygon-io/client-python",
-        "https://api.securityscorecards.dev/projects/github.com/polygon-io/client-python"
+        "https://api.securityscorecards.dev/projects/github.com/polygon-io/client-python",
+        "https://api.deps.dev/v3alpha/systems/pypi/packages/polygon-api-client/versions/1.16.3:dependents"
       ],
-      "category": "market-data"
+      "category": "market-data",
+      "upkeep": {
+        "asof": "2026-11-21",
+        "bands": {
+          "L": 3,
+          "R": 3,
+          "bus_deduction": 1,
+          "upkeep": 2,
+          "bus_scored": true
+        },
+        "last_human_commit": "2026-11-19",
+        "days_since_last_human_commit": 2,
+        "latest_release_tag": [
+          "v2.11.0",
+          "2026-11-19"
+        ],
+        "latest_release_age": 2,
+        "release_days_90d": 5,
+        "release_days_365d": 15,
+        "absence_factor_90d": 1,
+        "absence_factor_365d": 1,
+        "commits_human_90d": 10,
+        "commits_human_365d": 25,
+        "human_authors_365d": 2,
+        "error": null
+      }
     }
-  ]
+  ],
+  "upkeep_generated_at": "2026-11-21T19:51:02Z"
 }

@@ -1,14 +1,4 @@
-run 2026-11-21T19:39:03Z
+run 2026-11-21T19:49:41Z
 selftest ok (28 watchlist repos)
-wrote out/scout/2026-11-21.json: 28 repos, 12 with at least one error
-remote: Not Found
-fatal: repository 'https://github.com/scout.git/' not found
-Traceback (most recent call last):
-  File "/home/runner/work/Claude1/Claude1/chablis/upkeep.py", line 108, in <module>
-    main(sys.argv[1:])
-  File "/home/runner/work/Claude1/Claude1/chablis/upkeep.py", line 101, in main
-    subprocess.run(["git", "clone", "--bare", "--filter=tree:0", "--quiet",
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/subprocess.py", line 571, in run
-    raise CalledProcessError(retcode, process.args,
-subprocess.CalledProcessError: Command '['git', 'clone', '--bare', '--filter=tree:0', '--quiet', 'https://github.com/scout.git', '/tmp/tmp7uigqt71/scout.git']' returned non-zero exit status 128.
-upkeep failed
+wrote out/scout/2026-11-21.json: 28 repos, 15 with at least one error
+upkeep: 28 of 28 repos scored into out/scout/2026-11-21.json
