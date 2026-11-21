@@ -85,7 +85,7 @@ Blake signs off on that, not on the diff.
 
 ## Code cleanup agents and the review desk
 
-After writing or changing code, run the simplifier for each layer the change touched:
+Once per PR, before opening it, run the simplifier for each layer the PR touched (not after every edit):
 
 - Presentation layer (`.ts`, `.tsx`, `.js`, `.jsx`, `.html`, `.css`, templates) → `experience-simplifier`
 - Data layer (`.py`, `.sql`, migrations, schema, data access) → `data-simplifier`
