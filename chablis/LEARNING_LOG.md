@@ -42,6 +42,12 @@ Template:
 **Doctrine change:** §6 dated note: Adoption stays blank without dependents; resolve canonical repo name first.
 **Cost:** tokens not reported; fetch subagents 20.5k.
 
+**Day 2 addendum (2026-11-21, from the scout run on the PR branch for queue #14):** deps.dev dependents (v3alpha `:dependents`), stars from the same scout run.
+- Dependents (direct) vs stars: scrapy 2.20.0 552 (477) vs 65,527; duckdb 2.0.0 2,583 (1,959) vs 43,219; OpenBB `openbb` 5.0.0 2 (2) vs 75,620; yfinance 1.8.0 894 (793) vs 25,976; fredapi 0.5.2 39 (38) vs 1,676.
+- Biggest gap: OpenBB, 75.6k stars against 2 dependents on the `openbb` package. Not yet a verdict on adoption: `openbb` is a meta-package, and dependents may sit on its sub-packages (`openbb-core` and others), which were not pulled.
+- Counts are per version. duckdb's default on deps.dev is a dev pre-release (2.1.0.dev2611161157), so 2.0.0 was used. deps.dev does not link the PyPI `duckdb` to duckdb/duckdb (`source_repo_match` false); the Python package is built from another repo, so the 2,583 measures the Python binding.
+- deps.dev answered 404 for dependents of new versions (edgartools 6.3.0, great-expectations 1.25.0, ccxt PyPI 4.5.93); the scout now falls back to the newest stable version that answers. All five Go modules answered 404 on 4 versions each, so Go dependents are not available from this endpoint.
+
 ## Day 3 — Upkeep (2026-11-21, cycle 1)
 **Exercise:** Defined the Upkeep bands and ran them on scrapy, duckdb, OpenBB, yfinance, fredapi, plus checkout and setup-python, from treeless git clones (`chablis/upkeep.py`). Scout 2026-11-20 was current (11 of 28 repos with errors). Git was the route: the GitHub API is denied here for out-of-scope repos.
 **Findings:**
