@@ -53,6 +53,18 @@ jobs:
           else
             echo "upkeep skipped: no scout output" >> "$L"
           fi
+      - name: Coverage gate
+        id: gate
+        run: |
+          D=$(TZ=America/Denver date +%F)
+          L="out/logs/scout-$D.txt"
+          if [ -f "out/scout/$D.json" ]; then
+            python3 chablis/scout.py gate --scout "out/scout/$D.json" --prev-dir out/scout >> "$L" 2>&1 && R=ok || R=alert
+          else
+            echo "gate: no scout output" >> "$L"; R=alert
+          fi
+          echo "result=$R" >> "$GITHUB_OUTPUT"
+          grep -E "^(gate|ALERT)" "$L" || true
       - name: Commit to chablis-scout
         working-directory: out
         run: |
@@ -60,7 +72,12 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -q -m "scout $(TZ=America/Denver date +%F)" && git push || echo "nothing new"
+      - name: Fail the run on a coverage alert   # after the commit, so the data still lands for the lesson
+        if: steps.gate.outputs.result != 'ok'
+        run: |
+          echo "::error::scout coverage alert, see logs/scout-$(TZ=America/Denver date +%F).txt on chablis-scout"
+          exit 1
       - name: Delete the trigger branch
-        if: startsWith(github.ref_name, 'chablis-scout-trigger-')
+        if: always() && startsWith(github.ref_name, 'chablis-scout-trigger-')   # also on failure or timeout of an earlier step
         working-directory: out   # the main checkout has no credentials; this one does
         run: git push origin --delete "${{ github.ref_name }}" || true

@@ -1,5 +1,5 @@
 {
-  "note": "Repos the scout pulls signals for nightly. Chablis adds and removes entries; every change is logged. `packages` maps a repo to its deps.dev package(s) (system = pypi, npm, go, cargo, maven, nuget, rubygems) for the dependents signal; an empty list means no package ecosystem deps.dev covers (GitHub Actions) or no package built from this repo (airbyte's PyPI packages live in other repos).",
+  "note": "Repos the scout pulls signals for nightly. Chablis adds and removes entries; every change is logged. `packages` maps a repo to its deps.dev package(s) (system = pypi, npm, go, cargo, maven, nuget, rubygems) for the dependents signal; an empty list means no package ecosystem deps.dev covers (GitHub Actions) or no package built from this repo (airbyte's PyPI packages live in other repos). A package with \"dependents\": false skips the deps.dev :dependents calls (still checked for source_repo_match); flip it to true to re-test.",
   "repos": [
     {
       "repo": "actions/checkout",
@@ -132,7 +132,9 @@
       "packages": [
         {
           "system": "go",
-          "name": "github.com/projectdiscovery/subfinder/v2"
+          "name": "github.com/projectdiscovery/subfinder/v2",
+          "dependents": false,
+          "dependents_note": "deps.dev answered 404 on every version tried for all 5 Go modules (live run 2026-11-21); set true to re-test"
         }
       ]
     },
@@ -142,7 +144,9 @@
       "packages": [
         {
           "system": "go",
-          "name": "github.com/owasp-amass/amass/v5"
+          "name": "github.com/owasp-amass/amass/v5",
+          "dependents": false,
+          "dependents_note": "deps.dev answered 404 on every version tried for all 5 Go modules (live run 2026-11-21); set true to re-test"
         }
       ]
     },
@@ -152,7 +156,9 @@
       "packages": [
         {
           "system": "go",
-          "name": "github.com/zricethezav/gitleaks/v8"
+          "name": "github.com/zricethezav/gitleaks/v8",
+          "dependents": false,
+          "dependents_note": "deps.dev answered 404 on every version tried for all 5 Go modules (live run 2026-11-21); set true to re-test"
         }
       ]
     },
@@ -162,7 +168,9 @@
       "packages": [
         {
           "system": "go",
-          "name": "github.com/trufflesecurity/trufflehog/v3"
+          "name": "github.com/trufflesecurity/trufflehog/v3",
+          "dependents": false,
+          "dependents_note": "deps.dev answered 404 on every version tried for all 5 Go modules (live run 2026-11-21); set true to re-test"
         }
       ]
     },
@@ -172,7 +180,9 @@
       "packages": [
         {
           "system": "go",
-          "name": "github.com/ossf/scorecard/v5"
+          "name": "github.com/ossf/scorecard/v5",
+          "dependents": false,
+          "dependents_note": "deps.dev answered 404 on every version tried for all 5 Go modules (live run 2026-11-21); set true to re-test"
         }
       ]
     },

@@ -61,3 +61,9 @@ Template:
 **Registry:** Upkeep scored for 7 tools; Day 1 majors corrected; OpenBB licence and owner updated.
 **Doctrine change:** §6 Upkeep bands v1; §10 ledger-continuity note.
 **Cost:** tokens not reported; fetch subagent 36.4k.
+
+**Day 3 addendum — hardening after an outside architecture review (2026-11-21).**
+- Coverage gate: `scout.py gate` counts each route (GitHub, Scorecard, Upkeep, dependents), writes `_meta` into `scout/DATE.json`, and alerts below a floor (90 / 50 / 90 / 50 %) or on a fall of more than 20 % from the previous snapshot. The workflow commits first, then goes red, so the data still lands. Back-tested on the branch's own files: 2026-11-20 alerts (upkeep 0/28, before Upkeep existed); 2026-11-21 passes.
+- Trigger branches are now deleted on failure and timeout too (`if: always()`), in scout and feed. The existing orphan `chablis-keyed-trigger-001` (from the failed run noted on Day 1) is queue #22.
+- The five Go modules carry `"dependents": false` in the watchlist: no more 404 loop, no false error, `source_repo_match` still checked. Flip to true to re-test deps.dev.
+- Review points already covered and left as is: a `concurrency` group already serialises scout runs; the `Accept` header is already per host; a git commit can't land half a file. Kept the trigger-branch mechanism (the cloud lesson can push branches, not call the Actions API) and the scout → upkeep file hand-off (guarded, and `upkeep.py` runs standalone).

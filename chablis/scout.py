@@ -5,6 +5,8 @@ Commands
   pins DIR                      audit GitHub Actions in DIR's workflows for tag-pinning
   run --watchlist F --out F     pull signals for every repo in the watchlist (needs network;
                                 runs on GitHub Actions via chablis-scout.yml, uses GITHUB_TOKEN if set)
+  gate --scout F --prev-dir D   count each route's coverage, write it into F as _meta, compare with the
+                                floors and the newest older snapshot in D; exit 1 on any alert
   selftest                      offline checks of the parsing and scoring logic
 
 Stdlib only, by house convention. Every signal carries its source URL and retrieval time.
@@ -130,11 +132,14 @@ def dependents(packages, full_name):
                "tried": [], "error": None, "source": base}
         pkg, _, err = get(base)
         row["default_version"], cands = candidate_versions(pkg)
+        skip = p.get("dependents") is False  # watchlist says deps.dev computes none here: skip the 404 loop
+        if skip:
+            row["skipped"] = p.get("dependents_note") or "dependents not computed by deps.dev for this package"
         if not cands:
-            row["error"] = err or "no stable version"
+            row["error"] = None if skip else (err or "no stable version")
             out.append(row)
             continue
-        for ver in cands:
+        for ver in [] if skip else cands:
             url = f"{DEPS}/v3alpha/systems/{system}/packages/{q(name)}/versions/{q(ver)}:dependents"
             dep, _, err = get(url)
             row["tried"].append(ver)
@@ -227,6 +232,69 @@ def cmd_run(watchlist, out):
     return 0
 
 
+# ---------- coverage gate ----------
+# A run that degrades still exits 0 from scout/upkeep, so each route's coverage is counted here,
+# written into the snapshot as _meta, and compared with the floors and with the previous snapshot.
+FLOORS = {"github": 0.90, "scorecard": 0.50, "upkeep": 0.90, "dependents": 0.50}  # share of repos (or packages)
+MAX_DROP = 0.20  # a route falling more than 20% below the previous snapshot is an alert
+
+
+def coverage(doc):
+    rows = doc.get("repos", [])
+    pk = [d for r in rows for d in r.get("dependents", []) if not d.get("skipped")]
+    c = {
+        "repos": len(rows),
+        "github": sum(1 for r in rows if "repo" not in r.get("errors", {}) and "stars" in r),
+        "scorecard": sum(1 for r in rows if r.get("scorecard")),
+        "upkeep": sum(1 for r in rows if r.get("upkeep") and not r["upkeep"].get("error")),
+        "dependents": sum(1 for d in pk if d.get("dependent_count") is not None),
+        "dependents_expected": len(pk),
+        "dependents_skipped": sum(1 for r in rows for d in r.get("dependents", []) if d.get("skipped")),
+    }
+    return c
+
+
+def gate(cur, prev=None):
+    """Return (meta, alerts). cur and prev are coverage() dicts; prev may be None."""
+    alerts = []
+    for k, floor in FLOORS.items():
+        n = cur["dependents_expected"] if k == "dependents" else cur["repos"]
+        if n and cur[k] / n < floor:
+            alerts.append(f"{k} {cur[k]}/{n} below floor {floor:.0%}")
+        if prev and prev.get(k) and cur[k] < prev[k] * (1 - MAX_DROP):
+            alerts.append(f"{k} fell from {prev[k]} to {cur[k]} since the previous snapshot")
+    return {"coverage": cur, "previous": prev, "floors": FLOORS, "max_drop": MAX_DROP,
+            "alerts": alerts, "status": "alert" if alerts else "ok", "checked_at": now()}, alerts
+
+
+def cmd_gate(scout, prev_dir):
+    """Write _meta into the snapshot. Exit 1 on any alert, so the run shows red after it commits."""
+    with open(scout, encoding="utf-8") as fh:
+        doc = json.load(fh)
+    prev = None
+    me = os.path.basename(scout)
+    older = sorted(f for f in os.listdir(prev_dir) if re.fullmatch(r"\d{4}-\d{2}-\d{2}\.json", f) and f < me)
+    if older:
+        try:
+            with open(os.path.join(prev_dir, older[-1]), encoding="utf-8") as fh:
+                pd = json.load(fh)
+            prev = (pd.get("_meta") or {}).get("coverage") or coverage(pd)
+        except (OSError, ValueError):
+            prev = None
+    meta, alerts = gate(coverage(doc), prev)
+    meta["previous_file"] = older[-1] if older else None
+    doc["_meta"] = meta
+    with open(scout, "w", encoding="utf-8") as fh:
+        json.dump(doc, fh, indent=2, default=str)
+    c = meta["coverage"]
+    print(f"gate {meta['status']}: github {c['github']}/{c['repos']}, scorecard {c['scorecard']}/{c['repos']}, "
+          f"upkeep {c['upkeep']}/{c['repos']}, dependents {c['dependents']}/{c['dependents_expected']} "
+          f"({c['dependents_skipped']} skipped)")
+    for a in alerts:
+        print(f"ALERT: {a}")
+    return 1 if alerts else 0
+
+
 # ---------- selftest ----------
 
 def cmd_selftest():
@@ -255,6 +323,17 @@ def cmd_selftest():
     assert candidate_versions({"versions": [v("1.0", "2026-01"), v("1.1", "2026-02", True)]}) == ("1.1", ["1.1", "1.0"])
     assert candidate_versions(None) == (None, [])
     assert q("github.com/zricethezav/gitleaks/v8") == "github.com%2Fzricethezav%2Fgitleaks%2Fv8"
+    row = lambda **k: {"repo": "a/b", "errors": {}, "stars": 1, "scorecard": {"score": 5},
+                       "upkeep": {"score": 2}, "dependents": [], **k}
+    good = coverage({"repos": [row() for _ in range(10)]})
+    assert good["github"] == good["scorecard"] == good["upkeep"] == 10, good
+    assert gate(good)[1] == [] and gate(good, good)[0]["status"] == "ok"
+    bad = coverage({"repos": [row()] * 2 + [row(scorecard=None)] * 8})
+    al = gate(bad, good)[1]
+    assert any("scorecard 2/10 below floor" in a for a in al) and any("fell from 10 to 2" in a for a in al), al
+    sk = coverage({"repos": [row(dependents=[{"skipped": "x", "dependent_count": None},
+                                              {"dependent_count": 7}])]})
+    assert (sk["dependents"], sk["dependents_expected"], sk["dependents_skipped"]) == (1, 1, 1), sk
     print(f"selftest ok ({len(wl['repos'])} watchlist repos)")
     return 0
 
@@ -265,6 +344,8 @@ if __name__ == "__main__":
         sys.exit(cmd_pins(a[1]))
     if a[:1] == ["run"] and "--watchlist" in a and "--out" in a:
         sys.exit(cmd_run(a[a.index("--watchlist") + 1], a[a.index("--out") + 1]))
+    if a[:1] == ["gate"] and "--scout" in a and "--prev-dir" in a:
+        sys.exit(cmd_gate(a[a.index("--scout") + 1], a[a.index("--prev-dir") + 1]))
     if a[:1] == ["selftest"]:
         sys.exit(cmd_selftest())
     print(__doc__)
