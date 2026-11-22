@@ -55,3 +55,17 @@ Template:
 **Registry:** Upkeep scored for 7 tools; Day 1 majors corrected; OpenBB licence and owner updated.
 **Doctrine change:** §6 Upkeep bands v1; §10 ledger-continuity note.
 **Cost:** tokens not reported; fetch subagent 36.4k.
+
+## Day 4 — Issue health (2026-11-22, cycle 1)
+**Exercise:** Open/closed counts and a creation cohort for seven tools (scrapy, duckdb, OpenBB, yfinance, fredapi, checkout, setup-python) from GitHub issue search, `chablis/issues.py`. Scout 2026-11-21 was current (now with `upkeep`, `dependents`).
+**Findings:**
+- The scout's `open_issues` includes PRs ([GitHub docs](https://docs.github.com/en/rest/issues/issues)): scrapy 171 = 98 issues + 73 PRs. 5 of 7 reconcile exactly; duckdb (+7) and yfinance (+1) differ by a snapshot gap.
+- Open share of all issues filed: checkout 48.6% and fredapi 58%, against 2.3–8.5% for the other five.
+- Time to close among recent closures is sweep-driven: scrapy median 1,985 d (81 of its latest 100 filed before 2026), yfinance 524 d (32 of 55). Not response.
+- Cohort (created 2026-05-26..08-24), n / no comment / closed ≤30 d: duckdb 500 of 535 / 47% / 60%; scrapy 36 / 28% / 53%; checkout 28 / 61% / 61%; yfinance 25 / 8% / 68%; OpenBB 21 / 33% / 38%; setup-python 8 / 0% / 50%; fredapi 0. Checkout (Upkeep 1) matches duckdb (3) on speed: not Upkeep restated.
+- Median first response not obtained: search has no comment timestamps; CHAOSS excludes bot replies ([source](https://chaoss.community/kb/metric-time-to-first-response/)), `comments:0` does not.
+- Scorecard Maintained already counts issue activity (ossf/scorecard, 2026-11-21: "17 issue activity" in 90 days).
+**Feed load:** 11,874 rows read from feed 2026-11-21, 1,913 new (CFTC 1,890, Treasury 14, FRED 9), ledger 13,803. SEC-EDGAR failed: NVDA HTTP 403. CFTC's 5,705 rows on 11-20 was the lookback passing one report week, not loss. **Not saved:** the 3.5 MB ledger exceeds the connector's per-call cap (~3.1 MB); `ledger-2026-11-21.db` stays newest (queue #15).
+**Registry:** issue evidence on 7 rows; no scores.
+**Doctrine change:** §6 note: issue health is evidence only, no scored line.
+**Cost:** tokens not reported; fetch subagent 38.0k.

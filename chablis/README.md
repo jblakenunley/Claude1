@@ -12,6 +12,8 @@ tool quality and selection. "Chablis exists to connect you to data."
 | `TOOL_REGISTRY.md` | Every tool vetted: scores, evidence, review dates |
 | `watchlist.json` | Repos the nightly scout pulls signals for |
 | `scout.py` | Signal collector and Actions pin audit (stdlib, no model) |
+| `upkeep.py` | Upkeep scorer from git history (§6 bands; stdlib plus git) |
+| `issues.py` | Issue-health evidence from GitHub issue search: counts and a creation cohort (§6 Day 4 note; stdlib plus `gh`) |
 | `ledger/schema.sql` | Shared ledger schema, including the market data tables |
 | `feed/feed.py` | Market data feed: public lane (US-government sources), private lane (crypto, Yahoo, Massive), ledger loader |
 | `feed/feed_config.json` | Which series, contracts and companies the feed pulls |

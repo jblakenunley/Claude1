@@ -141,6 +141,23 @@ max(0, min(L, R) − deduction)**; an archived repo is 0. The scout's `commits_9
 (1) a stable first-party Action silent for 90+ days scores low (checkout 1; Scorecard Maintained
 is also 0); (2) the 50% line is a cliff (scrapy's top author is 52%, its top two 85%, so factor 1).
 
+*Note 2026-11-22 (Day 4, LEARNING_LOG).* **Issue health v1: evidence only, no scored line.**
+(1) Count issues with `is:issue` search (`chablis/issues.py`; search works for repos the session was
+not granted, repo-scoped reads do not). The scout's `open_issues` is GitHub's REST count, and the REST
+API treats every pull request as an issue ([GitHub docs](https://docs.github.com/en/rest/issues/issues)):
+scrapy 171 = 98 issues + 73 PRs; 5 of 7 repos reconcile exactly. Never score from it. (2) Lifetime open
+share, closed-in-window flow and time-to-close among recent closures are not read: a sweep of old
+issues dominates them (scrapy: 176 closed vs 27 opened in 90 d, median age at close 1,985 d). (3) The
+usable read is a creation cohort, issues created in the 90 days before the window so each had 90 days
+to resolve: share with no comment, share closed within 30 d, and n. Only duckdb has n of 50 or more; the
+other six have 36 or fewer (fredapi 0), where a few issues move a share by 3-5 points, so no band is
+set. (4) First-response time is not collected: search returns no comment timestamps, and CHAOSS Time to
+First Response excludes bot replies and filters by responder role
+([CHAOSS](https://chaoss.community/kb/metric-time-to-first-response/), modified 2024-10-24), while
+`comments:0` counts bots. (5) Scorecard's Maintained check already reads issue activity ("30 commit(s)
+and 17 issue activity found in the last 90 days", ossf/scorecard, 2026-11-21), so a scored line would
+partly double-count. Revisit at Day 5 (each Scorecard check) and Day 7 (rubric v1 review).
+
 ## 7. Run contract — state back before any run of size
 
 - **OBJECTIVE** — what data, for which project
