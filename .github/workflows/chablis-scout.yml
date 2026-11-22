@@ -1,5 +1,6 @@
 # Chablis scout: runs chablis/scout.py on GitHub's servers, which can reach api.github.com and the
-# OpenSSF Scorecard API. Pulls tool-quality signals for chablis/watchlist.json and commits
+# OpenSSF Scorecard and deps.dev APIs. Pulls tool-quality signals (incl. deps.dev dependents, and Upkeep
+# bands from treeless clones via chablis/upkeep.py) for chablis/watchlist.json and commits
 # scout/DATE.json and logs/scout-DATE.txt to the chablis-scout branch, where the daily lesson reads them.
 # No model, no token spend. Output is public metadata about public repos only; private data and
 # recon findings never come through here.
@@ -8,6 +9,8 @@ on:
   schedule:
     - cron: "17 9 * * *"   # 2:17am MST / 3:17am MDT, ahead of the 4:53am daily lesson
   workflow_dispatch:
+  push:
+    branches: ["chablis-scout-trigger-*"]   # the 4:53am lesson pushes a new chablis-scout-trigger-<time> branch for a same-morning run; GitHub's schedule lags 5-10 h. The branch is deleted after the run.
 permissions:
   contents: write   # commit to the chablis-scout branch
 concurrency:
@@ -16,11 +19,11 @@ concurrency:
 jobs:
   scout:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20   # upkeep clones: 28 repos in 36 s from a cloud session on 2026-11-21
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
         with:
-          ref: main
+          ref: ${{ github.sha }}   # = main on schedule/dispatch; on a trigger push, the commit it points at
           persist-credentials: false
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
         with:
@@ -39,6 +42,29 @@ jobs:
           echo "run $(date -u +%FT%TZ)" > "$L"
           python3 chablis/scout.py selftest >> "$L" 2>&1
           python3 chablis/scout.py run --watchlist chablis/watchlist.json --out "out/scout/$D.json" >> "$L" 2>&1 || echo "scout failed" >> "$L"
+      - name: Score Upkeep from git history
+        env:
+          GIT_TERMINAL_PROMPT: "0"
+        run: |
+          D=$(TZ=America/Denver date +%F)
+          L="out/logs/scout-$D.txt"
+          if [ -f "out/scout/$D.json" ]; then
+            python3 chablis/upkeep.py scout --watchlist chablis/watchlist.json --scout "out/scout/$D.json" >> "$L" 2>&1 || echo "upkeep failed" >> "$L"
+          else
+            echo "upkeep skipped: no scout output" >> "$L"
+          fi
+      - name: Coverage gate
+        id: gate
+        run: |
+          D=$(TZ=America/Denver date +%F)
+          L="out/logs/scout-$D.txt"
+          if [ -f "out/scout/$D.json" ]; then
+            python3 chablis/scout.py gate --scout "out/scout/$D.json" --prev-dir out/scout >> "$L" 2>&1 && R=ok || R=alert
+          else
+            echo "gate: no scout output" >> "$L"; R=alert
+          fi
+          echo "result=$R" >> "$GITHUB_OUTPUT"
+          grep -E "^(gate|ALERT)" "$L" || true
       - name: Commit to chablis-scout
         working-directory: out
         run: |
@@ -46,3 +72,12 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -q -m "scout $(TZ=America/Denver date +%F)" && git push || echo "nothing new"
+      - name: Fail the run on a coverage alert   # after the commit, so the data still lands for the lesson
+        if: steps.gate.outputs.result != 'ok'
+        run: |
+          echo "::error::scout coverage alert, see logs/scout-$(TZ=America/Denver date +%F).txt on chablis-scout"
+          exit 1
+      - name: Delete the trigger branch
+        if: always() && startsWith(github.ref_name, 'chablis-scout-trigger-')   # also on failure or timeout of an earlier step
+        working-directory: out   # the main checkout has no credentials; this one does
+        run: git push origin --delete "${{ github.ref_name }}" || true

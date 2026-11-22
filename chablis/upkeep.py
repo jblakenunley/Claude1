@@ -2,6 +2,8 @@
 """Chablis Upkeep scorer: Doctrine section 6, Upkeep bands v1. Stdlib plus git.
 
   upkeep.py [--asof YYYY-MM-DD] OWNER/REPO [OWNER/REPO ...]
+  upkeep.py scout --watchlist F --scout F   add an `upkeep` block to every repo row of a scout
+                                            JSON in place (chablis-scout.yml runs this nightly)
 
 Clones each repo bare and treeless (commits and tags only, a few MB) into a temp
 directory and scores Upkeep from git history alone. No API key, no API quota.
@@ -16,7 +18,7 @@ Bands (all windows end at --asof; humans only, bots excluded, authors merged by 
   Upkeep = max(0, min(L, R) - deduction).  An archived repo is 0 (hard stop; read the
   flag from the scout, git cannot see it).
 """
-import collections, json, re, subprocess, sys, tempfile
+import collections, json, re, shutil, subprocess, sys, tempfile
 from datetime import date, datetime, timedelta, timezone
 
 BOT = re.compile(r"\[bot\]|dependabot|github-actions|renovate|pre-commit-ci|^copilot$|copilot-swe-agent", re.I)
@@ -90,19 +92,64 @@ def analyse(repo, g, asof):
     return m
 
 
+def clone(repo, tmp):
+    g = f"{tmp}/{repo.replace('/', '_')}.git"
+    subprocess.run(["git", "clone", "--bare", "--filter=tree:0", "--quiet",
+                    f"https://github.com/{repo}.git", g], check=True, timeout=300)
+    return g
+
+
+def block(m, archived):
+    """The compact `upkeep` block the scout carries. Archived is a hard stop at 0."""
+    b = dict(m["bands"])
+    if archived:
+        b["upkeep"], b["archived_stop"] = 0, True
+    return {"asof": m["asof"], "bands": b, "last_human_commit": m["last_human_commit"],
+            "days_since_last_human_commit": m["days_since_last_human_commit"],
+            "latest_release_tag": m["latest_release_tag"], "latest_release_age": m["latest_release_age"],
+            "release_days_90d": m["release_days_90d"], "release_days_365d": m["release_days_365d"],
+            "absence_factor_90d": m["w90"]["absence_factor"], "absence_factor_365d": m["w365"]["absence_factor"],
+            "commits_human_90d": m["w90"]["commits_human"], "commits_human_365d": m["w365"]["commits_human"],
+            "human_authors_365d": m["w365"]["human_authors"], "error": None}
+
+
+def cmd_scout(watchlist, scout, asof):
+    with open(watchlist, encoding="utf-8") as fh:
+        repos = [r["repo"] for r in json.load(fh)["repos"]]
+    with open(scout, encoding="utf-8") as fh:
+        doc = json.load(fh)
+    rows = {r["repo"]: r for r in doc["repos"]}
+    ok = 0
+    with tempfile.TemporaryDirectory() as tmp:
+        for repo in repos:
+            row = rows.setdefault(repo, {"repo": repo, "errors": {}})
+            try:
+                g = clone(repo, tmp)
+                row["upkeep"] = block(analyse(repo, g, asof), row.get("archived"))
+                shutil.rmtree(g, ignore_errors=True)
+                ok += 1
+            except Exception as e:  # one bad clone must not lose the other 27
+                row["upkeep"] = {"asof": asof.isoformat(), "error": f"{type(e).__name__}: {e}"[:300]}
+                row.setdefault("errors", {})["upkeep"] = row["upkeep"]["error"]
+    doc["repos"] = list(rows.values())
+    doc["upkeep_generated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    with open(scout, "w", encoding="utf-8") as fh:
+        json.dump(doc, fh, indent=2, default=str)
+    print(f"upkeep: {ok} of {len(repos)} repos scored into {scout}")
+    return 0
+
+
 def main(argv):
     asof = datetime.now(timezone.utc).date()
     if argv[:1] == ["--asof"]:
         asof, argv = date.fromisoformat(argv[1]), argv[2:]
-    out = []
+    if argv[:1] == ["scout"] and "--watchlist" in argv and "--scout" in argv:
+        return cmd_scout(argv[argv.index("--watchlist") + 1], argv[argv.index("--scout") + 1], asof)
     with tempfile.TemporaryDirectory() as tmp:
-        for repo in argv:
-            g = f"{tmp}/{repo.replace('/', '_')}.git"
-            subprocess.run(["git", "clone", "--bare", "--filter=tree:0", "--quiet",
-                            f"https://github.com/{repo}.git", g], check=True)
-            out.append(analyse(repo, g, asof))
+        out = [analyse(repo, clone(repo, tmp), asof) for repo in argv]
     print(json.dumps(out, indent=1, default=str))
+    return 0
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    sys.exit(main(sys.argv[1:]))

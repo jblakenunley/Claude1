@@ -1,117 +1,279 @@
 {
-  "note": "Repos the scout pulls signals for nightly. Chablis adds and removes entries; every change is logged.",
+  "note": "Repos the scout pulls signals for nightly. Chablis adds and removes entries; every change is logged. `packages` maps a repo to its deps.dev package(s) (system = pypi, npm, go, cargo, maven, nuget, rubygems) for the dependents signal; an empty list means no package ecosystem deps.dev covers (GitHub Actions) or no package built from this repo (airbyte's PyPI packages live in other repos). A package with \"dependents\": false skips the deps.dev :dependents calls (still checked for source_repo_match); flip it to true to re-test.",
   "repos": [
     {
       "repo": "actions/checkout",
-      "category": "actions-in-use"
+      "category": "actions-in-use",
+      "packages": []
     },
     {
       "repo": "actions/setup-python",
-      "category": "actions-in-use"
+      "category": "actions-in-use",
+      "packages": []
     },
     {
       "repo": "scrapy/scrapy",
-      "category": "crawling"
+      "category": "crawling",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "scrapy"
+        }
+      ]
     },
     {
       "repo": "apify/crawlee-python",
-      "category": "crawling"
+      "category": "crawling",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "crawlee"
+        }
+      ]
     },
     {
       "repo": "dlt-hub/dlt",
-      "category": "elt"
+      "category": "elt",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "dlt"
+        }
+      ]
     },
     {
       "repo": "meltano/meltano",
-      "category": "elt"
+      "category": "elt",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "meltano"
+        }
+      ]
     },
     {
       "repo": "airbytehq/airbyte",
-      "category": "elt"
+      "category": "elt",
+      "packages": []
     },
     {
       "repo": "duckdb/duckdb",
-      "category": "ledger-engine"
+      "category": "ledger-engine",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "duckdb"
+        }
+      ]
     },
     {
       "repo": "simonw/sqlite-utils",
-      "category": "ledger-engine"
+      "category": "ledger-engine",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "sqlite-utils"
+        }
+      ]
     },
     {
       "repo": "great-expectations/great_expectations",
-      "category": "validation"
+      "category": "validation",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "great-expectations"
+        }
+      ]
     },
     {
       "repo": "frictionlessdata/frictionless-py",
-      "category": "validation"
+      "category": "validation",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "frictionless"
+        }
+      ]
     },
     {
       "repo": "moj-analytical-services/splink",
-      "category": "entity-resolution"
+      "category": "entity-resolution",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "splink"
+        }
+      ]
     },
     {
       "repo": "dedupeio/dedupe",
-      "category": "entity-resolution"
+      "category": "entity-resolution",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "dedupe"
+        }
+      ]
     },
     {
       "repo": "J535D165/recordlinkage",
-      "category": "entity-resolution"
+      "category": "entity-resolution",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "recordlinkage"
+        }
+      ]
     },
     {
       "repo": "projectdiscovery/subfinder",
-      "category": "recon-passive"
+      "category": "recon-passive",
+      "packages": [
+        {
+          "system": "go",
+          "name": "github.com/projectdiscovery/subfinder/v2",
+          "dependents": false,
+          "dependents_note": "deps.dev answered 404 on every version tried for all 5 Go modules (live run 2026-11-21); set true to re-test"
+        }
+      ]
     },
     {
       "repo": "owasp-amass/amass",
-      "category": "recon-passive"
+      "category": "recon-passive",
+      "packages": [
+        {
+          "system": "go",
+          "name": "github.com/owasp-amass/amass/v5",
+          "dependents": false,
+          "dependents_note": "deps.dev answered 404 on every version tried for all 5 Go modules (live run 2026-11-21); set true to re-test"
+        }
+      ]
     },
     {
       "repo": "gitleaks/gitleaks",
-      "category": "secret-scanning"
+      "category": "secret-scanning",
+      "packages": [
+        {
+          "system": "go",
+          "name": "github.com/zricethezav/gitleaks/v8",
+          "dependents": false,
+          "dependents_note": "deps.dev answered 404 on every version tried for all 5 Go modules (live run 2026-11-21); set true to re-test"
+        }
+      ]
     },
     {
       "repo": "trufflesecurity/trufflehog",
-      "category": "secret-scanning"
+      "category": "secret-scanning",
+      "packages": [
+        {
+          "system": "go",
+          "name": "github.com/trufflesecurity/trufflehog/v3",
+          "dependents": false,
+          "dependents_note": "deps.dev answered 404 on every version tried for all 5 Go modules (live run 2026-11-21); set true to re-test"
+        }
+      ]
     },
     {
       "repo": "ossf/scorecard",
-      "category": "supply-chain"
+      "category": "supply-chain",
+      "packages": [
+        {
+          "system": "go",
+          "name": "github.com/ossf/scorecard/v5",
+          "dependents": false,
+          "dependents_note": "deps.dev answered 404 on every version tried for all 5 Go modules (live run 2026-11-21); set true to re-test"
+        }
+      ]
     },
     {
       "repo": "anthropics/claude-code-action",
-      "category": "model-powered"
+      "category": "model-powered",
+      "packages": []
     },
     {
       "repo": "OpenBB-finance/OpenBB",
-      "category": "market-data"
+      "category": "market-data",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "openbb"
+        }
+      ]
     },
     {
       "repo": "ccxt/ccxt",
-      "category": "market-data"
+      "category": "market-data",
+      "packages": [
+        {
+          "system": "npm",
+          "name": "ccxt"
+        },
+        {
+          "system": "pypi",
+          "name": "ccxt"
+        }
+      ]
     },
     {
       "repo": "ranaroussi/yfinance",
-      "category": "market-data"
+      "category": "market-data",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "yfinance"
+        }
+      ]
     },
     {
       "repo": "dgunning/edgartools",
-      "category": "market-data"
+      "category": "market-data",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "edgartools"
+        }
+      ]
     },
     {
       "repo": "mortada/fredapi",
-      "category": "market-data"
+      "category": "market-data",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "fredapi"
+        }
+      ]
     },
     {
       "repo": "databento/databento-python",
-      "category": "market-data"
+      "category": "market-data",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "databento"
+        }
+      ]
     },
     {
       "repo": "alpacahq/alpaca-py",
-      "category": "market-data"
+      "category": "market-data",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "alpaca-py"
+        }
+      ]
     },
     {
       "repo": "polygon-io/client-python",
-      "category": "market-data"
+      "category": "market-data",
+      "packages": [
+        {
+          "system": "pypi",
+          "name": "polygon-api-client"
+        }
+      ]
     }
   ]
 }

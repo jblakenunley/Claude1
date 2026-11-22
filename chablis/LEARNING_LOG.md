@@ -42,6 +42,12 @@ Template:
 **Doctrine change:** §6 dated note: Adoption stays blank without dependents; resolve canonical repo name first.
 **Cost:** tokens not reported; fetch subagents 20.5k.
 
+**Day 2 addendum (2026-11-21, from the scout run on the PR branch for queue #14):** deps.dev dependents (v3alpha `:dependents`), stars from the same scout run.
+- Dependents (direct) vs stars: scrapy 2.20.0 552 (477) vs 65,527; duckdb 2.0.0 2,583 (1,959) vs 43,219; OpenBB `openbb` 5.0.0 2 (2) vs 75,620; yfinance 1.8.0 894 (793) vs 25,976; fredapi 0.5.2 39 (38) vs 1,676.
+- Biggest gap: OpenBB, 75.6k stars against 2 dependents on the `openbb` package. Not yet a verdict on adoption: `openbb` is a meta-package, and dependents may sit on its sub-packages (`openbb-core` and others), which were not pulled.
+- Counts are per version. duckdb's default on deps.dev is a dev pre-release (2.1.0.dev2611161157), so 2.0.0 was used. deps.dev does not link the PyPI `duckdb` to duckdb/duckdb (`source_repo_match` false); the Python package is built from another repo, so the 2,583 measures the Python binding.
+- deps.dev answered 404 for dependents of new versions (edgartools 6.3.0, great-expectations 1.25.0, ccxt PyPI 4.5.93); the scout now falls back to the newest stable version that answers. All five Go modules answered 404 on 4 versions each, so Go dependents are not available from this endpoint.
+
 ## Day 3 — Upkeep (2026-11-21, cycle 1)
 **Exercise:** Defined the Upkeep bands and ran them on scrapy, duckdb, OpenBB, yfinance, fredapi, plus checkout and setup-python, from treeless git clones (`chablis/upkeep.py`). Scout 2026-11-20 was current (11 of 28 repos with errors). Git was the route: the GitHub API is denied here for out-of-scope repos.
 **Findings:**
@@ -55,3 +61,9 @@ Template:
 **Registry:** Upkeep scored for 7 tools; Day 1 majors corrected; OpenBB licence and owner updated.
 **Doctrine change:** §6 Upkeep bands v1; §10 ledger-continuity note.
 **Cost:** tokens not reported; fetch subagent 36.4k.
+
+**Day 3 addendum — hardening after an outside architecture review (2026-11-21).**
+- Coverage gate: `scout.py gate` counts each route (GitHub, Scorecard, Upkeep, dependents), writes `_meta` into `scout/DATE.json`, and alerts below a floor (90 / 50 / 90 / 50 %) or on a fall of more than 20 % from the previous snapshot. The workflow commits first, then goes red, so the data still lands. Back-tested on the branch's own files: 2026-11-20 alerts (upkeep 0/28, before Upkeep existed); 2026-11-21 passes.
+- Trigger branches are now deleted on failure and timeout too (`if: always()`), in scout and feed. The existing orphan `chablis-keyed-trigger-001` (from the failed run noted on Day 1) is queue #22.
+- The five Go modules carry `"dependents": false` in the watchlist: no more 404 loop, no false error, `source_repo_match` still checked. Flip to true to re-test deps.dev.
+- Review points already covered and left as is: a `concurrency` group already serialises scout runs; the `Accept` header is already per host; a git commit can't land half a file. Kept the trigger-branch mechanism (the cloud lesson can push branches, not call the Actions API) and the scout → upkeep file hand-off (guarded, and `upkeep.py` runs standalone).

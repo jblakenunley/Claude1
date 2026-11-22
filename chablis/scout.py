@@ -5,11 +5,13 @@ Commands
   pins DIR                      audit GitHub Actions in DIR's workflows for tag-pinning
   run --watchlist F --out F     pull signals for every repo in the watchlist (needs network;
                                 runs on GitHub Actions via chablis-scout.yml, uses GITHUB_TOKEN if set)
+  gate --scout F --prev-dir D   count each route's coverage, write it into F as _meta, compare with the
+                                floors and the newest older snapshot in D; exit 1 on any alert
   selftest                      offline checks of the parsing and scoring logic
 
 Stdlib only, by house convention. Every signal carries its source URL and retrieval time.
 """
-import json, os, re, sys, time, urllib.error, urllib.request
+import json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timedelta, timezone
 
 UA = "chablis-scout/1.0 (+https://github.com/jblakenunley/claude1)"
@@ -62,8 +64,9 @@ def cmd_pins(d):
 
 def get(url, token=None):
     """GET JSON. Returns (data, headers, error). Honors Retry-After once on 403/429."""
-    h = {"User-Agent": UA, "Accept": "application/vnd.github+json"}
-    if token and "api.github.com" in url:
+    gh = "api.github.com" in url
+    h = {"User-Agent": UA, "Accept": "application/vnd.github+json" if gh else "application/json"}
+    if token and gh:
         h["Authorization"] = f"Bearer {token}"
     for attempt in (1, 2):
         try:
@@ -93,42 +96,123 @@ def count_via_link(url, token):
     return (n if n is not None else len(data or [])), None
 
 
-def signals(full_name, token=None):
+DEPS = "https://api.deps.dev"
+
+
+def q(x):
+    return urllib.parse.quote(x, safe="")
+
+
+PRE = re.compile(r"(?i)(dev|rc|alpha|beta|pre|[0-9](a|b)[0-9]|-)")  # pre-release or Go pseudo-version
+
+
+def candidate_versions(pkg_record, limit=4):
+    """Versions to ask for dependents, best first: the isDefault version if stable, then the
+    newest stable versions. deps.dev answers 404 for a version whose dependents it has not yet
+    computed, which on 2026-11-21 was typically a release a few days old."""
+    vs = (pkg_record or {}).get("versions", [])
+    name = lambda v: v.get("versionKey", {}).get("version")
+    default = next((name(v) for v in vs if v.get("isDefault")), None)
+    stable = [name(v) for v in sorted(vs, key=lambda v: v.get("publishedAt") or "", reverse=True)
+              if name(v) and not PRE.search(name(v).lstrip("vV"))]
+    order = ([default] if default and default in stable else []) + stable
+    return default, list(dict.fromkeys(order))[:limit]
+
+
+def dependents(packages, full_name):
+    """deps.dev dependents per package: package -> version -> :dependents (v3alpha). Counts are
+    per version, so the version used is recorded next to the default one. source_repo_match says
+    whether deps.dev links that version back to this repo (a wrong mapping shows up as false)."""
+    out = []
+    for p in packages:
+        system, name = p["system"].lower(), p["name"]
+        base = f"{DEPS}/v3/systems/{system}/packages/{q(name)}"
+        row = {"system": system, "name": name, "default_version": None, "version": None,
+               "dependent_count": None, "direct": None, "indirect": None, "source_repo_match": None,
+               "tried": [], "error": None, "source": base}
+        pkg, _, err = get(base)
+        row["default_version"], cands = candidate_versions(pkg)
+        skip = p.get("dependents") is False  # watchlist says deps.dev computes none here: skip the 404 loop
+        if skip:
+            row["skipped"] = p.get("dependents_note") or "dependents not computed by deps.dev for this package"
+        if not cands:
+            row["error"] = None if skip else (err or "no stable version")
+            out.append(row)
+            continue
+        for ver in [] if skip else cands:
+            url = f"{DEPS}/v3alpha/systems/{system}/packages/{q(name)}/versions/{q(ver)}:dependents"
+            dep, _, err = get(url)
+            row["tried"].append(ver)
+            if dep:
+                row.update(version=ver, source=url, error=None, dependent_count=dep.get("dependentCount"),
+                           direct=dep.get("directDependentCount"), indirect=dep.get("indirectDependentCount"))
+                break
+            row["error"] = f"{err} for {', '.join(row['tried'])}"
+        vrec, _, _ = get(f"{base}/versions/{q(row['version'] or cands[0])}")
+        if vrec:
+            ids = [r.get("projectKey", {}).get("id", "").lower() for r in vrec.get("relatedProjects", [])]
+            row["source_repo_match"] = f"github.com/{full_name}".lower() in ids
+        out.append(row)
+    return out
+
+
+def scorecard_from_depsdev(full_name):
+    """Second Scorecard route: the deps.dev project record carries OpenSSF Scorecard results."""
+    pid = f"github.com/{full_name}"
+    for pid in dict.fromkeys([pid, pid.lower()]):  # try as written, then lowercased
+        url = f"{DEPS}/v3/projects/{q(pid)}"
+        pr, _, err = get(url)
+        sc = (pr or {}).get("scorecard")
+        if sc:
+            return {"score": sc.get("overallScore"), "date": sc.get("date"), "via": "deps.dev", "source": url,
+                    "checks": {c["name"]: c.get("score") for c in sc.get("checks", [])}}, None
+        if pr:
+            err = "no scorecard in deps.dev project record"
+    return None, err
+
+
+def signals(full_name, token=None, packages=()):
     """All raw signals for one repo. Scores are assigned by Chablis, not here."""
     api = f"https://api.github.com/repos/{full_name}"
     s = {"repo": full_name, "retrieved_at": now(), "errors": {}}
     repo, _, err = get(api, token)
-    if err:
+    if err:  # GitHub failed: still pull Scorecard and dependents, which do not depend on it
         s["errors"]["repo"] = err
-        return s
-    s.update({
-        "stars": repo.get("stargazers_count"),
-        "forks": repo.get("forks_count"),
-        "open_issues": repo.get("open_issues_count"),
-        "archived": repo.get("archived"),
-        "pushed_at": repo.get("pushed_at"),
-        "license": (repo.get("license") or {}).get("spdx_id"),
-        "default_branch": repo.get("default_branch"),
-    })
-    rel, _, err = get(f"{api}/releases/latest", token)
-    s["latest_release"] = {"tag": rel.get("tag_name"), "published_at": rel.get("published_at")} if rel else None
-    if err and err != "HTTP 404":
-        s["errors"]["release"] = err
-    since = (datetime.now(timezone.utc) - timedelta(days=90)).strftime("%Y-%m-%dT%H:%M:%SZ")
-    s["commits_90d"], err = count_via_link(f"{api}/commits?since={since}&per_page=1", token)
-    if err:
-        s["errors"]["commits"] = err
-    s["contributors"], err = count_via_link(f"{api}/contributors?per_page=1&anon=1", token)
-    if err:
-        s["errors"]["contributors"] = err
-    sc, _, err = get(f"https://api.securityscorecards.dev/projects/github.com/{full_name}")
+    else:
+        s.update({
+            "stars": repo.get("stargazers_count"),
+            "forks": repo.get("forks_count"),
+            "open_issues": repo.get("open_issues_count"),
+            "archived": repo.get("archived"),
+            "pushed_at": repo.get("pushed_at"),
+            "license": (repo.get("license") or {}).get("spdx_id"),
+            "default_branch": repo.get("default_branch"),
+        })
+        rel, _, err = get(f"{api}/releases/latest", token)
+        s["latest_release"] = {"tag": rel.get("tag_name"), "published_at": rel.get("published_at")} if rel else None
+        if err and err != "HTTP 404":
+            s["errors"]["release"] = err
+        since = (datetime.now(timezone.utc) - timedelta(days=90)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        s["commits_90d"], err = count_via_link(f"{api}/commits?since={since}&per_page=1", token)
+        if err:
+            s["errors"]["commits"] = err
+        s["contributors"], err = count_via_link(f"{api}/contributors?per_page=1&anon=1", token)
+        if err:
+            s["errors"]["contributors"] = err
+    sc_url = f"https://api.securityscorecards.dev/projects/github.com/{full_name}"
+    sc, _, err = get(sc_url)
     if sc:
-        s["scorecard"] = {"score": sc.get("score"), "date": sc.get("date"),
+        s["scorecard"] = {"score": sc.get("score"), "date": sc.get("date"), "via": "securityscorecards.dev",
                           "checks": {c["name"]: c.get("score") for c in sc.get("checks", [])}}
     else:
-        s["scorecard"] = None
-        s["errors"]["scorecard"] = err
-    s["sources"] = [api, f"https://api.securityscorecards.dev/projects/github.com/{full_name}"]
+        s["scorecard"], err2 = scorecard_from_depsdev(full_name)
+        if not s["scorecard"]:
+            s["errors"]["scorecard"] = f"{err}; deps.dev: {err2}"
+    s["dependents"] = dependents(packages, full_name)
+    for d in s["dependents"]:
+        if d["error"]:
+            s["errors"][f"dependents:{d['system']}:{d['name']}"] = d["error"]
+    s["sources"] = [api, sc_url] + [d["source"] for d in s["dependents"]]
     return s
 
 
@@ -138,7 +222,7 @@ def cmd_run(watchlist, out):
     token = os.environ.get("GITHUB_TOKEN")
     rows = []
     for item in wl["repos"]:
-        rows.append({**signals(item["repo"], token), "category": item.get("category")})
+        rows.append({**signals(item["repo"], token, item.get("packages", [])), "category": item.get("category")})
         time.sleep(0.5)  # politeness
     os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
     with open(out, "w", encoding="utf-8") as fh:
@@ -146,6 +230,69 @@ def cmd_run(watchlist, out):
     errs = sum(1 for r in rows if r["errors"])
     print(f"wrote {out}: {len(rows)} repos, {errs} with at least one error")
     return 0
+
+
+# ---------- coverage gate ----------
+# A run that degrades still exits 0 from scout/upkeep, so each route's coverage is counted here,
+# written into the snapshot as _meta, and compared with the floors and with the previous snapshot.
+FLOORS = {"github": 0.90, "scorecard": 0.50, "upkeep": 0.90, "dependents": 0.50}  # share of repos (or packages)
+MAX_DROP = 0.20  # a route falling more than 20% below the previous snapshot is an alert
+
+
+def coverage(doc):
+    rows = doc.get("repos", [])
+    pk = [d for r in rows for d in r.get("dependents", []) if not d.get("skipped")]
+    c = {
+        "repos": len(rows),
+        "github": sum(1 for r in rows if "repo" not in r.get("errors", {}) and "stars" in r),
+        "scorecard": sum(1 for r in rows if r.get("scorecard")),
+        "upkeep": sum(1 for r in rows if r.get("upkeep") and not r["upkeep"].get("error")),
+        "dependents": sum(1 for d in pk if d.get("dependent_count") is not None),
+        "dependents_expected": len(pk),
+        "dependents_skipped": sum(1 for r in rows for d in r.get("dependents", []) if d.get("skipped")),
+    }
+    return c
+
+
+def gate(cur, prev=None):
+    """Return (meta, alerts). cur and prev are coverage() dicts; prev may be None."""
+    alerts = []
+    for k, floor in FLOORS.items():
+        n = cur["dependents_expected"] if k == "dependents" else cur["repos"]
+        if n and cur[k] / n < floor:
+            alerts.append(f"{k} {cur[k]}/{n} below floor {floor:.0%}")
+        if prev and prev.get(k) and cur[k] < prev[k] * (1 - MAX_DROP):
+            alerts.append(f"{k} fell from {prev[k]} to {cur[k]} since the previous snapshot")
+    return {"coverage": cur, "previous": prev, "floors": FLOORS, "max_drop": MAX_DROP,
+            "alerts": alerts, "status": "alert" if alerts else "ok", "checked_at": now()}, alerts
+
+
+def cmd_gate(scout, prev_dir):
+    """Write _meta into the snapshot. Exit 1 on any alert, so the run shows red after it commits."""
+    with open(scout, encoding="utf-8") as fh:
+        doc = json.load(fh)
+    prev = None
+    me = os.path.basename(scout)
+    older = sorted(f for f in os.listdir(prev_dir) if re.fullmatch(r"\d{4}-\d{2}-\d{2}\.json", f) and f < me)
+    if older:
+        try:
+            with open(os.path.join(prev_dir, older[-1]), encoding="utf-8") as fh:
+                pd = json.load(fh)
+            prev = (pd.get("_meta") or {}).get("coverage") or coverage(pd)
+        except (OSError, ValueError):
+            prev = None
+    meta, alerts = gate(coverage(doc), prev)
+    meta["previous_file"] = older[-1] if older else None
+    doc["_meta"] = meta
+    with open(scout, "w", encoding="utf-8") as fh:
+        json.dump(doc, fh, indent=2, default=str)
+    c = meta["coverage"]
+    print(f"gate {meta['status']}: github {c['github']}/{c['repos']}, scorecard {c['scorecard']}/{c['repos']}, "
+          f"upkeep {c['upkeep']}/{c['repos']}, dependents {c['dependents']}/{c['dependents_expected']} "
+          f"({c['dependents_skipped']} skipped)")
+    for a in alerts:
+        print(f"ALERT: {a}")
+    return 1 if alerts else 0
 
 
 # ---------- selftest ----------
@@ -168,6 +315,25 @@ def cmd_selftest():
     with open(os.path.join(os.path.dirname(__file__), "watchlist.json"), encoding="utf-8") as fh:
         wl = json.load(fh)
     assert all("/" in r["repo"] and r.get("category") for r in wl["repos"]), "watchlist malformed"
+    assert all(p.get("system") and p.get("name") for r in wl["repos"] for p in r.get("packages", [])), "packages malformed"
+    v = lambda n, t, d=False: {"versionKey": {"version": n}, "publishedAt": t, "isDefault": d}
+    rec = {"versions": [v("1.0", "2026-01"), v("2.1.0.dev5", "2026-11", True), v("2.0", "2026-10"),
+                        v("v0.0.0-2026-abc", "2026-11"), v("2.0rc1", "2026-09")]}
+    assert candidate_versions(rec) == ("2.1.0.dev5", ["2.0", "1.0"]), candidate_versions(rec)
+    assert candidate_versions({"versions": [v("1.0", "2026-01"), v("1.1", "2026-02", True)]}) == ("1.1", ["1.1", "1.0"])
+    assert candidate_versions(None) == (None, [])
+    assert q("github.com/zricethezav/gitleaks/v8") == "github.com%2Fzricethezav%2Fgitleaks%2Fv8"
+    row = lambda **k: {"repo": "a/b", "errors": {}, "stars": 1, "scorecard": {"score": 5},
+                       "upkeep": {"score": 2}, "dependents": [], **k}
+    good = coverage({"repos": [row() for _ in range(10)]})
+    assert good["github"] == good["scorecard"] == good["upkeep"] == 10, good
+    assert gate(good)[1] == [] and gate(good, good)[0]["status"] == "ok"
+    bad = coverage({"repos": [row()] * 2 + [row(scorecard=None)] * 8})
+    al = gate(bad, good)[1]
+    assert any("scorecard 2/10 below floor" in a for a in al) and any("fell from 10 to 2" in a for a in al), al
+    sk = coverage({"repos": [row(dependents=[{"skipped": "x", "dependent_count": None},
+                                              {"dependent_count": 7}])]})
+    assert (sk["dependents"], sk["dependents_expected"], sk["dependents_skipped"]) == (1, 1, 1), sk
     print(f"selftest ok ({len(wl['repos'])} watchlist repos)")
     return 0
 
@@ -178,6 +344,8 @@ if __name__ == "__main__":
         sys.exit(cmd_pins(a[1]))
     if a[:1] == ["run"] and "--watchlist" in a and "--out" in a:
         sys.exit(cmd_run(a[a.index("--watchlist") + 1], a[a.index("--out") + 1]))
+    if a[:1] == ["gate"] and "--scout" in a and "--prev-dir" in a:
+        sys.exit(cmd_gate(a[a.index("--scout") + 1], a[a.index("--prev-dir") + 1]))
     if a[:1] == ["selftest"]:
         sys.exit(cmd_selftest())
     print(__doc__)
