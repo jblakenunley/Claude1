@@ -69,3 +69,16 @@ Template:
 **Registry:** issue evidence on 7 rows; no scores.
 **Doctrine change:** §6 note: issue health is evidence only, no scored line.
 **Cost:** tokens not reported; fetch subagent 38.0k.
+
+## Day 5 — OpenSSF Scorecard (2026-11-23, cycle 1)
+**Exercise:** Read the 19 documented checks, tested the score formula on the scout's per-check data (2026-11-22, `main`'s `scout.py`: 17 of 28 repos with a record), and marked which checks Chablis weights. Risk levels came from the [pkg.go.dev table](https://beta.pkg.go.dev/github.com/ossf/scorecard/v5), read verbatim; two API records read directly.
+**Findings:**
+- Risk-weighted mean (10 / 7.5 / 5 / 2.5), -1 dropped, reproduces 19 of 19 reported scores within 0.05, deps.dev-sourced records included. The pages do not state the -1 rule; the data does.
+- The 16 weekly-scan API records carry 14 checks, without Vulnerabilities, Dependency-Update-Tool, CI-Tests or Contributors; [cve-bin-tool](https://api.securityscorecards.dev/projects/github.com/intel/cve-bin-tool) and [secure-repo](https://api.securityscorecards.dev/projects/github.com/step-security/secure-repo) carry 18. The README (model-extracted summary) says three are omitted. For those 16 repos Scorecard holds no vulnerability evidence (queue #23).
+- Six weighted checks rank the 16 at Spearman 0.76 against the overall: trufflehog 1st→6th, airbyte 10th→16th. CII-Best-Practices is 0 on 16 of 16; Signed-Releases -1 on 12; Dangerous-Workflow 0 on great_expectations and airbyte.
+- Nine of 28 repos had no API record on four days. The 11-21 scout's 19 came from PR #19's code (unmerged); fredapi and recordlinkage's deps.dev records were 89 d old, the API's 6–27 d.
+- Fetch: 6 of 6 URLs a search returned verbatim loaded; 5 others were refused (queue #17).
+**Feed load:** feeds 11-21 and 11-22 into the 11-21 ledger: 1,913 new rows (CFTC 1,890, Treasury 14, FRED 9); 11-22 added 0; ledger 13,803. SEC-EDGAR failed: NVDA HTTP 403. Saved gzipped (329 KB; the 3.5 MB .db exceeds the upload cap) as `ledger-2026-11-23.db.gz`.
+**Registry:** Scorecard evidence on 7 rows; no scores.
+**Doctrine change:** §6 Scorecard checks v1; §10 gzipped-ledger note.
+**Cost:** tokens not reported; fetch subagents 105.8k.

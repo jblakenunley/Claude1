@@ -158,6 +158,29 @@ First Response excludes bot replies and filters by responder role
 and 17 issue activity found in the last 90 days", ossf/scorecard, 2026-11-21), so a scored line would
 partly double-count. Revisit at Day 5 (each Scorecard check) and Day 7 (rubric v1 review).
 
+*Note 2026-11-23 (Day 5, LEARNING_LOG).* **Scorecard checks v1: read per check; no scored line until Day 7.**
+(1) The overall is the risk-weighted mean of the checks present, Critical 10 / High 7.5 / Medium 5 / Low 2.5, over 19
+documented checks ([pkg.go.dev](https://beta.pkg.go.dev/github.com/ossf/scorecard/v5), table read verbatim 2026-11-23). The
+pages read did not say how -1 is treated; dropping -1 reproduces the reported score for 19 of 19 scout records within 0.05
+(2026-11-21; 17 of 17 on 11-22; both deps.dev-sourced records included). Chablis recomputes any weighting from per-check values
+at use and never takes the overall as a Security score. (2) The API's weekly records (16 of 16 on 2026-11-22) carry 14 checks,
+without Vulnerabilities, Dependency-Update-Tool, CI-Tests or Contributors. Three 18-check records exist: ossf/scorecard in the
+scout, cve-bin-tool and secure-repo read directly ([API](https://api.securityscorecards.dev/projects/github.com/step-security/secure-repo),
+2026-11-23). The [README](https://github.com/ossf/scorecard), by a model-extracted summary, says the weekly scan omits three,
+not four. So for those 16 repos Scorecard says nothing about known vulnerabilities, and the hard stop "unpatched critical
+advisory" needs its own source (OSV, the service behind that check per pkg.go.dev, or GitHub advisories): queue #23.
+(3) Marks. **Weight** once bands exist: Dangerous-Workflow, Token-Permissions (12 of 16 score 0, so low spread),
+Pinned-Dependencies, Binary-Artifacts, Code-Review, Branch-Protection; each is a hazard that reaches the consumer through the
+tool's build or release path and is evaluable on most records. Vulnerabilities joins when sourced. **Evidence only:**
+Signed-Releases (-1 on 12 of 16, too rarely evaluable to carry a score), Security-Policy, SAST, Fuzzing, Packaging (-1 on 9 of
+16), Dependency-Update-Tool, CI-Tests, Contributors. **Not used:** Maintained (duplicates Upkeep), License (Fit, Day 6),
+CII-Best-Practices (0 on 16 of 16, no information here). A Dangerous-Workflow of 0 (great_expectations, airbyte on 2026-11-22)
+is a prompt to read that repo's workflows, not a hard stop; the hard-stop list is Day 6. (4) The marks change ranks: the six
+weighted checks against the overall over the 16 records give Spearman 0.76 (dropping Maintained alone, 0.96); trufflehog
+1st→6th, airbyte 10th→16th, great_expectations 9th→15th, yfinance 8th→4th. (5) Freshness and coverage: API records were 6–27 d
+old on 2026-11-22; the two deps.dev-sourced records were 89 d old. Nine of 28 watchlist repos had no record on any of four days
+(`TOOL_REGISTRY.md`). A tool with no record gets no Scorecard evidence, never a default.
+
 ## 7. Run contract — state back before any run of size
 
 - **OBJECTIVE** — what data, for which project
@@ -223,6 +246,14 @@ only, so the canonical `ledger.db` stays empty (queue #15). The lesson therefore
 into the newest dated ledger copy, which is cumulative, and saves the result as a new dated copy;
 loading into the empty canonical would leave each dated copy holding one day. `load` is idempotent:
 2026-11-21 read 9,986 rows and added 24.
+
+*Note 2026-11-23 (Day 5, LEARNING_LOG).* The ledger outgrew the connector's per-call upload cap (3.5 MB against about
+3.1 MB; 2026-11-22 saved nothing). A gzip of the vacuumed ledger is 329 KB, so the lesson now saves
+`ledger-YYYY-MM-DD.db.gz` (`create_file`, `base64Content` as a file reference, `application/gzip`,
+`disableConversionToGoogleType`) and loads from the newest `ledger-*.db.gz` or `ledger-*.db` by date. Round trip verified
+2026-11-23: the downloaded file's SHA-256 equals the uploaded one, and gunzip yields a ledger with `integrity_check` ok and
+13,803 rows. When a load is skipped or unsaved, the next lesson loads every missed feed directory, oldest first (today
+loaded feeds 11-21 and 11-22 into the 11-21 copy: 1,913 new rows, all from 11-21). The canonical `ledger.db` stays empty (queue #15).
 
 **Learning from GitHub.** Before writing an adapter, check whether a maintained
 library already does it (edgartools, fredapi, ccxt, OpenBB providers), score it,
