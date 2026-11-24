@@ -82,3 +82,17 @@ Template:
 **Registry:** Scorecard evidence on 7 rows; no scores.
 **Doctrine change:** §6 Scorecard checks v1; §10 gzipped-ledger note.
 **Cost:** tokens not reported; fetch subagents 105.8k.
+
+## Day 6 — License fit (2026-11-24, cycle 1)
+**Exercise:** Read the LICENSE file at HEAD of all 28 watchlist repos (treeless clones), compared each with the SPDX texts in github/choosealicense.com (`b851d0a`), read nested license files where a repo has several, and checked clause wording against the texts and vendor FAQs. Scout 2026-11-23 was current.
+**Findings:**
+- The exercise calls this repo's LICENSE proprietary; the file is Apache-2.0 (initial commit `0cc6d85`, 2026-08-12; same text as `licenses/LICENSE-APACHE-2.0`). Blake's shipped products are proprietary, so the stops are written by posture: use, vendor, ship, host.
+- 28 of 28 resolve from the file: MIT 13, Apache-2.0 11, BSD-3-Clause 2, AGPL-3.0 1 (trufflehog), ELv2 1 (airbyte). GitHub's field said NOASSERTION for airbyte, amass and OpenBB; amass and OpenBB are Apache-2.0 under a prepended notice.
+- A root file is not the tree: duckdb has 36 nested files (mbedtls Apache-2.0 OR GPL-2.0-or-later; the TPC EULA); dlt's docs carry the dltHub License; Airbyte's README says all but airbyte-protocol (MIT) is ELv2.
+- No tool stops at use. Trufflehog stops at vendor and ship (and host if modified, AGPL §13); airbyte at ship and host where its UI or API is exposed.
+- Not used: GPL FAQ entries #UnreleasedMods and the AGPL one were read only as a summary, not verbatim.
+- Fetch: 7 of 7 URLs a search returned loaded.
+**Feed load:** 11,850 rows read (feed 2026-11-23), 24 new (Treasury 14, FRED 10), ledger 13,827; saved `ledger-2026-11-24.db.gz` (329,483 B). SEC-EDGAR failed: NVDA submissions and facts HTTP 403 (queue #3).
+**Registry:** license evidence for 28 repos; no scores (Fit bands wait for Day 7).
+**Doctrine change:** §6 Day 6 note, hard stops by posture.
+**Cost:** tokens not reported; fetch subagents 84.4k.

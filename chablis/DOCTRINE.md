@@ -181,6 +181,34 @@ weighted checks against the overall over the 16 records give Spearman 0.76 (drop
 old on 2026-11-22; the two deps.dev-sourced records were 89 d old. Nine of 28 watchlist repos had no record on any of four days
 (`TOOL_REGISTRY.md`). A tool with no record gets no Scorecard evidence, never a default.
 
+*Note 2026-11-24 (Day 6, LEARNING_LOG).* **License hard stops v1, by posture.** (1) The license is the LICENSE file read at the
+scored commit; GitHub's `license` field is a pointer. It returned NOASSERTION for 3 of 28 scout records (2026-11-23), and the files
+read as Apache-2.0 (amass, OpenBB: the standard text under a prepended notice) and Elastic License 2.0 (airbyte). All 28 resolve:
+MIT 13, Apache-2.0 11, BSD-3-Clause 2, AGPL-3.0 1, ELv2 1. A root file does not cover the tree: duckdb has 36 nested license files
+(mbedtls is Apache-2.0 OR GPL-2.0-or-later; the tpch dbgen carries the TPC EULA), dlt's docs carry the dltHub License beside its
+Apache-2.0 root, and Airbyte's README says everything in its public repos except airbyte-protocol (MIT) is ELv2. Read the nested
+files on the path the tool takes. (2) Every registry entry names its **posture**, and hard stops are tested at it. **U** use: Blake
+or his agents run it, nothing is conveyed, no outside users (the §10 boundary). **V** vendor: its code is copied or linked into a
+repo of Blake's, either this public one (`LICENSE` is Apache-2.0, since the initial commit 2026-08-12) or a private proprietary one.
+**S** ship: it goes to a client or into another surface (Lightning Web Components, a client-installed interface). **H** host:
+outside users reach it over a network. (3) **Stops.** *No license text* (all rights reserved, [choosealicense.com](https://choosealicense.com/no-permission/)):
+V, S, H, and U until one is found. *GPL-2.0, GPL-3.0, AGPL-3.0*, and LGPL when combined into a shipped work: V and S. GPL-3.0 §0:
+"Mere interaction with a user through a computer network, with no transfer of a copy, is not conveying"; §2: "You may make, run
+and propagate covered works that you do not convey, without conditions"; the [GPL FAQ](https://www.gnu.org/licenses/gpl-faq):
+"an organization can make a modified version and use it internally without ever releasing it outside the organization"
+(#GPLRequireSourcePostedPublic) and "You cannot incorporate GPL-covered software in a proprietary system" (#GPLInProprietarySystem).
+So U is clear (trufflehog today). AGPL-3.0 §13 adds H: a modified version must offer source to every user interacting with it
+remotely. *Use-restricted* licenses stop S and H where the tool's own function is what is exposed: ELv2 bars hosting it as a managed
+service for third parties ([Airbyte FAQ](https://docs.airbyte.com/community/licenses/license-faq): "You can use software under ELv2
+for your commercial business, you simply can't offer it as a managed service"; "Sell a product that directly exposes Airbyte's UI
+or API" is not allowed); SSPL stops H (MongoDB's [FAQ](https://www.mongodb.com/legal/licensing/server-side-public-license/faq):
+internal-only service use is not covered); BUSL-1.1 grants non-production use and only the production use its Additional Use Grant
+permits, otherwise a commercial license ([SPDX text](https://spdx.org/licenses/BUSL-1.1)), so read each grant; a noncommercial-only
+text (PolyForm Noncommercial) stops client work, while U for Blake's own research stays his call under the 2026-11-18 decision.
+MIT, BSD, ISC and Apache-2.0 carry notice duties only (Apache-2.0 §3 also ends a patent license if you sue over the Work); MPL-2.0
+is file-level (§3.3 allows a Larger Work under terms of your choice). (4) Scope: the rule reads each tool's own license text, no
+dependency tree, and is Chablis's operating rule, not legal advice; a close call goes to Blake. Open for Day 7: Fit has no bands yet.
+
 ## 7. Run contract — state back before any run of size
 
 - **OBJECTIVE** — what data, for which project
