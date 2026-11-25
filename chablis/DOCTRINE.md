@@ -82,7 +82,7 @@ time-to-live. At expiry `_current` flips to 0: binary CURRENT/STALE, no decay.
 
 ## 6. Tool rubric — GitHub tool quality and selection
 
-*Amended by the learning path. v1, 2026-11-18.*
+*Amended by the learning path. v1, 2026-11-18; v1.1, 2026-11-25 (Day 7 note).*
 
 Score each dimension 0–3. A tool enters a 1+Claude system only with a recorded
 score, the evidence behind each number, and a review date (~90 days).
@@ -208,6 +208,29 @@ text (PolyForm Noncommercial) stops client work, while U for Blake's own researc
 MIT, BSD, ISC and Apache-2.0 carry notice duties only (Apache-2.0 §3 also ends a patent license if you sue over the Work); MPL-2.0
 is file-level (§3.3 allows a Larger Work under terms of your choice). (4) Scope: the rule reads each tool's own license text, no
 dependency tree, and is Chablis's operating rule, not legal advice; a close call goes to Blake. Open for Day 7: Fit has no bands yet.
+
+*Note 2026-11-25 (Day 7, LEARNING_LOG).* **Rubric v1.1: bands for Adoption, Security and Fit; one Upkeep change; entry rule.**
+(1) **Adoption**: deps.dev `dependentCount` for the package built from the repo, "the number of packages known to depend on this
+package version, either directly or indirectly", available for npm, Cargo, Maven and PyPI only, and "indicative of relative popularity
+rather than precisely accurate" ([API v3alpha](https://docs.deps.dev/api/v3alpha/index.html)). Decade bands: 1,000 or more 3; 100 to 999
+2; 10 to 99 1; under 10 0. A `source_repo_match` of false is a flag to read, not a reason to drop (duckdb's package is built from
+duckdb/duckdb-python). Actions and applications have no route: Adoption stays blank, never stars or forks. Code search
+(`gh api search/code`, works in lessons) counts workflow files referencing an Action (checkout 9,764,864, setup-python 1,507,328 on
+2026-11-25); that is a different measure, evidence only. (2) **Security** (partial until Vulnerabilities is sourced, queue #23): S6 is the
+risk-weighted mean of the six Day 5 checks, -1 dropped, weights from the Scorecard risk table ([pkg.go.dev](https://beta.pkg.go.dev/github.com/ossf/scorecard/v5):
+Critical 10, High 7.5, Medium 5, Low 2.5): Dangerous-Workflow 10, Token-Permissions 7.5, Pinned-Dependencies 5, Binary-Artifacts 7.5,
+Code-Review 7.5, Branch-Protection 7.5 (sum 45). Quarter bands: 7.5 or more 3; 5 to 7.49 2; 2.5 to 4.99 1; under 2.5 0. Scored from the newest record
+within 90 d; no record is blank. (3) **Fit** = min(license cap, footprint). License cap, at the registered posture (Day 6): a stop
+there is 0 and a hard stop; a stop at a wider posture, or a nested or bundled license that could bind the posture and is unread, is 2;
+otherwise 3. Footprint (stdlib-first): unique runtime dependencies the package declares, extras excluded: 5 or fewer 3; 6 to 15 2; 16 to 40 1;
+more 0; none for an Action or application. Libraries are registered at V, Actions and servers at U. API stability and lock-in are not scored.
+(4) **Upkeep**: L3 with R0 is not scored (live repo, no release tag in 365 d, release channel unread), not 0: airbyte has 656 human commits in
+90 d and no tag since v2.0.0 (2025-10-15). `upkeep.py` now emits null. The 50% bus line stays: four of the ten (great_expectations 47.0%, scrapy 52.2%, meltano 54.6%,
+checkout 56.2% with n under 20) sit within 7 points of it, and no outcome data exists to place a better one; checkout's 1 stays. Revisit in cycle 2.
+(5) **Entry**: a tool enters only with all four dimensions scored, no hard stop, and its advisories checked. A blank blocks entry and is
+never 0. No composite is computed: a sum would let Adoption offset a Security 0. Tools in use are re-scored, not removed. (6) The scout
+on `main` stopped carrying `dependents` and `upkeep` after 2026-11-21, whose run came from open PR #19 (queue #14, #20): lessons read the
+2026-11-21 values and date them.
 
 ## 7. Run contract — state back before any run of size
 

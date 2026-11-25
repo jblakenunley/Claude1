@@ -96,3 +96,19 @@ Template:
 **Registry:** license evidence for 28 repos; no scores (Fit bands wait for Day 7).
 **Doctrine change:** §6 Day 6 note, hard stops by posture.
 **Cost:** tokens not reported; fetch subagents 84.4k.
+
+## Day 7 — Rubric v1 review (2026-11-25, cycle 1)
+**Exercise:** Scored the first ten watchlist tools on all four dimensions: Upkeep re-run from git (as of 2026-11-25), Scorecard from scout 2026-11-24 (current; 13 of 28 repos with errors), dependents from scout 2026-11-21 (the newest carrying them), runtime dependencies from each pyproject.
+**Findings:**
+- Adoption, Security and Fit had no bands; v1.1 sets them (`DOCTRINE.md` §6). Four scores exist for 3 of 10 (scrapy, sqlite-utils, great_expectations); none enters, since advisories are unsourced.
+- Adoption is blank for 3: deps.dev dependents cover npm, Cargo, Maven and PyPI only ([docs](https://docs.deps.dev/api/v3alpha/index.html)), so Actions and airbyte have none. Code search counts workflow files (checkout 9,764,864; setup-python 1,507,328), a different measure.
+- Day 2's gap: sqlite-utils is 7th of 7 by stars (2,228) and 2nd by dependents (760); scrapy is 1st (65,562) and 3rd (552). Spearman 0.29, n=7.
+- Security is blank for 4 (crawlee, dlt, meltano, duckdb: 404 on 6 of 6 days). great_expectations' record stopped being served after 11-22. Six-check scores run 3.83 to 7.72; Token-Permissions is 0 on 5 of 6.
+- Upkeep failed on airbyte: R0 (no tag since 2025-10-15) beside 656 human commits in 90 d, so L3 with R0 is now unscored. Four of ten sit within 7 points of the 50% bus line; kept.
+- duckdb's PyPI package is built from duckdb/duckdb-python.
+- Main's scout lost `dependents` and `upkeep` after 11-21 (PR #19 open).
+- Fetch: 3 of 3 search-returned URLs loaded.
+**Feed load:** feed 2026-11-24: 11,866 rows read, 17 new (Treasury 14, FRED 3), ledger 13,844; SEC-EDGAR failed (NVDA HTTP 403, queue #3). Saved as `ledger-2026-11-25.db.gz`.
+**Registry:** ten tools scored; table added.
+**Doctrine change:** §6 rubric v1.1; `upkeep.py` emits null for L3 with R0.
+**Cost:** tokens not reported; fetch subagents 87.0k.

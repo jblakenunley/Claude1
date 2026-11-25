@@ -13,7 +13,9 @@ Bands (all windows end at --asof; humans only, bots excluded, authors merged by 
        age<=90 and >=4 days -> 3; age<=180 and >=2 -> 2; age<=365 -> 1; else 0
   B  bus:      CHAOSS Contributor Absence Factor (fewest humans making >=50% of the
        last 365 d of commits). With >=20 human commits and AF = 1, deduct 1.
-  Upkeep = max(0, min(L, R) - deduction).  An archived repo is 0 (hard stop; read the
+  Upkeep = max(0, min(L, R) - deduction), except L=3 with R=0, which is null (not scored:
+  the repo is live but ships no release tag, so its release channel is unread).
+  An archived repo is 0 (hard stop; read the
   flag from the scout, git cannot see it).
 """
 import collections, json, re, subprocess, sys, tempfile
@@ -40,7 +42,9 @@ def bands(m):
     R = 0 if age is None else 3 if age <= 90 and days >= 4 else 2 if age <= 180 and days >= 2 else 1 if age <= 365 else 0
     w = m["w365"]
     deduct = 1 if w["commits_human"] >= 20 and w["absence_factor"] == 1 else 0
-    return {"L": L, "R": R, "bus_deduction": deduct, "upkeep": max(0, min(L, R) - deduct),
+    # v1.1 (2026-11-25): live commits (L3) with no release tag in 365 d (R0) is "release channel unread", not 0.
+    up = None if (L == 3 and R == 0) else max(0, min(L, R) - deduct)
+    return {"L": L, "R": R, "bus_deduction": deduct, "upkeep": up,
             "bus_scored": w["commits_human"] >= 20}
 
 
