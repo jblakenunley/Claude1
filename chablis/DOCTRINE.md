@@ -82,7 +82,7 @@ time-to-live. At expiry `_current` flips to 0: binary CURRENT/STALE, no decay.
 
 ## 6. Tool rubric — GitHub tool quality and selection
 
-*Amended by the learning path. v1, 2026-11-18; v1.1, 2026-11-25 (Day 7 note).*
+*Amended by the learning path. v1, 2026-11-18; v1.1, 2026-11-25 (Day 7 note); v1.2, 2026-11-26 (Day 8 note).*
 
 Score each dimension 0–3. A tool enters a 1+Claude system only with a recorded
 score, the evidence behind each number, and a review date (~90 days).
@@ -96,7 +96,7 @@ score, the evidence behind each number, and a review date (~90 days).
 
 **Hard stops** — any one blocks adoption regardless of score: archived repo;
 unpatched critical advisory; a license that would force disclosure of Blake's
-code; an Action that requests write permissions it does not need.
+code; an Action that requests, or is given by its job, write permissions it does not need (Day 8 note).
 
 **GitHub Actions rules:**
 - Pin third-party Actions to a full commit SHA, with the version in a comment.
@@ -231,6 +231,19 @@ checkout 56.2% with n under 20) sit within 7 points of it, and no outcome data e
 never 0. No composite is computed: a sum would let Adoption offset a Security 0. Tools in use are re-scored, not removed. (6) The scout
 on `main` stopped carrying `dependents` and `upkeep` after 2026-11-21, whose run came from open PR #19 (queue #14, #20): lessons read the
 2026-11-21 values and date them.
+
+*Note 2026-11-26 (Day 8, LEARNING_LOG).* **Rubric v1.2: the write-permission hard stop gains a job test.** (1) The
+[metadata reference](https://docs.github.com/en/actions/reference/workflows-and-actions/metadata-syntax.md) documents the keys name, author, description, inputs, outputs, runs and branding, none for
+permissions, and "An action can access the `GITHUB_TOKEN` through the `github.token` context even if the workflow does not
+explicitly pass" it ([GitHub docs](https://docs.github.com/en/actions/tutorials/authenticate-with-github_token); both read 2026-11-26). A job-level block applies to "all actions and run commands
+within that job that use the `GITHUB_TOKEN`" ([GHES 3.13 page, discontinued](https://docs.github.com/en/enterprise-server@3.13/actions/how-tos/writing-workflows/choosing-what-your-workflow-does/controlling-permissions-for-github_token)). So v1's stop still covers the writes an
+Action's documentation asks for, and adds: an Action runs in a job that holds a write permission only if it takes part in
+making that write; the rest belongs in a read job. (2) Audit: parse every workflow version on every branch; read the `GITHUB_TOKEN Permissions` block in a job log (the
+effective grant); name the command that needs each write. No command, no write. (3) A layout that passes: one job that fetches
+with read, one that only commits with write, `permissions:` on each, and `persist-credentials: false` on every checkout that
+does not push. GitHub advises read-only contents as the default, "increased, as required, for individual jobs"
+([secure use](https://docs.github.com/en/actions/reference/security/secure-use.md)). (4) Vetting an Action includes the runtime it declares at the pinned SHA: the pin freezes that too.
+(5) The three live jobs do not pass today (queue #25); tools in use stay (v1.1 entry rule). Day 14 sets the house policy.
 
 ## 7. Run contract — state back before any run of size
 

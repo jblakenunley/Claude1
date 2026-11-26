@@ -112,3 +112,19 @@ Template:
 **Registry:** ten tools scored; table added.
 **Doctrine change:** §6 rubric v1.1; `upkeep.py` emits null for L3 with R0.
 **Cost:** tokens not reported; fetch subagents 87.0k.
+
+## Day 8 — Permissions (2026-11-26, cycle 1)
+**Exercise:** Audited `permissions:` in all 5 registered workflows (11 file versions, 23 of 27 branches), read effective scope from the three 2026-11-25 job logs, and traced each write to a command. Scout 2026-11-25 was current (14 of 28 repos with errors).
+**Findings:**
+- All 11 versions grant only `contents: write`, workflow-wide; none has a job block; each is one job. None triggers on pull request, issue or comment events.
+- Feed, scout and morning-brief ran with `Contents: write`, `Metadata: read`.
+- Only pushes need the write: feed to `chablis-feed`; scout to `chablis-scout`; morning-brief to `mb-data` plus trigger-branch delete; side-branch keyed and probe to `chablis-data` plus delete. setup-python, fetch and probe steps need no write. Read from commands, not run with less.
+- Moving the block to the job changes nothing here; narrowing needs separate read and write jobs.
+- setup-python received the token though no workflow passes it ([docs](https://docs.github.com/en/actions/tutorials/authenticate-with-github_token)). checkout stores it in git config unless told not to.
+- action.yml documents no permissions key ([reference](https://docs.github.com/en/actions/reference/workflows-and-actions/metadata-syntax.md)): an Action gets what its job grants.
+- Both pinned Actions target Node 20, [removed 2026-09-23](https://github.blog/changelog/2026-09-23-node-20-is-no-longer-available-in-github-actions/), and run on Node 24.
+- Fetch: 8 of 8 search-returned URLs loaded. Exposure detail is in the private recon folder.
+**Feed load:** feed 2026-11-25: 11,877 rows read, 12 new (FRED), ledger 13,856; SEC-EDGAR failed (NVDA HTTP 403, queue #3). Saved `ledger-2026-11-26.db.gz`, hash verified.
+**Registry:** checkout, setup-python: job hard stop and runtime evidence; scores unchanged.
+**Doctrine change:** §6 rubric v1.2: job test added to the write hard stop.
+**Cost:** tokens not reported; fetch subagents 126.0k.
