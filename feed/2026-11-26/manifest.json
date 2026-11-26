@@ -1,0 +1,78 @@
+{
+  "generated_at": "2026-11-26T19:49:22Z",
+  "lane": "public",
+  "since": "2026-10-27",
+  "sources": [
+    {
+      "source_id": "SRC-UST-CURVE",
+      "name": "US Treasury daily par yield curve",
+      "access_class": "PUBLIC",
+      "freshness_class": "reference",
+      "license": "US Government work, public domain",
+      "scope": "Daily par yield curve rates published by Treasury. Silent on: intraday moves, off-the-run issues, non-business days.",
+      "urls": [
+        "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026"
+      ],
+      "count": 294,
+      "error": null,
+      "status": "complete"
+    },
+    {
+      "source_id": "SRC-FRED-GOV",
+      "name": "FRED (government-source series only)",
+      "access_class": "PUBLIC",
+      "freshness_class": "structural",
+      "license": "Series from US government originators (Fed, Treasury, BLS, BEA); FRED terms apply",
+      "scope": "Latest published values via FRED for the configured government series. Silent on: revision history (no vintages), any non-government series, values before the lookback.",
+      "urls": [
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS1MO&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS3MO&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS30&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10Y2Y&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10YIE&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SOFR&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WALCL&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RRPONTSYD&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=M2SL&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE&cosd=2026-10-27",
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PAYEMS&cosd=2026-10-27"
+      ],
+      "count": 3986,
+      "error": null,
+      "status": "complete"
+    },
+    {
+      "source_id": "SRC-CFTC-COT",
+      "name": "CFTC Commitments of Traders, legacy futures-only",
+      "access_class": "PUBLIC",
+      "freshness_class": "reference",
+      "license": "US Government work, public domain",
+      "scope": "Weekly positions by trader class as of Tuesday. Silent on: options, intra-week changes, OTC swaps, individual traders.",
+      "urls": [
+        "https://publicreporting.cftc.gov/resource/6dca-aqww.json?%24where=report_date_as_yyyy_mm_dd+%3E%3D+%272026-10-27T00%3A00%3A00%27&%24limit=50000"
+      ],
+      "count": 7595,
+      "error": null,
+      "status": "complete"
+    },
+    {
+      "source_id": "SRC-SEC-EDGAR",
+      "name": "SEC EDGAR submissions and XBRL company facts",
+      "access_class": "PUBLIC",
+      "freshness_class": "reference",
+      "license": "US Government work, public domain",
+      "scope": "Filings index and XBRL facts as filed, point-in-time by filing date. Silent on: private companies, intra-quarter figures, non-XBRL footnote detail, anything not yet filed.",
+      "urls": [
+        "https://data.sec.gov/submissions/CIK0001045810.json",
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json"
+      ],
+      "count": 0,
+      "error": "NVDA sub: HTTP 403; NVDA facts: HTTP 403",
+      "status": "failed"
+    }
+  ]
+}
