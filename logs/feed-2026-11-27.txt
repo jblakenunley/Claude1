@@ -1,0 +1,8 @@
+run 2026-11-27T19:39:38Z
+loaded 18 rows from 1 sources into /tmp/tmpwrsxr3q8/ledger.db
+loaded 18 rows from 1 sources into /tmp/tmpwrsxr3q8/ledger.db
+selftest ok (treasury 18, fred 2, cftc 5, sec 1; load idempotent)
+SRC-UST-CURVE: 280 rows
+SRC-FRED-GOV: 3978 rows
+SRC-CFTC-COT: 5670 rows
+SRC-SEC-EDGAR: 0 rows  ERROR NVDA sub: HTTP 403; NVDA facts: HTTP 403
