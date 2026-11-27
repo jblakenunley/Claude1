@@ -82,7 +82,7 @@ time-to-live. At expiry `_current` flips to 0: binary CURRENT/STALE, no decay.
 
 ## 6. Tool rubric — GitHub tool quality and selection
 
-*Amended by the learning path. v1, 2026-11-18; v1.1, 2026-11-25 (Day 7 note); v1.2, 2026-11-26 (Day 8 note).*
+*Amended by the learning path. v1, 2026-11-18; v1.1, 2026-11-25 (Day 7 note); v1.2, 2026-11-26 (Day 8 note); v1.3, 2026-11-27 (Day 9 note).*
 
 Score each dimension 0–3. A tool enters a 1+Claude system only with a recorded
 score, the evidence behind each number, and a review date (~90 days).
@@ -99,13 +99,13 @@ unpatched critical advisory; a license that would force disclosure of Blake's
 code; an Action that requests, or is given by its job, write permissions it does not need (Day 8 note).
 
 **GitHub Actions rules:**
-- Pin third-party Actions to a full commit SHA, with the version in a comment.
-  A tag can be moved; a SHA cannot.
+- Pin every Action, first-party included (Day 9 note), to a full commit SHA,
+  with the version in a comment. A tag can be moved; a SHA cannot.
 - Grant `permissions:` per job, least privilege. Default to read.
 - Never interpolate untrusted input (issue titles, PR bodies, branch names)
   directly into `run:`.
-- Prefer first-party (`actions/*`) or verified creators; vet everything else
-  with the full rubric.
+- Publisher tier breaks ties only: first-party, verified-creator and other
+  Actions all get the full rubric (Day 9 note).
 
 *Note 2026-11-19 (Day 1, LEARNING_LOG).* (1) Audit every workflow GitHub has
 registered for the repo (Actions API `list_workflows`) and every branch or commit
@@ -244,6 +244,27 @@ with read, one that only commits with write, `permissions:` on each, and `persis
 does not push. GitHub advises read-only contents as the default, "increased, as required, for individual jobs"
 ([secure use](https://docs.github.com/en/actions/reference/security/secure-use.md)). (4) Vetting an Action includes the runtime it declares at the pinned SHA: the pin freezes that too.
 (5) The three live jobs do not pass today (queue #25); tools in use stay (v1.1 entry rule). Day 14 sets the house policy.
+
+*Note 2026-11-27 (Day 9, LEARNING_LOG).* **Rubric v1.3: publisher tier, first-party pins, advisory route.** (1) Tier is recorded,
+never scored, and waives nothing. "Actions created by GitHub are located in the `actions` and `github` organizations"
+([settings docs](https://docs.github.com/en/enterprise-cloud@latest/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository)). The verified creator badge means "GitHub has verified the creator of the action as a partner
+organization", and listed Actions "aren't reviewed by GitHub" once they meet the listing requirements ([publishing docs](https://docs.github.com/en/enterprise-cloud@latest/actions/creating-actions/publishing-actions-in-github-marketplace?learn=create_actions&learnProduct=actions));
+a [2022 partner post](https://partner.github.com/2022/11/07/why-should-action-partners-get-verified.html) names domain, email and a support contact. Every tier gets the full rubric, the hard stops and the
+job test. (2) The pin rule covers first-party `actions/*` (closes the Day 1 open item). GitHub's "Require actions to be pinned to a
+full-length commit SHA" setting "includes actions from your enterprise and actions authored by GitHub" (settings docs). checkout's
+major tags move by design: "Workflows pinned to a floating major tag (e.g., `actions/checkout@v4`) will automatically pick up the
+change" ([changelog](https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout/), enforcement moved to 2026-07-20; v4.4.0 notes it as "[BREAKING]", [releases](https://github.com/actions/checkout/releases), first page,
+no Immutable label seen). The cost: "Workflows pinned to a specific SHA, minor, or patch version aren't affected by the backport",
+and Dependabot "will not create alerts for actions pinned to SHA values" ([GHES 3.11 page, discontinued](https://docs.github.com/en/enterprise-server@3.11/actions/security-guides/using-githubs-security-features-to-secure-your-use-of-github-actions)). So every pin
+needs a named update route (Day 11). (3) Lockfiles are generally available since 2026-10-28 on Free, Team and Enterprise Cloud
+([changelog](https://github.blog/changelog/2026-10-28-github-actions-workflow-lockfiles-are-generally-available/)): `.github/workflows/actions.lock` keeps tag references in the workflow and runs the locked commits, and a
+Dependabot version update regenerates the entry. Transitive actions are included, "except" dependencies of reusable workflow calls;
+the [concept page](https://docs.github.com/en/actions/concepts/security/workflow-dependency-lockfiles) says SHA pinning is then "no longer necessary" but still calls the feature public preview. A lockfile
+does not yet satisfy this rule here: Chablis has not seen it run, and mismatch behaviour is unread. Day 11 compares, Day 14 sets
+policy. (4) Advisory route for lessons: `gh api -X GET search/code -f q='"owner/name" repo:github/advisory-database'`
+([database](https://github.com/github/advisory-database)), run beside known advisories searched the same way as positive controls, then read each hit's affected
+package. On 2026-11-27 controls for four Actions surfaced; adding the JSON key `name` to the query returned 0 even for a known one.
+No hit is a negative scoped to that search. The scout route stays queue #23.
 
 ## 7. Run contract — state back before any run of size
 

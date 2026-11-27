@@ -128,3 +128,18 @@ Template:
 **Registry:** checkout, setup-python: job hard stop and runtime evidence; scores unchanged.
 **Doctrine change:** §6 rubric v1.2: job test added to the write hard stop.
 **Cost:** tokens not reported; fetch subagents 126.0k.
+
+## Day 9 — Third-party Actions (2026-11-27, cycle 1)
+**Exercise:** Classified and re-read every Action in 11 workflow file versions on 27 branches; repository search showed one repo. Scout 2026-11-26 was current.
+**Findings:**
+- 13 `uses:` lines, two Actions, both GitHub-created; no third-party. checkout 4 SHA / 4 tag, setup-python 2 / 3.
+- Verified creator means [partner identity](https://docs.github.com/en/enterprise-cloud@latest/actions/creating-actions/publishing-actions-in-github-marketplace?learn=create_actions&learnProduct=actions); the same page says listed Actions aren't reviewed. setup-python's [listing](https://github.com/marketplace/actions/setup-python) carries the badge.
+- checkout's major tags move: `@v4` users [received a breaking backport](https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout/) on 2026-07-20; SHA pins did not. Our v4.4.0 pin includes it (job log 2026-11-26).
+- SHA pins get [no Dependabot alerts](https://docs.github.com/en/enterprise-server@3.11/actions/security-guides/using-githubs-security-features-to-secure-your-use-of-github-actions) (discontinued GHES page).
+- [Lockfiles went GA 2026-10-28](https://github.blog/changelog/2026-10-28-github-actions-workflow-lockfiles-are-generally-available/): tags stay, locked commits run. The [concept page](https://docs.github.com/en/actions/concepts/security/workflow-dependency-lockfiles) calls SHA pinning unnecessary but still says preview. Mismatch behaviour unread.
+- [Advisory database](https://github.com/github/advisory-database) search surfaced none naming either Action; four control Actions surfaced. Security pages rate-limited.
+- Both default branches declare node24 (queue #25b).
+**Feed load:** feed 2026-11-26: 11,875 rows, 22 new (Treasury 14, FRED 8), ledger 13,878; SEC-EDGAR failed (NVDA HTTP 403, queue #3). Saved `ledger-2026-11-27.db.gz`, hash verified.
+**Registry:** both re-read, scores unchanged; tier table added.
+**Doctrine change:** §6 v1.3: tier waives nothing; pin rule covers first-party; advisory route.
+**Cost:** tokens not reported; fetch subagents 255.1k.
