@@ -38,6 +38,8 @@ Day 8 (2026-11-26) scored nothing. The write-permission hard stop is now tested 
 
 Day 9 (2026-11-27) classified every Action in use (table below), re-read Security with no score change, and searched advisories. The pin rule now covers first-party Actions (`DOCTRINE.md` §6 Day 9 note), so the tag-pinned rows fail it. On the Day 1 question of newer majors: the pinned releases target Node 20 and both default branches declare node24; move in the edit queued as #25(b), reading `runs.using` at the chosen release SHA first.
 
+Day 10 (2026-11-28) scored nothing: the lesson tested how this repo's own workflows and scripts handle secrets, not a third-party tool. No entry is past its review date. Secrets rules are in `DOCTRINE.md` §6 (Day 10 note).
+
 ### Publisher tier (Day 9, 2026-11-27)
 
 | Action | `uses:` lines (SHA / tag) | GitHub-created | Verified creator badge | Advisory naming it | Read | Review by |

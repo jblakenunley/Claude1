@@ -143,3 +143,20 @@ Template:
 **Registry:** both re-read, scores unchanged; tier table added.
 **Doctrine change:** §6 v1.3: tier waives nothing; pin rule covers first-party; advisory route.
 **Cost:** tokens not reported; fetch subagents 255.1k.
+
+## Day 10 — Secrets in workflows (2026-11-28, cycle 1)
+**Exercise:** Traced `CDOT_API_KEY` through `morning-brief-data.yml` and `fetch.py`, tested its guards offline with fake values, read the 2026-11-27 job log, scanned history. Scout 2026-11-27 was current (10 of 28 repos with errors).
+**Findings:**
+- Layers present: key passed by `env:` to one step, URL masked in the fetch log, a validator check, an exact-value search before commit. The job log shows `***`.
+- Pattern: reach, placement, redaction in code, a gate that fails closed and is shown to fire (`DOCTRINE.md` §6).
+- Write access [reads all repository secrets](https://docs.github.com/en/actions/reference/security/secure-use.md); a run uses the workflow file [from the event's commit](https://docs.github.com/en/actions/concepts/workflows-and-actions/workflows).
+- Public repositories can [limit environment secrets by branch](https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments).
+- [Log secret scanning](https://github.blog/changelog/2026-11-09-secret-scanning-detects-secrets-in-github-actions-workflow-logs/) is a preview announced for enterprises; free personal repositories are not mentioned.
+- [Default `pull_request_target` block](https://docs.github.com/en/actions/concepts/about-actions-policies) enforces 2026-12-02; no workflow version on any branch uses that trigger.
+- Census [puts its key in the URL](https://www.census.gov/data/developers/guidance/api-user-guide.API_Key.html); the feed records URLs publicly.
+- Gaps and scan results are in the private recon folder.
+- Fetch: two docs pages refused (permission timeout).
+**Feed load:** feed 2026-11-27: 9,928 rows read, 2 new (FRED), ledger 13,880; SEC-EDGAR failed (NVDA HTTP 403, queue #3). Saved `ledger-2026-11-28.db.gz`, hash verified.
+**Registry:** no scores.
+**Doctrine change:** §6 v1.4 secrets rules; §10 keyed-source rule. Queue #26 added, #18 amended.
+**Cost:** tokens not reported; fetch subagents 136.7k.

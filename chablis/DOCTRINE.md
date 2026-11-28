@@ -82,7 +82,7 @@ time-to-live. At expiry `_current` flips to 0: binary CURRENT/STALE, no decay.
 
 ## 6. Tool rubric — GitHub tool quality and selection
 
-*Amended by the learning path. v1, 2026-11-18; v1.1, 2026-11-25 (Day 7 note); v1.2, 2026-11-26 (Day 8 note); v1.3, 2026-11-27 (Day 9 note).*
+*Amended by the learning path. v1, 2026-11-18; v1.1, 2026-11-25 (Day 7 note); v1.2, 2026-11-26 (Day 8 note); v1.3, 2026-11-27 (Day 9 note); v1.4, 2026-11-28 (Day 10 note).*
 
 Score each dimension 0–3. A tool enters a 1+Claude system only with a recorded
 score, the evidence behind each number, and a review date (~90 days).
@@ -106,6 +106,8 @@ code; an Action that requests, or is given by its job, write permissions it does
   directly into `run:`.
 - Publisher tier breaks ties only: first-party, verified-creator and other
   Actions all get the full rubric (Day 9 note).
+- A secret goes to the one step that uses it, and log masking is never the
+  control for anything a job writes to a file (Day 10 note).
 
 *Note 2026-11-19 (Day 1, LEARNING_LOG).* (1) Audit every workflow GitHub has
 registered for the repo (Actions API `list_workflows`) and every branch or commit
@@ -266,6 +268,27 @@ policy. (4) Advisory route for lessons: `gh api -X GET search/code -f q='"owner/
 package. On 2026-11-27 controls for four Actions surfaced; adding the JSON key `name` to the query returned 0 even for a known one.
 No hit is a negative scoped to that search. The scout route stays queue #23.
 
+*Note 2026-11-28 (Day 10, LEARNING_LOG).* **Rubric v1.4: secrets rules for workflows and the scripts they run.** (1) Reach: "Any user with
+write access to your repository has read access to all secrets configured in your repository"
+([secure use](https://docs.github.com/en/actions/reference/security/secure-use.md)), and "Each workflow run will use the version of
+the workflow that is present in the associated commit SHA or Git ref" of the event
+([workflows](https://docs.github.com/en/actions/concepts/workflows-and-actions/workflows)). So an audit counts every trigger pattern and every
+branch carrying a copy, not only `main`. (2) Narrow it: where the job can run from a fixed ref, use an environment secret with a deployment
+branch rule (available to public repositories; matched against the run's `GITHUB_REF`,
+[docs](https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments)); a pattern that admits trigger branches
+admits the workflow file those branches carry. Execution protections allowlist who and which events can start a workflow
+([GA 2026-09-17](https://github.blog/changelog/2026-09-17-workflow-execution-protections-in-github-actions-generally-available/)); the pages read
+name no plan list and no branch rule. (3) Place: pass a secret by `env:` to the one step that uses it; send it in a request header where the
+API allows. (4) Files: "automatic redaction is not guaranteed" even in logs (secure use), so whatever a job commits or uploads is redacted
+in code where it is recorded, exception text included. (5) A commit or upload check counts as a gate only if its failure stops the write; it
+fails closed when its own command errors; it tests the shape that leaks (the credential parameter with an unmasked value) as well as the
+exact value; it takes the value without exposing it as a command argument or option; and a test with fake values, malformed ones included,
+shows it fire. (6) Do not count GitHub's scanning of Actions logs as a backstop: the
+[public preview](https://github.blog/changelog/2026-11-09-secret-scanning-detects-secrets-in-github-actions-workflow-logs/) (2026-11-09) is
+announced for enterprises with Secret Protection or Advanced Security, reads logs for provider patterns, and does not mention free personal
+repositories. (7) The live secret-bearing job does not pass all of this
+today (queue #26); tools in use stay.
+
 ## 7. Run contract — state back before any run of size
 
 - **OBJECTIVE** — what data, for which project
@@ -339,6 +362,12 @@ loading into the empty canonical would leave each dated copy holding one day. `l
 2026-11-23: the downloaded file's SHA-256 equals the uploaded one, and gunzip yields a ledger with `integrity_check` ok and
 13,803 rows. When a load is skipped or unsaved, the next lesson loads every missed feed directory, oldest first (today
 loaded feeds 11-21 and 11-22 into the 11-21 copy: 1,913 new rows, all from 11-21). The canonical `ledger.db` stays empty (queue #15).
+
+*Note 2026-11-28 (Day 10, LEARNING_LOG).* Before the first keyed source enters the public lane (queue #18, Census): the Census API takes its
+key as a `&key=` query parameter ([user guide](https://www.census.gov/data/developers/guidance/api-user-guide.API_Key.html), revised
+2026-05-14, no header alternative on that page), and `feed.py` writes request URLs into every row and the manifest, which are committed to a
+public branch. The adapter therefore builds the recorded URL without the key, redacts error text, records `auth_ref` and never the value, and
+shows this in `selftest` with a fake key before the secret is set.
 
 **Learning from GitHub.** Before writing an adapter, check whether a maintained
 library already does it (edgartools, fredapi, ccxt, OpenBB providers), score it,
